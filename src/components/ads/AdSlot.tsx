@@ -8,32 +8,36 @@ interface AdSlotProps {
   format?: 'auto' | 'rectangle' | 'horizontal'
 }
 
+const isPlaceholder = (slot: string) => slot === 'placeholder-slot-id' || !slot
+
 export default function AdSlot({ compressionDone, slot, format = 'auto' }: AdSlotProps) {
   const [showAd, setShowAd] = useState(false)
   const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID
+  const hasRealSlot = !isPlaceholder(slot) && !!adsenseId
 
   useEffect(() => {
-    if (!compressionDone) return
+    if (!hasRealSlot || !compressionDone) return
     const timer = setTimeout(() => setShowAd(true), 500)
     return () => clearTimeout(timer)
-  }, [compressionDone])
+  }, [hasRealSlot, compressionDone])
 
   useEffect(() => {
-    if (!showAd || !adsenseId) return
+    if (!showAd) return
     try {
       // @ts-expect-error adsbygoogle is injected by Google
       ;(window.adsbygoogle = window.adsbygoogle || []).push({})
     } catch {}
-  }, [showAd, adsenseId])
+  }, [showAd])
 
-  // Pre-sized container always present — prevents CLS
+  if (!hasRealSlot) return null
+
   return (
     <div
       style={{ minHeight: '250px' }}
       className="w-full flex items-center justify-center overflow-hidden"
       aria-hidden={!showAd}
     >
-      {showAd && adsenseId && (
+      {showAd && (
         <ins
           className="adsbygoogle"
           style={{ display: 'block', width: '100%' }}
