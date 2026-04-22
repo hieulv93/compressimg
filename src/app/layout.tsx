@@ -36,22 +36,20 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429920062430374"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body className="font-sans antialiased bg-white text-text-main flex flex-col min-h-screen">
         <Header />
         <div className="flex-1 flex flex-col">
           {children}
         </div>
         <Footer />
+        {/* Google AdSense — afterInteractive để không block LCP */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429920062430374"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+          id="adsense-script"
+        />
         {/* Google Analytics 4 */}
         {GA_ID && (
           <>
