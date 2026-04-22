@@ -12,6 +12,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  verification: {
+    other: {
+      'google-adsense-account': 'ca-pub-5429920062430374',
+    },
+  },
   metadataBase: new URL(process.env.SITE_URL || 'https://compressimg.pro'),
   title: {
     default: 'Compress Image Online Free – Reduce JPG, PNG, WebP Size | CompressImg',
