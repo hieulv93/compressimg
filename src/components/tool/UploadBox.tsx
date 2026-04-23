@@ -9,23 +9,32 @@ interface UploadBoxProps {
   onFileSelect: (file: File) => void
   state: UploadState
   errorMessage?: string
+  processingLabel?: string
 }
 
-export default function UploadBox({ onFileSelect, state, errorMessage }: UploadBoxProps) {
+export default function UploadBox({
+  onFileSelect,
+  state,
+  errorMessage,
+  processingLabel = 'Compressing...',
+}: UploadBoxProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [isDragging, setIsDragging] = useState(false)
 
-  const validateAndSelect = useCallback((file: File) => {
-    if (!ACCEPTED_TYPES.includes(file.type)) {
-      onFileSelect(Object.assign(file, { _invalid: 'format' }))
-      return
-    }
-    if (file.size > MAX_FILE_SIZE_BYTES) {
-      onFileSelect(Object.assign(file, { _invalid: 'size' }))
-      return
-    }
-    onFileSelect(file)
-  }, [onFileSelect])
+  const validateAndSelect = useCallback(
+    (file: File) => {
+      if (!ACCEPTED_TYPES.includes(file.type)) {
+        onFileSelect(Object.assign(file, { _invalid: 'format' }))
+        return
+      }
+      if (file.size > MAX_FILE_SIZE_BYTES) {
+        onFileSelect(Object.assign(file, { _invalid: 'size' }))
+        return
+      }
+      onFileSelect(file)
+    },
+    [onFileSelect]
+  )
 
   const handleClick = () => inputRef.current?.click()
 
@@ -52,12 +61,15 @@ export default function UploadBox({ onFileSelect, state, errorMessage }: UploadB
     if (file) validateAndSelect(file)
   }
 
-  const handlePaste = useCallback((e: ClipboardEvent<HTMLDivElement>) => {
-    const item = Array.from(e.clipboardData.items).find(i => i.type.startsWith('image/'))
-    if (!item) return
-    const file = item.getAsFile()
-    if (file) validateAndSelect(file)
-  }, [validateAndSelect])
+  const handlePaste = useCallback(
+    (e: ClipboardEvent<HTMLDivElement>) => {
+      const item = Array.from(e.clipboardData.items).find((i) => i.type.startsWith('image/'))
+      if (!item) return
+      const file = item.getAsFile()
+      if (file) validateAndSelect(file)
+    },
+    [validateAndSelect]
+  )
 
   if (state === 'done') return null
 
@@ -85,9 +97,14 @@ export default function UploadBox({ onFileSelect, state, errorMessage }: UploadB
         isProcessing && 'cursor-not-allowed opacity-70',
         isActive && !isProcessing && 'border-primary bg-drag-active scale-[1.01]',
         isError && 'border-error bg-error-light',
-        !isActive && !isError && !isProcessing && 'border-border bg-surface hover:border-primary hover:bg-drag-active',
+        !isActive &&
+          !isError &&
+          !isProcessing &&
+          'border-border bg-surface hover:border-primary hover:bg-drag-active',
         isProcessing && 'border-primary bg-drag-active',
-      ].filter(Boolean).join(' ')}
+      ]
+        .filter(Boolean)
+        .join(' ')}
     >
       <input
         ref={inputRef}
@@ -100,8 +117,11 @@ export default function UploadBox({ onFileSelect, state, errorMessage }: UploadB
 
       {isProcessing ? (
         <>
-          <div className="w-12 h-12 rounded-full border-4 border-primary border-t-transparent animate-spin" aria-hidden="true" />
-          <p className="text-text-muted font-medium">Compressing...</p>
+          <div
+            className="w-12 h-12 rounded-full border-4 border-primary border-t-transparent animate-spin"
+            aria-hidden="true"
+          />
+          <p className="text-text-muted font-medium">{processingLabel}</p>
         </>
       ) : (
         <>
@@ -114,9 +134,7 @@ export default function UploadBox({ onFileSelect, state, errorMessage }: UploadB
               JPG, PNG, WebP — max {MAX_FILE_SIZE_MB}MB
             </p>
             {!isError && (
-              <p className="text-text-muted text-xs mt-1">
-                You can also paste an image (Ctrl+V)
-              </p>
+              <p className="text-text-muted text-xs mt-1">You can also paste an image (Ctrl+V)</p>
             )}
           </div>
           {isError && errorMessage && (
@@ -134,15 +152,20 @@ function UploadIcon({ isError, isActive }: { isError: boolean; isActive: boolean
   const color = isError ? '#DC2626' : isActive ? '#2563EB' : '#9CA3AF'
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
-      <rect width="48" height="48" rx="12" fill={isError ? '#FEE2E2' : isActive ? '#EFF6FF' : '#F3F4F6'} />
+      <rect
+        width="48"
+        height="48"
+        rx="12"
+        fill={isError ? '#FEE2E2' : isActive ? '#EFF6FF' : '#F3F4F6'}
+      />
       <path
         d="M24 14L24 30M24 14L18 20M24 14L30 20"
-        stroke={color} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+        stroke={color}
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
-      <path
-        d="M14 34H34"
-        stroke={color} strokeWidth="2.5" strokeLinecap="round"
-      />
+      <path d="M14 34H34" stroke={color} strokeWidth="2.5" strokeLinecap="round" />
     </svg>
   )
 }

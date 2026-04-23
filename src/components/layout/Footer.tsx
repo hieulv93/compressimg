@@ -18,6 +18,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/resize-image"
+                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                >
+                  Resize Image
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/privacy-policy"
                   className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
                 >

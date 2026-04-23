@@ -10,10 +10,14 @@ export function calcReduction(original: number, compressed: number): number {
   return Math.max(0, Math.round(((original - compressed) / original) * 100))
 }
 
-export function generateFilename(originalName: string, format?: string): string {
+export function generateFilename(
+  originalName: string,
+  format?: string,
+  prefix = 'compressed'
+): string {
   const ext = format ?? originalName.split('.').pop() ?? 'jpg'
   const base = originalName.replace(/\.[^.]+$/, '').replace(/[^a-zA-Z0-9._-]/g, '-')
-  return `compressed-${base}.${ext}`
+  return `${prefix}-${base}.${ext}`
 }
 
 export const ACCEPTED_TYPES = ['image/jpeg', 'image/png', 'image/webp']

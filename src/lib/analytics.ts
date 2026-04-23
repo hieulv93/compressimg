@@ -28,6 +28,22 @@ export const analytics = {
   imageDownloaded: (compressedKb: number) =>
     track('image_downloaded', { compressed_kb: Math.round(compressedKb) }),
 
-  compressionError: (errorType: string) =>
-    track('compression_error', { error_type: errorType }),
+  compressionError: (errorType: string) => track('compression_error', { error_type: errorType }),
+
+  imageResized: (
+    originalW: number,
+    originalH: number,
+    newW: number,
+    newH: number,
+    format: string
+  ) =>
+    track('image_resized', {
+      original_width: originalW,
+      original_height: originalH,
+      new_width: newW,
+      new_height: newH,
+      output_format: format,
+    }),
+
+  resizeError: (errorType: string) => track('resize_error', { error_type: errorType }),
 }
