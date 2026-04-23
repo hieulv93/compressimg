@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Free Online Image Tools — Compress & Resize Images | CompressImg',
+  title: 'Free Online Image Tools — Compress, Resize & Convert Images | CompressImg',
   description:
-    'Free browser-based image tools. Compress images up to 90% smaller or resize to any dimension. No upload, no login — 100% private and instant.',
+    'Free browser-based image tools. Compress, resize, and convert JPG, PNG, WebP instantly. No upload, no login — 100% private and instant.',
   alternates: { canonical: 'https://compressimg.pro' },
 }
 
@@ -56,6 +56,38 @@ const tools = [
     description:
       'Change photo dimensions for any platform. Presets for Instagram, YouTube, and more.',
     cta: 'Resize Now',
+    badge: null,
+  },
+  {
+    href: '/convert-image',
+    icon: (
+      <svg
+        className="w-8 h-8 text-primary"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        aria-hidden="true"
+      >
+        <path
+          d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M16 3h3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <line x1="12" y1="8" x2="12" y2="16" strokeLinecap="round" />
+        <polyline points="9 11 12 8 15 11" strokeLinecap="round" strokeLinejoin="round" />
+        <polyline points="9 13 12 16 15 13" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    title: 'Convert Image',
+    description:
+      'Convert between JPG, PNG, and WebP instantly. Transparency preserved for PNG and WebP output.',
+    cta: 'Convert Now',
     badge: null,
   },
 ]

@@ -5,25 +5,9 @@ export default function Footer() {
     <footer className="w-full border-t border-border bg-white mt-auto">
       <div className="max-w-3xl mx-auto px-4 py-8">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
-          <p>© {new Date().getFullYear()} CompressImg.pro — Free online image compression.</p>
+          <p>© {new Date().getFullYear()} CompressImg.pro — Free online image tools.</p>
           <nav aria-label="Footer navigation">
-            <ul className="flex items-center gap-4 flex-wrap justify-center">
-              <li>
-                <Link
-                  href="/compress-image"
-                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
-                >
-                  Compress Image
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/resize-image"
-                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
-                >
-                  Resize Image
-                </Link>
-              </li>
+            <ul className="flex items-center gap-4">
               <li>
                 <Link
                   href="/privacy-policy"

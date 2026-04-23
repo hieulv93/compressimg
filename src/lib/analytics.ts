@@ -46,4 +46,19 @@ export const analytics = {
     }),
 
   resizeError: (errorType: string) => track('resize_error', { error_type: errorType }),
+
+  imageConverted: (
+    inputFormat: string,
+    outputFormat: string,
+    originalKb: number,
+    outputKb: number
+  ) =>
+    track('image_converted', {
+      input_format: inputFormat,
+      output_format: outputFormat,
+      original_kb: Math.round(originalKb),
+      output_kb: Math.round(outputKb),
+    }),
+
+  convertError: (errorType: string) => track('convert_error', { error_type: errorType }),
 }

@@ -30,7 +30,7 @@ export default function Header() {
         </Link>
 
         <nav aria-label="Main navigation">
-          <ul className="flex items-center gap-4 text-sm">
+          <ul className="flex items-center gap-3 text-sm">
             <li>
               <Link
                 href="/compress-image"
@@ -45,6 +45,14 @@ export default function Header() {
                 className="text-text-muted hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded px-1"
               >
                 Resize
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/convert-image"
+                className="text-text-muted hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded px-1"
+              >
+                Convert
               </Link>
             </li>
           </ul>
