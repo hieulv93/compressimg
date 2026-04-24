@@ -54,18 +54,27 @@ export default function CropBox({
   onCrop,
   onReset,
 }: CropBoxProps) {
-  const cropStyle = useMemo(
+  const { x, y, w, h } = crop
+
+  // Pre-compute % strings once per render
+  const pct = useMemo(
     () => ({
-      left: `${crop.x * 100}%`,
-      top: `${crop.y * 100}%`,
-      width: `${crop.w * 100}%`,
-      height: `${crop.h * 100}%`,
+      left: `${x * 100}%`,
+      top: `${y * 100}%`,
+      width: `${w * 100}%`,
+      height: `${h * 100}%`,
+      right: `${(1 - x - w) * 100}%`,
+      bottom: `${(1 - y - h) * 100}%`,
+      midTop: `${y * 100}%`,
+      midH: `${h * 100}%`,
     }),
-    [crop]
+    [x, y, w, h]
   )
 
-  const croppedW = Math.round(crop.w * naturalWidth)
-  const croppedH = Math.round(crop.h * naturalHeight)
+  const croppedW = Math.round(w * naturalWidth)
+  const croppedH = Math.round(h * naturalHeight)
+
+  const OVERLAY = 'absolute bg-black/55 pointer-events-none'
 
   return (
     <div className="space-y-3">
@@ -84,22 +93,35 @@ export default function CropBox({
           draggable={false}
         />
 
-        {/* Dark overlay — box-shadow technique punches through crop area */}
+        {/* 4-div overlay — each div paints only its small area, no giant box-shadow repaint */}
+        {/* Top */}
+        <div className={OVERLAY} style={{ top: 0, left: 0, right: 0, height: pct.top }} />
+        {/* Bottom */}
         <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            left: cropStyle.left,
-            top: cropStyle.top,
-            width: cropStyle.width,
-            height: cropStyle.height,
-            boxShadow: '0 0 0 9999px rgba(0,0,0,0.55)',
-          }}
+          className={OVERLAY}
+          style={{ bottom: 0, left: 0, right: 0, top: `${(y + h) * 100}%` }}
+        />
+        {/* Left */}
+        <div
+          className={OVERLAY}
+          style={{ top: pct.midTop, left: 0, width: pct.left, height: pct.midH }}
+        />
+        {/* Right */}
+        <div
+          className={OVERLAY}
+          style={{ top: pct.midTop, right: 0, left: `${(x + w) * 100}%`, height: pct.midH }}
         />
 
         {/* Crop border + move handle */}
         <div
           className="absolute border-2 border-white"
-          style={{ ...cropStyle, cursor: CURSOR_MAP['move'] }}
+          style={{
+            left: pct.left,
+            top: pct.top,
+            width: pct.width,
+            height: pct.height,
+            cursor: CURSOR_MAP['move'],
+          }}
           onMouseDown={onMouseDown('move')}
           onTouchStart={onTouchStart('move')}
         >
@@ -112,13 +134,13 @@ export default function CropBox({
           </div>
 
           {/* 8 resize handles */}
-          {HANDLES.map(([handle, x, y]) => (
+          {HANDLES.map(([handle, hx, hy]) => (
             <div
               key={handle}
               className="absolute"
               style={{
-                left: x,
-                top: y,
+                left: hx,
+                top: hy,
                 transform: 'translate(-50%, -50%)',
                 width: 44,
                 height: 44,
