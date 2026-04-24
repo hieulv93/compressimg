@@ -40,6 +40,7 @@ const required = [
   'src/lib/compress.ts',
   'src/lib/resize.ts',
   'src/lib/convert.ts',
+  'src/lib/crop.ts',
   'src/lib/analytics.ts',
   'src/lib/utils.ts',
   'src/app/compress-image/page.tsx',
@@ -48,10 +49,14 @@ const required = [
   'src/app/resize-image/layout.tsx',
   'src/app/convert-image/page.tsx',
   'src/app/convert-image/layout.tsx',
+  'src/app/crop-image/page.tsx',
+  'src/app/crop-image/layout.tsx',
   'src/components/tool/ContentSection.tsx',
   'src/components/tool/ResizeContentSection.tsx',
   'src/components/tool/ConvertContentSection.tsx',
+  'src/components/tool/CropContentSection.tsx',
   'src/components/tool/FormatSelector.tsx',
+  'src/hooks/useCropState.ts',
   'src/components/layout/Header.tsx',
   'src/components/layout/Footer.tsx',
   'public/sitemap-0.xml',
@@ -65,6 +70,7 @@ const contentFiles = [
   ['src/components/tool/ContentSection.tsx', 'compress'],
   ['src/components/tool/ResizeContentSection.tsx', 'resize'],
   ['src/components/tool/ConvertContentSection.tsx', 'convert'],
+  ['src/components/tool/CropContentSection.tsx', 'crop'],
 ]
 for (const [fp, name] of contentFiles) {
   const n = countWords(fp)
@@ -77,6 +83,7 @@ for (const [name, fp] of [
   ['compress', 'src/app/compress-image/layout.tsx'],
   ['resize', 'src/app/resize-image/layout.tsx'],
   ['convert', 'src/app/convert-image/layout.tsx'],
+  ['crop', 'src/app/crop-image/layout.tsx'],
 ]) {
   check(`${name}: canonical`, hasPattern(fp, 'canonical'))
   check(`${name}: FAQPage`, hasPattern(fp, 'FAQPage'))
@@ -90,23 +97,27 @@ for (const event of [
   'imageCompressed',
   'imageResized',
   'imageConverted',
+  'imageCropped',
   'resizeError',
   'convertError',
+  'cropError',
 ]) {
   check(`analytics.${event}`, hasPattern(analyticsFile, event))
 }
 
 // ─── Common pitfalls (lessons from previous builds) ───────────────
 console.log('\n── Pitfall checks ──')
-// processingLabel must be set on resize + convert (not default "Compressing...")
+// processingLabel must be set on resize + convert + crop (not default "Compressing...")
 check('resize: processingLabel set', hasPattern('src/app/resize-image/page.tsx', 'processingLabel'))
 check(
   'convert: processingLabel set',
   hasPattern('src/app/convert-image/page.tsx', 'processingLabel')
 )
-// ProgressBar color override (no quality slider on resize/convert)
+check('crop: processingLabel set', hasPattern('src/app/crop-image/page.tsx', 'processingLabel'))
+// ProgressBar color override (no quality slider on resize/convert/crop)
 check('resize: ProgressBar color prop', hasPattern('src/app/resize-image/page.tsx', 'color='))
 check('convert: ProgressBar color prop', hasPattern('src/app/convert-image/page.tsx', 'color='))
+check('crop: ProgressBar color prop', hasPattern('src/app/crop-image/page.tsx', 'color='))
 // generateFilename prefix
 check(
   "resize: uses 'resized' prefix",
@@ -116,17 +127,30 @@ check(
   "convert: uses 'converted' prefix",
   hasPattern('src/components/tool/ConvertResultCard.tsx', "'converted'")
 )
+check(
+  "crop: uses 'cropped' prefix",
+  hasPattern('src/components/tool/CropResultCard.tsx', "'cropped'")
+)
 // AdSense lazyOnload
 check('layout: AdSense/GA4 lazyOnload', hasPattern('src/app/layout.tsx', 'lazyOnload'))
 // setTimeout yield before canvas ops
 check('resize: setTimeout yield', hasPattern('src/app/resize-image/page.tsx', 'setTimeout'))
 check('convert: setTimeout yield', hasPattern('src/app/convert-image/page.tsx', 'setTimeout'))
+check('crop: setTimeout yield', hasPattern('src/app/crop-image/page.tsx', 'setTimeout'))
 // AdSlot placeholder returns null
 check('AdSlot: null when placeholder', hasPattern('src/components/ads/AdSlot.tsx', 'return null'))
+// Crop-specific
+check('crop: useCropState hook used', hasPattern('src/app/crop-image/page.tsx', 'useCropState'))
+check('crop: CropBox component used', hasPattern('src/app/crop-image/page.tsx', 'CropBox'))
+check('crop: CropPresets component used', hasPattern('src/app/crop-image/page.tsx', 'CropPresets'))
+check(
+  'crop: revokeCropPreview on reset',
+  hasPattern('src/app/crop-image/page.tsx', 'revokeCropPreview')
+)
 
 // ─── Sitemap ──────────────────────────────────────────────────────
 console.log('\n── Sitemap ──')
-for (const route of ['/compress-image/', '/resize-image/', '/convert-image/']) {
+for (const route of ['/compress-image/', '/resize-image/', '/convert-image/', '/crop-image/']) {
   check(`sitemap: ${route}`, hasPattern('public/sitemap-0.xml', route))
 }
 

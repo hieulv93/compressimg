@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Free Online Image Tools — Compress, Resize & Convert Images | CompressImg',
+  title: 'Free Online Image Tools — Compress, Resize, Convert & Crop Images | CompressImg',
   description:
-    'Free browser-based image tools. Compress, resize, and convert JPG, PNG, WebP instantly. No upload, no login — 100% private and instant.',
+    'Free browser-based image tools. Compress, resize, convert, and crop JPG, PNG, WebP instantly. No upload, no login — 100% private and instant.',
   alternates: { canonical: 'https://compressimg.pro' },
 }
 
@@ -88,6 +88,27 @@ const tools = [
     description:
       'Convert between JPG, PNG, and WebP instantly. Transparency preserved for PNG and WebP output.',
     cta: 'Convert Now',
+    badge: null,
+  },
+  {
+    href: '/crop-image',
+    icon: (
+      <svg
+        className="w-8 h-8 text-primary"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.75"
+        aria-hidden="true"
+      >
+        <path d="M6 2v14a2 2 0 0 0 2 2h14" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M18 22V8a2 2 0 0 0-2-2H2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    ),
+    title: 'Crop Image',
+    description:
+      'Trim, cut, and crop photos to any ratio. Presets for Instagram, YouTube, Stories, and more.',
+    cta: 'Crop Now',
     badge: null,
   },
 ]

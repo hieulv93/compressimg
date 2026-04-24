@@ -61,4 +61,21 @@ export const analytics = {
     }),
 
   convertError: (errorType: string) => track('convert_error', { error_type: errorType }),
+
+  imageCropped: (
+    originalW: number,
+    originalH: number,
+    croppedW: number,
+    croppedH: number,
+    format: string
+  ) =>
+    track('image_cropped', {
+      original_width: originalW,
+      original_height: originalH,
+      cropped_width: croppedW,
+      cropped_height: croppedH,
+      output_format: format,
+    }),
+
+  cropError: (errorType: string) => track('crop_error', { error_type: errorType }),
 }

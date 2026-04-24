@@ -55,6 +55,14 @@ export default function Header() {
                 Convert
               </Link>
             </li>
+            <li>
+              <Link
+                href="/crop-image"
+                className="text-text-muted hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded px-1"
+              >
+                Crop
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
