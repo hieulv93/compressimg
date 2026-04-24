@@ -271,6 +271,45 @@ export default function ConvertContentSection() {
         </p>
       </div>
 
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">More Free Image Tools</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link
+            href="/compress-image"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Compress Image
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Reduce image file size up to 90% without visible quality loss.
+            </p>
+          </Link>
+          <Link
+            href="/resize-image"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Resize Image
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Change image dimensions to any size while preserving quality.
+            </p>
+          </Link>
+          <Link
+            href="/crop-image"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Crop Image
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Trim and cut any area with free or fixed aspect ratio presets.
+            </p>
+          </Link>
+        </div>
+      </div>
+
       <ConvertFAQSection />
     </section>
   )

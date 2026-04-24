@@ -216,6 +216,45 @@ export default function ContentSection() {
         </p>
       </div>
 
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">More Free Image Tools</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <Link
+            href="/resize-image"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Resize Image
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Change image dimensions to any size while preserving quality.
+            </p>
+          </Link>
+          <Link
+            href="/convert-image"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Convert Image Format
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Convert between JPG, PNG, and WebP instantly in your browser.
+            </p>
+          </Link>
+          <Link
+            href="/crop-image"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Crop Image
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Trim and cut any area with free or fixed aspect ratio presets.
+            </p>
+          </Link>
+        </div>
+      </div>
+
       <FAQSection />
     </section>
   )

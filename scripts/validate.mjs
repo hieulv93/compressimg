@@ -148,9 +148,60 @@ check(
   hasPattern('src/app/crop-image/page.tsx', 'revokeCropPreview')
 )
 
+// ─── Long-tail pages ──────────────────────────────────────────────
+console.log('\n── Long-tail pages ──')
+const longtailPages = [
+  ['src/app/compress-jpg-online/layout.tsx', 'compress-jpg-online'],
+  ['src/app/compress-png-online/layout.tsx', 'compress-png-online'],
+]
+for (const [fp, name] of longtailPages) {
+  check(`exists: ${name}/layout.tsx`, existsSync(fp))
+  check(`exists: ${name}/page.tsx`, existsSync(fp.replace('layout', 'page')))
+  check(`${name}: canonical`, hasPattern(fp, 'canonical'))
+  check(`${name}: FAQPage`, hasPattern(fp, 'FAQPage'))
+  check(`${name}: WebApplication`, hasPattern(fp, 'WebApplication'))
+}
+
+// ─── Long-tail content sections ───────────────────────────────────
+console.log('\n── Long-tail content word count (≥1000) ──')
+const longtailContent = [
+  ['src/components/tool/JpgContentSection.tsx', 'compress-jpg'],
+  ['src/components/tool/PngContentSection.tsx', 'compress-png'],
+]
+for (const [fp, name] of longtailContent) {
+  const n = countWords(fp)
+  check(`${name}: ${n} words`, n >= 1000, `need ≥1000`)
+}
+
+// ─── Internal links ───────────────────────────────────────────────
+console.log('\n── Internal links (Related Tools) ──')
+check(
+  'ContentSection: has Related Tools',
+  hasPattern('src/components/tool/ContentSection.tsx', 'More Free Image Tools')
+)
+check(
+  'ResizeContentSection: has Related Tools',
+  hasPattern('src/components/tool/ResizeContentSection.tsx', 'More Free Image Tools')
+)
+check(
+  'ConvertContentSection: has Related Tools',
+  hasPattern('src/components/tool/ConvertContentSection.tsx', 'More Free Image Tools')
+)
+check(
+  'CropContentSection: has Related Tools',
+  hasPattern('src/components/tool/CropContentSection.tsx', 'More Free Image Tools')
+)
+
 // ─── Sitemap ──────────────────────────────────────────────────────
 console.log('\n── Sitemap ──')
-for (const route of ['/compress-image/', '/resize-image/', '/convert-image/', '/crop-image/']) {
+for (const route of [
+  '/compress-image/',
+  '/resize-image/',
+  '/convert-image/',
+  '/crop-image/',
+  '/compress-jpg-online/',
+  '/compress-png-online/',
+]) {
   check(`sitemap: ${route}`, hasPattern('public/sitemap-0.xml', route))
 }
 

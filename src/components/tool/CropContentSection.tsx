@@ -165,6 +165,11 @@ export default function CropContentSection() {
             empty space and draws attention directly to the subject. This is especially effective
             for e-commerce product listings where a clean, focused image increases conversion rates.
           </p>
+          <p>
+            <strong className="text-text-main">Prepare for printing.</strong> Standard print sizes
+            (4×6, 5×7, 8×10) use fixed aspect ratios. Use the preset buttons to crop your photo to
+            the exact ratio required before sending to a print lab or photo service.
+          </p>
         </div>
       </div>
 
@@ -179,37 +184,56 @@ export default function CropContentSection() {
           your images remain completely private, even when working with confidential documents,
           personal photos, or proprietary design assets.
         </p>
+        <p className="text-text-muted leading-relaxed">
+          For full details on how we handle data and advertising, see our{' '}
+          <a href="/privacy-policy" className="text-primary underline">
+            Privacy Policy
+          </a>{' '}
+          and{' '}
+          <a href="/terms" className="text-primary underline">
+            Terms of Service
+          </a>
+          .
+        </p>
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-xl font-bold">Other Free Image Tools</h2>
-        <p className="text-text-muted leading-relaxed">
-          Cropping is often just the first step in preparing an image. CompressImg offers a complete
-          set of browser-based image tools, all free and all private:
-        </p>
-        <ul className="space-y-2 text-text-muted">
-          <li>
-            <a href="/compress-image" className="text-primary hover:underline font-medium">
+        <h2 className="text-xl font-bold text-text-main">More Free Image Tools</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <a
+            href="/compress-image"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
               Compress Image
-            </a>{' '}
-            — Reduce file size by up to 90% using smart compression. Ideal after cropping to keep
-            your images fast-loading.
-          </li>
-          <li>
-            <a href="/resize-image" className="text-primary hover:underline font-medium">
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Reduce image file size up to 90% without visible quality loss.
+            </p>
+          </a>
+          <a
+            href="/resize-image"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
               Resize Image
-            </a>{' '}
-            — Change pixel dimensions without cropping. Set exact width and height, lock aspect
-            ratio, or choose from common presets.
-          </li>
-          <li>
-            <a href="/convert-image" className="text-primary hover:underline font-medium">
-              Convert Image
-            </a>{' '}
-            — Convert between JPG, PNG, and WebP formats. Useful when a platform requires a specific
-            file format.
-          </li>
-        </ul>
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Change image dimensions to any size while preserving quality.
+            </p>
+          </a>
+          <a
+            href="/convert-image"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Convert Image Format
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Convert between JPG, PNG, and WebP instantly in your browser.
+            </p>
+          </a>
+        </div>
       </div>
 
       {/* FAQ Section */}
