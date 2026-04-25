@@ -113,6 +113,54 @@ const tools = [
   },
 ]
 
+const popularUseCases = [
+  {
+    href: '/jpg-to-png',
+    title: 'JPG to PNG',
+    description: 'Convert JPG photos to PNG with transparency support.',
+  },
+  {
+    href: '/png-to-jpg',
+    title: 'PNG to JPG',
+    description: 'Convert PNG to JPG for smaller file sizes.',
+  },
+  {
+    href: '/compress-image-for-whatsapp',
+    title: 'Compress for WhatsApp',
+    description: 'Reduce photo size before sharing to avoid double-compression.',
+  },
+  {
+    href: '/compress-image-for-instagram',
+    title: 'Compress for Instagram',
+    description: 'Pre-compress photos before posting to keep them sharp.',
+  },
+  {
+    href: '/compress-image-to-100kb',
+    title: 'Compress to 100KB',
+    description: 'Reduce any image to under 100KB for forms and portals.',
+  },
+  {
+    href: '/webp-to-jpg',
+    title: 'WebP to JPG',
+    description: 'Convert WebP to JPG for universal compatibility.',
+  },
+  {
+    href: '/compress-image-for-facebook',
+    title: 'Compress for Facebook',
+    description: 'Optimize photos for Facebook feed and cover photos.',
+  },
+  {
+    href: '/jpg-to-webp',
+    title: 'JPG to WebP',
+    description: 'Convert JPG to WebP for 25–35% smaller web images.',
+  },
+  {
+    href: '/compress-image-to-50kb',
+    title: 'Compress to 50KB',
+    description: 'Hit strict 50KB limits for government portals and exams.',
+  },
+]
+
 export default function HomePage() {
   return (
     <main className="flex-1">
@@ -170,6 +218,24 @@ export default function HomePage() {
               </span>
             </Link>
           ))}
+        </div>
+
+        <div className="space-y-4 pt-4 border-t border-border">
+          <h2 className="text-base font-semibold text-text-main">Popular Use Cases</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {popularUseCases.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+              >
+                <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+                  {item.title}
+                </p>
+                <p className="text-xs text-text-muted mt-1 leading-relaxed">{item.description}</p>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </main>
