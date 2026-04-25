@@ -11,6 +11,7 @@ import CropContentSection from '@/components/tool/CropContentSection'
 import { cropImage, revokeCropPreview } from '@/lib/crop'
 import type { CropResult } from '@/lib/crop'
 import { MAX_FILE_SIZE_MB } from '@/lib/utils'
+import { isHeicFile, convertHeicToJpeg } from '@/lib/heic'
 import { useCropState } from '@/hooks/useCropState'
 import { analytics } from '@/lib/analytics'
 
@@ -54,15 +55,18 @@ export default function CropImagePage() {
       setResult(null)
       setErrorMessage('')
 
+      // Convert HEIC before loading into CropBox
+      const fileToLoad = isHeicFile(file) ? await convertHeicToJpeg(file) : file
+
       // Load image to get natural dimensions before showing CropBox
-      const objectUrl = URL.createObjectURL(file)
+      const objectUrl = URL.createObjectURL(fileToLoad)
       imgLoadUrlRef.current = objectUrl
 
       const img = new Image()
       img.onload = () => {
         setNaturalSize({ w: img.naturalWidth, h: img.naturalHeight })
         setPreviewUrl(objectUrl)
-        setOriginalFile(file)
+        setOriginalFile(fileToLoad)
         setPageState('ready')
         analytics.imageUploaded(file.type, Math.round(file.size / 1024))
       }

@@ -168,6 +168,7 @@ const longtailPages = [
   ['src/app/compress-image-for-twitter/layout.tsx', 'compress-image-for-twitter'],
   ['src/app/compress-image-to-50kb/layout.tsx', 'compress-image-to-50kb'],
   ['src/app/compress-image-for-linkedin/layout.tsx', 'compress-image-for-linkedin'],
+  ['src/app/heic-to-jpg/layout.tsx', 'heic-to-jpg'],
 ]
 for (const [fp, name] of longtailPages) {
   check(`exists: ${name}/layout.tsx`, existsSync(fp))
@@ -197,6 +198,7 @@ const longtailContent = [
   ['src/components/tool/CompressForTwitterContentSection.tsx', 'compress-for-twitter'],
   ['src/components/tool/CompressTo50KbContentSection.tsx', 'compress-to-50kb'],
   ['src/components/tool/CompressForLinkedInContentSection.tsx', 'compress-for-linkedin'],
+  ['src/components/tool/HeicToJpgContentSection.tsx', 'heic-to-jpg'],
 ]
 for (const [fp, name] of longtailContent) {
   const n = countWords(fp)
@@ -246,6 +248,7 @@ for (const route of [
   '/compress-image-for-twitter/',
   '/compress-image-to-50kb/',
   '/compress-image-for-linkedin/',
+  '/heic-to-jpg/',
 ]) {
   check(`sitemap: ${route}`, hasPattern('public/sitemap-0.xml', route))
 }

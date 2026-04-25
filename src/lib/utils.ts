@@ -20,6 +20,12 @@ export function generateFilename(
   return `${prefix}-${base}.${ext}`
 }
 
-export const ACCEPTED_TYPES = ['image/jpeg', 'image/png', 'image/webp']
+export const ACCEPTED_TYPES = ['image/jpeg', 'image/png', 'image/webp', 'image/heic', 'image/heif']
 export const MAX_FILE_SIZE_MB = 20
 export const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024
+
+export function isValidImageFile(file: File): boolean {
+  if (ACCEPTED_TYPES.includes(file.type)) return true
+  const lower = file.name.toLowerCase()
+  return lower.endsWith('.heic') || lower.endsWith('.heif')
+}

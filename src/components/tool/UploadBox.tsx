@@ -1,7 +1,7 @@
 'use client'
 
 import { useRef, useState, useCallback, DragEvent, ChangeEvent, ClipboardEvent } from 'react'
-import { ACCEPTED_TYPES, MAX_FILE_SIZE_BYTES, MAX_FILE_SIZE_MB } from '@/lib/utils'
+import { isValidImageFile, MAX_FILE_SIZE_BYTES, MAX_FILE_SIZE_MB } from '@/lib/utils'
 
 type UploadState = 'idle' | 'dragging' | 'processing' | 'done' | 'error'
 
@@ -23,7 +23,7 @@ export default function UploadBox({
 
   const validateAndSelect = useCallback(
     (file: File) => {
-      if (!ACCEPTED_TYPES.includes(file.type)) {
+      if (!isValidImageFile(file)) {
         onFileSelect(Object.assign(file, { _invalid: 'format' }))
         return
       }
@@ -109,7 +109,7 @@ export default function UploadBox({
       <input
         ref={inputRef}
         type="file"
-        accept="image/jpeg,image/png,image/webp"
+        accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif"
         className="hidden"
         onChange={handleChange}
         aria-hidden="true"
@@ -131,7 +131,7 @@ export default function UploadBox({
               {isError ? 'Try again' : 'Drop image here or click to upload'}
             </p>
             <p className="text-text-muted text-sm mt-1">
-              JPG, PNG, WebP — max {MAX_FILE_SIZE_MB}MB
+              JPG, PNG, WebP, HEIC — max {MAX_FILE_SIZE_MB}MB
             </p>
             {!isError && (
               <p className="text-text-muted text-xs mt-1">You can also paste an image (Ctrl+V)</p>

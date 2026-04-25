@@ -3,10 +3,12 @@
 import Image from 'next/image'
 import { formatBytes, calcReduction, generateFilename } from '@/lib/utils'
 import DownloadButton from './DownloadButton'
+import BeforeAfterSlider from './BeforeAfterSlider'
 
 interface ResultCardProps {
   blob: Blob
   previewUrl: string
+  originalPreviewUrl?: string
   originalSize: number
   compressedSize: number
   format: string
@@ -19,6 +21,7 @@ interface ResultCardProps {
 export default function ResultCard({
   blob,
   previewUrl,
+  originalPreviewUrl,
   originalSize,
   compressedSize,
   format,
@@ -37,16 +40,30 @@ export default function ResultCard({
       aria-label="Compression result"
       aria-live="polite"
     >
-      {/* Preview */}
-      <div className="relative w-full bg-surface flex items-center justify-center" style={{ minHeight: '200px' }}>
-        <Image
-          src={previewUrl}
-          alt={`Compressed preview of ${originalName}`}
-          width={600}
-          height={400}
-          className="max-h-64 w-auto object-contain"
-          unoptimized
-        />
+      {/* Preview: before/after slider when original URL is available, otherwise single preview */}
+      <div className="w-full bg-surface" style={{ minHeight: '200px' }}>
+        {originalPreviewUrl ? (
+          <BeforeAfterSlider
+            beforeUrl={originalPreviewUrl}
+            afterUrl={previewUrl}
+            beforeLabel="Original"
+            afterLabel="Compressed"
+          />
+        ) : (
+          <div
+            className="relative w-full flex items-center justify-center"
+            style={{ minHeight: '200px' }}
+          >
+            <Image
+              src={previewUrl}
+              alt={`Compressed preview of ${originalName}`}
+              width={600}
+              height={400}
+              className="max-h-64 w-auto object-contain"
+              unoptimized
+            />
+          </div>
+        )}
       </div>
 
       {/* Stats */}
@@ -57,7 +74,9 @@ export default function ResultCard({
             <p className="text-sm font-semibold text-text-main">{formatBytes(originalSize)}</p>
           </div>
           <div className="space-y-1">
-            <p className="text-xs text-text-muted uppercase tracking-wide font-medium">Compressed</p>
+            <p className="text-xs text-text-muted uppercase tracking-wide font-medium">
+              Compressed
+            </p>
             <p className="text-sm font-semibold text-primary">{formatBytes(compressedSize)}</p>
           </div>
           <div className="space-y-1">
@@ -79,7 +98,12 @@ export default function ResultCard({
           />
         </div>
 
-        <DownloadButton blob={blob} filename={filename} compressedSize={compressedSize} onDownload={onDownload} />
+        <DownloadButton
+          blob={blob}
+          filename={filename}
+          compressedSize={compressedSize}
+          onDownload={onDownload}
+        />
 
         <div className="flex gap-3">
           <button

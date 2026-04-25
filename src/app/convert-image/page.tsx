@@ -10,6 +10,7 @@ import ConvertContentSection from '@/components/tool/ConvertContentSection'
 import { convertImage, revokeConvertPreview } from '@/lib/convert'
 import type { ConvertResult, OutputFormat } from '@/lib/convert'
 import { MAX_FILE_SIZE_MB } from '@/lib/utils'
+import { isHeicFile, convertHeicToJpeg } from '@/lib/heic'
 import { analytics } from '@/lib/analytics'
 
 type PageState = 'idle' | 'processing' | 'done' | 'error'
@@ -64,9 +65,10 @@ export default function ConvertImagePage() {
 
       if (result?.previewUrl) revokeConvertPreview(result.previewUrl)
       setResult(null)
-      setOriginalFile(file)
+      const prepared = isHeicFile(file) ? await convertHeicToJpeg(file) : file
+      setOriginalFile(prepared)
       analytics.imageUploaded(file.type, Math.round(file.size / 1024))
-      await handleConvert(file, outputFormat)
+      await handleConvert(prepared, outputFormat)
     },
     [outputFormat, result, handleConvert]
   )

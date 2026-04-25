@@ -11,23 +11,23 @@ export interface CompressResult {
   previewUrl: string
 }
 
-export async function compressImage(
-  file: File,
-  options: CompressOptions
-): Promise<CompressResult> {
+export async function compressImage(file: File, options: CompressOptions): Promise<CompressResult> {
+  const { isHeicFile, convertHeicToJpeg } = await import('./heic')
+  const fileToProcess = isHeicFile(file) ? await convertHeicToJpeg(file) : file
+
   const { default: imageCompression } = await import('browser-image-compression')
 
   const compressionOptions = {
     maxWidthOrHeight: options.maxDimensionPx ?? 1920,
     useWebWorker: true,
     initialQuality: options.quality / 100,
-    fileType: file.type as 'image/jpeg' | 'image/png' | 'image/webp',
+    fileType: fileToProcess.type as 'image/jpeg' | 'image/png' | 'image/webp',
     alwaysKeepResolution: true,
   }
 
-  const compressed = await imageCompression(file, compressionOptions)
+  const compressed = await imageCompression(fileToProcess, compressionOptions)
   const previewUrl = URL.createObjectURL(compressed)
-  const format = file.type.split('/')[1] ?? 'jpeg'
+  const format = fileToProcess.type.split('/')[1] ?? 'jpeg'
 
   return {
     blob: compressed,

@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import UploadBox from '@/components/tool/UploadBox'
 import QualitySlider from '@/components/tool/QualitySlider'
 import ProgressBar from '@/components/tool/ProgressBar'
@@ -20,46 +20,63 @@ export default function CompressImagePage() {
   const [result, setResult] = useState<CompressResult | null>(null)
   const [errorMessage, setErrorMessage] = useState('')
   const [originalFile, setOriginalFile] = useState<File | null>(null)
+  const [originalPreviewUrl, setOriginalPreviewUrl] = useState<string | null>(null)
+  const origUrlRef = useRef<string | null>(null)
 
-  const handleFileSelect = useCallback(async (file: File) => {
-    const fileWithFlag = file as File & { _invalid?: string }
-    if (fileWithFlag._invalid === 'format') {
-      setErrorMessage('Unsupported format. Use JPG, PNG, or WebP.')
-      setPageState('error')
-      return
-    }
-    if (fileWithFlag._invalid === 'size') {
-      setErrorMessage(`File too large. Max ${MAX_FILE_SIZE_MB}MB.`)
-      setPageState('error')
-      return
-    }
+  const handleFileSelect = useCallback(
+    async (file: File) => {
+      const fileWithFlag = file as File & { _invalid?: string }
+      if (fileWithFlag._invalid === 'format') {
+        setErrorMessage('Unsupported format. Use JPG, PNG, or WebP.')
+        setPageState('error')
+        return
+      }
+      if (fileWithFlag._invalid === 'size') {
+        setErrorMessage(`File too large. Max ${MAX_FILE_SIZE_MB}MB.`)
+        setPageState('error')
+        return
+      }
 
-    setOriginalFile(file)
-    setPageState('processing')
-    setErrorMessage('')
-    analytics.imageUploaded(file.type, Math.round(file.size / 1024))
+      setOriginalFile(file)
+      setPageState('processing')
+      setErrorMessage('')
 
-    try {
-      const compressed = await compressImage(file, { quality })
-      setResult(compressed)
-      setPageState('done')
-      analytics.imageCompressed(
-        Math.round(compressed.originalSize / 1024),
-        Math.round(compressed.compressedSize / 1024),
-        compressed.format,
-        quality
-      )
-    } catch {
-      setErrorMessage('Compression failed. Please try again.')
-      setPageState('error')
-      analytics.compressionError('compression_failed')
-    }
-  }, [quality])
+      // Create original preview URL for before/after comparison
+      if (origUrlRef.current) URL.revokeObjectURL(origUrlRef.current)
+      const origUrl = URL.createObjectURL(file)
+      origUrlRef.current = origUrl
+      setOriginalPreviewUrl(origUrl)
+
+      analytics.imageUploaded(file.type, Math.round(file.size / 1024))
+
+      try {
+        const compressed = await compressImage(file, { quality })
+        setResult(compressed)
+        setPageState('done')
+        analytics.imageCompressed(
+          Math.round(compressed.originalSize / 1024),
+          Math.round(compressed.compressedSize / 1024),
+          compressed.format,
+          quality
+        )
+      } catch {
+        setErrorMessage('Compression failed. Please try again.')
+        setPageState('error')
+        analytics.compressionError('compression_failed')
+      }
+    },
+    [quality]
+  )
 
   const handleReset = useCallback(() => {
     if (result?.previewUrl) revokePreview(result.previewUrl)
+    if (origUrlRef.current) {
+      URL.revokeObjectURL(origUrlRef.current)
+      origUrlRef.current = null
+    }
     setResult(null)
     setOriginalFile(null)
+    setOriginalPreviewUrl(null)
     setErrorMessage('')
     setPageState('idle')
   }, [result])
@@ -86,22 +103,20 @@ export default function CompressImagePage() {
     }
   }, [originalFile, result, quality])
 
-  const uploadBoxState = pageState === 'done'
-    ? 'done'
-    : pageState === 'processing'
-    ? 'processing'
-    : pageState === 'error'
-    ? 'error'
-    : 'idle'
+  const uploadBoxState =
+    pageState === 'done'
+      ? 'done'
+      : pageState === 'processing'
+        ? 'processing'
+        : pageState === 'error'
+          ? 'error'
+          : 'idle'
 
   return (
     <main className="flex-1">
       <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12 space-y-6">
-
         <div className="text-center space-y-2">
-          <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
-            Compress Image Online
-          </h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-text-main">Compress Image Online</h1>
           <p className="text-text-muted text-sm sm:text-base">
             Reduce image file size instantly — free, private, 100% in your browser
           </p>
@@ -137,6 +152,7 @@ export default function CompressImagePage() {
           <ResultCard
             blob={result.blob}
             previewUrl={result.previewUrl}
+            originalPreviewUrl={originalPreviewUrl ?? undefined}
             originalSize={result.originalSize}
             compressedSize={result.compressedSize}
             format={result.format}
@@ -151,7 +167,6 @@ export default function CompressImagePage() {
         <AdSlot compressionDone={pageState === 'done'} slot="placeholder-slot-id" />
 
         <ContentSection />
-
       </div>
     </main>
   )

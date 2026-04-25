@@ -16,6 +16,7 @@ interface ResizeResultCardProps {
   format: string
   originalName: string
   onReset: () => void
+  onTryDifferentSize?: () => void
   onDownload?: () => void
 }
 
@@ -31,6 +32,7 @@ export default function ResizeResultCard({
   format,
   originalName,
   onReset,
+  onTryDifferentSize,
   onDownload,
 }: ResizeResultCardProps) {
   const filename = generateFilename(originalName, format, 'resized')
@@ -102,12 +104,22 @@ export default function ResizeResultCard({
           onDownload={onDownload}
         />
 
-        <button
-          onClick={onReset}
-          className="w-full touch-target text-sm text-text-muted hover:text-text-main border border-border rounded-lg py-2 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-        >
-          Resize another image
-        </button>
+        <div className="flex gap-3">
+          {onTryDifferentSize && (
+            <button
+              onClick={onTryDifferentSize}
+              className="flex-1 touch-target text-sm font-medium text-primary border border-primary rounded-lg py-2 hover:bg-drag-active transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            >
+              Try different size
+            </button>
+          )}
+          <button
+            onClick={onReset}
+            className="flex-1 touch-target text-sm text-text-muted hover:text-text-main border border-border rounded-lg py-2 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          >
+            New image
+          </button>
+        </div>
       </div>
     </div>
   )
