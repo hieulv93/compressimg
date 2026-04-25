@@ -286,17 +286,6 @@ export default function CompressForInstagramContentSection() {
         <h2 className="text-xl font-bold text-text-main">More Free Image Tools</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <Link
-            href="/resize-image"
-            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
-          >
-            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Resize Image
-            </p>
-            <p className="text-xs text-text-muted mt-1">
-              Resize to 1080px for Instagram feed, Stories, or Reels before compressing.
-            </p>
-          </Link>
-          <Link
             href="/compress-image-for-whatsapp"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
@@ -308,14 +297,25 @@ export default function CompressForInstagramContentSection() {
             </p>
           </Link>
           <Link
-            href="/compress-image"
+            href="/compress-image-for-facebook"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress Image
+              Compress for Facebook
             </p>
             <p className="text-xs text-text-muted mt-1">
-              General-purpose image compressor for JPG, PNG, and WebP files.
+              Optimize photos for Facebook feed and cover before posting.
+            </p>
+          </Link>
+          <Link
+            href="/compress-image-for-twitter"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Compress for Twitter
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Pre-compress images before tweeting to keep photos sharp on the timeline.
             </p>
           </Link>
         </div>

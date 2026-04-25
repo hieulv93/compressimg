@@ -231,36 +231,36 @@ export default function CompressForWhatsAppContentSection() {
         <h2 className="text-xl font-bold text-text-main">More Free Image Tools</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
           <Link
-            href="/compress-image-for-email"
+            href="/compress-image-for-instagram"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress for Email
+              Compress for Instagram
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Reduce image size to fit Gmail, Outlook, and other email providers.
+              Reduce photo size before posting on Instagram to avoid double-compression.
             </p>
           </Link>
           <Link
-            href="/compress-image"
+            href="/compress-image-for-facebook"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress Any Image
+              Compress for Facebook
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Compress JPG, PNG, and WebP — all formats in one tool.
+              Optimize photos for Facebook feed and cover before posting.
             </p>
           </Link>
           <Link
-            href="/resize-image"
+            href="/compress-image-for-twitter"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Resize Image
+              Compress for Twitter
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Change image dimensions to any size while preserving quality.
+              Pre-compress images before tweeting to keep photos sharp on the timeline.
             </p>
           </Link>
         </div>

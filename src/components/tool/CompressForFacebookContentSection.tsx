@@ -295,14 +295,14 @@ export default function CompressForFacebookContentSection() {
             </p>
           </Link>
           <Link
-            href="/resize-image"
+            href="/compress-image-for-twitter"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Resize Image
+              Compress for Twitter
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Resize photos to Facebook&apos;s exact dimensions before compressing.
+              Pre-compress images before tweeting to keep photos sharp on the timeline.
             </p>
           </Link>
         </div>

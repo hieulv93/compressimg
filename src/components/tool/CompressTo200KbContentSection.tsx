@@ -282,14 +282,14 @@ export default function CompressTo200KbContentSection() {
             </p>
           </Link>
           <Link
-            href="/crop-image"
+            href="/compress-image-to-50kb"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Crop Image
+              Compress to 50KB
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Crop to portrait ratio or remove background before compressing a headshot.
+              Hit a strict 50KB limit for government portals and exam registration forms.
             </p>
           </Link>
         </div>
