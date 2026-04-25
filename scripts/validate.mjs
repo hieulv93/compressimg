@@ -153,6 +153,7 @@ console.log('\n── Long-tail pages ──')
 const longtailPages = [
   ['src/app/compress-jpg-online/layout.tsx', 'compress-jpg-online'],
   ['src/app/compress-png-online/layout.tsx', 'compress-png-online'],
+  ['src/app/compress-image-to-100kb/layout.tsx', 'compress-image-to-100kb'],
 ]
 for (const [fp, name] of longtailPages) {
   check(`exists: ${name}/layout.tsx`, existsSync(fp))
@@ -167,6 +168,7 @@ console.log('\n── Long-tail content word count (≥1000) ──')
 const longtailContent = [
   ['src/components/tool/JpgContentSection.tsx', 'compress-jpg'],
   ['src/components/tool/PngContentSection.tsx', 'compress-png'],
+  ['src/components/tool/CompressTo100KbContentSection.tsx', 'compress-to-100kb'],
 ]
 for (const [fp, name] of longtailContent) {
   const n = countWords(fp)
@@ -201,6 +203,7 @@ for (const route of [
   '/crop-image/',
   '/compress-jpg-online/',
   '/compress-png-online/',
+  '/compress-image-to-100kb/',
 ]) {
   check(`sitemap: ${route}`, hasPattern('public/sitemap-0.xml', route))
 }
