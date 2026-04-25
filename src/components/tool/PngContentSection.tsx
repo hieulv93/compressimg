@@ -264,14 +264,14 @@ export default function PngContentSection() {
             </p>
           </Link>
           <Link
-            href="/convert-image"
+            href="/compress-image-for-email"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Convert Image Format
+              Compress for Email
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Convert PNG to JPG, WebP, or between any format instantly.
+              Reduce PNG size to fit Gmail, Outlook, and other email providers.
             </p>
           </Link>
         </div>

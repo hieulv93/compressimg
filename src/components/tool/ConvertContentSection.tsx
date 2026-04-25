@@ -297,14 +297,14 @@ export default function ConvertContentSection() {
             </p>
           </Link>
           <Link
-            href="/crop-image"
+            href="/webp-to-jpg"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Crop Image
+              WebP to JPG
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Trim and cut any area with free or fixed aspect ratio presets.
+              Convert WebP to universally compatible JPG for any platform.
             </p>
           </Link>
         </div>

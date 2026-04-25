@@ -158,6 +158,9 @@ const longtailPages = [
   ['src/app/jpg-to-png/layout.tsx', 'jpg-to-png'],
   ['src/app/png-to-jpg/layout.tsx', 'png-to-jpg'],
   ['src/app/webp-to-jpg/layout.tsx', 'webp-to-jpg'],
+  ['src/app/compress-image-for-whatsapp/layout.tsx', 'compress-image-for-whatsapp'],
+  ['src/app/jpg-to-webp/layout.tsx', 'jpg-to-webp'],
+  ['src/app/webp-to-png/layout.tsx', 'webp-to-png'],
 ]
 for (const [fp, name] of longtailPages) {
   check(`exists: ${name}/layout.tsx`, existsSync(fp))
@@ -177,6 +180,9 @@ const longtailContent = [
   ['src/components/tool/JpgToPngContentSection.tsx', 'jpg-to-png'],
   ['src/components/tool/PngToJpgContentSection.tsx', 'png-to-jpg'],
   ['src/components/tool/WebpToJpgContentSection.tsx', 'webp-to-jpg'],
+  ['src/components/tool/CompressForWhatsAppContentSection.tsx', 'compress-for-whatsapp'],
+  ['src/components/tool/JpgToWebpContentSection.tsx', 'jpg-to-webp'],
+  ['src/components/tool/WebpToPngContentSection.tsx', 'webp-to-png'],
 ]
 for (const [fp, name] of longtailContent) {
   const n = countWords(fp)
@@ -216,6 +222,9 @@ for (const route of [
   '/jpg-to-png/',
   '/png-to-jpg/',
   '/webp-to-jpg/',
+  '/compress-image-for-whatsapp/',
+  '/jpg-to-webp/',
+  '/webp-to-png/',
 ]) {
   check(`sitemap: ${route}`, hasPattern('public/sitemap-0.xml', route))
 }

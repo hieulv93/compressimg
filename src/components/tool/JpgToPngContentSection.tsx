@@ -245,14 +245,14 @@ export default function JpgToPngContentSection() {
             </p>
           </Link>
           <Link
-            href="/resize-image"
+            href="/webp-to-jpg"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Resize Image
+              WebP to JPG
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Change image dimensions to any size while preserving quality.
+              Convert WebP to universally compatible JPG for any platform.
             </p>
           </Link>
         </div>

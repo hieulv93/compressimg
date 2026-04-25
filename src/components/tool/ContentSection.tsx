@@ -242,14 +242,14 @@ export default function ContentSection() {
             </p>
           </Link>
           <Link
-            href="/crop-image"
+            href="/compress-image-for-email"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Crop Image
+              Compress for Email
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Trim and cut any area with free or fixed aspect ratio presets.
+              Reduce image size to fit Gmail, Outlook, and other email providers.
             </p>
           </Link>
         </div>

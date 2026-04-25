@@ -247,14 +247,14 @@ export default function PngToJpgContentSection() {
             </p>
           </Link>
           <Link
-            href="/compress-png-online"
+            href="/webp-to-jpg"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress PNG
+              WebP to JPG
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Reduce PNG file size while preserving transparency.
+              Convert WebP to universally compatible JPG for any platform.
             </p>
           </Link>
         </div>

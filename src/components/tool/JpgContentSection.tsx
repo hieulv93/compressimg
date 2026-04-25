@@ -313,14 +313,14 @@ export default function JpgContentSection() {
             </p>
           </Link>
           <Link
-            href="/resize-image"
+            href="/compress-image-for-email"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Resize Image
+              Compress for Email
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Change image dimensions to any size while preserving quality.
+              Reduce JPG size to fit Gmail, Outlook, and other email providers.
             </p>
           </Link>
         </div>
