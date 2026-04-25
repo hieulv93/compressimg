@@ -30,7 +30,7 @@ export default function Header() {
         </Link>
 
         <nav aria-label="Main navigation">
-          <ul className="flex items-center gap-3 text-sm">
+          <ul className="flex items-center gap-1 sm:gap-3 text-sm">
             <li>
               <Link
                 href="/compress-image"
