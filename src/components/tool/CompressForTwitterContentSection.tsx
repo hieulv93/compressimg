@@ -259,6 +259,26 @@ export default function CompressForTwitterContentSection() {
         </div>
       </div>
 
+      <div className="rounded-xl border border-border bg-surface p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+        <div className="flex-1 space-y-1">
+          <p className="text-sm font-semibold text-text-main">
+            Need to create a Twitter/X header first?
+          </p>
+          <p className="text-xs text-text-muted leading-relaxed">
+            Design a 1500×500px Twitter header with templates and custom text — then compress it
+            here before uploading.
+          </p>
+        </div>
+        <a
+          href="https://click-thumb.com/twitter-header-maker"
+          target="_blank"
+          rel="noopener"
+          className="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-primary bg-white px-4 py-2 text-sm font-semibold text-primary hover:bg-drag-active transition-colors"
+        >
+          Twitter Header Maker →
+        </a>
+      </div>
+
       <CompressForTwitterFAQSection />
     </section>
   )

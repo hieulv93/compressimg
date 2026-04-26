@@ -220,6 +220,29 @@ export default function HomePage() {
           ))}
         </div>
 
+        <div className="rounded-2xl border border-border bg-surface p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="flex-1 space-y-1.5">
+            <p className="text-xs font-semibold text-text-muted uppercase tracking-wide">
+              Also free
+            </p>
+            <p className="font-bold text-text-main text-base">
+              Create thumbnails &amp; social images
+            </p>
+            <p className="text-sm text-text-muted leading-relaxed">
+              YouTube thumbnails, Instagram posts, Twitter headers, LinkedIn banners, Facebook
+              covers, OG images — all at exact platform sizes.
+            </p>
+          </div>
+          <a
+            href="https://click-thumb.com"
+            target="_blank"
+            rel="noopener"
+            className="shrink-0 inline-flex items-center gap-2 rounded-xl border border-primary bg-white px-5 py-2.5 text-sm font-semibold text-primary hover:bg-drag-active transition-colors"
+          >
+            ClickThumb.com →
+          </a>
+        </div>
+
         <div className="space-y-4 pt-4 border-t border-border">
           <h2 className="text-base font-semibold text-text-main">Popular Use Cases</h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

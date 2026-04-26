@@ -9,6 +9,16 @@ export default function Footer() {
           <nav aria-label="Footer navigation">
             <ul className="flex items-center gap-4">
               <li>
+                <a
+                  href="https://click-thumb.com"
+                  target="_blank"
+                  rel="noopener"
+                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                >
+                  ClickThumb — Thumbnail Maker
+                </a>
+              </li>
+              <li>
                 <Link
                   href="/privacy-policy"
                   className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"

@@ -314,6 +314,26 @@ export default function CompressForLinkedInContentSection() {
         </div>
       </div>
 
+      <div className="rounded-xl border border-border bg-surface p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+        <div className="flex-1 space-y-1">
+          <p className="text-sm font-semibold text-text-main">
+            Need to create a LinkedIn banner first?
+          </p>
+          <p className="text-xs text-text-muted leading-relaxed">
+            Design a 1584×396px LinkedIn profile banner with professional templates — then compress
+            it here before uploading.
+          </p>
+        </div>
+        <a
+          href="https://click-thumb.com/linkedin-banner-maker"
+          target="_blank"
+          rel="noopener"
+          className="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-primary bg-white px-4 py-2 text-sm font-semibold text-primary hover:bg-drag-active transition-colors"
+        >
+          LinkedIn Banner Maker →
+        </a>
+      </div>
+
       <CompressForLinkedInFAQSection />
     </section>
   )
