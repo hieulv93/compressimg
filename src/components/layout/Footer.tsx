@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
           <p>© {new Date().getFullYear()} CompressImg.pro — Free online image tools.</p>
           <nav aria-label="Footer navigation">
-            <ul className="flex items-center gap-4">
+            <ul className="flex flex-wrap items-center gap-4">
               <li>
                 <a
                   href="https://click-thumb.com"
@@ -33,6 +33,14 @@ export default function Footer() {
                 >
                   Terms
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="/sitemap.xml"
+                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                >
+                  Sitemap
+                </a>
               </li>
             </ul>
           </nav>

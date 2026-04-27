@@ -6,17 +6,36 @@ module.exports = {
   priority: 0.7,
   transform: async (config, path) => {
     const priorities = {
-      '/compress-image': 1.0,
       '/': 0.9,
+      '/compress-image': 1.0,
+      '/resize-image': 0.85,
+      '/jpg-to-png': 0.85,
+      '/png-to-jpg': 0.85,
+      '/heic-to-jpg': 0.85,
+      '/webp-to-jpg': 0.8,
+      '/compress-image-for-whatsapp': 0.8,
+      '/compress-jpg-online': 0.8,
+      '/convert-image': 0.8,
+      '/compress-image-for-instagram': 0.75,
+      '/compress-image-to-100kb': 0.75,
+      '/jpg-to-webp': 0.75,
+      '/webp-to-png': 0.75,
+      '/compress-png-online': 0.75,
+      '/png-to-webp': 0.75,
+      '/crop-image': 0.75,
+      '/compress-image-for-facebook': 0.7,
+      '/compress-image-for-twitter': 0.7,
+      '/compress-image-for-linkedin': 0.7,
+      '/compress-image-to-200kb': 0.7,
+      '/compress-image-to-50kb': 0.7,
+      '/compress-image-for-email': 0.7,
     }
     return {
       loc: path,
-      priority: priorities[path] ?? (path.includes('/blog') ? 0.8 : 0.7),
+      priority: priorities[path] ?? (path.includes('/blog') ? 0.8 : 0.65),
       changefreq: path.includes('/blog') ? 'monthly' : 'weekly',
       lastmod: new Date().toISOString(),
     }
   },
-  additionalPaths: async (config) => [
-    await config.transform(config, '/compress-image'),
-  ],
+  additionalPaths: async (config) => [await config.transform(config, '/compress-image')],
 }
