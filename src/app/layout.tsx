@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'CompressImg',
-    url: 'https://compressimg.pro',
+    url: 'https://compressimg.pro/',
   },
   twitter: { card: 'summary_large_image', site: '@compressimg' },
 }

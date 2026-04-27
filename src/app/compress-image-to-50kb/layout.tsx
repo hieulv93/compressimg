@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
-const PAGE_URL = `${SITE_URL}/compress-image-to-50kb`
+const PAGE_URL = `${SITE_URL}/compress-image-to-50kb/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {

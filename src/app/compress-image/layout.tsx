@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
-const PAGE_URL = `${SITE_URL}/compress-image`
+const PAGE_URL = `${SITE_URL}/compress-image/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
@@ -154,11 +154,7 @@ const jsonLd = {
   ],
 }
 
-export default function CompressImageLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function CompressImageLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <script
