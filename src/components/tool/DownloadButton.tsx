@@ -7,7 +7,9 @@ import { formatBytes } from '@/lib/utils'
 interface DownloadButtonProps {
   blob: Blob
   filename: string
-  compressedSize: number
+  compressedSize?: number
+  sizeKb?: number
+  compact?: boolean
   onDownload?: () => void
 }
 
@@ -15,8 +17,11 @@ export default function DownloadButton({
   blob,
   filename,
   compressedSize,
+  sizeKb,
+  compact = false,
   onDownload,
 }: DownloadButtonProps) {
+  const displaySize = sizeKb ? `${sizeKb} KB` : compressedSize ? formatBytes(compressedSize) : ''
   const [downloaded, setDownloaded] = useState(false)
 
   function handleDownload() {
@@ -29,10 +34,10 @@ export default function DownloadButton({
   return (
     <button
       onClick={handleDownload}
-      className={`w-full touch-target flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-95 text-white ${
-        downloaded ? 'bg-green-600 hover:bg-green-700' : 'bg-primary hover:bg-primary-hover'
-      }`}
-      aria-label={`Download compressed image (${formatBytes(compressedSize)})`}
+      className={`touch-target flex items-center justify-center gap-2 rounded-xl font-semibold text-sm transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 active:scale-95 text-white ${
+        compact ? 'px-3 py-2 rounded-lg' : 'w-full px-6 py-3'
+      } ${downloaded ? 'bg-green-600 hover:bg-green-700' : 'bg-primary hover:bg-primary-hover'}`}
+      aria-label={`Download compressed image${displaySize ? ` (${displaySize})` : ''}`}
     >
       {downloaded ? (
         <>
@@ -64,7 +69,7 @@ export default function DownloadButton({
               clipRule="evenodd"
             />
           </svg>
-          Download ({formatBytes(compressedSize)})
+          {compact ? '↓' : `Download${displaySize ? ` (${displaySize})` : ''}`}
         </>
       )}
     </button>

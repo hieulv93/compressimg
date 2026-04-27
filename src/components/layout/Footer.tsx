@@ -9,6 +9,30 @@ export default function Footer() {
           <nav aria-label="Footer navigation">
             <ul className="flex flex-wrap items-center gap-4">
               <li>
+                <Link
+                  href="/compress-images"
+                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                >
+                  Batch Compress
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/compress-gif-online"
+                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                >
+                  GIF Compressor
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                >
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <a
                   href="https://click-thumb.com"
                   target="_blank"
