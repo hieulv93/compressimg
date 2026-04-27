@@ -185,6 +185,7 @@ export default function CompressGifPage() {
       {pageState === 'done' && result && (
         <div className="border border-border rounded-xl overflow-hidden">
           <div className="p-5 flex flex-col items-center gap-4">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={result.previewUrl}
               alt="Compressed GIF preview"

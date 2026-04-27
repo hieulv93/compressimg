@@ -117,7 +117,6 @@ export default function BatchCompressPage() {
     setTimeout(() => URL.revokeObjectURL(url), 1000)
   }, [entries])
 
-  const isProcessing = entries.some((e) => e.state === 'processing' || e.state === 'pending')
   const doneCount = entries.filter((e) => e.state === 'done').length
   const totalSavedBytes = entries.reduce(
     (sum, e) => sum + (e.result ? e.result.originalSize - e.result.compressedSize : 0),
@@ -214,6 +213,7 @@ export default function BatchCompressPage() {
                 {/* Thumbnail */}
                 <div className="w-14 h-14 rounded-lg bg-surface border border-border overflow-hidden flex-shrink-0">
                   {entry.result?.previewUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={entry.result.previewUrl}
                       alt={entry.file.name}
