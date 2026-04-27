@@ -19,7 +19,7 @@ export default function HowToCompressImagesForWeb() {
         <span className="text-text-main">How to Compress Images for Web</span>
       </nav>
 
-      <article className="prose-custom">
+      <article>
         <header className="mb-10">
           <div className="flex items-center gap-2 text-xs text-text-muted mb-4">
             <span className="bg-surface px-2 py-0.5 rounded font-medium">Guide</span>

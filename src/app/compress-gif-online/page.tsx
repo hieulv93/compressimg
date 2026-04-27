@@ -235,7 +235,7 @@ export default function CompressGifPage() {
       )}
 
       {/* SEO Content */}
-      <section className="prose-custom space-y-6 text-sm text-text-muted leading-relaxed border-t border-border pt-8">
+      <section className="space-y-6 text-sm text-text-muted leading-relaxed border-t border-border pt-8">
         <h2 className="text-xl font-bold text-text-main">How to Compress a GIF Online</h2>
         <p>
           GIF files are often 3–10× larger than equivalent JPEG or WebP images because they store
