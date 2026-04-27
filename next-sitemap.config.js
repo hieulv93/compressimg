@@ -30,6 +30,7 @@ module.exports = {
       '/compress-image-to-50kb': 0.7,
       '/compress-image-for-email': 0.7,
       '/blog': 0.8,
+      '/blog/best-image-format-for-web': 0.8,
       '/blog/how-to-compress-images-for-web': 0.8,
       '/compress-gif-online': 0.8,
       '/compress-images': 0.8,

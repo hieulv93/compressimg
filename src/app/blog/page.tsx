@@ -2,6 +2,15 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'best-image-format-for-web',
+    title: 'Best Image Format for Web: JPEG vs PNG vs WebP in 2026',
+    description:
+      'JPEG, PNG, WebP, AVIF — which image format is best for your website? Full comparison of file size, quality, browser support, and when to use each format.',
+    date: '2026-04-28',
+    readTime: '8 min read',
+    category: 'Guide',
+  },
+  {
     slug: 'how-to-compress-images-for-web',
     title: 'How to Compress Images for Web: The Complete Guide',
     description:
