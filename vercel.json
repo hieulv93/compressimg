@@ -1,13 +1,5 @@
 {
   "outputDirectory": "out",
-  "redirects": [
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.compressimg.pro" }],
-      "destination": "https://compressimg.pro/:path*",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
