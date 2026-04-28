@@ -177,6 +177,16 @@ const popularUseCases = [
     description: 'Hit strict 50KB limits for government portals and exams.',
   },
   {
+    href: '/compress-image-to-1mb',
+    title: 'Compress to 1MB',
+    description: 'Reduce large photos to under 1MB for email and web uploads.',
+  },
+  {
+    href: '/compress-image-to-500kb',
+    title: 'Compress to 500KB',
+    description: 'Hit 500KB targets for WordPress, CMS, and web-optimized images.',
+  },
+  {
     href: '/svg-to-png',
     title: 'SVG to PNG',
     description: 'Convert SVG logos and icons to PNG for email and social media.',

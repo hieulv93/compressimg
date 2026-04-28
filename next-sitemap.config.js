@@ -36,6 +36,9 @@ module.exports = {
       '/compress-images': 0.8,
       '/compress-image-for-tiktok': 0.75,
       '/svg-to-png': 0.8,
+      '/compress-image-to-1mb': 0.75,
+      '/compress-image-to-500kb': 0.75,
+      '/compress-image-to-5mb': 0.7,
     }
     return {
       loc: path,
