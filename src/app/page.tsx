@@ -177,6 +177,11 @@ const popularUseCases = [
     description: 'Hit strict 50KB limits for government portals and exams.',
   },
   {
+    href: '/heic-to-png',
+    title: 'HEIC to PNG',
+    description: 'Convert iPhone HEIC photos to lossless PNG for editing and archiving.',
+  },
+  {
     href: '/compress-image-to-1mb',
     title: 'Compress to 1MB',
     description: 'Reduce large photos to under 1MB for email and web uploads.',
