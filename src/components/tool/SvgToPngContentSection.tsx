@@ -47,7 +47,8 @@ export default function SvgToPngContentSection() {
           <li>
             <strong className="text-text-main">Social media profile photos and covers</strong> —
             Twitter, Facebook, LinkedIn, and YouTube all require PNG or JPG for uploads. Convert
-            your SVG brand mark to a PNG at the platform's required dimensions before uploading.
+            your SVG brand mark to a PNG at the platform&apos;s required dimensions before
+            uploading.
           </li>
           <li>
             <strong className="text-text-main">Open Graph and social preview images</strong> — OG
@@ -128,8 +129,8 @@ export default function SvgToPngContentSection() {
         <h2 className="text-base font-bold text-text-main">How SVG to PNG Conversion Works</h2>
         <p>
           This tool converts SVG to PNG entirely in your browser using the built-in Canvas API and
-          the browser's own SVG rendering engine — the same engine that renders SVGs on web pages.
-          No file is ever sent to a server.
+          the browser&apos;s own SVG rendering engine — the same engine that renders SVGs on web
+          pages. No file is ever sent to a server.
         </p>
         <p>
           When you upload an SVG, the tool reads the file to determine its dimensions from the{' '}
@@ -164,8 +165,13 @@ export default function SvgToPngContentSection() {
             </Link>{' '}
             to scale the PNG up to any size. Since SVG is resolution-independent, you can also set
             explicit larger dimensions on the SVG before converting (e.g., change{' '}
-            <code className="bg-surface px-1 py-0.5 rounded text-xs font-mono">width="512"</code> to{' '}
-            <code className="bg-surface px-1 py-0.5 rounded text-xs font-mono">width="2048"</code>{' '}
+            <code className="bg-surface px-1 py-0.5 rounded text-xs font-mono">
+              width=&quot;512&quot;
+            </code>{' '}
+            to{' '}
+            <code className="bg-surface px-1 py-0.5 rounded text-xs font-mono">
+              width=&quot;2048&quot;
+            </code>{' '}
             in the SVG source) to get a higher-resolution PNG output.
           </li>
           <li>
