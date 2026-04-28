@@ -1,6 +1,13 @@
 import Link from 'next/link'
 
-const posts = [
+const posts: {
+  slug: string
+  title: string
+  description: string
+  date: string
+  readTime: string
+  category: string
+}[] = [
   {
     slug: 'best-image-format-for-web',
     title: 'Best Image Format for Web: JPEG vs PNG vs WebP in 2026',
