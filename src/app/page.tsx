@@ -5,7 +5,24 @@ export const metadata: Metadata = {
   title: 'Free Online Image Tools — Compress, Resize, Convert & Crop Images | CompressImg',
   description:
     'Free browser-based image tools. Compress, resize, convert, and crop JPG, PNG, WebP instantly. No upload, no login — 100% private and instant.',
-  alternates: { canonical: 'https://compressimg.pro' },
+  alternates: { canonical: 'https://compressimg.pro/' },
+  openGraph: {
+    title: 'Free Online Image Tools — CompressImg',
+    description:
+      'Compress, resize, convert, and crop JPG, PNG, WebP instantly. No upload, no login — 100% private.',
+    url: 'https://compressimg.pro/',
+    siteName: 'CompressImg',
+    images: [
+      {
+        url: 'https://compressimg.pro/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'CompressImg — Free Online Image Tools',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
 }
 
 const tools = [
@@ -115,14 +132,19 @@ const tools = [
 
 const popularUseCases = [
   {
+    href: '/heic-to-jpg',
+    title: 'HEIC to JPG',
+    description: 'Convert iPhone HEIC photos to JPG for universal sharing.',
+  },
+  {
     href: '/jpg-to-png',
     title: 'JPG to PNG',
     description: 'Convert JPG photos to PNG with transparency support.',
   },
   {
-    href: '/png-to-jpg',
-    title: 'PNG to JPG',
-    description: 'Convert PNG to JPG for smaller file sizes.',
+    href: '/webp-to-jpg',
+    title: 'WebP to JPG',
+    description: 'Convert WebP to JPG for universal compatibility.',
   },
   {
     href: '/compress-image-for-whatsapp',
@@ -135,24 +157,19 @@ const popularUseCases = [
     description: 'Pre-compress photos before posting to keep them sharp.',
   },
   {
+    href: '/compress-image-for-tiktok',
+    title: 'Compress for TikTok',
+    description: 'Reduce photo size before uploading TikTok profile and cover images.',
+  },
+  {
     href: '/compress-image-to-100kb',
     title: 'Compress to 100KB',
     description: 'Reduce any image to under 100KB for forms and portals.',
   },
   {
-    href: '/webp-to-jpg',
-    title: 'WebP to JPG',
-    description: 'Convert WebP to JPG for universal compatibility.',
-  },
-  {
     href: '/compress-image-for-facebook',
     title: 'Compress for Facebook',
     description: 'Optimize photos for Facebook feed and cover photos.',
-  },
-  {
-    href: '/jpg-to-webp',
-    title: 'JPG to WebP',
-    description: 'Convert JPG to WebP for 25–35% smaller web images.',
   },
   {
     href: '/compress-image-to-50kb',
