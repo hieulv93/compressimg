@@ -1,5 +1,6 @@
 import Link from 'next/link'
 
+// v2
 export default function BestImageFormatForWeb() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-12">
