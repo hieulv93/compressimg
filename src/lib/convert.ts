@@ -93,3 +93,83 @@ export function revokeConvertPreview(url: string) {
 }
 
 export { triggerDownload } from './compress'
+
+async function getSvgSize(file: File): Promise<{ width: number; height: number }> {
+  try {
+    const text = await file.text()
+    const parser = new DOMParser()
+    const doc = parser.parseFromString(text, 'image/svg+xml')
+    const svg = doc.documentElement
+    const w = parseFloat(svg.getAttribute('width') || '0')
+    const h = parseFloat(svg.getAttribute('height') || '0')
+    if (w > 0 && h > 0) return { width: Math.round(w), height: Math.round(h) }
+    const vb = svg.getAttribute('viewBox')
+    if (vb) {
+      const parts = vb.trim().split(/[\s,]+/)
+      const vw = parseFloat(parts[2] || '0')
+      const vh = parseFloat(parts[3] || '0')
+      if (vw > 0 && vh > 0) return { width: Math.round(vw), height: Math.round(vh) }
+    }
+  } catch {}
+  return { width: 800, height: 600 }
+}
+
+export async function convertSvgToPng(file: File): Promise<ConvertResult> {
+  const { width, height } = await getSvgSize(file)
+
+  // Cap at 4096px to avoid huge PNG output while keeping aspect ratio
+  const MAX_DIM = 4096
+  const scale = Math.min(1, MAX_DIM / Math.max(width, height))
+  const finalW = Math.max(1, Math.round(width * scale))
+  const finalH = Math.max(1, Math.round(height * scale))
+
+  // Re-serialize SVG with explicit dimensions so browser renders at correct size
+  const text = await file.text()
+  const parser = new DOMParser()
+  const doc = parser.parseFromString(text, 'image/svg+xml')
+  const svgEl = doc.documentElement
+  svgEl.setAttribute('width', String(finalW))
+  svgEl.setAttribute('height', String(finalH))
+  const svgBlob = new Blob([new XMLSerializer().serializeToString(doc)], { type: 'image/svg+xml' })
+  const objectUrl = URL.createObjectURL(svgBlob)
+
+  return new Promise((resolve, reject) => {
+    const img = new window.Image()
+
+    img.onload = () => {
+      URL.revokeObjectURL(objectUrl)
+      const canvas = document.createElement('canvas')
+      canvas.width = finalW
+      canvas.height = finalH
+      const ctx = canvas.getContext('2d')
+      if (!ctx) {
+        reject(new Error('Canvas context unavailable'))
+        return
+      }
+      ctx.fillStyle = '#ffffff'
+      ctx.fillRect(0, 0, finalW, finalH)
+      ctx.drawImage(img, 0, 0, finalW, finalH)
+      canvas.toBlob((blob) => {
+        if (!blob) {
+          reject(new Error('Failed to generate PNG'))
+          return
+        }
+        resolve({
+          blob,
+          previewUrl: URL.createObjectURL(blob),
+          inputFormat: 'svg',
+          outputExt: 'png',
+          originalSize: file.size,
+          outputSize: blob.size,
+        })
+      }, 'image/png')
+    }
+
+    img.onerror = () => {
+      URL.revokeObjectURL(objectUrl)
+      reject(new Error('Failed to load SVG'))
+    }
+
+    img.src = objectUrl
+  })
+}

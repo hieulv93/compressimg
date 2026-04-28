@@ -10,6 +10,9 @@ interface UploadBoxProps {
   state: UploadState
   errorMessage?: string
   processingLabel?: string
+  accept?: string
+  customValidate?: (file: File) => boolean
+  formatHint?: string
 }
 
 export default function UploadBox({
@@ -17,13 +20,17 @@ export default function UploadBox({
   state,
   errorMessage,
   processingLabel = 'Compressing...',
+  accept,
+  customValidate,
+  formatHint,
 }: UploadBoxProps) {
   const inputRef = useRef<HTMLInputElement>(null)
   const [isDragging, setIsDragging] = useState(false)
 
   const validateAndSelect = useCallback(
     (file: File) => {
-      if (!isValidImageFile(file)) {
+      const isValid = customValidate ? customValidate(file) : isValidImageFile(file)
+      if (!isValid) {
         onFileSelect(Object.assign(file, { _invalid: 'format' }))
         return
       }
@@ -33,7 +40,7 @@ export default function UploadBox({
       }
       onFileSelect(file)
     },
-    [onFileSelect]
+    [onFileSelect, customValidate]
   )
 
   const handleClick = () => inputRef.current?.click()
@@ -109,7 +116,7 @@ export default function UploadBox({
       <input
         ref={inputRef}
         type="file"
-        accept="image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif"
+        accept={accept ?? 'image/jpeg,image/png,image/webp,image/heic,image/heif,.heic,.heif'}
         className="hidden"
         onChange={handleChange}
         aria-hidden="true"
@@ -131,7 +138,7 @@ export default function UploadBox({
               {isError ? 'Try again' : 'Drop image here or click to upload'}
             </p>
             <p className="text-text-muted text-sm mt-1">
-              JPG, PNG, WebP, HEIC — max {MAX_FILE_SIZE_MB}MB
+              {formatHint ?? `JPG, PNG, WebP, HEIC — max ${MAX_FILE_SIZE_MB}MB`}
             </p>
             {!isError && (
               <p className="text-text-muted text-xs mt-1">You can also paste an image (Ctrl+V)</p>

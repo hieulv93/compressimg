@@ -35,6 +35,7 @@ module.exports = {
       '/compress-gif-online': 0.8,
       '/compress-images': 0.8,
       '/compress-image-for-tiktok': 0.75,
+      '/svg-to-png': 0.8,
     }
     return {
       loc: path,

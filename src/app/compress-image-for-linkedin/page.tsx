@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useRef } from 'react'
 import UploadBox from '@/components/tool/UploadBox'
 import QualitySlider from '@/components/tool/QualitySlider'
 import ProgressBar from '@/components/tool/ProgressBar'
@@ -20,6 +20,8 @@ export default function CompressForLinkedInPage() {
   const [result, setResult] = useState<CompressResult | null>(null)
   const [errorMessage, setErrorMessage] = useState('')
   const [originalFile, setOriginalFile] = useState<File | null>(null)
+  const [originalPreviewUrl, setOriginalPreviewUrl] = useState<string | null>(null)
+  const origUrlRef = useRef<string | null>(null)
 
   const handleFileSelect = useCallback(
     async (file: File) => {
@@ -38,6 +40,10 @@ export default function CompressForLinkedInPage() {
       setOriginalFile(file)
       setPageState('processing')
       setErrorMessage('')
+      if (origUrlRef.current) URL.revokeObjectURL(origUrlRef.current)
+      const origUrl = URL.createObjectURL(file)
+      origUrlRef.current = origUrl
+      setOriginalPreviewUrl(origUrl)
       analytics.imageUploaded(file.type, Math.round(file.size / 1024))
 
       try {
@@ -61,8 +67,13 @@ export default function CompressForLinkedInPage() {
 
   const handleReset = useCallback(() => {
     if (result?.previewUrl) revokePreview(result.previewUrl)
+    if (origUrlRef.current) {
+      URL.revokeObjectURL(origUrlRef.current)
+      origUrlRef.current = null
+    }
     setResult(null)
     setOriginalFile(null)
+    setOriginalPreviewUrl(null)
     setErrorMessage('')
     setPageState('idle')
   }, [result])
@@ -141,6 +152,7 @@ export default function CompressForLinkedInPage() {
           <ResultCard
             blob={result.blob}
             previewUrl={result.previewUrl}
+            originalPreviewUrl={originalPreviewUrl ?? undefined}
             originalSize={result.originalSize}
             compressedSize={result.compressedSize}
             format={result.format}

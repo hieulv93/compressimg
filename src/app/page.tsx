@@ -176,6 +176,11 @@ const popularUseCases = [
     title: 'Compress to 50KB',
     description: 'Hit strict 50KB limits for government portals and exams.',
   },
+  {
+    href: '/svg-to-png',
+    title: 'SVG to PNG',
+    description: 'Convert SVG logos and icons to PNG for email and social media.',
+  },
 ]
 
 export default function HomePage() {
