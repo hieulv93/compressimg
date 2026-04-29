@@ -196,6 +196,16 @@ const popularUseCases = [
     title: 'SVG to PNG',
     description: 'Convert SVG logos and icons to PNG for email and social media.',
   },
+  {
+    href: '/gif-to-jpg',
+    title: 'GIF to JPG',
+    description: 'Convert GIF to JPG for better photo quality and smaller file size.',
+  },
+  {
+    href: '/gif-to-png',
+    title: 'GIF to PNG',
+    description: 'Convert GIF to lossless PNG with full color depth and transparency.',
+  },
 ]
 
 export default function HomePage() {

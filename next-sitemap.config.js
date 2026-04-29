@@ -40,6 +40,8 @@ module.exports = {
       '/compress-image-to-1mb': 0.75,
       '/compress-image-to-500kb': 0.75,
       '/compress-image-to-5mb': 0.7,
+      '/gif-to-jpg': 0.8,
+      '/gif-to-png': 0.8,
     }
     return {
       loc: path,
