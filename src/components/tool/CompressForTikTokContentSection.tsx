@@ -208,6 +208,26 @@ export default function CompressForTikTokContentSection() {
         </ul>
       </div>
 
+      <div className="rounded-xl border border-border bg-surface p-4 flex flex-col sm:flex-row sm:items-center gap-3">
+        <div className="flex-1 space-y-1">
+          <p className="text-sm font-semibold text-text-main">
+            Need to create a TikTok thumbnail first?
+          </p>
+          <p className="text-xs text-text-muted leading-relaxed">
+            Design a custom TikTok video cover with templates, text overlays, and background images
+            — then compress it here before uploading.
+          </p>
+        </div>
+        <a
+          href="https://click-thumb.com/tiktok-thumbnail-maker"
+          target="_blank"
+          rel="noopener"
+          className="shrink-0 inline-flex items-center gap-1.5 rounded-lg border border-primary bg-white px-4 py-2 text-sm font-semibold text-primary hover:bg-drag-active transition-colors"
+        >
+          TikTok Thumbnail Maker →
+        </a>
+      </div>
+
       <div className="space-y-4">
         <h2 className="text-xl font-bold text-text-main">Frequently Asked Questions</h2>
         <FAQItem
