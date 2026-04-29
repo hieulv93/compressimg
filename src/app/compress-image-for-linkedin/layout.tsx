@@ -74,6 +74,32 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress an Image for LinkedIn',
+      description:
+        'Reduce image file size before uploading to LinkedIn to avoid quality loss on profile photos, cover images, and post attachments.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your photo',
+          text: 'Click the upload area, drag and drop your image, or paste from clipboard with Ctrl+V. Supports JPG, PNG, and WebP files up to 20MB.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Set quality to 80',
+          text: 'Quality 80 reduces a typical professional headshot or banner from several MB to under 500KB without visible quality loss — ideal for LinkedIn profile and cover images.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download and upload to LinkedIn',
+          text: "Download the compressed file, then upload it to your LinkedIn profile, cover, or post. The pre-compressed image preserves professional-grade sharpness after LinkedIn's processing.",
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

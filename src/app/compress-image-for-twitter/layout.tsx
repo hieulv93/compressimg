@@ -74,6 +74,32 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress an Image for Twitter',
+      description:
+        'Reduce image file size before tweeting to prevent double-compression and keep photos sharp on the timeline.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your photo',
+          text: 'Click the upload area, drag and drop your image, or paste from clipboard with Ctrl+V. Supports JPG, PNG, and WebP files up to 20MB.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Set quality to 80',
+          text: "Quality 80 reduces a typical photo from 5–10MB to under 500KB without visible quality loss — keeping it within Twitter's 5MB limit while minimising re-compression.",
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download and tweet',
+          text: 'Download the compressed file, then attach it to your tweet. The pre-compressed image will look noticeably sharper on the Twitter timeline.',
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

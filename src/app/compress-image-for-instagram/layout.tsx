@@ -74,6 +74,32 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress an Image for Instagram',
+      description:
+        'Reduce image file size before uploading to Instagram to prevent double-compression and keep photos sharp.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your photo',
+          text: 'Click the upload area, drag and drop your image, or paste from clipboard with Ctrl+V. Supports JPG, PNG, and WebP files up to 20MB.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Set quality to 80',
+          text: 'Quality 80 reduces a typical smartphone photo from 5–10MB to 300–600KB without visible quality loss — the sweet spot for Instagram uploads.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download and upload to Instagram',
+          text: 'Download the compressed file, then upload it directly to Instagram. The pre-compressed image will look noticeably sharper than one Instagram re-compressed from scratch.',
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

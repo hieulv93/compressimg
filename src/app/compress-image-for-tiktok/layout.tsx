@@ -73,6 +73,32 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress an Image for TikTok',
+      description:
+        'Reduce image file size before uploading to TikTok to avoid quality loss on profile photos and video cover images.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your photo',
+          text: 'Click the upload area, drag and drop your image, or paste from clipboard with Ctrl+V. Supports JPG, PNG, and WebP files up to 20MB.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Set quality to 80',
+          text: "Quality 80 reduces a typical photo to 100–300KB for profile photos or 300–800KB for cover images — within TikTok's limits while minimising re-compression.",
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download and upload to TikTok',
+          text: 'Download the compressed file, then upload it to TikTok as your profile photo or video cover. The pre-compressed image will look noticeably sharper than one TikTok compressed from scratch.',
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

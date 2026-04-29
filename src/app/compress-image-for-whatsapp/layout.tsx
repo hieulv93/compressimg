@@ -74,6 +74,32 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress an Image for WhatsApp',
+      description:
+        'Reduce image file size before sharing on WhatsApp to avoid quality loss and speed up sending.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your photo',
+          text: 'Click the upload area, drag and drop your image, or paste from clipboard with Ctrl+V. Supports JPG, PNG, and WebP files up to 20MB.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Set quality to 70–80',
+          text: 'Quality 70–80 reduces a typical photo from 5–10MB to under 300KB — fast to send over mobile data while remaining sharp on phone screens.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download and share on WhatsApp',
+          text: 'Download the compressed file, then send it on WhatsApp as a document (not a photo) to prevent WhatsApp from applying its own compression on top.',
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

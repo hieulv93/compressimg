@@ -74,6 +74,32 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress an Image for Facebook',
+      description:
+        'Reduce image file size before posting to Facebook to prevent double-compression and keep photos sharp.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your photo',
+          text: 'Click the upload area, drag and drop your image, or paste from clipboard with Ctrl+V. Supports JPG, PNG, and WebP files up to 20MB.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Set quality to 80',
+          text: 'Quality 80 reduces a typical photo from 5–10MB to 300–600KB without visible quality loss — optimal for Facebook feed and cover photos.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download and post to Facebook',
+          text: 'Download the compressed file, then upload it to Facebook. The pre-compressed image will retain more detail than one Facebook re-compressed from a large original.',
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {
