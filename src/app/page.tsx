@@ -162,6 +162,11 @@ const popularUseCases = [
     description: 'Reduce photo size before uploading TikTok profile and cover images.',
   },
   {
+    href: '/compress-image-for-youtube',
+    title: 'Compress for YouTube',
+    description: "Reduce thumbnail and banner size — stay under YouTube's 2MB limit.",
+  },
+  {
     href: '/compress-image-to-100kb',
     title: 'Compress to 100KB',
     description: 'Reduce any image to under 100KB for forms and portals.',
