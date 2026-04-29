@@ -36,7 +36,7 @@ export default function Footer() {
                 <a
                   href="https://click-thumb.com"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                   className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
                 >
                   ClickThumb — Thumbnail Maker
