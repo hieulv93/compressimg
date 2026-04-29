@@ -206,6 +206,11 @@ const popularUseCases = [
     title: 'GIF to PNG',
     description: 'Convert GIF to lossless PNG with full color depth and transparency.',
   },
+  {
+    href: '/bmp-to-jpg',
+    title: 'BMP to JPG',
+    description: 'Shrink huge uncompressed BMP files to compact JPG — 90%+ smaller.',
+  },
 ]
 
 export default function HomePage() {

@@ -30,6 +30,7 @@ module.exports = {
       '/compress-image-to-50kb': 0.7,
       '/compress-image-for-email': 0.7,
       '/blog': 0.8,
+      '/blog/how-to-reduce-image-file-size': 0.8,
       '/blog/best-image-format-for-web': 0.8,
       '/blog/how-to-compress-images-for-web': 0.8,
       '/compress-gif-online': 0.8,
@@ -42,6 +43,7 @@ module.exports = {
       '/compress-image-to-5mb': 0.7,
       '/gif-to-jpg': 0.8,
       '/gif-to-png': 0.8,
+      '/bmp-to-jpg': 0.75,
     }
     return {
       loc: path,

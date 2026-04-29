@@ -2,6 +2,15 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'how-to-reduce-image-file-size',
+    title: 'How to Reduce Image File Size: 5 Methods That Actually Work',
+    description:
+      'Compress, resize, convert format, batch process — 5 proven techniques to reduce image file size for web, email, upload forms, and social media.',
+    date: '2026-04-29',
+    readTime: '9 min read',
+    category: 'Guide',
+  },
+  {
     slug: 'best-image-format-for-web',
     title: 'Best Image Format for Web: JPEG vs PNG vs WebP in 2026',
     description:
