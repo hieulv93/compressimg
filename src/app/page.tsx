@@ -216,6 +216,21 @@ const popularUseCases = [
     title: 'Compress to 300KB',
     description: 'Compress photos to under 300KB for CMS, email, and job portals.',
   },
+  {
+    href: '/compress-jpg-online',
+    title: 'Compress JPG Online',
+    description: 'Reduce JPG file size without visible quality loss. Fast, free, browser-based.',
+  },
+  {
+    href: '/compress-png-online',
+    title: 'Compress PNG Online',
+    description: 'Shrink PNG files while preserving transparency and sharp edges.',
+  },
+  {
+    href: '/compress-images',
+    title: 'Batch Compress Images',
+    description: 'Compress multiple images at once — ZIP download when done.',
+  },
 ]
 
 export default function HomePage() {
@@ -298,6 +313,26 @@ export default function HomePage() {
           >
             ClickThumb.com →
           </a>
+        </div>
+
+        <div className="rounded-2xl border border-border bg-surface p-5 flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="flex-1 space-y-1">
+            <p className="text-xs font-semibold text-text-muted uppercase tracking-wide">
+              From the blog
+            </p>
+            <p className="font-bold text-text-main text-base">
+              Image compression tips &amp; guides
+            </p>
+            <p className="text-sm text-text-muted">
+              How to reduce file size, best formats for web, compression tools compared.
+            </p>
+          </div>
+          <Link
+            href="/blog"
+            className="shrink-0 inline-flex items-center gap-2 rounded-xl border border-border px-5 py-2.5 text-sm font-semibold text-text-main hover:border-primary hover:text-primary transition-colors"
+          >
+            Read the blog →
+          </Link>
         </div>
 
         <div className="space-y-4 pt-4 border-t border-border">

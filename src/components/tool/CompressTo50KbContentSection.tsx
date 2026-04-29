@@ -282,14 +282,14 @@ export default function CompressTo50KbContentSection() {
             </p>
           </Link>
           <Link
-            href="/crop-image"
+            href="/compress-image-to-200kb"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Crop Image
+              Compress to 200KB
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Crop to headshot or signature area before compressing for smallest output.
+              Slightly looser target for visa forms and university portals.
             </p>
           </Link>
         </div>

@@ -312,14 +312,14 @@ export default function CompressTo100KbContentSection() {
             </p>
           </Link>
           <Link
-            href="/compress-jpg-online"
+            href="/compress-image-to-200kb"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress JPG Online
+              Compress to 200KB
             </p>
             <p className="text-xs text-text-muted mt-1">
-              JPG-specific compression guide with quality settings for photos.
+              Looser target — more quality retained for visa and form portals.
             </p>
           </Link>
           <Link

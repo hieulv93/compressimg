@@ -310,14 +310,14 @@ export default function CompressTo1MbContentSection() {
             </p>
           </Link>
           <Link
-            href="/compress-image-to-100kb"
+            href="/compress-image-to-5mb"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress to 100KB
+              Compress to 5MB
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Strict 100KB target for government portals and ID submissions.
+              Light compression for professional photos and print-ready files.
             </p>
           </Link>
         </div>

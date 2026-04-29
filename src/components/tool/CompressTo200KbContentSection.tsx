@@ -282,14 +282,14 @@ export default function CompressTo200KbContentSection() {
             </p>
           </Link>
           <Link
-            href="/compress-image-to-50kb"
+            href="/compress-image-to-500kb"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress to 50KB
+              Compress to 500KB
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Hit a strict 50KB limit for government portals and exam registration forms.
+              Web-optimized target for CMS, blogs, and social media uploads.
             </p>
           </Link>
         </div>

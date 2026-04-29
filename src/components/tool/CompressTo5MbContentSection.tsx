@@ -317,14 +317,14 @@ export default function CompressTo5MbContentSection() {
             </p>
           </Link>
           <Link
-            href="/png-to-jpg"
+            href="/compress-image-to-500kb"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              PNG to JPG
+              Compress to 500KB
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Convert large PNG design exports to JPG for massive size reduction.
+              Web-optimized target for blog images and social media posts.
             </p>
           </Link>
         </div>

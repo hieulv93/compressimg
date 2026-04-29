@@ -277,14 +277,14 @@ export default function CompressTo500KbContentSection() {
             </p>
           </Link>
           <Link
-            href="/compress-image-to-200kb"
+            href="/compress-image-to-300kb"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
             <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress to 200KB
+              Compress to 300KB
             </p>
             <p className="text-xs text-text-muted mt-1">
-              Stricter target for social media and CMS thumbnail uploads.
+              Mid-range target for email, job portals, and CMS image uploads.
             </p>
           </Link>
         </div>
