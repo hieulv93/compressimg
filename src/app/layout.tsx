@@ -17,6 +17,10 @@ export const metadata: Metadata = {
       'google-adsense-account': 'ca-pub-5429920062430374',
     },
   },
+  icons: {
+    icon: [{ url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' }],
+    shortcut: '/favicon.ico',
+  },
   metadataBase: new URL(process.env.SITE_URL || 'https://compressimg.pro'),
   title: {
     default: 'Compress Image Online Free – Reduce JPG, PNG, WebP Size | CompressImg',
