@@ -211,6 +211,11 @@ const popularUseCases = [
     title: 'BMP to JPG',
     description: 'Shrink huge uncompressed BMP files to compact JPG — 90%+ smaller.',
   },
+  {
+    href: '/compress-image-to-300kb',
+    title: 'Compress to 300KB',
+    description: 'Compress photos to under 300KB for CMS, email, and job portals.',
+  },
 ]
 
 export default function HomePage() {
