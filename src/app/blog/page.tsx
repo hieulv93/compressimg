@@ -2,6 +2,33 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'compress-images-without-losing-quality',
+    title: 'How to Compress Images Without Losing Quality',
+    description:
+      'Compress JPG, PNG, and WebP images without visible quality loss. Learn which settings, methods, and formats minimize file size while keeping images sharp.',
+    date: '2026-05-04',
+    readTime: '8 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'what-is-webp-format',
+    title: 'What Is WebP? The Complete Guide to WebP Images',
+    description:
+      'WebP produces 25–35% smaller files than JPEG at the same visual quality. Learn what WebP is, browser support, and how to convert images to and from WebP.',
+    date: '2026-05-03',
+    readTime: '7 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'what-is-heic-format',
+    title: 'What Is HEIC? How to Open and Convert HEIC Images',
+    description:
+      'HEIC is the default photo format on iPhones. Learn why iPhones use HEIC, how to open HEIC files on Windows, and how to convert HEIC to JPG or PNG for free.',
+    date: '2026-05-02',
+    readTime: '8 min read',
+    category: 'Guide',
+  },
+  {
     slug: 'why-photos-look-blurry-social-media',
     title: 'Why Do Photos Look Blurry on Social Media? (And How to Fix It)',
     description:
