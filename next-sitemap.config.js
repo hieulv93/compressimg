@@ -50,6 +50,9 @@ module.exports = {
       '/bmp-to-jpg': 0.75,
       '/compress-image-to-300kb': 0.75,
       '/compress-image-for-youtube': 0.8,
+      '/compress-image-for-pinterest': 0.75,
+      '/compress-image-for-discord': 0.75,
+      '/compress-image-to-10mb': 0.75,
     }
     return {
       loc: path,
