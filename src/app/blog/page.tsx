@@ -2,6 +2,15 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'why-photos-look-blurry-social-media',
+    title: 'Why Do Photos Look Blurry on Social Media? (And How to Fix It)',
+    description:
+      'Instagram, Facebook, WhatsApp, and TikTok all recompress your photos automatically. Learn exactly why it happens and the pre-compression trick that keeps your photos sharp.',
+    date: '2026-05-04',
+    readTime: '10 min read',
+    category: 'Guide',
+  },
+  {
     slug: 'how-to-reduce-image-file-size',
     title: 'How to Reduce Image File Size: 5 Methods That Actually Work',
     description:

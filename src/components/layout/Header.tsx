@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/convert-image', label: 'Convert' },
   { href: '/crop-image', label: 'Crop' },
   { href: '/blog', label: 'Blog' },
+  { href: '/about', label: 'About' },
 ]
 
 export default function Header() {
