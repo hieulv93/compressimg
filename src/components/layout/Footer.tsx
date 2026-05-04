@@ -44,6 +44,22 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/about"
+                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/privacy-policy"
                   className="hover:text-primary transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded"
                 >
