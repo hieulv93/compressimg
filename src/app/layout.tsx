@@ -18,8 +18,7 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' }],
-    shortcut: '/favicon.ico',
+    icon: [{ url: '/icon.svg', sizes: 'any', type: 'image/svg+xml' }],
   },
   metadataBase: new URL(process.env.SITE_URL || 'https://compressimg.pro'),
   title: {
