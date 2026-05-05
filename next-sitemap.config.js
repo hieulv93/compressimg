@@ -54,6 +54,8 @@ module.exports = {
       '/compress-image-for-pinterest': 0.75,
       '/compress-image-for-discord': 0.75,
       '/compress-image-to-10mb': 0.75,
+      '/compress-image-to-2mb': 0.75,
+      '/compress-image-to-3mb': 0.75,
     }
     return {
       loc: path,
