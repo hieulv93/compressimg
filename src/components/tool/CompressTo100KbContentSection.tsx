@@ -144,7 +144,7 @@ export default function CompressTo100KbContentSection() {
                   q50: '10–22 KB',
                   note: '✅ Always under 100KB',
                 },
-              ].map(({ res, q80, q70, q60, q50, note }) => (
+              ].map(({ res, q80, q70, q60, q50 }) => (
                 <tr
                   key={res}
                   className="border-b border-border hover:bg-surface/50 transition-colors"
