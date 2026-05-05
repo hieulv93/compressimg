@@ -56,6 +56,11 @@ module.exports = {
       '/compress-image-to-10mb': 0.75,
       '/compress-image-to-2mb': 0.75,
       '/compress-image-to-3mb': 0.75,
+      '/compress-image-to-4mb': 0.75,
+      '/compress-image-for-slack': 0.75,
+      '/compress-image-for-teams': 0.75,
+      '/tiff-to-jpg': 0.85,
+      '/avif-to-jpg': 0.8,
     }
     return {
       loc: path,

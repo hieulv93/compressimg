@@ -92,6 +92,49 @@ export function revokeConvertPreview(url: string) {
   URL.revokeObjectURL(url)
 }
 
+export async function convertTiffToJpg(file: File): Promise<ConvertResult> {
+  const buf = await file.arrayBuffer()
+  // Dynamic import — utif is only needed for TIFF, keep it out of the main bundle
+  const UTIF = (await import('utif')).default
+  const ifds = UTIF.decode(buf)
+  if (!ifds || ifds.length === 0) throw new Error('Failed to decode TIFF')
+  UTIF.decodeImage(buf, ifds[0])
+  const rgba = UTIF.toRGBA8(ifds[0])
+  const width = ifds[0].width as number
+  const height = ifds[0].height as number
+
+  const canvas = document.createElement('canvas')
+  canvas.width = width
+  canvas.height = height
+  const ctx = canvas.getContext('2d')
+  if (!ctx) throw new Error('Canvas context unavailable')
+
+  ctx.fillStyle = '#ffffff'
+  ctx.fillRect(0, 0, width, height)
+  ctx.putImageData(new ImageData(new Uint8ClampedArray(rgba), width, height), 0, 0)
+
+  return new Promise((resolve, reject) => {
+    canvas.toBlob(
+      (blob) => {
+        if (!blob) {
+          reject(new Error('Failed to generate JPEG'))
+          return
+        }
+        resolve({
+          blob,
+          previewUrl: URL.createObjectURL(blob),
+          inputFormat: 'tiff',
+          outputExt: 'jpg',
+          originalSize: file.size,
+          outputSize: blob.size,
+        })
+      },
+      'image/jpeg',
+      0.92
+    )
+  })
+}
+
 export { triggerDownload } from './compress'
 
 async function getSvgSize(file: File): Promise<{ width: number; height: number }> {
