@@ -139,6 +139,46 @@ const jsonLd = {
             text: 'Yes — files up to 20MB are accepted. If your original file is larger than 20MB, consider resizing the dimensions first to bring the file under 20MB before uploading.',
           },
         },
+        {
+          '@type': 'Question',
+          name: 'How do I compress a photo to 100KB for WhatsApp?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Upload your photo, set quality to 70, and check the output size. If still over 100KB, lower quality to 55–60 or resize to 800px wide first. WhatsApp profile photos display at 300×300px, so a 800px wide JPG at quality 70 lands at 30–60KB.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I make a photo size less than 100KB?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Try quality 70 first — this reduces most phone photos to 50–150KB. If still over 100KB, lower to 55–60 or resize to 1000–1280px wide first, then compress at quality 70.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How to reduce image size below 100KB?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Start with quality 70 and check the output size. If still over 100KB at quality 60, resize the image to 1000–1280px wide first, then compress at quality 60–70. For limits under 50KB, resize to 800px and use quality 50–55.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I compress an image to under 100KB for free?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes — this tool compresses images to under 100KB completely free with no sign-up, no watermark, and no daily limit. All compression runs in your browser — your image is never uploaded to any server.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I compress an image to 100KB on a mobile phone?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Open this page in Safari or Chrome on your phone, tap the upload area, select a photo from your camera roll, set quality to 60–70, and compress. The result shows the exact output size. Download the compressed image directly to your phone.',
+          },
+        },
       ],
     },
   ],

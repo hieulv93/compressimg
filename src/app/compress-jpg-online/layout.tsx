@@ -134,6 +134,38 @@ const jsonLd = {
             text: 'Yes. Fully optimized for iOS and Android mobile browsers. Open your camera roll, select a JPG, compress it, and download — all within your mobile browser, no app required.',
           },
         },
+        {
+          '@type': 'Question',
+          name: 'How do I reduce JPG file size?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Upload your JPG, set quality to 80, and download the compressed result. Quality 80 reduces JPG file size by 60–70% with no visible quality loss. Lower to 60 for 80–90% reduction. The result card shows the exact file size before you download.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I shrink a JPG file size?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Set quality to 75–80 to shrink a JPG by 60–70% with no visible change. For maximum shrinkage, use quality 50–60 — the result is 80–90% smaller. For thumbnails and social media previews, quality 60–70 is indistinguishable from the original.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is a free JPG file size reducer online?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'This tool is a free browser-based JPG file size reducer — no upload to server, no sign-up, no watermark, no daily limit. Compress any number of JPG files for free. Works on desktop and mobile.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I decrease JPG file size without losing quality?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Use quality 75–85. At quality 80, most JPG files are reduced by 60–70% with a result visually indistinguishable from the original on screen. Quality loss only becomes noticeable below quality 60 at full zoom.',
+          },
+        },
       ],
     },
   ],

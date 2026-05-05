@@ -375,6 +375,26 @@ function CompressTo100KbFAQSection() {
       q: 'Is there a file size limit for images I can compress?',
       a: 'Yes — files up to 20MB are accepted. If your original file is larger than 20MB (common with high-resolution DSLR RAW exports or very large scans), consider resizing the dimensions first to bring the file under 20MB before uploading.',
     },
+    {
+      q: 'How do I compress a photo to 100KB for WhatsApp?',
+      a: 'WhatsApp compresses images automatically when sent, but some forms and profile pictures require a specific file under 100KB. To compress a photo to 100KB for WhatsApp: upload your photo here, set quality to 70, and check the output size. If still over 100KB, lower quality to 55–60 or resize the photo to 800px wide first. WhatsApp profile photos display at 300×300px, so a 800px wide JPG at quality 70 will land at 30–60KB.',
+    },
+    {
+      q: 'How do I make a photo size less than 100KB?',
+      a: 'To make a photo less than 100KB: (1) Upload the photo and try quality 70 first — this reduces most phone photos to 50–150KB. (2) If still over 100KB, lower quality to 55–60. (3) If quality compression alone is not enough, the photo dimensions are too large — resize to 1000–1280px wide first using the Resize Image tool, then compress at quality 70. A 3000px wide photo at quality 60 is still 200–400KB; the same photo at 1000px wide at quality 70 is 30–80KB.',
+    },
+    {
+      q: 'How to reduce image size below 100KB?',
+      a: 'Reducing an image below 100KB requires either quality reduction, dimension reduction, or both. Start with quality 70 and check the output size. If still over 100KB at quality 60, the image dimensions are likely too large. Use the Resize Image tool to bring the width to 1000–1280px, then compress at quality 60–70. For very strict limits (under 50KB), resize to 800px and use quality 50–55.',
+    },
+    {
+      q: 'Can I compress an image to under 100KB for free?',
+      a: 'Yes — this tool compresses images to under 100KB completely free with no sign-up, no watermark, and no daily limit. All compression runs in your browser — your image is never uploaded to any server. Adjust the quality slider down until the output size shown in the result is under 100KB, then download.',
+    },
+    {
+      q: 'How do I compress an image to 100KB on a mobile phone?',
+      a: 'This tool works on iPhone and Android. Open the page in Safari, Chrome, or any mobile browser. Tap the upload area and select a photo from your camera roll. Adjust the quality slider down to 60–70 and tap to compress. The result shows the exact output size — if over 100KB, lower the quality and compress again. Download the compressed image directly to your phone.',
+    },
   ]
 
   return (

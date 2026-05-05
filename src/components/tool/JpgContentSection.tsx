@@ -365,6 +365,26 @@ function JpgFAQSection() {
       q: 'Are my JPG files uploaded to any server?',
       a: 'No. All JPG compression happens entirely in your browser using JavaScript. Your files never leave your device and are never uploaded to any server. There is no sign-up required and no usage limits. The tool works completely offline once the page is loaded.',
     },
+    {
+      q: 'How do I reduce JPG file size?',
+      a: 'To reduce JPG file size: upload your JPG to this tool, adjust the quality slider (start at 80), and download the compressed result. Quality 80 typically reduces JPG file size by 60–70% with no visible quality loss on screen. For aggressive reduction (80–90%), lower quality to 60. The result card shows the exact file size before you download, so you can re-compress at a lower quality if needed.',
+    },
+    {
+      q: 'How do I shrink a JPG file size?',
+      a: 'Shrinking a JPG file involves reducing the quality level, which removes image detail imperceptible to the human eye. Set quality to 75–80 to shrink a JPG by 60–70% with no visible change. For maximum shrinkage, use quality 50–60 — the result is 80–90% smaller but may show minor artifacts on detailed images. For photos displayed at small sizes (thumbnails, social media previews), quality 60–70 is indistinguishable from the original.',
+    },
+    {
+      q: 'What is the best free JPG file size reducer online?',
+      a: 'This tool is a free browser-based JPG file size reducer — no upload to server, no sign-up, no watermark, and no daily limit. You can compress any number of JPG files for free. The quality slider lets you choose exactly how much to reduce the file size, and the result shows the exact output size before downloading. It works on desktop and mobile browsers.',
+    },
+    {
+      q: 'How do I decrease JPG file size without losing quality?',
+      a: 'To decrease JPG file size without visible quality loss, use quality 75–85. At quality 80, most JPG files are reduced by 60–70% with a result that is visually indistinguishable from the original when viewed on a screen. Quality loss only becomes noticeable below quality 60, and then only at full zoom on detailed images. For standard display sizes (web, social media, email), quality 70–80 is the sweet spot for maximum size reduction without perceived quality loss.',
+    },
+    {
+      q: 'How do I compress a JPG image file for email?',
+      a: 'For email, aim for JPG files under 1MB per image (Gmail and Outlook allow up to 25MB total per email, but large attachments cause slow sending). Set quality to 75–80 — this compresses a 5MB photo to 500KB–1MB with no visible quality change. If you need even smaller files for email, try quality 65–70, which typically produces 200–500KB JPGs. For passport photos and form submissions requiring under 100KB, use quality 60 and resize to 1280px wide first.',
+    },
   ]
 
   return (
