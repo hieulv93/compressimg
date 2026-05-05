@@ -167,6 +167,11 @@ const popularUseCases = [
     description: "Reduce thumbnail and banner size — stay under YouTube's 2MB limit.",
   },
   {
+    href: '/compress-image',
+    title: 'Thumbnail Compressor',
+    description: 'Compress YouTube and gaming thumbnails to under 2MB before uploading.',
+  },
+  {
     href: '/compress-image-to-100kb',
     title: 'Compress to 100KB',
     description: 'Reduce any image to under 100KB for forms and portals.',
@@ -243,7 +248,9 @@ export default function HomePage() {
     <main className="flex-1">
       <div className="max-w-3xl mx-auto px-4 py-12 sm:py-20 space-y-10">
         <div className="text-center space-y-3">
-          <h1 className="text-2xl sm:text-3xl font-bold text-text-main">Free Online Image Tools</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
+            Free Image Compressor — Compress, Resize &amp; Convert Images
+          </h1>
           <p className="text-text-muted text-sm sm:text-base max-w-lg mx-auto">
             Fast, private, browser-based. Your images never leave your device.
           </p>

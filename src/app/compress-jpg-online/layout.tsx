@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-jpg-online/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress JPG Online Free – Reduce JPEG File Size',
+  title: 'Compress JPG Online Free — JPG File Size Reducer & JPEG Compressor',
   description:
-    'Free online JPG compressor. Reduce JPEG file size by up to 90% without losing quality. No upload to server — 100% browser-based and private. Supports JPG and JPEG.',
+    'Free JPG file size reducer. Reduce and shrink JPG/JPEG images by up to 90% without losing quality. No upload to server — 100% browser-based and private.',
   keywords: [
     'compress jpg',
     'compress jpeg',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress JPG Online Free – Reduce JPEG File Size',
+    title: 'Compress JPG Online Free — JPG File Size Reducer & JPEG Compressor',
     description:
-      'Reduce JPG and JPEG file size by up to 90% for free. No uploads — works 100% in your browser. Your images never leave your device.',
+      'Free JPG file size reducer. Shrink JPG and JPEG images by up to 90% for free. No uploads — works 100% in your browser.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress JPG Online Free' }],
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress JPG Online Free – Reduce JPEG File Size',
-    description: 'Reduce JPG file size by up to 90% for free. 100% browser-based — no uploads.',
+    title: 'Compress JPG Online Free — JPG File Size Reducer',
+    description: 'Free JPG file size reducer. Shrink JPEG images by up to 90% — no uploads.',
     images: [OG_IMAGE],
   },
 }

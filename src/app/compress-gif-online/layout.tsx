@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-gif-online/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress GIF Online Free — Reduce GIF File Size',
+  title: 'GIF Compressor Online Free — Compress Animated GIF File Size',
   description:
-    'Free online GIF compressor. Reduce GIF file size by up to 70% without losing animation. No upload to server — 100% browser-based and private.',
+    'Free GIF compressor and animated GIF size reducer. Reduce GIF file size by up to 70% without losing animation. No upload to server — 100% browser-based and private.',
   keywords: [
     'compress gif online',
     'gif compressor',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress GIF Online Free — Reduce GIF File Size',
+    title: 'GIF Compressor Online Free — Compress Animated GIF File Size',
     description:
-      'Reduce GIF file size by up to 70% without losing animation. 100% browser-based, no uploads.',
+      'Reduce animated GIF file size by up to 70% without losing animation. 100% browser-based, no uploads.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress GIF Online Free' }],
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress GIF Online Free',
-    description: 'Reduce GIF file size by up to 70%. Browser-based, no uploads, free.',
+    title: 'GIF Compressor Online Free — Compress Animated GIF',
+    description: 'Reduce animated GIF file size by up to 70%. Browser-based, no uploads, free.',
     images: [OG_IMAGE],
   },
 }
