@@ -27,6 +27,44 @@ export default function CompressGifContentSection() {
       </div>
 
       <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">How Does a GIF Compressor Work?</h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          A GIF compressor (also called a GIF optimizer) reduces file size through two independent
+          mechanisms: lossy color reduction and frame rate reduction. Unlike video compression, GIF
+          has no inter-frame compression — each frame is a fully independent image, so the
+          compressor must optimize each frame separately.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          {[
+            {
+              title: 'Color Palette Reduction (Lossy)',
+              desc: 'Each GIF frame can use up to 256 colors. The optimizer merges similar colors into fewer palette entries — at Quality 10, roughly 64 colors are used. Fewer colors = more repeated values = better LZW compression ratio. This is the primary size reduction method.',
+            },
+            {
+              title: 'Frame Rate Reduction',
+              desc: 'The optimizer removes every Nth frame from the animation sequence, reducing total frame count. Frame Skip 2 removes every other frame, halving the data. The animation continues to loop — just at half the original frame rate.',
+            },
+            {
+              title: 'LZW Re-encoding',
+              desc: 'After color reduction, each frame is re-encoded using LZW compression. Frames with fewer colors and more repeated pixel values compress significantly better. A 256-color frame may be 3× larger than the same frame at 64 colors after LZW.',
+            },
+          ].map(({ title, desc }) => (
+            <div key={title} className="border border-border rounded-xl p-4 space-y-1">
+              <p className="text-sm font-semibold text-text-main">{title}</p>
+              <p className="text-xs text-text-muted leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Best practice for web GIFs: target under 1MB for GIFs used in blog posts and social
+          embeds, under 500KB for GIFs used as page decorations. For anything over 2MB, consider{' '}
+          <span className="text-text-main font-medium">Frame Skip 2 + Quality 10</span> — this
+          combination reliably reduces most GIFs to 20–40% of their original size while keeping the
+          animation recognizable.
+        </p>
+      </div>
+
+      <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
           How to Compress an Animated GIF — Two Methods
         </h2>
@@ -288,6 +326,14 @@ export default function CompressGifContentSection() {
             {
               q: 'Is there a free online tool to compress GIF files without losing animation?',
               a: 'Yes — this tool compresses animated GIFs entirely in your browser at no cost, with no file upload. The animation is always preserved. You can reduce GIF file size by 30–80% by adjusting the quality and frame skip sliders. No account or sign-up is required, and there is no daily limit on the number of GIFs you can compress.',
+            },
+            {
+              q: 'Can I compress a GIF that has already been compressed?',
+              a: 'Yes, but with diminishing returns. If a GIF was previously compressed with color reduction (fewer than 256 colors), further quality reduction will produce visible banding and little additional size savings. Frame rate reduction still works effectively on pre-compressed GIFs — Frame Skip 2 will still remove half the frames and cut file size by 30–50% regardless of prior compression.',
+            },
+            {
+              q: 'What is a good target file size for a web GIF?',
+              a: 'For inline use in blog posts, emails, and social embeds: under 1MB. For GIFs used as page decorations or background elements: under 500KB. For GIF emoji and reactions: under 64–256KB (Discord emoji limit is 256KB; Slack emoji is 64KB). For GIFs embedded in landing pages: keep under 300KB to avoid PageSpeed score penalties.',
             },
           ].map(({ q, a }) => (
             <FAQItem key={q} question={q} answer={a} />

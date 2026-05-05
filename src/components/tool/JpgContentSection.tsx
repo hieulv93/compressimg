@@ -39,6 +39,41 @@ export default function JpgContentSection() {
       </div>
 
       <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">How JPEG Compression Works</h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          JPEG compression works by dividing the image into 8×8 pixel blocks and applying a
+          mathematical process called Discrete Cosine Transform (DCT). This identifies and discards
+          high-frequency details — fine textures and subtle gradients — that the human eye is least
+          sensitive to. The quality slider controls how aggressively these details are discarded.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            {
+              title: 'Lossy compression — permanent',
+              desc: 'Each save cycle discards some image data permanently. Always keep your original file and compress a copy. Re-compressing an already-compressed JPG at low quality produces visible artifacts ("blockiness") faster than starting from the original.',
+            },
+            {
+              title: 'Quality 80 = 60–70% smaller, invisible loss',
+              desc: 'At quality 80, JPEG discards detail that screens cannot display and eyes cannot detect at normal viewing distance. The output is visually identical to the original on any monitor but 60–70% smaller in file size.',
+            },
+            {
+              title: 'Browser-based compression (this tool)',
+              desc: "This tool uses the browser's native Canvas API to re-encode the image. No file is uploaded to any server. The compression happens locally on your device, making it instant and private.",
+            },
+            {
+              title: 'When to reduce file size vs dimensions',
+              desc: 'For a 5MB photo at 4000px wide: resizing to 1280px first reduces file size by 85% before quality compression is applied. For smaller images, quality compression alone is sufficient.',
+            },
+          ].map(({ title, desc }) => (
+            <div key={title} className="border border-border rounded-xl p-4 space-y-1">
+              <p className="text-sm font-semibold text-text-main">{title}</p>
+              <p className="text-xs text-text-muted leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
           How to Compress JPG Online — 3 Simple Steps
         </h2>
