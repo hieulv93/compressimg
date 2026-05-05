@@ -211,6 +211,128 @@ export default function JpgContentSection() {
 
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
+          How to Reduce JPG File Size — Results by Resolution
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          When you reduce JPG file size online, the output depends on the original image dimensions
+          and your quality setting. This table shows typical compressed sizes so you can pick the
+          right quality level for your target before uploading. Values are for standard photographic
+          content — images with solid colors or simple backgrounds compress smaller.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-surface border-b border-border">
+                <th className="text-left p-3 font-semibold text-text-main">Original resolution</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 85</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 75</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 60</th>
+                <th className="text-left p-3 font-semibold text-text-main">Typical original</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                {
+                  res: '4000×3000 (12MP)',
+                  q85: '500–1200 KB',
+                  q75: '300–700 KB',
+                  q60: '150–350 KB',
+                  orig: '3–8 MB',
+                },
+                {
+                  res: '2560×1440 (4K crop)',
+                  q85: '250–600 KB',
+                  q75: '150–350 KB',
+                  q60: '80–180 KB',
+                  orig: '1.5–4 MB',
+                },
+                {
+                  res: '1920×1080 (Full HD)',
+                  q85: '150–350 KB',
+                  q75: '90–200 KB',
+                  q60: '50–110 KB',
+                  orig: '800 KB–2 MB',
+                },
+                {
+                  res: '1280×720 (HD)',
+                  q85: '80–180 KB',
+                  q75: '50–110 KB',
+                  q60: '30–65 KB',
+                  orig: '300–800 KB',
+                },
+                {
+                  res: '800×600',
+                  q85: '30–80 KB',
+                  q75: '20–50 KB',
+                  q60: '12–30 KB',
+                  orig: '100–300 KB',
+                },
+              ].map(({ res, q85, q75, q60, orig }) => (
+                <tr
+                  key={res}
+                  className="border-b border-border hover:bg-surface/50 transition-colors"
+                >
+                  <td className="p-3 font-medium text-text-main text-xs">{res}</td>
+                  <td className="p-3 text-text-muted text-xs">{q85}</td>
+                  <td className="p-3 text-text-muted text-xs">{q75}</td>
+                  <td className="p-3 text-text-muted text-xs">{q60}</td>
+                  <td className="p-3 text-text-muted text-xs">{orig}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          For most websites and social media: quality 75–80 reduces JPG file size by 65–75% with no
+          visible quality change. For form submissions requiring under 100KB: use quality 60 on
+          images 1280px wide or smaller. For print and portfolio work: keep quality at 85+.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
+          Shrink JPG File Size for Specific Platforms
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Different platforms have different JPG file size requirements. Use the guide below to
+          shrink your JPG file size to the right target for each use case:
+        </p>
+        <div className="grid sm:grid-cols-2 gap-3">
+          {[
+            {
+              platform: 'Email attachments (Gmail / Outlook)',
+              target: 'Under 1–2 MB per image',
+              setting: 'Quality 80 — reduces a 5MB JPG to 400–800KB with invisible quality loss.',
+            },
+            {
+              platform: 'Government forms / job portals',
+              target: 'Under 100–200 KB',
+              setting: 'Quality 60–70 at 1280px wide. Resize first if original is over 2000px.',
+            },
+            {
+              platform: 'WordPress / CMS uploads',
+              target: 'Under 200 KB per image',
+              setting:
+                'Quality 75–80 at 1920px wide for hero images; quality 70 at 1280px for blog thumbnails.',
+            },
+            {
+              platform: 'Social media (Instagram, Facebook, Twitter)',
+              target: 'Under 1 MB',
+              setting:
+                'Quality 80 — platforms re-compress on upload, so start high to control final quality.',
+            },
+          ].map(({ platform, target, setting }) => (
+            <div key={platform} className="border border-border rounded-xl p-4 space-y-1">
+              <p className="text-sm font-semibold text-text-main">{platform}</p>
+              <p className="text-xs text-primary font-medium">{target}</p>
+              <p className="text-xs text-text-muted leading-relaxed">{setting}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
           JPG vs PNG vs WebP: Which Format Should You Use?
         </h2>
         <p className="text-text-muted text-sm leading-relaxed">

@@ -83,6 +83,130 @@ export default function CompressTo100KbContentSection() {
 
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
+          Compress Photo to 100KB — Expected Output Size
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          The output size depends on two things: your image dimensions and the quality setting. Use
+          this table as a starting point when you need to compress a photo to 100KB or less. Values
+          are approximate and vary with image content — photos with lots of detail compress less
+          than simple backgrounds.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-surface border-b border-border">
+                <th className="text-left p-3 font-semibold text-text-main">Resolution</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 80</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 70</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 60</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 50</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                {
+                  res: '4000×3000 (12MP phone)',
+                  q80: '800–2000 KB',
+                  q70: '500–1200 KB',
+                  q60: '300–700 KB',
+                  q50: '180–400 KB',
+                  note: 'Resize first',
+                },
+                {
+                  res: '2000×1500 (5MP)',
+                  q80: '250–600 KB',
+                  q70: '150–350 KB',
+                  q60: '90–200 KB',
+                  q50: '55–120 KB',
+                  note: 'Q60 borderline',
+                },
+                {
+                  res: '1280×960 (1.2MP)',
+                  q80: '100–250 KB',
+                  q70: '60–150 KB',
+                  q60: '40–100 KB',
+                  q50: '25–65 KB',
+                  note: '✅ Q70 hits 100KB',
+                },
+                {
+                  res: '1000×750',
+                  q80: '60–150 KB',
+                  q70: '40–90 KB',
+                  q60: '25–60 KB',
+                  q50: '15–40 KB',
+                  note: '✅ Q80 usually hits 100KB',
+                },
+                {
+                  res: '800×600',
+                  q80: '35–90 KB',
+                  q70: '22–55 KB',
+                  q60: '15–35 KB',
+                  q50: '10–22 KB',
+                  note: '✅ Always under 100KB',
+                },
+              ].map(({ res, q80, q70, q60, q50, note }) => (
+                <tr
+                  key={res}
+                  className="border-b border-border hover:bg-surface/50 transition-colors"
+                >
+                  <td className="p-3 font-medium text-text-main text-xs">{res}</td>
+                  <td className="p-3 text-text-muted text-xs">{q80}</td>
+                  <td className="p-3 text-text-muted text-xs">{q70}</td>
+                  <td className="p-3 text-text-muted text-xs">{q60}</td>
+                  <td className="p-3 text-text-muted text-xs">{q50}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          <strong className="text-text-main">Rule of thumb:</strong> If your photo is taken with a
+          modern smartphone (12MP+), resize it to 1280×960px first using the{' '}
+          <Link href="/resize-image" className="text-primary underline">
+            Resize Image tool
+          </Link>
+          , then compress at quality 70. This two-step process reliably gets most photos under 100KB
+          while keeping the image sharp enough for form submissions, ID photos, and profile
+          pictures.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">How to Make Photo Size Less Than 100KB</h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          &quot;Make photo size less than 100KB&quot; is one of the most common image tasks for job
+          applications, school portals, and government forms — and it is easier than most people
+          think. Here is the fastest method:
+        </p>
+        <div className="space-y-2">
+          {[
+            {
+              label: 'Step 1 — Check the original size',
+              desc: 'If your photo is already under 1280px wide (e.g., a screenshot or downloaded image), you can skip resizing. Go straight to compression at quality 70.',
+            },
+            {
+              label: 'Step 2 — Resize if over 2MP',
+              desc: 'Smartphone photos are usually 3000–4000px wide. Resize to 1000–1280px wide first. This single step takes most 3–8MB photos to 200–500KB, making the 100KB target easy to hit with quality compression.',
+            },
+            {
+              label: 'Step 3 — Compress at quality 60–70',
+              desc: 'Upload the (resized) photo here and set quality to 70. Check the output size. If over 100KB, lower to 60. The result shows the exact compressed size before you download — no guessing.',
+            },
+            {
+              label: 'Step 4 — Download and submit',
+              desc: 'Download the compressed photo. The dimensions are unchanged (only file size is reduced), so a 1280×960px photo submitted to a form will display correctly at any size the platform uses.',
+            },
+          ].map(({ label, desc }) => (
+            <div key={label} className="border border-border rounded-xl p-4 space-y-1">
+              <p className="text-sm font-semibold text-text-main">{label}</p>
+              <p className="text-sm text-text-muted leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
           Why 100KB? Common File Size Requirements
         </h2>
         <p className="text-text-muted text-sm leading-relaxed">
