@@ -61,6 +61,9 @@ module.exports = {
       '/compress-image-for-teams': 0.75,
       '/tiff-to-jpg': 0.85,
       '/avif-to-jpg': 0.8,
+      '/reduce-image-size': 0.85,
+      '/photo-compressor': 0.85,
+      '/compress-jpeg': 0.85,
     }
     return {
       loc: path,
