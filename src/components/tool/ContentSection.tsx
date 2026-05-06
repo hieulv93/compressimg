@@ -218,7 +218,7 @@ export default function ContentSection() {
 
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">More Free Image Tools</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <Link
             href="/resize-image"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
@@ -239,6 +239,17 @@ export default function ContentSection() {
             </p>
             <p className="text-xs text-text-muted mt-1">
               Convert between JPG, PNG, and WebP instantly in your browser.
+            </p>
+          </Link>
+          <Link
+            href="/compress-image-to-100kb"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Compress to 100KB
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Reduce any photo to under 100KB for government forms and portals.
             </p>
           </Link>
           <Link
