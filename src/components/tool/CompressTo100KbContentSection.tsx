@@ -83,6 +83,105 @@ export default function CompressTo100KbContentSection() {
 
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
+          Compress Phone Photo to 100KB — iPhone &amp; Android
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          The most common source of images that need to reach 100KB is a smartphone camera. Modern
+          phones shoot at 12–48 megapixels, producing photos that are 3–8MB each. This tool handles
+          both major phone formats directly — no separate conversion step needed.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="rounded-xl border border-border p-4 space-y-1">
+            <p className="font-semibold text-text-main text-sm">iPhone (HEIC format)</p>
+            <p className="text-xs text-text-muted leading-relaxed">
+              iPhones save photos as HEIC by default — a highly efficient format that still produces
+              2–5MB files at 4032×3024px. This tool accepts HEIC directly and converts it to JPG
+              during compression. For most iPhone photos, quality 55–65 after resizing to 1280px
+              wide outputs 40–90KB.
+            </p>
+          </div>
+          <div className="rounded-xl border border-border p-4 space-y-1">
+            <p className="font-semibold text-text-main text-sm">Android (JPG / WebP)</p>
+            <p className="text-xs text-text-muted leading-relaxed">
+              Android phones save in JPG or WebP. Camera files at 12MP are typically 3–6MB at
+              4000×3000px. Set quality to 60–70 to reach 100KB on most Android photos. If still over
+              100KB at quality 60, resize to 1280px wide first using the{' '}
+              <Link href="/resize-image" className="text-primary underline">
+                Resize Image tool
+              </Link>
+              .
+            </p>
+          </div>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-surface border-b border-border">
+                <th className="text-left p-3 font-semibold text-text-main">Phone Camera</th>
+                <th className="text-left p-3 font-semibold text-text-main">Typical Size</th>
+                <th className="text-left p-3 font-semibold text-text-main">Resolution</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality for 100KB</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                {
+                  type: 'iPhone (12MP HEIC)',
+                  size: '2–4MB',
+                  res: '4032×3024px',
+                  q: 'Resize to 1280px + Q60',
+                },
+                {
+                  type: 'iPhone (48MP HEIC)',
+                  size: '15–30MB',
+                  res: '8064×6048px',
+                  q: 'Resize to 1000px + Q55',
+                },
+                {
+                  type: 'Android flagship (12MP)',
+                  size: '3–6MB',
+                  res: '4000×3000px',
+                  q: 'Resize to 1280px + Q65',
+                },
+                {
+                  type: 'Budget Android (8MP)',
+                  size: '1–3MB',
+                  res: '3264×2448px',
+                  q: 'Resize to 1280px + Q70',
+                },
+                {
+                  type: 'Selfie camera (5–12MP)',
+                  size: '500KB–2MB',
+                  res: '1600–4000px',
+                  q: 'Q60–70 (no resize needed)',
+                },
+              ].map(({ type, size, res, q }) => (
+                <tr
+                  key={type}
+                  className="border-b border-border hover:bg-surface/50 transition-colors"
+                >
+                  <td className="p-3 font-medium text-text-main text-xs">{type}</td>
+                  <td className="p-3 text-text-muted text-xs">{size}</td>
+                  <td className="p-3 text-text-muted text-xs">{res}</td>
+                  <td className="p-3 text-text-muted text-xs">{q}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          <strong className="text-text-main">Tip for ID and form photos taken on phone:</strong> If
+          the form specifies both file size (e.g., under 100KB) and pixel dimensions (e.g.,
+          600×600px), use the{' '}
+          <Link href="/resize-image" className="text-primary underline">
+            Resize Image tool
+          </Link>{' '}
+          to set exact dimensions first, then compress here.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
           Compress Photo to 100KB — Expected Output Size
         </h2>
         <p className="text-text-muted text-sm leading-relaxed">
@@ -263,6 +362,101 @@ export default function CompressTo100KbContentSection() {
               instantly even on 3G mobile connections.
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
+          Compress Image to 100KB for Online Form Submissions
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Online portals that enforce a 100KB file size limit typically do so for performance and
+          storage reasons. The table below shows typical requirements by form type — always check
+          the specific portal&apos;s upload instructions before compressing, as requirements vary by
+          country and platform.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-surface border-b border-border">
+                <th className="text-left p-3 font-semibold text-text-main">Form Type</th>
+                <th className="text-left p-3 font-semibold text-text-main">Typical Size Limit</th>
+                <th className="text-left p-3 font-semibold text-text-main">Common Dimensions</th>
+                <th className="text-left p-3 font-semibold text-text-main">Format</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                {
+                  type: 'Government ID / Visa photo',
+                  size: '10–100KB',
+                  dims: '200×200 to 600×600px',
+                  fmt: 'JPG',
+                },
+                {
+                  type: 'Job application / HR portal',
+                  size: '50–200KB',
+                  dims: '300×300 to 600×600px',
+                  fmt: 'JPG, PNG',
+                },
+                {
+                  type: 'University admission form',
+                  size: '20–100KB',
+                  dims: '200×200 to 400×400px',
+                  fmt: 'JPG',
+                },
+                {
+                  type: 'Exam / test registration',
+                  size: '10–50KB',
+                  dims: '100×120 to 200×230px',
+                  fmt: 'JPG',
+                },
+                {
+                  type: 'Bank / KYC document photo',
+                  size: '50–200KB',
+                  dims: 'Any',
+                  fmt: 'JPG',
+                },
+                {
+                  type: 'Social media profile photo',
+                  size: 'No hard limit',
+                  dims: '400×400 to 1000×1000px',
+                  fmt: 'JPG, PNG',
+                },
+              ].map(({ type, size, dims, fmt }) => (
+                <tr
+                  key={type}
+                  className="border-b border-border hover:bg-surface/50 transition-colors"
+                >
+                  <td className="p-3 font-medium text-text-main text-xs">{type}</td>
+                  <td className="p-3 text-text-muted text-xs">{size}</td>
+                  <td className="p-3 text-text-muted text-xs">{dims}</td>
+                  <td className="p-3 text-text-muted text-xs">{fmt}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="space-y-2">
+          {[
+            {
+              step: 'Check the portal requirements first',
+              desc: 'Note both the file size limit (e.g., under 100KB) and dimension requirements (e.g., 600×600px). Some portals also specify format (JPG only) and minimum dimensions.',
+            },
+            {
+              step: 'Resize to exact dimensions if specified',
+              desc: 'If the form lists a pixel size, use the Resize Image tool to set exact dimensions. Compressing an image already at the right size ensures you meet both requirements in one step.',
+            },
+            {
+              step: 'Compress at quality 60–70',
+              desc: 'For most form photos at 600×600px, quality 65 produces 30–70KB — safely under 100KB. Check the compressed size shown in the result. If still over 100KB, reduce quality to 50–55.',
+            },
+          ].map(({ step, desc }) => (
+            <div key={step} className="border border-border rounded-xl p-4 space-y-1">
+              <p className="text-sm font-semibold text-text-main">{step}</p>
+              <p className="text-sm text-text-muted leading-relaxed">{desc}</p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -518,6 +712,14 @@ function CompressTo100KbFAQSection() {
     {
       q: 'How do I compress an image to 100KB on a mobile phone?',
       a: 'This tool works on iPhone and Android. Open the page in Safari, Chrome, or any mobile browser. Tap the upload area and select a photo from your camera roll. Adjust the quality slider down to 60–70 and tap to compress. The result shows the exact output size — if over 100KB, lower the quality and compress again. Download the compressed image directly to your phone.',
+    },
+    {
+      q: 'How do I compress an iPhone photo (HEIC) to 100KB?',
+      a: 'iPhones save photos as HEIC format by default. This tool accepts HEIC directly — just upload the photo and it will be automatically converted to JPG during compression. iPhone 12MP photos at 4032×3024px are typically 2–4MB. To reach 100KB, use the Resize Image tool to bring the width to 1280px, then compress at quality 60. iPhone 48MP photos need resizing to 1000px or smaller first.',
+    },
+    {
+      q: 'How do I compress a photo to 100KB for a government form or visa application?',
+      a: 'Government forms and visa portals typically require photos under 100KB, often at specific dimensions (e.g., 600×600px). The best approach: (1) Use the Resize Image tool to set the exact pixel dimensions required by the form. (2) Upload the resized photo here and compress at quality 65. (3) Check the output size — if still over 100KB, lower to quality 50–55. A 600×600px JPG at quality 65 is typically 30–70KB.',
     },
   ]
 

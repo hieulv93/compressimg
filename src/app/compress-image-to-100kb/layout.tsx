@@ -179,6 +179,22 @@ const jsonLd = {
             text: 'Open this page in Safari or Chrome on your phone, tap the upload area, select a photo from your camera roll, set quality to 60–70, and compress. The result shows the exact output size. Download the compressed image directly to your phone.',
           },
         },
+        {
+          '@type': 'Question',
+          name: 'How do I compress an iPhone photo (HEIC) to 100KB?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'iPhones save photos as HEIC format by default. This tool accepts HEIC directly — upload the photo and it will be automatically converted to JPG during compression. iPhone 12MP photos are typically 2–4MB at 4032×3024px. To reach 100KB, resize to 1280px wide first, then compress at quality 60.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I compress a photo to 100KB for a government form or visa application?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Government forms and visa portals typically require photos under 100KB at specific dimensions (e.g., 600×600px). Use the Resize Image tool to set the exact pixel dimensions, then upload here and compress at quality 65. A 600×600px JPG at quality 65 is typically 30–70KB — safely under 100KB.',
+          },
+        },
       ],
     },
   ],
