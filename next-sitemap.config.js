@@ -64,6 +64,9 @@ module.exports = {
       '/reduce-image-size': 0.85,
       '/photo-compressor': 0.85,
       '/compress-jpeg': 0.85,
+      '/image-resizer': 0.9,
+      '/webp-converter': 0.85,
+      '/image-converter': 0.85,
     }
     return {
       loc: path,
