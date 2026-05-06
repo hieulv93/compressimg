@@ -78,83 +78,85 @@ export default function CropBox({
 
   return (
     <div className="space-y-3">
-      {/* Crop area container */}
-      <div
-        ref={containerRef}
-        className="relative w-full select-none overflow-hidden rounded-xl bg-black"
-        style={{ touchAction: 'none' }}
-      >
-        {/* Image */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={imageUrl}
-          alt="Image to crop"
-          className="block w-full h-auto pointer-events-none"
-          draggable={false}
-        />
-
-        {/* 4-div overlay — each div paints only its small area, no giant box-shadow repaint */}
-        {/* Top */}
-        <div className={OVERLAY} style={{ top: 0, left: 0, right: 0, height: pct.top }} />
-        {/* Bottom */}
+      {/* Crop area container — centered, shrinks to fit image so containerRef = image bounds exactly */}
+      <div className="w-full flex justify-center">
         <div
-          className={OVERLAY}
-          style={{ bottom: 0, left: 0, right: 0, top: `${(y + h) * 100}%` }}
-        />
-        {/* Left */}
-        <div
-          className={OVERLAY}
-          style={{ top: pct.midTop, left: 0, width: pct.left, height: pct.midH }}
-        />
-        {/* Right */}
-        <div
-          className={OVERLAY}
-          style={{ top: pct.midTop, right: 0, left: `${(x + w) * 100}%`, height: pct.midH }}
-        />
-
-        {/* Crop border + move handle */}
-        <div
-          className="absolute border-2 border-white"
-          style={{
-            left: pct.left,
-            top: pct.top,
-            width: pct.width,
-            height: pct.height,
-            cursor: CURSOR_MAP['move'],
-          }}
-          onMouseDown={onMouseDown('move')}
-          onTouchStart={onTouchStart('move')}
+          ref={containerRef}
+          className="relative select-none overflow-hidden rounded-xl bg-black"
+          style={{ touchAction: 'none' }}
         >
-          {/* Rule-of-thirds grid lines */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-1/3 left-0 right-0 border-t border-white/30" />
-            <div className="absolute top-2/3 left-0 right-0 border-t border-white/30" />
-            <div className="absolute left-1/3 top-0 bottom-0 border-l border-white/30" />
-            <div className="absolute left-2/3 top-0 bottom-0 border-l border-white/30" />
-          </div>
+          {/* Image — max-h caps portrait images; w-auto keeps aspect ratio; max-w-full prevents overflow */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={imageUrl}
+            alt="Image to crop"
+            className="block max-w-full max-h-[75vh] w-auto h-auto pointer-events-none"
+            draggable={false}
+          />
 
-          {/* 8 resize handles */}
-          {HANDLES.map(([handle, hx, hy]) => (
-            <div
-              key={handle}
-              className="absolute"
-              style={{
-                left: hx,
-                top: hy,
-                transform: 'translate(-50%, -50%)',
-                width: 44,
-                height: 44,
-                cursor: CURSOR_MAP[handle],
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-              }}
-              onMouseDown={onMouseDown(handle)}
-              onTouchStart={onTouchStart(handle)}
-            >
-              <div className="w-3 h-3 bg-white border border-white/80 rounded-sm shadow-md" />
+          {/* 4-div overlay — each div paints only its small area, no giant box-shadow repaint */}
+          {/* Top */}
+          <div className={OVERLAY} style={{ top: 0, left: 0, right: 0, height: pct.top }} />
+          {/* Bottom */}
+          <div
+            className={OVERLAY}
+            style={{ bottom: 0, left: 0, right: 0, top: `${(y + h) * 100}%` }}
+          />
+          {/* Left */}
+          <div
+            className={OVERLAY}
+            style={{ top: pct.midTop, left: 0, width: pct.left, height: pct.midH }}
+          />
+          {/* Right */}
+          <div
+            className={OVERLAY}
+            style={{ top: pct.midTop, right: 0, left: `${(x + w) * 100}%`, height: pct.midH }}
+          />
+
+          {/* Crop border + move handle */}
+          <div
+            className="absolute border-2 border-white"
+            style={{
+              left: pct.left,
+              top: pct.top,
+              width: pct.width,
+              height: pct.height,
+              cursor: CURSOR_MAP['move'],
+            }}
+            onMouseDown={onMouseDown('move')}
+            onTouchStart={onTouchStart('move')}
+          >
+            {/* Rule-of-thirds grid lines */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-1/3 left-0 right-0 border-t border-white/30" />
+              <div className="absolute top-2/3 left-0 right-0 border-t border-white/30" />
+              <div className="absolute left-1/3 top-0 bottom-0 border-l border-white/30" />
+              <div className="absolute left-2/3 top-0 bottom-0 border-l border-white/30" />
             </div>
-          ))}
+
+            {/* 8 resize handles */}
+            {HANDLES.map(([handle, hx, hy]) => (
+              <div
+                key={handle}
+                className="absolute"
+                style={{
+                  left: hx,
+                  top: hy,
+                  transform: 'translate(-50%, -50%)',
+                  width: 44,
+                  height: 44,
+                  cursor: CURSOR_MAP[handle],
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+                onMouseDown={onMouseDown(handle)}
+                onTouchStart={onTouchStart(handle)}
+              >
+                <div className="w-3 h-3 bg-white border border-white/80 rounded-sm shadow-md" />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
