@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-youtube/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for YouTube — Reduce Thumbnail & Banner File Size',
+  title: 'Compress Image for YouTube — Free Thumbnail Size Reducer',
   description:
-    'Free online tool to compress YouTube thumbnails, channel banners, and profile photos. Reduce JPG, PNG size before uploading. 100% browser-based, no upload.',
+    'Compress YouTube thumbnails & channel banners in seconds. Stay under 2MB limit, keep faces and text sharp. Free, no sign-up, files never leave your device.',
   keywords: [
     'compress image for youtube',
     'compress youtube thumbnail',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for YouTube — Reduce Thumbnail & Banner File Size',
+    title: 'Compress Image for YouTube — Free Thumbnail Size Reducer',
     description:
-      'Reduce JPG and PNG file size for YouTube thumbnails, channel art, and profile photos. Free, no uploads, 100% browser-based.',
+      'Compress YouTube thumbnails & channel banners in seconds. Stay under 2MB limit, keep faces and text sharp. Free, no sign-up, files never leave your device.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for YouTube' }],
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Compress Image for YouTube — Free Thumbnail Size Reducer',
     description:
-      'Compress YouTube thumbnails and channel art before uploading. 100% browser-based, no uploads.',
+      'Compress YouTube thumbnails & channel banners in seconds. Stay under 2MB limit. Free, no sign-up.',
     images: [OG_IMAGE],
   },
 }

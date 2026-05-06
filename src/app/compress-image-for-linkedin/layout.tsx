@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-linkedin/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for LinkedIn — Reduce Photo Size for Profile & Posts',
+  title: 'Compress Image for LinkedIn — Free, Instant, No Upload',
   description:
-    'Free online tool to compress images for LinkedIn. Reduce JPG, PNG file size before uploading profile photos, cover images, and post attachments. 100% browser-based, no upload.',
+    'Compress LinkedIn profile photos, cover images & post attachments in seconds. Avoid blurry re-compression — keep images sharp. Free, no sign-up, 100% browser-based.',
   keywords: [
     'compress image for linkedin',
     'compress photo for linkedin',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for LinkedIn — Reduce Photo Size for Profile & Posts',
+    title: 'Compress Image for LinkedIn — Free, Instant, No Upload',
     description:
-      'Reduce JPG and PNG file size before uploading to LinkedIn. Keep profile photos sharp, avoid re-compression — free, no uploads, 100% browser-based.',
+      'Compress LinkedIn profile photos, cover images & post attachments in seconds. Avoid blurry re-compression — keep images sharp. Free, no sign-up, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for LinkedIn' }],
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress Image for LinkedIn — Free Photo Size Reducer',
+    title: 'Compress Image for LinkedIn — Free, Instant, No Upload',
     description:
-      'Compress profile photos and post images before uploading to LinkedIn. 100% browser-based, no uploads.',
+      'Compress LinkedIn profile photos & post images in seconds. No blurry re-compression. Free, no sign-up.',
     images: [OG_IMAGE],
   },
 }
