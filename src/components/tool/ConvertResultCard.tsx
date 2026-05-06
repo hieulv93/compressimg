@@ -72,18 +72,31 @@ export default function ConvertResultCard({
             <p className="text-xs text-text-muted uppercase tracking-wide font-medium">
               Size change
             </p>
-            <p className={`text-sm font-semibold ${isBigger ? 'text-amber-600' : 'text-success'}`}>
-              {isBigger ? '+' : '-'}
-              {diffPct}%
-            </p>
-            <p className="text-xs text-text-muted">{isBigger ? 'larger' : 'smaller'}</p>
+            {isBigger && outputExt === 'png' ? (
+              <>
+                <p className="text-sm font-semibold text-primary">Lossless</p>
+                <p className="text-xs text-text-muted">expected</p>
+              </>
+            ) : (
+              <>
+                <p
+                  className={`text-sm font-semibold ${isBigger ? 'text-amber-600' : 'text-success'}`}
+                >
+                  {isBigger ? '+' : '-'}
+                  {diffPct}%
+                </p>
+                <p className="text-xs text-text-muted">{isBigger ? 'larger' : 'smaller'}</p>
+              </>
+            )}
           </div>
         </div>
 
         {isBigger && (
-          <p className="text-xs text-amber-600 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 text-center">
+          <p
+            className={`text-xs rounded-lg px-3 py-2 text-center ${outputExt === 'png' ? 'text-primary bg-primary/5 border border-primary/20' : 'text-amber-600 bg-amber-50 border border-amber-200'}`}
+          >
             {outputExt === 'png'
-              ? 'PNG is lossless and stores more data than compressed formats — a larger file is expected.'
+              ? 'PNG uses lossless compression and stores more pixel data than JPG — a larger file is expected.'
               : `Output is larger than the original. Try converting to WebP for a smaller file size.`}
           </p>
         )}
