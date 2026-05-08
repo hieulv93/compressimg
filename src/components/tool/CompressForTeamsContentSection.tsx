@@ -8,6 +8,46 @@ export default function CompressForTeamsContentSection() {
       aria-label="Guide to compressing images for Microsoft Teams"
     >
       <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">Does Microsoft Teams Compress Images?</h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          <strong className="text-text-main">Yes — but only the preview, not the original.</strong>{' '}
+          Microsoft Teams automatically generates smaller thumbnail previews for inline display in
+          chat and channels. However, the original full-size image is stored in SharePoint and
+          remains available for download at its original file size. This means your team members who
+          download the image still get the uncompressed original, and the full file counts against
+          your organization&apos;s SharePoint storage quota.
+        </p>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Teams also applies additional compression when images are pasted directly from the
+          clipboard (copy-paste). In this case, Teams reduces image quality automatically — which
+          can make screenshots look blurry. To avoid this, save your image as a file and upload it
+          directly instead of pasting.
+        </p>
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">Quick answer: Does Teams compress images?</p>
+          <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
+            <li>
+              ✅ <strong className="text-text-main">Preview thumbnails:</strong> Yes — Teams
+              generates smaller previews for inline display
+            </li>
+            <li>
+              ❌ <strong className="text-text-main">Original file:</strong> No — full-size original
+              is stored in SharePoint and available for download
+            </li>
+            <li>
+              ⚠️ <strong className="text-text-main">Clipboard paste:</strong> Yes — Teams compresses
+              pasted images, often causing blur
+            </li>
+          </ul>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Because Teams stores the original, compressing images <em>before</em> uploading is the
+          only way to reduce SharePoint storage consumption, speed up loading for everyone in the
+          channel, and ensure colleagues receive an optimally sized file.
+        </p>
+      </div>
+
+      <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
           Why Compress Images Before Sharing in Microsoft Teams?
         </h2>

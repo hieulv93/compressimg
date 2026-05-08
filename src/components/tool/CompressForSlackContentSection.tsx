@@ -8,6 +8,45 @@ export default function CompressForSlackContentSection() {
       aria-label="Guide to compressing images for Slack"
     >
       <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">Does Slack Compress Images?</h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          <strong className="text-text-main">Yes — but only the preview, not the original.</strong>{' '}
+          Slack automatically generates smaller thumbnail previews for images shared in channels and
+          direct messages. These previews display inline in the message thread at a reduced size.
+          However, the original full-size image is stored on Slack&apos;s servers and is available
+          for teammates to download at the original file size, counting toward your workspace
+          storage quota.
+        </p>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Slack also reduces image quality for animated GIFs to limit bandwidth usage in channels.
+          For static images (JPG, PNG, WebP), Slack shows a compressed preview but preserves the
+          original for download.
+        </p>
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">Quick answer: Does Slack compress images?</p>
+          <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
+            <li>
+              ✅ <strong className="text-text-main">Preview thumbnails:</strong> Yes — Slack
+              generates smaller previews for inline display in channels
+            </li>
+            <li>
+              ❌ <strong className="text-text-main">Original file:</strong> No — full-size original
+              is stored and available for download
+            </li>
+            <li>
+              ⚠️ <strong className="text-text-main">Storage quota:</strong> The original counts
+              against your plan&apos;s storage limit (5GB on Free)
+            </li>
+          </ul>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Because Slack stores the original file, compressing images <em>before</em> uploading is
+          the only reliable way to save workspace storage, speed up channel loading for everyone,
+          and reduce bandwidth usage for teammates on mobile data or slow connections.
+        </p>
+      </div>
+
+      <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
           Why Compress Images Before Uploading to Slack?
         </h2>
