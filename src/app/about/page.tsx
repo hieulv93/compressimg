@@ -21,6 +21,37 @@ export default function AboutPage() {
           </p>
         </header>
 
+        {/* Founder */}
+        <section className="space-y-4">
+          <h2 className="text-2xl font-bold text-text-main">Built by Alex Kim</h2>
+          <div className="rounded-xl border border-border bg-surface p-5 flex gap-4 items-start">
+            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0 text-primary font-bold text-lg">
+              AK
+            </div>
+            <div className="space-y-2">
+              <p className="font-semibold text-text-main text-sm">
+                Alex Kim — Indie Developer & Content Creator
+              </p>
+              <p className="text-text-muted text-sm leading-relaxed">
+                Alex built CompressImg out of frustration with existing image tools — every option
+                required uploading files to a third-party server, creating an account, or paying to
+                remove watermarks. With a background in web development and content creation, Alex
+                knew modern browsers were powerful enough to handle compression locally. CompressImg
+                launched in April 2026 as a single compression tool and has since grown to 65+ tools
+                covering compression, conversion, resizing, and format conversion — all processing
+                images entirely in the browser, with no server involvement.
+              </p>
+              <p className="text-xs text-text-muted">
+                Questions?{' '}
+                <Link href="/contact" className="text-primary underline">
+                  Get in touch
+                </Link>{' '}
+                — Alex reads every message.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Our Story */}
         <section className="space-y-4">
           <h2 className="text-2xl font-bold text-text-main">Why We Built This</h2>
