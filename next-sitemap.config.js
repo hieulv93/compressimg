@@ -38,6 +38,7 @@ module.exports = {
       '/blog/best-image-format-for-web': 0.8,
       '/blog/how-to-compress-images-for-web': 0.8,
       '/blog/why-photos-look-blurry-social-media': 0.8,
+      '/blog/how-to-compress-images-for-wordpress': 0.8,
       '/compress-gif-online': 0.8,
       '/compress-images': 0.8,
       '/compress-image-for-tiktok': 0.75,

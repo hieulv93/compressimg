@@ -2,6 +2,15 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'how-to-compress-images-for-wordpress',
+    title: 'How to Compress Images for WordPress — Speed Up Your Site',
+    description:
+      'Uncompressed images are the most common cause of slow WordPress sites. Learn the right dimensions, quality settings, WebP support, and pre-upload workflow to keep your site fast.',
+    date: '2026-05-11',
+    readTime: '9 min read',
+    category: 'Guide',
+  },
+  {
     slug: 'compress-images-without-losing-quality',
     title: 'How to Compress Images Without Losing Quality',
     description:
