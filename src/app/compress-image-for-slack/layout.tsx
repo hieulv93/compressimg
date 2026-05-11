@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-slack/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Slack — Reduce Photo Size for Slack Upload',
+  title: 'Does Slack Compress Images? Free Image Optimizer',
   description:
-    'Compress images for Slack free online. Reduce JPG, PNG, WebP size before uploading to Slack channels. No upload to server — 100% browser-based.',
+    'Slack compresses display previews but stores originals. Compress images to under 1MB for fast sharing in channels — free, 100% browser-based, no uploads.',
   keywords: [
     'compress image for slack',
     'compress photo for slack',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for Slack — Free Online Tool',
+    title: 'Does Slack Compress Images? Free Image Optimizer',
     description:
-      'Reduce image size before uploading to Slack. Compress JPG, PNG, WebP free — no uploads, 100% browser-based.',
+      'Slack compresses display previews but stores originals. Compress images to under 1MB for fast sharing in channels — free, browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for Slack Online' }],
