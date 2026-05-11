@@ -262,6 +262,55 @@ export default function CompressForLinkedInContentSection() {
 
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
+          Why LinkedIn Image Quality Has Professional Consequences
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          LinkedIn is the only major social platform where image quality has documented professional
+          consequences. Unlike Instagram (entertainment) or Twitter (news), LinkedIn images are
+          evaluated by hiring managers, potential clients, and senior business connections — people
+          whose first impression of you or your company is often formed in under three seconds. A
+          blurry profile photo or pixelated company post signals lower professionalism before a
+          single word is read.
+        </p>
+        <div className="space-y-3">
+          {[
+            {
+              context: 'Job seeking / career transition',
+              image: 'Profile photo',
+              impact:
+                'Recruiters and hiring managers view your profile photo before reading your headline. A compressed, blurry headshot at quality below 70 visibly degrades at the 200px display size LinkedIn uses in search results. Quality 80+ at 400×400px is the minimum for a professional appearance.',
+            },
+            {
+              context: 'Freelancing / consulting',
+              image: 'Profile photo + post images',
+              impact:
+                'Potential clients often visit your LinkedIn profile before replying to an outreach. Post images demonstrating your work — project screenshots, design samples, case study graphics — should be at quality 85 to convey attention to detail.',
+            },
+            {
+              context: 'B2B sales / business development',
+              image: 'Company page cover + post images',
+              impact:
+                'LinkedIn company page covers are often the first touchpoint for prospects researching your company. A pixelated or stretched cover image undermines credibility before a prospect reads your company description. Upload at exactly 1584×396px, quality 80.',
+            },
+            {
+              context: 'Employer branding / recruiting',
+              image: 'Company page + Life tab images',
+              impact:
+                'LinkedIn Life tab photos showing office culture, team events, and workplace environment are viewed by candidates evaluating whether to apply. High-quality, authentic images at quality 80–85 signal that the company takes its employer brand seriously.',
+            },
+          ].map(({ context, image, impact }) => (
+            <div key={context} className="border border-border rounded-xl p-4 space-y-1">
+              <p className="text-sm font-semibold text-text-main">
+                {context} — <span className="font-normal text-text-muted">{image}</span>
+              </p>
+              <p className="text-xs text-text-muted leading-relaxed">{impact}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
           Privacy — Your Images Never Leave Your Device
         </h2>
         <p className="text-text-muted text-sm leading-relaxed">

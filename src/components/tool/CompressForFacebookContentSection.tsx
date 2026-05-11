@@ -256,6 +256,89 @@ export default function CompressForFacebookContentSection() {
 
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
+          Facebook Image Compression by Surface — How Each Placement Behaves Differently
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Facebook has a more complex surface ecosystem than any other social platform. Each
+          placement applies different compression settings and is viewed by different audiences — a
+          Marketplace listing is scrutinized by a buyer, a feed post is skimmed in a scroll, and an
+          ad image must pass Facebook&apos;s ad quality review. Understanding how each surface
+          handles images helps you choose the right quality setting for each use case.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse text-xs">
+            <thead>
+              <tr className="bg-surface-alt">
+                <th className="border border-border px-3 py-2 text-left font-semibold text-text-main">
+                  Surface
+                </th>
+                <th className="border border-border px-3 py-2 text-left font-semibold text-text-main">
+                  Compression Level
+                </th>
+                <th className="border border-border px-3 py-2 text-left font-semibold text-text-main">
+                  Recommended Quality
+                </th>
+                <th className="border border-border px-3 py-2 text-left font-semibold text-text-main">
+                  Why It Matters
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                [
+                  'Feed post',
+                  'Moderate',
+                  'Q80',
+                  'Seen while scrolling — file size balanced against speed',
+                ],
+                [
+                  'Marketplace listing',
+                  'Moderate',
+                  'Q85',
+                  'Buyers zoom in to inspect details — higher quality worth it',
+                ],
+                [
+                  'Facebook Ads',
+                  'Low (preserves quality)',
+                  'Q85–90',
+                  'Ad images are reviewed for quality; blurry ads get lower reach',
+                ],
+                [
+                  'Stories / Reels cover',
+                  'Aggressive (9:16 format)',
+                  'Q80',
+                  'Full-screen but fast-scrolling — quality 80 survives re-compression',
+                ],
+                ['Events cover', 'Moderate', 'Q80', 'Shown in sidebar invitations at small sizes'],
+                [
+                  'Group cover photo',
+                  'Moderate',
+                  'Q75',
+                  'Displayed at smaller preview sizes; Q75 sufficient',
+                ],
+              ].map(([surface, level, q, why]) => (
+                <tr key={surface} className="border-b border-border">
+                  <td className="border border-border px-3 py-2 font-semibold text-text-main">
+                    {surface}
+                  </td>
+                  <td className="border border-border px-3 py-2 text-text-muted">{level}</td>
+                  <td className="border border-border px-3 py-2 text-text-muted">{q}</td>
+                  <td className="border border-border px-3 py-2 text-text-muted">{why}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          For Facebook Ads specifically: blurry or low-quality ad images receive a lower relevance
+          score from Facebook&apos;s ad review system. Compress ad images at quality 85–90 and
+          upload at the exact recommended dimensions. If the ad image contains text, use PNG
+          (lossless compression preserves text sharpness) rather than JPG.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
           Privacy — Your Photos Never Leave Your Device
         </h2>
         <p className="text-text-muted text-sm leading-relaxed">

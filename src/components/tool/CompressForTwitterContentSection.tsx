@@ -207,6 +207,46 @@ export default function CompressForTwitterContentSection() {
 
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
+          How Twitter / X Compresses Images — Inline Tweets, Headers, and Cards Behave Differently
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Twitter applies different compression depending on how and where an image appears. A photo
+          uploaded directly to a tweet, a header banner, and a link preview card are all processed
+          differently — understanding these differences helps you optimize for each use case.
+        </p>
+        <div className="space-y-3">
+          {[
+            {
+              type: 'Inline tweet images (photo uploads)',
+              detail:
+                "Twitter converts JPG and PNG uploads to WebP for delivery on modern browsers. This means your image goes through two lossy compression steps: your original JPG, then WebP conversion. Pre-compressing at quality 80 before uploading minimizes the quality degradation from Twitter's internal WebP conversion. Twitter displays up to 4 images in a single tweet, each cropped to a preview that expands on click.",
+            },
+            {
+              type: 'Twitter header / banner image',
+              detail:
+                'Header images are displayed at 1500×500px (3:1 ratio) on desktop and scaled on mobile. Twitter applies moderate compression — less aggressive than inline photos. Upload at exactly 1500×500px, quality 80–85. The bottom-left corner is obscured by your profile picture, so keep key content in the center and right portions of the header.',
+            },
+            {
+              type: 'Link preview cards (shared URLs)',
+              detail:
+                'When you share a URL, Twitter fetches the Open Graph image from that URL and displays it as a card. Twitter compresses this OG image independently — it is not the same as uploading a photo. To optimize link cards, ensure your OG images are already under 1MB before Twitter fetches them, and use the 1200×630px (1.91:1) format for Summary Large Image cards.',
+            },
+            {
+              type: 'Direct message images',
+              detail:
+                'Images sent in Twitter DMs are compressed more aggressively than timeline images. Pre-compressing to 500–700KB before sending via DM reduces the total compression applied. For sensitive documents or high-detail images shared via DM, consider sending as a file attachment (less compression) rather than a photo message.',
+            },
+          ].map(({ type, detail }) => (
+            <div key={type} className="border border-border rounded-xl p-4 space-y-1">
+              <p className="text-sm font-semibold text-text-main">{type}</p>
+              <p className="text-xs text-text-muted leading-relaxed">{detail}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
           Privacy — Your Images Never Leave Your Device
         </h2>
         <p className="text-text-muted text-sm leading-relaxed">
