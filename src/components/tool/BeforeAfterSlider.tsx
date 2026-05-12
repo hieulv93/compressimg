@@ -77,7 +77,7 @@ export default function BeforeAfterSlider({
       <img
         src={afterUrl}
         alt="Compressed"
-        className="block w-full max-h-64 object-contain"
+        className="block w-full max-h-64 sm:max-h-[500px] object-contain"
         draggable={false}
       />
 

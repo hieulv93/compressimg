@@ -59,7 +59,7 @@ export default function ResultCard({
               alt={`Compressed preview of ${originalName}`}
               width={600}
               height={400}
-              className="max-h-64 w-auto object-contain"
+              className="max-h-64 sm:max-h-[500px] w-auto object-contain"
               unoptimized
             />
           </div>
