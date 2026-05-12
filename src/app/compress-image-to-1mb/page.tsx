@@ -1,6 +1,6 @@
-'use client'
+﻿'use client'
 
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback, useRef, useEffect } from 'react'
 import UploadBox from '@/components/tool/UploadBox'
 import QualitySlider from '@/components/tool/QualitySlider'
 import ProgressBar from '@/components/tool/ProgressBar'
@@ -22,6 +22,18 @@ export default function CompressTo1MbPage() {
   const [originalFile, setOriginalFile] = useState<File | null>(null)
   const [originalPreviewUrl, setOriginalPreviewUrl] = useState<string | null>(null)
   const origUrlRef = useRef<string | null>(null)
+  const qualityTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  // Auto-recompress 800ms after slider stops (only when a result already exists)
+  useEffect(() => {
+    if (pageState !== 'done' || !originalFile) return
+    if (qualityTimerRef.current) clearTimeout(qualityTimerRef.current)
+    qualityTimerRef.current = setTimeout(handleRecompress, 800)
+    return () => {
+      if (qualityTimerRef.current) clearTimeout(qualityTimerRef.current)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [quality])
 
   const handleFileSelect = useCallback(
     async (file: File) => {
