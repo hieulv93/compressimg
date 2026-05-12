@@ -268,6 +268,99 @@ export default function HeicToJpgContentSection() {
         </p>
       </div>
 
+      <div className="space-y-3">
+        <h2 className="text-base font-bold text-text-main">
+          How to Convert HEIC to JPG on Windows
+        </h2>
+        <p>
+          Windows does not support HEIC natively — File Explorer shows HEIC files as blank icons and
+          most apps cannot open them. There are two ways to convert on Windows:
+        </p>
+        <p>
+          <strong className="text-text-main">
+            Option 1 — Use this browser tool (free, instant):
+          </strong>{' '}
+          Open this page in Chrome or Edge, drag your HEIC file into the upload area, and click
+          Download. No software installation required. Works on Windows 10 and Windows 11.
+        </p>
+        <p>
+          <strong className="text-text-main">Option 2 — Microsoft HEVC codec ($0.99):</strong> Open
+          the Microsoft Store → search &ldquo;HEVC Video Extensions&rdquo; → purchase for $0.99.
+          After installing, Windows Photos and File Explorer will open HEIC files natively.
+          Right-click the HEIC file → Open with Photos → click &ldquo;…&rdquo; → Save a copy →
+          select JPEG.
+        </p>
+        <p>
+          <strong className="text-text-main">Option 3 — iCloud for Windows:</strong> Install iCloud
+          from the Microsoft Store. Enable Photos sync. iCloud automatically converts HEIC to JPG
+          when downloading photos to your PC.
+        </p>
+        <p>
+          The browser tool on this page is the fastest option — no payment, no installation, and
+          your photos never leave your device.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-base font-bold text-text-main">How to Convert HEIC to JPG on Mac</h2>
+        <p>
+          Mac has full native HEIC support — no extra software needed. Here are three ways to
+          convert HEIC to JPG on macOS:
+        </p>
+        <ol className="list-decimal list-inside space-y-2 pl-1">
+          <li>
+            <strong className="text-text-main">Preview app (built-in):</strong> Double-click the
+            HEIC file to open in Preview → File → Export → change Format to JPEG → adjust quality
+            slider if needed → Save. This works on macOS Mojave (10.14) and later.
+          </li>
+          <li>
+            <strong className="text-text-main">Batch convert in Preview:</strong> Select multiple
+            HEIC files in Finder → right-click → Open With → Preview. In Preview, select all images
+            (Cmd+A) → File → Export Selected Images → choose JPEG → Export. Converts the entire
+            selection at once.
+          </li>
+          <li>
+            <strong className="text-text-main">Automator (batch, no limit):</strong> Open Automator
+            → New Quick Action → add &ldquo;Change Type of Images&rdquo; → set output to JPEG. Save.
+            Now right-click any HEIC file in Finder → Quick Actions → run your action.
+          </li>
+        </ol>
+        <p>
+          For single-file conversion without opening any app, use the browser tool above — paste
+          with Cmd+V or drag the file directly from Finder.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-base font-bold text-text-main">How to Convert HEIC to JPG on iPhone</h2>
+        <p>You can convert HEIC photos to JPG directly on your iPhone without any app:</p>
+        <ol className="list-decimal list-inside space-y-2 pl-1">
+          <li>
+            <strong className="text-text-main">Open this page in Safari</strong> on your iPhone.
+          </li>
+          <li>
+            <strong className="text-text-main">Tap the upload area</strong> → select &ldquo;Photo
+            Library&rdquo; → choose your HEIC photo.
+          </li>
+          <li>
+            <strong className="text-text-main">Tap Download</strong> when conversion is complete.
+            The JPG saves to your Files app (Downloads folder).
+          </li>
+        </ol>
+        <p>
+          <strong className="text-text-main">Stop iPhone from taking HEIC photos:</strong> Go to
+          Settings → Camera → Formats → select &ldquo;Most Compatible&rdquo;. This records new
+          photos in JPG format instead of HEIC. Existing HEIC photos are not affected — you will
+          need to convert them separately.
+        </p>
+        <p>
+          <strong className="text-text-main">When sharing to non-Apple devices:</strong> In the
+          Share sheet, iOS automatically converts HEIC to JPG when you share via Mail, AirDrop to
+          non-Mac, or most messaging apps. The automatic conversion uses Apple&apos;s default
+          quality settings. Use this tool when you need to control the output quality.
+        </p>
+      </div>
+
       <div className="space-y-4">
         <h2 className="text-base font-bold text-text-main">Frequently Asked Questions</h2>
         <div className="space-y-3">
