@@ -41,7 +41,7 @@ export default function ResultCard({
       aria-live="polite"
     >
       {/* Preview: before/after slider when original URL is available, otherwise single preview */}
-      <div className="w-full bg-surface" style={{ minHeight: '200px' }}>
+      <div className="w-full bg-surface">
         {originalPreviewUrl ? (
           <BeforeAfterSlider
             beforeUrl={originalPreviewUrl}
@@ -50,16 +50,12 @@ export default function ResultCard({
             afterLabel="Compressed"
           />
         ) : (
-          <div
-            className="relative w-full flex items-center justify-center"
-            style={{ minHeight: '200px' }}
-          >
+          <div className="relative w-full aspect-video">
             <Image
               src={previewUrl}
               alt={`Compressed preview of ${originalName}`}
-              width={600}
-              height={400}
-              className="max-h-64 sm:max-h-[500px] w-auto object-contain"
+              fill
+              className="object-contain"
               unoptimized
             />
           </div>
