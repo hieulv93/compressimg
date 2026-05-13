@@ -243,6 +243,127 @@ export default function CompressGifContentSection() {
       </div>
 
       <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
+          How to Reduce GIF File Size — Step by Step
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          This GIF size reducer works entirely in your browser — no upload, no account, no waiting
+          for a server. Follow these steps to make your GIF file smaller in under a minute:
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            {
+              step: '1',
+              title: 'Set your quality target',
+              desc: 'Start with Quality 10 (default). For GIFs with flat colors or icons, go as low as 5 — quality stays high. For screen recordings or photos, stay at 10–15 to avoid color banding.',
+            },
+            {
+              step: '2',
+              title: 'Choose frame skip if needed',
+              desc: 'Leave Frame Skip at 1 (none) for smooth animations. If the GIF is still too large after compression, switch to Frame Skip 2 — this halves the frame count and cuts an extra 30–50% off the file size.',
+            },
+            {
+              step: '3',
+              title: 'Drop or click to upload',
+              desc: 'Drag your GIF into the upload area above, or click to browse. The GIF size reducer processes the file locally — nothing leaves your device. Files up to 20MB are supported.',
+            },
+            {
+              step: '4',
+              title: 'Download the smaller GIF',
+              desc: 'Once compression is complete, check the result size. If you need a smaller file, use "Compress another" and lower the quality slider further. The animation is always preserved.',
+            },
+          ].map(({ step, title, desc }) => (
+            <div key={step} className="border border-border rounded-xl p-4 space-y-1">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="w-6 h-6 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center shrink-0">
+                  {step}
+                </span>
+                <p className="text-sm font-semibold text-text-main">{title}</p>
+              </div>
+              <p className="text-xs text-text-muted leading-relaxed pl-8">{desc}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          <strong className="text-text-main">Recommended starting point:</strong> Quality 10 + Frame
+          Skip 1. This setting reduces most GIFs by 50–70% while keeping the animation smooth. Only
+          add Frame Skip 2 if you need to shrink the GIF file size further — for example, to fit
+          Discord&apos;s 8MB free-tier limit or Slack&apos;s 5MB file cap.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
+          Animated GIF Size Reducer — Results by Source Type
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          The amount of compression you can achieve depends heavily on what the GIF contains. This
+          animated GIF size reducer performs differently on screen recordings, icons, and
+          photographic content. Use the table below to set realistic expectations:
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-xs border-collapse">
+            <thead>
+              <tr className="bg-surface">
+                <th className="text-left p-3 border border-border font-semibold text-text-main">
+                  GIF type
+                </th>
+                <th className="text-left p-3 border border-border font-semibold text-text-main">
+                  Typical original
+                </th>
+                <th className="text-left p-3 border border-border font-semibold text-text-main">
+                  At Quality 10
+                </th>
+                <th className="text-left p-3 border border-border font-semibold text-text-main">
+                  Reduction
+                </th>
+                <th className="text-left p-3 border border-border font-semibold text-text-main">
+                  Quality impact
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                [
+                  'Logo / icon animation',
+                  '500 KB',
+                  '~150 KB',
+                  '~70%',
+                  'Minimal — flat colors compress well',
+                ],
+                ['Pixel art animation', '800 KB', '~200 KB', '~75%', 'Minimal — limited palette'],
+                ['Screen recording (UI)', '4 MB', '~1.5 MB', '~62%', 'Low — some color shifts'],
+                ['Social media reaction', '2 MB', '~600 KB', '~70%', 'Low — short, simple motion'],
+                ['Video clip (photographic)', '8 MB', '~4 MB', '~50%', 'Moderate — visible at Q5'],
+                [
+                  'Text animation / title',
+                  '1.5 MB',
+                  '~400 KB',
+                  '~73%',
+                  'Low — high contrast edges',
+                ],
+              ].map(([type, orig, compressed, reduction, impact]) => (
+                <tr key={type} className="border-t border-border">
+                  <td className="p-3 border border-border font-medium text-text-main">{type}</td>
+                  <td className="p-3 border border-border text-text-muted">{orig}</td>
+                  <td className="p-3 border border-border text-text-muted">{compressed}</td>
+                  <td className="p-3 border border-border text-text-muted">{reduction}</td>
+                  <td className="p-3 border border-border text-text-muted">{impact}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          GIFs with flat colors (logos, icons, pixel art) compress the most because they already use
+          fewer unique colors — reducing the palette from 256 to 64 has little visual effect. Video
+          clips and photographic GIFs compress less because they use the full 256-color range and
+          color banding becomes visible at low quality settings. For these, use Quality 12–15 and
+          rely on Frame Skip 2 to reduce gif size without visible quality loss.
+        </p>
+      </div>
+
+      <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">Related Image and GIF Tools</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
