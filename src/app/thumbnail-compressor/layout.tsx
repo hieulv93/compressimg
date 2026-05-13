@@ -136,6 +136,38 @@ const jsonLd = {
             text: 'Quality 80 is the recommended setting for gaming thumbnails. Gaming thumbnails typically have high contrast, bold text, and vivid colors — quality 80 preserves all of these while reducing file size by 60–70%. If you need to go under 500KB, try quality 70.',
           },
         },
+        {
+          '@type': 'Question',
+          name: 'How do I reduce thumbnail size in YouTube Studio?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'YouTube Studio does not have a built-in thumbnail compressor. You need to compress the image before uploading. Export your thumbnail from Canva, Photoshop, or any design tool, compress it here at quality 80, then upload the compressed file in YouTube Studio under the Custom Thumbnail option.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I compress a YouTube thumbnail from Canva?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "In Canva, export your thumbnail as JPG at standard quality. Canva JPG exports are often 1–5MB even at 1280×720. Upload the exported file here, set quality to 80, and download the compressed version — typically 80–200KB, well under YouTube's 2MB limit.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is thumbnail compression and why does it matter?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Thumbnail compression reduces the file size of a thumbnail image by removing redundant image data. Smaller thumbnails load faster across video cards and search results, and stay within platform upload limits (YouTube: 2MB, Twitch: 10MB). Compressed thumbnails at quality 80 are visually identical to uncompressed originals on screen.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I compress a thumbnail for free without Photoshop?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Upload your thumbnail here — no Photoshop or software installation needed. Set quality to 80 and download the compressed file. The tool runs entirely in your browser, is completely free, and has no file limits or watermarks.',
+          },
+        },
       ],
     },
   ],

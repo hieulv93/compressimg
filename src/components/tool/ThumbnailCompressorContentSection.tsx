@@ -209,6 +209,85 @@ export default function ThumbnailCompressorContentSection() {
         </div>
       </div>
 
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
+          Expected Output Size — Thumbnail Compression Results
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Use this table as a starting point when compressing thumbnails to a specific file size
+          target. Values are approximate and vary with image content — thumbnails with complex
+          backgrounds and fine text compress less than solid-color designs.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-surface border-b border-border">
+                <th className="text-left p-3 font-semibold text-text-main">Dimensions</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 90</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 80</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 70</th>
+                <th className="text-left p-3 font-semibold text-text-main">Quality 60</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                {
+                  dims: '1280×720 (YouTube)',
+                  q90: '300–600 KB',
+                  q80: '80–200 KB',
+                  q70: '50–130 KB',
+                  q60: '35–85 KB',
+                },
+                {
+                  dims: '1920×1080 (Twitch)',
+                  q90: '600–1200 KB',
+                  q80: '180–400 KB',
+                  q70: '110–260 KB',
+                  q60: '70–170 KB',
+                },
+                {
+                  dims: '1080×1080 (Instagram)',
+                  q90: '250–500 KB',
+                  q80: '70–180 KB',
+                  q70: '45–115 KB',
+                  q60: '30–75 KB',
+                },
+                {
+                  dims: '1200×630 (Facebook/OG)',
+                  q90: '220–450 KB',
+                  q80: '65–170 KB',
+                  q70: '40–110 KB',
+                  q60: '25–70 KB',
+                },
+                {
+                  dims: '1080×1920 (TikTok cover)',
+                  q90: '550–1100 KB',
+                  q80: '160–380 KB',
+                  q70: '100–240 KB',
+                  q60: '65–155 KB',
+                },
+              ].map(({ dims, q90, q80, q70, q60 }) => (
+                <tr
+                  key={dims}
+                  className="border-b border-border hover:bg-surface/50 transition-colors"
+                >
+                  <td className="p-3 font-medium text-text-main text-xs">{dims}</td>
+                  <td className="p-3 text-text-muted text-xs">{q90}</td>
+                  <td className="p-3 text-text-muted text-xs">{q80}</td>
+                  <td className="p-3 text-text-muted text-xs">{q70}</td>
+                  <td className="p-3 text-text-muted text-xs">{q60}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          <strong className="text-text-main">Rule of thumb:</strong> Quality 80 is the safe default
+          for all thumbnail types — it keeps text sharp, faces clear, and vivid colors intact while
+          reducing a typical 1280×720 thumbnail from 3–8MB to under 200KB.
+        </p>
+      </div>
+
       <div className="space-y-4">
         <h2 className="text-xl font-bold text-text-main">Frequently Asked Questions</h2>
         <div className="space-y-2">
@@ -244,6 +323,26 @@ export default function ThumbnailCompressorContentSection() {
             {
               q: 'What quality setting should I use for gaming thumbnails?',
               a: 'Quality 80 is recommended for gaming thumbnails. Gaming thumbnails have high contrast, bold text, and vivid colors — quality 80 preserves these while reducing file size by 60–70%. For under 500KB, try quality 70.',
+            },
+            {
+              q: 'How do I reduce thumbnail size in YouTube Studio?',
+              a: 'YouTube Studio does not have a built-in thumbnail compressor — you need to compress the image before uploading. Export your thumbnail from Canva, Photoshop, or any design tool, compress it here at quality 80, then upload the compressed file in YouTube Studio under the Custom Thumbnail option.',
+            },
+            {
+              q: 'How do I compress a YouTube thumbnail from Canva?',
+              a: "In Canva, export your thumbnail as JPG (not PNG) at standard quality. Canva JPG exports are often 1–5MB even at 1280×720. Upload the exported file here, set quality to 80, and download the compressed version — typically 80–200KB, well under YouTube's 2MB limit.",
+            },
+            {
+              q: 'What is thumbnail compression and why does it matter?',
+              a: 'Thumbnail compression reduces the file size of a thumbnail image by removing redundant image data using algorithms like JPEG encoding. Smaller thumbnails load faster across video cards and search results pages, and they stay within platform upload limits (YouTube: 2MB, Twitch: 10MB). Compressed thumbnails at quality 80 are visually identical to uncompressed originals on screen.',
+            },
+            {
+              q: 'Can I compress thumbnails on my phone?',
+              a: 'Yes. This tool works on iPhone and Android in Safari, Chrome, and any mobile browser. Tap the upload area to select a thumbnail from your camera roll or files app, set quality to 80, and download the compressed file directly to your phone.',
+            },
+            {
+              q: 'How do I compress a thumbnail for free without Photoshop?',
+              a: 'Upload your thumbnail here — no Photoshop or software installation needed. Set quality to 80 and download the compressed file. The tool runs entirely in your browser, is completely free, and has no file limits or watermarks.',
             },
           ].map(({ q, a }) => (
             <FAQItem key={q} question={q} answer={a} />
