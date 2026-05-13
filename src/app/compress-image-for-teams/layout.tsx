@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-teams/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Does Microsoft Teams Compress Images? Free Optimizer',
+  title: 'Does Teams Compress Images? Yes — Free Fix Online',
   description:
-    'Teams compresses display previews but stores originals at full size. Compress images to under 1MB for fast inline sharing in channels — free, 100% browser-based.',
+    'Yes, Teams downsizes previews but keeps originals full size. Compress images to under 1MB for instant channel sharing — free, browser-based, no install.',
   keywords: [
     'compress image for teams',
     'compress image for microsoft teams',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Does Microsoft Teams Compress Images? Free Optimizer',
+    title: 'Does Teams Compress Images? Yes — Free Fix Online',
     description:
-      'Teams compresses display previews but stores originals. Compress images to under 1MB for fast sharing in channels — free, browser-based.',
+      'Yes, Teams downsizes previews but keeps originals full size. Compress images to under 1MB for instant channel sharing — free, browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress Image for Teams — Free Online',
+    title: 'Does Teams Compress Images? Yes — Fix Free Online',
     description: 'Reduce image size for Microsoft Teams. 100% browser-based — no uploads.',
     images: [OG_IMAGE],
   },
