@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-linkedin/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for LinkedIn — Free, Instant, No Upload',
+  title: 'Does LinkedIn Compress Images? Yes — Free Fix Online',
   description:
-    'Compress LinkedIn profile photos, cover images & post attachments in seconds. Avoid blurry re-compression — keep images sharp. Free, no sign-up, 100% browser-based.',
+    'Yes, LinkedIn re-compresses uploads and reduces quality. Pre-compress images before uploading to keep them sharp. Free, browser-based, no sign-up needed.',
   keywords: [
     'compress image for linkedin',
     'compress photo for linkedin',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for LinkedIn — Free, Instant, No Upload',
+    title: 'Does LinkedIn Compress Images? Yes — Free Fix Online',
     description:
-      'Compress LinkedIn profile photos, cover images & post attachments in seconds. Avoid blurry re-compression — keep images sharp. Free, no sign-up, 100% browser-based.',
+      'Yes, LinkedIn re-compresses uploads and reduces quality. Pre-compress images before uploading to keep them sharp. Free, browser-based, no sign-up.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for LinkedIn' }],
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress Image for LinkedIn — Free, Instant, No Upload',
+    title: 'Does LinkedIn Compress Images? Yes — Fix Free Online',
     description:
-      'Compress LinkedIn profile photos & post images in seconds. No blurry re-compression. Free, no sign-up.',
+      'Yes, LinkedIn re-compresses uploads. Pre-compress before uploading to keep images sharp. Free, browser-based, no sign-up.',
     images: [OG_IMAGE],
   },
 }
