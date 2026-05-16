@@ -14,7 +14,7 @@ interface ResultCardProps {
   format: string
   originalName: string
   onReset: () => void
-  onRecompress: () => void
+  onRecompress?: () => void
   onDownload?: () => void
 }
 
@@ -27,7 +27,6 @@ export default function ResultCard({
   format,
   originalName,
   onReset,
-  onRecompress,
   onDownload,
 }: ResultCardProps) {
   const reduction = calcReduction(originalSize, compressedSize)
