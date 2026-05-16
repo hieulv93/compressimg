@@ -101,20 +101,12 @@ export default function ResultCard({
           onDownload={onDownload}
         />
 
-        <div className="flex gap-3">
-          <button
-            onClick={onRecompress}
-            className="flex-1 touch-target text-sm font-medium text-primary border border-primary rounded-lg py-2 hover:bg-drag-active transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-          >
-            Try different quality
-          </button>
-          <button
-            onClick={onReset}
-            className="flex-1 touch-target text-sm text-text-muted hover:text-text-main border border-border rounded-lg py-2 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-          >
-            New image
-          </button>
-        </div>
+        <button
+          onClick={onReset}
+          className="w-full touch-target text-sm text-text-muted hover:text-text-main border border-border rounded-lg py-2 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        >
+          New image
+        </button>
       </div>
     </div>
   )

@@ -141,7 +141,9 @@ export default function UploadBox({
               {formatHint ?? `JPG, PNG, WebP, HEIC — max ${MAX_FILE_SIZE_MB}MB`}
             </p>
             {!isError && (
-              <p className="text-text-muted text-xs mt-1">You can also paste an image (Ctrl+V)</p>
+              <p className="hidden sm:block text-text-muted text-xs mt-1">
+                You can also paste an image (Ctrl+V)
+              </p>
             )}
           </div>
           {isError && errorMessage && (
