@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/convert-image/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Convert Image Online Free – JPG to PNG, PNG to WebP, WebP to JPG',
+  title: 'Convert Image Online Free — JPG, PNG, WebP',
   description:
     'Free online image converter. Convert JPG, PNG, WebP to any format instantly. No upload — 100% browser-based. Transparency preserved for PNG and WebP output.',
   keywords: [

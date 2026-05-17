@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-email/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Email — Reduce Photo Size for Attachments',
+  title: 'Compress Image for Email — Reduce File Size',
   description:
     'Free online tool to compress images for email attachments. Reduce JPG, PNG file size to under 500KB instantly. No upload — 100% browser-based and private.',
   keywords: [

@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-pinterest/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Pinterest — Reduce Photo Size Before Pinning',
+  title: 'Compress Image for Pinterest — Reduce Size',
   description:
     'Free online tool to compress images for Pinterest. Reduce JPG, PNG size before uploading pins — avoid blurry results, faster uploads. 100% browser-based, no upload.',
   keywords: [

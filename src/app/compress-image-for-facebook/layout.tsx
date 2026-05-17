@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-facebook/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Facebook — Reduce Photo Size Before Posting',
+  title: 'Compress Image for Facebook — Reduce Size',
   description:
     'Free online tool to compress images for Facebook. Reduce JPG, PNG file size before posting — keep quality, avoid double-compression. 100% browser-based, no upload.',
   keywords: [

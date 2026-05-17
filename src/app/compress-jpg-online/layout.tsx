@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/compress-jpg-online/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress JPG Online Free — JPG File Size Reducer & JPEG Compressor',
+  title: 'Compress JPG Online Free — JPEG Compressor',
   description:
     'Free JPG file size reducer. Reduce and shrink JPG/JPEG images by up to 90% without losing quality. No upload to server — 100% browser-based and private.',
   keywords: [

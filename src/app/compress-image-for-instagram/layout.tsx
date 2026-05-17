@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-instagram/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Instagram — Reduce Photo Size Before Uploading',
+  title: 'Compress Image for Instagram — Reduce Size',
   description:
     'Free online tool to compress images for Instagram. Reduce JPG, PNG size before uploading to avoid double-compression and keep photos sharp. 100% browser-based, no upload.',
   keywords: [

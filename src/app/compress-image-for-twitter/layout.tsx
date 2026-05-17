@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-twitter/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Twitter / X — Reduce Photo Size for Tweets',
+  title: 'Compress Image for Twitter/X — Reduce Size',
   description:
     'Free online tool to compress images for Twitter and X. Reduce JPG, PNG file size before tweeting — keep quality, avoid double-compression. 100% browser-based, no upload.',
   keywords: [

@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/thumbnail-compressor/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Thumbnail Compressor Online Free — Reduce Thumbnail File Size',
+  title: 'Thumbnail Compressor — Reduce File Size Free',
   description:
     'Free thumbnail compressor for YouTube, gaming, and social media. Compress thumbnails under 2MB instantly. No upload to server — 100% browser-based and private.',
   keywords: [
