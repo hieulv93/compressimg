@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Free Online Image Tools — Compress, Resize, Convert & Crop Images | CompressImg',
+  title: { absolute: 'Compress, Resize & Convert Images Free | CompressImg' },
   description:
     'Free browser-based image tools. Compress, resize, convert, and crop JPG, PNG, WebP instantly. No upload, no login — 100% private and instant.',
   alternates: { canonical: 'https://compressimg.pro/' },

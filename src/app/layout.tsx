@@ -92,13 +92,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <div className="flex-1 flex flex-col">{children}</div>
         <Footer />
-        {/* Google AdSense — lazyOnload để không cạnh tranh băng thông với LCP */}
-        <Script
+        {/* Google AdSense — plain script tag tránh data-nscript attr gây AdSense warning */}
+        {/* eslint-disable-next-line @next/next/no-before-interactive-script-outside-document */}
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5429920062430374"
           crossOrigin="anonymous"
-          strategy="lazyOnload"
-          id="adsense-script"
         />
         {/* Google Analytics 4 */}
         {GA_ID && (
