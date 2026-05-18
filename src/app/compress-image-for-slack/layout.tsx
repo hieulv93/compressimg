@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-slack/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Does Slack Compress Images? Yes — Free Fix Online',
+  title: 'Does Slack Reduce Image Quality? Yes — Fix Free Online',
   description:
-    'Yes, Slack compresses previews but stores originals full size. Pre-compress to under 1MB for instant channel sharing — free, browser-based, no account.',
+    'Yes, Slack re-compresses images and reduces quality on every upload. Pre-compress photos before sharing in channels to keep them sharp — free, browser-based, no sign-up.',
   keywords: [
     'compress image for slack',
     'compress photo for slack',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Does Slack Compress Images? Yes — Free Fix Online',
+    title: 'Does Slack Reduce Image Quality? Yes — Fix Free Online',
     description:
-      'Yes, Slack compresses previews but stores originals full size. Pre-compress to under 1MB for instant channel sharing — free, browser-based.',
+      'Yes, Slack re-compresses images and reduces quality on every upload. Pre-compress before sharing in channels to keep photos sharp — free, browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for Slack Online' }],
@@ -31,8 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Does Slack Compress Images? Yes — Fix Free Online',
-    description: 'Reduce image size for Slack uploads. 100% browser-based — no uploads.',
+    title: 'Does Slack Reduce Image Quality? Yes — Fix Free Online',
+    description:
+      'Yes, Slack reduces quality on every upload. Pre-compress images before sharing — 100% browser-based, no sign-up.',
     images: [OG_IMAGE],
   },
 }
