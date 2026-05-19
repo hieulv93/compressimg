@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { compressImage, revokePreview } from '@/lib/compress'
 import type { CompressResult } from '@/lib/compress'
 import { MAX_FILE_SIZE_MB } from '@/lib/utils'
+import { analytics } from '@/lib/analytics'
 
 const MAX_FILES = 5
 
@@ -44,6 +45,8 @@ export default function BatchCompressPage() {
         state: 'pending',
       }))
 
+      valid.forEach((file) => analytics.imageUploaded(file.type, Math.round(file.size / 1024)))
+
       setEntries(newEntries)
       setAllDone(false)
 
@@ -55,6 +58,12 @@ export default function BatchCompressPage() {
         try {
           const result = await compressImage(updated[i].file, { quality })
           updated[i] = { ...updated[i], state: 'done', result }
+          analytics.imageCompressed(
+            Math.round(updated[i].file.size / 1024),
+            Math.round(result.compressedSize / 1024),
+            result.format ?? 'jpg',
+            quality
+          )
         } catch {
           updated[i] = { ...updated[i], state: 'error', error: 'Compression failed' }
         }
