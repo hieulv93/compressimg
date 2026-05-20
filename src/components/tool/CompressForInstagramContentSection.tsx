@@ -8,26 +8,46 @@ export default function CompressForInstagramContentSection() {
       aria-label="Guide to compressing images for Instagram"
     >
       <div className="space-y-3">
-        <h2 className="text-xl font-bold text-text-main">Why Compress Images for Instagram?</h2>
+        <h2 className="text-xl font-bold text-text-main">Does Instagram Compress Images?</h2>
         <p className="text-text-muted text-sm leading-relaxed">
-          Instagram automatically re-compresses every photo you upload. When you share a 10MB
-          smartphone photo on Instagram, the platform strips EXIF metadata, resizes the image to fit
-          its resolution limits, and applies its own lossy compression algorithm — often reducing a
-          crisp original to a visibly softer result. This is called double-compression: your phone
-          already compressed the photo when you took it (JPG), and Instagram compresses it a second
-          time when you upload it.
+          <strong className="text-text-main">
+            Yes — Instagram compresses every photo you upload.
+          </strong>{' '}
+          When you share a 10MB smartphone photo, Instagram strips EXIF metadata, resizes the image
+          to its resolution limits, and applies its own lossy compression algorithm. This is called
+          double-compression: your phone already compressed the photo (JPG), and Instagram
+          compresses it a second time. A crisp original can become visibly softer after
+          Instagram&apos;s processing, especially on high-resolution displays.
         </p>
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">
+            Quick answer: Does Instagram compress images?
+          </p>
+          <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
+            <li>
+              ✅ <strong className="text-text-main">Every upload:</strong> Yes — Instagram
+              compresses all photos regardless of original size
+            </li>
+            <li>
+              ⚠️ <strong className="text-text-main">Quality impact:</strong> Significant — a 10MB
+              photo can become 150–300KB, losing visible sharpness
+            </li>
+            <li>
+              ❌ <strong className="text-text-main">Can you disable it:</strong> No — Instagram
+              always applies compression, but pre-compressing reduces the damage
+            </li>
+          </ul>
+        </div>
         <p className="text-text-muted text-sm leading-relaxed">
-          The solution is to pre-compress your image at quality 80 before uploading. When Instagram
-          receives a file that is already optimally compressed, its algorithm has less room to
-          degrade the image further. The result is a noticeably sharper photo on your feed compared
-          to uploading an uncompressed original. Pre-compressing also reduces upload time on mobile
-          data, which means fewer upload failures on slow connections.
+          The fix is to pre-compress at quality 80 before uploading. When Instagram receives a file
+          that is already optimally sized, its algorithm has less room to degrade the image — the
+          result is a noticeably sharper photo on your feed. Pre-compressing also reduces upload
+          time on mobile data, meaning fewer failures on slow connections.
         </p>
         <p className="text-text-muted text-sm leading-relaxed">
           This tool processes your images entirely in your browser — nothing is uploaded to any
-          server. Your photos never leave your device during compression, making it completely safe
-          for personal photos, professional photography portfolios, and brand content.
+          server. Your photos never leave your device, making it safe for personal photos,
+          professional portfolios, and brand content.
         </p>
       </div>
 

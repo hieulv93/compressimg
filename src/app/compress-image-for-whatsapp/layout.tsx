@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-whatsapp/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for WhatsApp — Reduce Photo Size for Sharing',
+  title: 'Does WhatsApp Compress Images? Yes — Fix Free Online',
   description:
-    'Free online tool to compress images for WhatsApp. Reduce JPG, PNG file size before sending — keep quality, avoid double-compression. 100% browser-based, no upload.',
+    'Yes, WhatsApp compresses every photo you send — often reducing a 12MP photo to 1–2MP quality. Pre-compress at quality 80 before sending to reduce blur — free, 100% browser-based.',
   keywords: [
     'compress image for whatsapp',
     'compress photo for whatsapp',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for WhatsApp — Reduce Photo Size for Sharing',
+    title: 'Does WhatsApp Compress Images? Yes — Fix Free Online',
     description:
-      'Reduce JPG and PNG file size before sending on WhatsApp. Avoid double-compression and keep photos sharp — free, no uploads, 100% browser-based.',
+      'Yes, WhatsApp compresses every photo sent — often to 1–2MP quality. Pre-compress at quality 80 to reduce blur — free, no uploads, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for WhatsApp' }],
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress Image for WhatsApp — Free Photo Size Reducer',
+    title: 'Does WhatsApp Compress Images? Yes — Fix Free Online',
     description:
-      'Compress photos before sending on WhatsApp to avoid quality loss. 100% browser-based, no uploads.',
+      'Yes, WhatsApp compresses photos to ~1–2MP. Pre-compress to keep quality — 100% browser-based, no uploads.',
     images: [OG_IMAGE],
   },
 }
@@ -102,6 +102,14 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Does WhatsApp compress images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, WhatsApp automatically compresses every photo you send via the photo gallery. A 12MP smartphone photo (5–10MB) is typically reduced to the equivalent of 1–2MP quality (100–300KB). This aggressive compression is why photos shared on WhatsApp often look blurry compared to the original. To avoid this: either send the image as a Document (no compression) or pre-compress at quality 80 before sending as a photo to reduce double-compression blur.',
+          },
+        },
         {
           '@type': 'Question',
           name: 'What happens when WhatsApp compresses my photo?',

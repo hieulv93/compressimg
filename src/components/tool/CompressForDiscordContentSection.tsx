@@ -8,6 +8,46 @@ export default function CompressForDiscordContentSection() {
       aria-label="Guide to compressing images for Discord"
     >
       <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">Does Discord Compress Images?</h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          <strong className="text-text-main">Yes — but only for display, not the original.</strong>{' '}
+          Discord re-encodes uploaded images to generate smaller previews for inline display in
+          channels and DMs. The original file remains downloadable at full quality. For JPG images
+          above ~8MB, Discord may also downscale the inline display version, while keeping the
+          original for download.
+        </p>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Discord also applies heavier compression to images pasted directly from the clipboard.
+          When you paste a screenshot into a channel, the quality is often reduced significantly
+          compared to uploading the same image as a file. Saving the screenshot first and uploading
+          it as a file attachment produces noticeably better results.
+        </p>
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">
+            Quick answer: Does Discord compress images?
+          </p>
+          <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
+            <li>
+              ✅ <strong className="text-text-main">Preview display:</strong> Yes — Discord
+              generates smaller versions for inline channel display
+            </li>
+            <li>
+              ❌ <strong className="text-text-main">Original file:</strong> No — stored and
+              downloadable at full quality
+            </li>
+            <li>
+              ⚠️ <strong className="text-text-main">Clipboard paste:</strong> Yes — pasted images
+              are compressed more aggressively than uploaded files
+            </li>
+          </ul>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Pre-compressing before uploading ensures everyone in the channel sees your image at the
+          exact quality you intended — without Discord&apos;s re-encoding affecting the result.
+        </p>
+      </div>
+
+      <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">Discord File Upload Limits Explained</h2>
         <p className="text-text-muted text-sm leading-relaxed">
           Discord free accounts can upload files up to 10MB per attachment. This limit applies to

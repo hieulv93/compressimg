@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-discord/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Discord — Reduce File Size for Uploads',
+  title: 'Does Discord Compress Images? Yes — Fix Free Online',
   description:
-    'Free online tool to compress images for Discord. Stay under the 10MB free tier upload limit. Reduce JPG, PNG, GIF size — 100% browser-based, no upload to server.',
+    'Yes, Discord compresses images for inline display and aggressively compresses clipboard pastes. Pre-compress photos before uploading to keep full quality — free, 100% browser-based.',
   keywords: [
     'compress image for discord',
     'compress image discord',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for Discord — Reduce File Size for Uploads',
+    title: 'Does Discord Compress Images? Yes — Fix Free Online',
     description:
-      "Stay under Discord's 10MB upload limit. Compress JPG, PNG, GIF before uploading — free, no server upload, 100% browser-based.",
+      'Yes, Discord compresses images for display and aggressively compresses clipboard pastes. Pre-compress before uploading to preserve full quality — free, browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for Discord' }],
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress Image for Discord — Free File Size Reducer',
+    title: 'Does Discord Compress Images? Yes — Fix Free Online',
     description:
-      'Compress images and GIFs to stay under Discord upload limits. 100% browser-based, no uploads to server.',
+      'Yes, Discord compresses images for display and clipboard pastes. Pre-compress to keep full quality — 100% browser-based, no uploads to server.',
     images: [OG_IMAGE],
   },
 }
@@ -95,6 +95,14 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Does Discord compress images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, Discord compresses images for inline display in channels and DMs. Discord re-encodes uploaded images to generate smaller preview versions. However, the original full-quality file remains downloadable. Discord also applies heavier compression to images pasted from clipboard — saving and uploading as a file produces better results. Pre-compressing images before uploading ensures the inline display matches your intended quality.',
+          },
+        },
         {
           '@type': 'Question',
           name: 'What is the Discord file upload size limit?',

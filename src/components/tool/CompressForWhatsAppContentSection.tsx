@@ -5,21 +5,39 @@ export default function CompressForWhatsAppContentSection() {
   return (
     <section className="space-y-8 text-sm text-text-muted leading-relaxed">
       <div className="space-y-3">
-        <h2 className="text-xl font-bold text-text-main">
-          Why Compress Images Before Sending on WhatsApp?
-        </h2>
-        <p>
-          WhatsApp automatically compresses images when you send them — but this automatic
-          compression is aggressive and often reduces a sharp 12MP photo to a blurry 1–2MP result.
-          By compressing your image first at a controlled quality setting, you maintain visual
-          sharpness while still reducing file size. The result is a faster send and a better-looking
-          photo on the recipient&apos;s screen.
+        <h2 className="text-xl font-bold text-text-main">Does WhatsApp Compress Images?</h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          <strong className="text-text-main">
+            Yes — WhatsApp compresses every photo you send.
+          </strong>{' '}
+          When you send an image as a photo (not a document), WhatsApp applies aggressive automatic
+          compression — often reducing a sharp 12MP photo to the equivalent of a 1–2MP result. This
+          is why photos shared on WhatsApp frequently look blurry or soft compared to the original.
         </p>
-        <p>
-          WhatsApp also applies its own compression on top of yours, so sending a pre-compressed
-          image at quality 80 results in significantly less double-compression than sending a raw
-          10MB photo. The final image on the recipient&apos;s phone will look noticeably sharper
-          than if WhatsApp had compressed it from scratch.
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">
+            Quick answer: Does WhatsApp compress images?
+          </p>
+          <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
+            <li>
+              ✅ <strong className="text-text-main">Photos (default):</strong> Yes — WhatsApp
+              compresses aggressively, reducing a 12MP photo to ~1–2MP quality
+            </li>
+            <li>
+              ❌ <strong className="text-text-main">Documents:</strong> No — sending as a document
+              skips WhatsApp compression, preserving original quality
+            </li>
+            <li>
+              ✅ <strong className="text-text-main">Pre-compression fix:</strong> Yes — compress at
+              quality 80 first, then send as photo for best result
+            </li>
+          </ul>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          By compressing your image first at quality 80, you maintain visual sharpness while giving
+          WhatsApp a smaller file to work with. Since WhatsApp compresses on top of whatever you
+          send, starting with an optimized 500KB file results in significantly less quality loss
+          than sending a raw 10MB photo. The recipient sees a noticeably sharper image.
         </p>
       </div>
 

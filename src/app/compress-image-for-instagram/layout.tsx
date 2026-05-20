@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-instagram/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Instagram — Reduce Size',
+  title: 'Does Instagram Compress Images? Yes — Fix Free Online',
   description:
-    'Free online tool to compress images for Instagram. Reduce JPG, PNG size before uploading to avoid double-compression and keep photos sharp. 100% browser-based, no upload.',
+    'Yes, Instagram compresses every photo you upload. Pre-compress at quality 80 before posting to reduce double-compression and keep photos sharp — free, 100% browser-based.',
   keywords: [
     'compress image for instagram',
     'compress photo for instagram',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for Instagram — Reduce Photo Size Before Uploading',
+    title: 'Does Instagram Compress Images? Yes — Fix Free Online',
     description:
-      'Reduce JPG and PNG size before posting on Instagram. Prevent double-compression and keep photos sharp — free, no uploads, 100% browser-based.',
+      'Yes, Instagram compresses every photo. Pre-compress at quality 80 before posting to reduce double-compression and keep photos sharp — free, no uploads, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for Instagram' }],
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress Image for Instagram — Free Photo Size Reducer',
+    title: 'Does Instagram Compress Images? Yes — Fix Free Online',
     description:
-      'Compress photos before posting on Instagram to avoid quality loss. 100% browser-based, no uploads.',
+      'Yes, Instagram compresses every upload. Pre-compress to keep photos sharp — 100% browser-based, no uploads.',
     images: [OG_IMAGE],
   },
 }
@@ -102,6 +102,14 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Does Instagram compress images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Yes, Instagram compresses every photo you upload. Instagram strips EXIF metadata, resizes images to its resolution limits (max 1080px wide for feed), and applies lossy compression. A 10MB uncompressed photo may be reduced to 150–300KB in Instagram's delivery format, resulting in visible softness. Pre-compressing at quality 80 before uploading gives Instagram less room to degrade the image further — resulting in a sharper photo on your feed.",
+          },
+        },
         {
           '@type': 'Question',
           name: 'Why do my Instagram photos look blurry after uploading?',
