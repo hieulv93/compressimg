@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-tiktok/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for TikTok — Reduce Photo Size for Uploads',
+  title: 'Does TikTok Compress Images? Yes — Fix Free Online',
   description:
-    'Free online tool to compress images for TikTok. Reduce JPG, PNG size before uploading profile photos, cover images, and in-video assets. 100% browser-based, no upload.',
+    'Yes, TikTok compresses every photo you upload — profile pictures and cover images get aggressively re-encoded. Pre-compress at quality 80 to keep them sharp. Free, browser-based.',
   keywords: [
     'compress image for tiktok',
     'compress photo for tiktok',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for TikTok — Reduce Photo Size for Uploads',
+    title: 'Does TikTok Compress Images? Yes — Fix Free Online',
     description:
-      'Reduce JPG and PNG file size before uploading to TikTok. Avoid double-compression on profile photos and cover images — free, no uploads, 100% browser-based.',
+      'Yes, TikTok compresses every photo on upload. Pre-compress at quality 80 to keep profile photos and covers sharp — free, no uploads, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for TikTok' }],
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress Image for TikTok — Free Photo Size Reducer',
+    title: 'Does TikTok Compress Images? Yes — Fix Free Online',
     description:
-      'Compress photos before uploading to TikTok to avoid quality loss. 100% browser-based, no uploads.',
+      'Yes, TikTok compresses every photo on upload. Pre-compress to keep profile photos sharp. 100% browser-based, no uploads.',
     images: [OG_IMAGE],
   },
 }
@@ -101,6 +101,14 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Does TikTok compress images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, TikTok automatically compresses every photo you upload — profile pictures, video cover images, and in-video assets. TikTok applies aggressive lossy compression that can turn a sharp 12MP photo into a blurry, artifact-filled result. Pre-compressing at quality 80 before uploading gives TikTok a smaller, already-optimized file, so TikTok applies far less additional compression and the final result looks noticeably sharper.',
+          },
+        },
         {
           '@type': 'Question',
           name: 'Why do my TikTok photos look blurry after uploading?',

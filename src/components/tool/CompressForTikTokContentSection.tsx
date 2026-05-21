@@ -5,22 +5,38 @@ export default function CompressForTikTokContentSection() {
   return (
     <section className="space-y-8 text-sm text-text-muted leading-relaxed">
       <div className="space-y-3">
-        <h2 className="text-xl font-bold text-text-main">
-          Why Compress Images Before Uploading to TikTok?
-        </h2>
+        <h2 className="text-xl font-bold text-text-main">Does TikTok Compress Images?</h2>
         <p>
-          TikTok automatically compresses every photo it receives — profile pictures, video cover
-          images, and in-video assets. When you upload a large, uncompressed photo, TikTok&apos;s
-          servers apply aggressive lossy compression that often turns a sharp 12MP image into a
-          blurry, artifact-filled result. Pre-compressing your image at quality 80 gives TikTok a
-          smaller, already-optimized file, so TikTok applies far less additional compression and the
-          final result looks noticeably sharper.
+          <strong className="text-text-main">
+            Yes — TikTok compresses every photo you upload.
+          </strong>{' '}
+          Profile pictures, video cover images, and in-video assets are all re-encoded by
+          TikTok&apos;s servers. When you upload a large, uncompressed photo, TikTok applies
+          aggressive lossy compression that often turns a sharp 12MP image into a blurry,
+          artifact-filled result.
         </p>
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">Quick answer: Does TikTok compress images?</p>
+          <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
+            <li>
+              ✅ <strong className="text-text-main">Profile photos:</strong> Yes — TikTok
+              aggressively compresses all profile pictures on upload
+            </li>
+            <li>
+              ✅ <strong className="text-text-main">Cover images:</strong> Yes — video covers get
+              re-encoded, especially visible on high-res originals
+            </li>
+            <li>
+              ✅ <strong className="text-text-main">Pre-compression fix:</strong> Yes — compress to
+              quality 80 first to minimize TikTok&apos;s double-compression
+            </li>
+          </ul>
+        </div>
         <p>
-          This is especially important for TikTok profile photos, which are displayed as small
-          circles. Blurry profile photos hurt first impressions on your profile page and in comment
-          sections. Pre-compressing at quality 80 keeps the file small while retaining the sharpness
-          that makes a photo look professional at small display sizes.
+          Pre-compressing at quality 80 gives TikTok a smaller, already-optimized file, so TikTok
+          applies far less additional compression. This is especially important for profile photos —
+          displayed as small circles where blurriness is immediately noticeable on your profile page
+          and in comment sections.
         </p>
       </div>
 
