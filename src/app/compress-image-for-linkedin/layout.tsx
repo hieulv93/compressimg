@@ -104,6 +104,14 @@ const jsonLd = {
       mainEntity: [
         {
           '@type': 'Question',
+          name: 'Does LinkedIn compress images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, LinkedIn automatically compresses every image you upload — profile photos, cover images, post attachments, and article headers. LinkedIn applies lossy compression that can visibly reduce sharpness, especially on high-resolution originals. Pre-compressing at quality 80 before uploading gives LinkedIn a file already close to its delivery target, resulting in less double-compression and noticeably sharper images.',
+          },
+        },
+        {
+          '@type': 'Question',
           name: 'Why does my LinkedIn profile photo look blurry?',
           acceptedAnswer: {
             '@type': 'Answer',

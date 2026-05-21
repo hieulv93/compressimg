@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-twitter/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Twitter/X — Reduce Size',
+  title: 'Does Twitter Compress Images? Yes — Fix Free Online',
   description:
-    'Free online tool to compress images for Twitter and X. Reduce JPG, PNG file size before tweeting — keep quality, avoid double-compression. 100% browser-based, no upload.',
+    'Yes, Twitter/X compresses every image you tweet — converting to WebP and reducing to 300–500KB. Pre-compress at quality 80 to keep photos sharp on the timeline. Free, browser-based.',
   keywords: [
     'compress image for twitter',
     'compress photo for twitter',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for Twitter / X — Reduce Photo Size for Tweets',
+    title: 'Does Twitter Compress Images? Yes — Fix Free Online',
     description:
-      'Reduce JPG and PNG file size before tweeting. Avoid double-compression and keep photos sharp on the timeline — free, no uploads, 100% browser-based.',
+      'Yes, Twitter compresses every image to 300–500KB. Pre-compress at quality 80 to keep photos sharp on the timeline — free, no uploads, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for Twitter' }],
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress Image for Twitter / X — Free Photo Size Reducer',
+    title: 'Does Twitter Compress Images? Yes — Fix Free Online',
     description:
-      "Compress photos before tweeting to avoid quality loss from Twitter's re-compression. 100% browser-based, no uploads.",
+      'Yes, Twitter compresses every image to 300–500KB. Pre-compress before tweeting to keep photos sharp. 100% browser-based, no uploads.',
     images: [OG_IMAGE],
   },
 }
@@ -102,6 +102,14 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Does Twitter compress images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, Twitter (X) automatically compresses every image uploaded to the platform. Twitter converts uploaded images to WebP format and reduces file size to its 300–500KB delivery target — regardless of the original size or format. A crisp 8MP smartphone photo can emerge noticeably softer on the tweet timeline. Pre-compressing at quality 80 before uploading gives Twitter a file already near its target size, resulting in minimal additional compression and a sharper final image.',
+          },
+        },
         {
           '@type': 'Question',
           name: 'Why do my Twitter photos look blurry after uploading?',

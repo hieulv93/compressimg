@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-youtube/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for YouTube — Free Thumbnail Size Reducer',
+  title: 'Does YouTube Compress Images? Yes — Fix Free Online',
   description:
-    'Compress YouTube thumbnails & channel banners in seconds. Stay under 2MB limit, keep faces and text sharp. Free, no sign-up, files never leave your device.',
+    'Yes, YouTube compresses thumbnails and images on upload. Pre-compress before uploading to stay sharp and under the 2MB limit. Free, browser-based, no sign-up.',
   keywords: [
     'compress image for youtube',
     'compress youtube thumbnail',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for YouTube — Free Thumbnail Size Reducer',
+    title: 'Does YouTube Compress Images? Yes — Fix Free Online',
     description:
-      'Compress YouTube thumbnails & channel banners in seconds. Stay under 2MB limit, keep faces and text sharp. Free, no sign-up, files never leave your device.',
+      'Yes, YouTube compresses thumbnails on upload. Pre-compress before uploading to stay sharp and under the 2MB limit. Free, browser-based, no sign-up.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for YouTube' }],
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress Image for YouTube — Free Thumbnail Size Reducer',
+    title: 'Does YouTube Compress Images? Yes — Fix Free Online',
     description:
-      'Compress YouTube thumbnails & channel banners in seconds. Stay under 2MB limit. Free, no sign-up.',
+      'Yes, YouTube compresses thumbnails on upload. Pre-compress to stay sharp and under 2MB. Free, no sign-up.',
     images: [OG_IMAGE],
   },
 }
@@ -102,6 +102,14 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Does YouTube compress images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, YouTube compresses thumbnails and images when displaying them across its platform. YouTube re-encodes thumbnails for delivery at multiple resolutions — search results, suggested feeds, mobile apps, and TV. The original file is preserved in YouTube Studio, but the displayed version is compressed. Thumbnails must also be under 2MB to upload at all. Pre-compressing to quality 85 before uploading ensures your thumbnail displays as sharp as possible across all surfaces.',
+          },
+        },
         {
           '@type': 'Question',
           name: 'What is the maximum file size for a YouTube thumbnail?',

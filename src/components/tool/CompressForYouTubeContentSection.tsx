@@ -5,25 +5,40 @@ export default function CompressForYouTubeContentSection() {
   return (
     <section className="space-y-8 text-sm text-text-muted leading-relaxed">
       <div className="space-y-3">
-        <h2 className="text-xl font-bold text-text-main">Why Compress Images for YouTube?</h2>
+        <h2 className="text-xl font-bold text-text-main">Does YouTube Compress Images?</h2>
         <p>
-          YouTube imposes a strict 2MB file size limit on thumbnails. A raw 1280×720px screenshot or
-          design export can easily reach 3–8MB, causing your upload to fail with an error.
-          Compressing your thumbnail to quality 85 before uploading reduces a typical file to
-          150–400KB — passing the limit with room to spare, with no visible quality loss at the
-          sizes YouTube displays thumbnails.
+          <strong className="text-text-main">
+            Yes — YouTube compresses thumbnails on upload and delivery.
+          </strong>{' '}
+          YouTube re-encodes thumbnails for display across dozens of surfaces: search results,
+          suggested feeds, mobile apps, and TV. The original file is preserved in YouTube Studio,
+          but the displayed version is always compressed. Thumbnails also have a strict 2MB upload
+          limit — a raw 1280×720px design export can easily reach 3–8MB and fail to upload entirely.
         </p>
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">
+            Quick answer: Does YouTube compress images?
+          </p>
+          <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
+            <li>
+              ✅ <strong className="text-text-main">Thumbnail display:</strong> Yes — YouTube
+              re-encodes for delivery across search, mobile, and TV surfaces
+            </li>
+            <li>
+              ❌ <strong className="text-text-main">Original file:</strong> No — source preserved in
+              YouTube Studio for download
+            </li>
+            <li>
+              ✅ <strong className="text-text-main">2MB hard limit:</strong> Yes — thumbnails over
+              2MB are rejected outright. Compress first to avoid upload errors
+            </li>
+          </ul>
+        </div>
         <p>
-          Beyond the size limit, smaller thumbnails load faster in search results, suggested video
-          feeds, and mobile apps. YouTube&apos;s recommendation algorithm serves thumbnails across
-          dozens of surface areas at different resolutions — a well-compressed thumbnail renders
-          crisply on all of them without the progressive-loading blur that large files can show on
-          slow connections.
-        </p>
-        <p>
-          Channel banners (2560×1440px) have a 6MB limit. Profile photos (800×800px) need to be
-          under 4MB. This tool compresses any of these in seconds, entirely in your browser —
-          nothing is uploaded to any server.
+          Pre-compressing to quality 85 reduces a typical thumbnail to 150–400KB — well under the
+          2MB limit with no visible quality loss at the sizes YouTube displays thumbnails. Smaller
+          thumbnails also load faster in search results and suggested feeds, which matters for
+          click-through rate on slow mobile connections.
         </p>
       </div>
 

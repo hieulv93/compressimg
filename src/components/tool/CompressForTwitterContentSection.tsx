@@ -8,25 +8,40 @@ export default function CompressForTwitterContentSection() {
       aria-label="Guide to compressing images for Twitter and X"
     >
       <div className="space-y-3">
-        <h2 className="text-xl font-bold text-text-main">Why Compress Images for Twitter / X?</h2>
+        <h2 className="text-xl font-bold text-text-main">Does Twitter Compress Images?</h2>
         <p className="text-text-muted text-sm leading-relaxed">
-          Twitter (now X) automatically compresses every image uploaded to the platform. When you
-          attach a high-resolution photo to a tweet, Twitter converts it to WebP or JPG and reduces
-          the file size to fit its delivery targets — often down to 300–500KB regardless of the
-          original. A crisp 8MP photo from your smartphone can emerge noticeably softer on the tweet
-          timeline, with visible compression artifacts in gradients, fine detail, and text areas.
+          <strong className="text-text-main">
+            Yes — Twitter/X compresses every image you tweet.
+          </strong>{' '}
+          When you attach a photo to a tweet, Twitter converts it to WebP and reduces the file to
+          its 300–500KB delivery target — regardless of the original size or format. A crisp 8MP
+          smartphone photo can emerge noticeably softer on the timeline, with visible compression
+          artifacts in gradients, fine detail, and text areas.
         </p>
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">
+            Quick answer: Does Twitter compress images?
+          </p>
+          <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
+            <li>
+              ✅ <strong className="text-text-main">Every tweet:</strong> Yes — Twitter converts all
+              images to WebP and compresses to 300–500KB
+            </li>
+            <li>
+              ✅ <strong className="text-text-main">Quality impact:</strong> An 8MP photo can emerge
+              noticeably softer with visible artifacts in gradients and text
+            </li>
+            <li>
+              ✅ <strong className="text-text-main">Pre-compression fix:</strong> Yes — compress to
+              quality 80 first to minimize Twitter&apos;s double-compression
+            </li>
+          </ul>
+        </div>
         <p className="text-text-muted text-sm leading-relaxed">
-          Pre-compressing your image at quality 80 before uploading to Twitter gives the platform a
-          file that is already close to its internal size target. Twitter then applies minimal
-          additional compression, preserving more of the original detail. This technique is commonly
-          used by photographers, designers, and content creators who need their images to look sharp
-          on the tweet timeline without the visible softness introduced by Twitter&apos;s automatic
-          processing.
-        </p>
-        <p className="text-text-muted text-sm leading-relaxed">
-          All compression in this tool happens entirely in your browser — no image is ever sent to
-          any server. Your photos are processed locally and downloaded directly to your device.
+          Pre-compressing at quality 80 before uploading gives Twitter a file already near its
+          delivery target. Twitter then applies minimal additional compression, preserving more of
+          the original detail. This technique is used by photographers, designers, and content
+          creators who need images to look sharp on the tweet timeline.
         </p>
       </div>
 

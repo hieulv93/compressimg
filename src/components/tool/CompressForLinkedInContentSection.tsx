@@ -8,23 +8,41 @@ export default function CompressForLinkedInContentSection() {
       aria-label="Guide to compressing images for LinkedIn"
     >
       <div className="space-y-3">
-        <h2 className="text-xl font-bold text-text-main">Why Compress Images for LinkedIn?</h2>
+        <h2 className="text-xl font-bold text-text-main">Does LinkedIn Compress Images?</h2>
         <p className="text-text-muted text-sm leading-relaxed">
-          LinkedIn automatically compresses every image you upload — profile photos, cover images,
-          post attachments, and article headers. While LinkedIn&apos;s compression is less
-          aggressive than Facebook or Instagram, it still introduces visible softness and color
-          shifts on high-resolution originals. A crisp professional headshot or company announcement
-          graphic can lose sharpness after LinkedIn&apos;s internal processing, which matters in a
-          professional context where image quality reflects directly on your personal brand or
-          company credibility.
+          <strong className="text-text-main">
+            Yes — LinkedIn compresses every image you upload.
+          </strong>{' '}
+          Profile photos, cover images, post attachments, and article headers are all re-encoded
+          during upload. While LinkedIn&apos;s compression is less aggressive than Facebook or
+          Instagram, it still introduces visible softness on high-resolution originals — which
+          matters in a professional context where image quality reflects directly on your personal
+          brand or company credibility.
         </p>
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">
+            Quick answer: Does LinkedIn compress images?
+          </p>
+          <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
+            <li>
+              ✅ <strong className="text-text-main">All uploads:</strong> Yes — profile photos,
+              covers, post images all get compressed on upload
+            </li>
+            <li>
+              ✅ <strong className="text-text-main">Quality impact:</strong> Profile photos reduced
+              to 200×200px display with lossy compression applied
+            </li>
+            <li>
+              ✅ <strong className="text-text-main">Pre-compression fix:</strong> Yes — compress to
+              quality 80 first, then upload for noticeably sharper results
+            </li>
+          </ul>
+        </div>
         <p className="text-text-muted text-sm leading-relaxed">
-          Pre-compressing your image at quality 80 before uploading to LinkedIn gives the platform a
-          file that is already close to its internal delivery target. LinkedIn then applies minimal
-          additional compression, preserving more of the original detail. This technique is used by
-          recruiters, career coaches, marketers, and brand managers who need their profile photos
-          and post images to appear sharp and professional to hiring managers, clients, and business
-          connections.
+          Pre-compressing at quality 80 before uploading gives LinkedIn a file already close to its
+          delivery target. LinkedIn then applies minimal additional compression, preserving more
+          original detail. This technique is used by recruiters, career coaches, and brand managers
+          who need images to appear sharp and professional to clients and hiring managers.
         </p>
         <p className="text-text-muted text-sm leading-relaxed">
           All compression in this tool happens entirely in your browser — no image is ever sent to
