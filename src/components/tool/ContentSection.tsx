@@ -218,7 +218,7 @@ export default function ContentSection() {
 
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">More Free Image Tools</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           <Link
             href="/resize-image"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
@@ -242,6 +242,17 @@ export default function ContentSection() {
             </p>
           </Link>
           <Link
+            href="/jpg-to-webp"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              JPG to WebP
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Convert JPG to WebP — 25–35% smaller file size for web images.
+            </p>
+          </Link>
+          <Link
             href="/compress-image-to-100kb"
             className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
           >
@@ -261,6 +272,17 @@ export default function ContentSection() {
             </p>
             <p className="text-xs text-text-muted mt-1">
               Reduce image size to fit Gmail, Outlook, and other email providers.
+            </p>
+          </Link>
+          <Link
+            href="/compress-images"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Batch Compress
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Compress multiple images at once and download as a ZIP.
             </p>
           </Link>
         </div>

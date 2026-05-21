@@ -147,6 +147,11 @@ const popularUseCases = [
     description: 'Convert WebP to JPG for universal compatibility.',
   },
   {
+    href: '/jpg-to-webp',
+    title: 'JPG to WebP',
+    description: 'Convert JPG to WebP — 25–35% smaller file size for web use.',
+  },
+  {
     href: '/compress-image-for-whatsapp',
     title: 'Compress for WhatsApp',
     description: 'Reduce photo size before sharing to avoid double-compression.',
