@@ -2,16 +2,16 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Why Do Photos Look Blurry on Social Media? (And How to Fix It)',
+  title: 'Why Do Exported Images Look Blurry on Social Media? (2026 Fix)',
   description:
-    'Instagram, Facebook, and WhatsApp all compress your photos automatically. Learn exactly why it happens and how to upload sharp images every time.',
+    'Your exported photos look blurry on Instagram, Facebook, or LinkedIn? Learn exactly why platforms compress images and 5 proven ways to keep them sharp.',
   alternates: {
     canonical: 'https://compressimg.pro/blog/why-photos-look-blurry-social-media/',
   },
   openGraph: {
-    title: 'Why Do Photos Look Blurry on Social Media? (And How to Fix It)',
+    title: 'Why Do Exported Images Look Blurry on Social Media? (2026 Fix)',
     description:
-      'Instagram, Facebook, and WhatsApp all compress your photos automatically. Learn exactly why it happens and how to upload sharp images every time.',
+      'Your exported photos look blurry on Instagram, Facebook, or LinkedIn? Learn exactly why platforms compress images and 5 proven ways to keep them sharp.',
     type: 'article',
     url: 'https://compressimg.pro/blog/why-photos-look-blurry-social-media/',
   },

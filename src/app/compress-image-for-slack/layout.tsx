@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-slack/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Does Slack Reduce Image Quality? Yes — Fix Free Online',
+  title: 'Does Slack Compress Images? Yes — Fix Free Online',
   description:
-    'Yes, Slack re-compresses images and reduces quality on every upload. Pre-compress photos before sharing in channels to keep them sharp — free, browser-based, no sign-up.',
+    'Yes, Slack compresses every image you upload. See how it works and pre-optimize photos before sharing in channels — keeps them sharp and crisp in Slack. Free, browser-based.',
   keywords: [
     'compress image for slack',
     'compress photo for slack',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Does Slack Reduce Image Quality? Yes — Fix Free Online',
+    title: 'Does Slack Compress Images? Yes — Fix Free Online',
     description:
-      'Yes, Slack re-compresses images and reduces quality on every upload. Pre-compress before sharing in channels to keep photos sharp — free, browser-based.',
+      'Yes, Slack compresses every image you upload. Pre-compress before sharing in channels to keep photos sharp and crisp in Slack — free, browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for Slack Online' }],
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Does Slack Reduce Image Quality? Yes — Fix Free Online',
+    title: 'Does Slack Compress Images? Yes — Fix Free Online',
     description:
-      'Yes, Slack reduces quality on every upload. Pre-compress images before sharing — 100% browser-based, no sign-up.',
+      'Yes, Slack compresses every image you upload. Pre-compress before sharing — keeps photos crisp in Slack. 100% browser-based, no sign-up.',
     images: [OG_IMAGE],
   },
 }
@@ -74,6 +74,14 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Does Slack compress images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, Slack compresses images when displaying them inline in channels and DMs. Slack re-encodes uploads to generate smaller preview versions for faster loading. The original file is stored and downloadable at full quality, but the inline preview shown in chat is a compressed version. For photos that need to look sharp in the channel — not just on download — pre-compress to under 1MB before uploading.',
+          },
+        },
         {
           '@type': 'Question',
           name: 'What is the Slack file upload size limit?',

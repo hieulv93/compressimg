@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-teams/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Does Microsoft Teams Compress Images? Yes — Fix Free Online',
+  title: 'Does Teams Compress Images? Yes — Fix Free Online',
   description:
-    'Yes, Microsoft Teams re-compresses images and reduces quality on upload. Pre-compress photos before sharing in channels to keep them sharp — free, browser-based, no install.',
+    'Yes, Microsoft Teams compresses images and reduces quality on upload. Pre-compress photos before sharing in channels to keep them sharp — free, browser-based, no install.',
   keywords: [
     'compress image for teams',
     'compress image for microsoft teams',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Does Microsoft Teams Compress Images? Yes — Fix Free Online',
+    title: 'Does Teams Compress Images? Yes — Fix Free Online',
     description:
-      'Yes, Microsoft Teams re-compresses images and reduces quality on upload. Pre-compress before sharing in channels to keep photos sharp — free, browser-based.',
+      'Yes, Microsoft Teams compresses images and reduces quality on upload. Pre-compress before sharing in channels to keep photos sharp — free, browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Does Microsoft Teams Compress Images? Yes — Fix Free Online',
+    title: 'Does Teams Compress Images? Yes — Fix Free Online',
     description:
       'Yes, Teams reduces quality on every upload. Pre-compress images before sharing in channels — 100% browser-based, no install.',
     images: [OG_IMAGE],
@@ -81,6 +81,14 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Does Teams compress images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes, Microsoft Teams compresses images when displaying them inline in chat and channels. Teams re-encodes images to generate optimized preview versions, which can reduce sharpness compared to the original. The original file is stored in SharePoint and remains downloadable at full quality. Pre-compressing images to under 1MB before sharing ensures the version everyone sees in chat matches your intended quality.',
+          },
+        },
         {
           '@type': 'Question',
           name: 'What is the Microsoft Teams file upload size limit?',
