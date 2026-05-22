@@ -195,6 +195,12 @@ export default function CompressForYouTubeContentSection() {
         <h2 className="text-xl font-bold text-text-main">Related Image Tools</h2>
         <ul className="list-disc list-inside space-y-1.5 ml-2">
           <li>
+            <Link href="/thumbnail-compressor" className="text-primary hover:underline font-medium">
+              Thumbnail Compressor
+            </Link>{' '}
+            — dedicated tool to compress thumbnails under 2MB for YouTube
+          </li>
+          <li>
             <Link href="/compress-image" className="text-primary hover:underline font-medium">
               Image Compressor
             </Link>{' '}

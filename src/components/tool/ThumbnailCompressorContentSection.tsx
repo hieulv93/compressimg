@@ -357,6 +357,10 @@ export default function ThumbnailCompressorContentSection() {
             Compress Image
           </Link>
           <span className="text-text-muted">·</span>
+          <Link href="/compress-image-for-youtube" className="text-primary hover:underline">
+            Compress for YouTube
+          </Link>
+          <span className="text-text-muted">·</span>
           <Link href="/compress-image-to-100kb" className="text-primary hover:underline">
             Compress to 100KB
           </Link>
