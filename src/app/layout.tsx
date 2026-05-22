@@ -78,6 +78,26 @@ const siteJsonLd = {
         height: 630,
       },
     },
+    {
+      '@type': 'WebApplication',
+      name: 'CompressImg',
+      url: 'https://compressimg.pro',
+      applicationCategory: 'MultimediaApplication',
+      operatingSystem: 'Any',
+      browserRequirements: 'Requires a modern web browser with JavaScript enabled',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      description:
+        'Free browser-based image compressor, resizer, converter, and cropper. Supports JPG, PNG, WebP, HEIC, GIF, BMP, SVG. No upload required.',
+      featureList: [
+        'Compress JPG, PNG, WebP images online',
+        'Resize images to any dimension',
+        'Convert between image formats',
+        'Crop images to any ratio',
+        'Batch compress multiple images',
+        'No file upload — 100% browser-based',
+        'Free with no limits or watermarks',
+      ],
+    },
   ],
 }
 

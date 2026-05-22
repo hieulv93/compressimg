@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import HomeContentSection from '@/components/layout/HomeContentSection'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Compress, Resize & Convert Images Free | CompressImg' },
+  title: { absolute: 'Free Image Compressor Online — Compress JPG, PNG, WebP | CompressImg' },
   description:
-    'Free browser-based image tools. Compress, resize, convert, and crop JPG, PNG, WebP instantly. No upload, no login — 100% private and instant.',
+    'Free online image compressor. Reduce JPG, PNG, WebP file size up to 90% without losing quality. No upload — 100% browser-based and private.',
   alternates: { canonical: 'https://compressimg.pro/' },
   openGraph: {
-    title: 'Free Online Image Tools — CompressImg',
+    title: 'Free Image Compressor Online — Compress JPG, PNG, WebP | CompressImg',
     description:
       'Compress, resize, convert, and crop JPG, PNG, WebP instantly. No upload, no login — 100% private.',
     url: 'https://compressimg.pro/',
@@ -17,12 +18,67 @@ export const metadata: Metadata = {
         url: 'https://compressimg.pro/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'CompressImg — Free Online Image Tools',
+        alt: 'CompressImg — Free Online Image Compressor',
       },
     ],
     locale: 'en_US',
     type: 'website',
   },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is an online image compressor?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'An online image compressor reduces the file size of JPG, PNG, or WebP images using lossy or lossless compression algorithms — all inside your browser, with no upload to any server. CompressImg uses JPEG recompression and PNG optimization to reduce file size by 50–90% with no visible quality loss at quality 80.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What image formats does CompressImg support?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'CompressImg supports JPG (JPEG), PNG, and WebP for compression. For conversion, it also supports HEIC, BMP, GIF, and SVG as input formats. All output files are downloaded directly to your device — no server storage involved.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How much does image compression reduce file size?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'At quality 80, compression typically reduces JPG file size by 60–80% and PNG by 30–60%. A 5MB photo from a smartphone compresses to 300–800KB with no visible quality loss on screen. Results vary based on image content — photos with complex detail compress more than simple graphics.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is CompressImg free to use?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. CompressImg is completely free with no file limits, no watermarks, and no sign-up required. All compression, conversion, resizing, and cropping tools run in your browser at no cost.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are my images safe when using CompressImg?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. All processing runs entirely in your browser using JavaScript — no image is ever uploaded to any server. Your files never leave your device. This makes CompressImg safe for personal, confidential, and unreleased content.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I compress images on my phone?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. CompressImg works on iPhone and Android in Chrome, Safari, and Firefox. Tap the upload area to select an image from your camera roll, adjust quality, and download the compressed file — no app installation needed.',
+      },
+    },
+  ],
 }
 
 const tools = [
@@ -172,7 +228,7 @@ const popularUseCases = [
     description: "Reduce thumbnail and banner size — stay under YouTube's 2MB limit.",
   },
   {
-    href: '/compress-image',
+    href: '/thumbnail-compressor',
     title: 'Thumbnail Compressor',
     description: 'Compress YouTube and gaming thumbnails to under 2MB before uploading.',
   },
@@ -251,6 +307,10 @@ const popularUseCases = [
 export default function HomePage() {
   return (
     <main className="flex-1">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="max-w-3xl mx-auto px-4 py-12 sm:py-20 space-y-10">
         <div className="text-center space-y-3">
           <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
@@ -361,14 +421,16 @@ export default function HomePage() {
                 href={item.href}
                 className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
               >
-                <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+                <h3 className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
                   {item.title}
-                </p>
+                </h3>
                 <p className="text-xs text-text-muted mt-1 leading-relaxed">{item.description}</p>
               </Link>
             ))}
           </div>
         </div>
+
+        <HomeContentSection />
       </div>
     </main>
   )
