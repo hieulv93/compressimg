@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CompressImg — Product Hunt Gallery</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #f0f0f0;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: -20px;
+    align-self: flex-start;
+    margin-left: calc(50% - 635px);
+  }
+
+  /* Each slide is exactly 1270×952px */
+  .slide {
+    width: 1270px;
+    height: 952px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* ─── SLIDE 1: Hero ─── */
+  .s1 {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 40%, #bfdbfe 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    gap: 40px;
+  }
+  .s1-top {
+    text-align: center;
+  }
+  .s1-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+  }
+  .s1-title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #1e3a8a;
+    line-height: 1.1;
+    margin-bottom: 12px;
+  }
+  .s1-sub {
+    font-size: 22px;
+    color: #3b82f6;
+    font-weight: 500;
+  }
+  .s1-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(37,99,235,0.15);
+    width: 820px;
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .s1-img-box {
+    width: 160px;
+    height: 120px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #dbeafe, #93c5fd);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 48px;
+  }
+  .s1-info { flex: 1; }
+  .s1-filename {
+    font-size: 15px;
+    color: #6b7280;
+    margin-bottom: 8px;
+  }
+  .s1-sizes {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  .s1-size-before {
+    font-size: 18px;
+    color: #9ca3af;
+    text-decoration: line-through;
+  }
+  .s1-arrow { color: #2563eb; font-size: 20px; }
+  .s1-size-after {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1d4ed8;
+  }
+  .s1-bar-wrap {
+    background: #f3f4f6;
+    border-radius: 100px;
+    height: 10px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .s1-bar {
+    height: 100%;
+    width: 12%;
+    background: linear-gradient(90deg, #2563eb, #60a5fa);
+    border-radius: 100px;
+  }
+  .s1-saved {
+    font-size: 14px;
+    color: #16a34a;
+    font-weight: 600;
+  }
+  .s1-download {
+    background: #2563eb;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 12px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .s1-stats {
+    display: flex;
+    gap: 40px;
+  }
+  .s1-stat { text-align: center; }
+  .s1-stat-num {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1e3a8a;
+  }
+  .s1-stat-label {
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 4px;
+  }
+
+  /* ─── SLIDE 2: Privacy ─── */
+  .s2 {
+    background: #0f172a;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0;
+  }
+  .s2-left {
+    position: relative;
+    width: 50%;
+    border-right: 1px solid rgba(255,255,255,0.08);
+    background: linear-gradient(135deg, #1e3a8a22, #2563eb11);
+  }
+  .s2-right {
+    position: relative;
+    width: 50%;
+    opacity: 0.45;
+  }
+  .s2-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: calc(100% - 96px);
+  }
+  .s2-icon-good {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    box-shadow: 0 0 40px rgba(37,99,235,0.5);
+  }
+  .s2-icon-bad {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #374151;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+  }
+  .s2-heading {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .s2-heading span { color: #60a5fa; }
+  .s2-heading-bad {
+    font-size: 32px;
+    font-weight: 800;
+    color: #9ca3af;
+    text-align: center;
+    line-height: 1.2;
+  }
+  .s2-desc {
+    font-size: 17px;
+    color: #94a3b8;
+    text-align: center;
+    line-height: 1.6;
+    width: 100%;
+    max-width: 380px;
+  }
+  .s2-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+  }
+  .s2-chip {
+    background: rgba(37,99,235,0.2);
+    border: 1px solid rgba(37,99,235,0.4);
+    color: #93c5fd;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+  }
+  .s2-chip-bad {
+    background: rgba(107,114,128,0.2);
+    border: 1px solid rgba(107,114,128,0.3);
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 100px;
+    text-decoration: line-through;
+  }
+  .s2-vs {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #1e293b;
+    border: 2px solid #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: 800;
+    color: #64748b;
+    z-index: 10;
+  }
+
+  /* ─── SLIDE 3: Multi-tool ─── */
+  .s3 {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    gap: 48px;
+  }
+  .s3-header { text-align: center; }
+  .s3-eyebrow {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .s3-title {
+    font-size: 44px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.15;
+  }
+  .s3-sub {
+    font-size: 18px;
+    color: #6b7280;
+    margin-top: 10px;
+  }
+  .s3-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    width: 100%;
+    max-width: 940px;
+  }
+  .s3-card {
+    border: 1.5px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 36px 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    transition: all 0.2s;
+  }
+  .s3-card:hover { border-color: #2563eb; }
+  .s3-card-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    flex-shrink: 0;
+  }
+  .s3-card-body {}
+  .s3-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 6px;
+  }
+  .s3-card-desc {
+    font-size: 15px;
+    color: #6b7280;
+    line-height: 1.5;
+  }
+  .s3-card-tag {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2563eb;
+    background: #eff6ff;
+    padding: 3px 10px;
+    border-radius: 100px;
+  }
+
+  /* ─── SLIDE 4: Speed ─── */
+  .s4 {
+    background: linear-gradient(160deg, #1e3a8a 0%, #1d4ed8 50%, #2563eb 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 80px;
+    gap: 56px;
+  }
+  .s4-title {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.15;
+  }
+  .s4-title span { color: #93c5fd; }
+  .s4-compare {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 900px;
+  }
+  .s4-box {
+    flex: 1;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 36px;
+    text-align: center;
+  }
+  .s4-box-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .s4-box-size {
+    font-size: 52px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .s4-box-type {
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+  }
+  .s4-arrow-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .s4-arrow-icon { font-size: 36px; }
+  .s4-time {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .s4-saved-badge {
+    background: #22c55e;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 10px 28px;
+    border-radius: 100px;
+    margin-top: -8px;
+  }
+  .s4-stats {
+    display: flex;
+    gap: 60px;
+  }
+  .s4-stat { text-align: center; }
+  .s4-stat-num {
+    font-size: 44px;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1;
+  }
+  .s4-stat-unit {
+    font-size: 20px;
+    font-weight: 700;
+    color: #93c5fd;
+  }
+  .s4-stat-label {
+    font-size: 18px;
+    color: rgba(255,255,255,0.65);
+    margin-top: 6px;
+  }
+  .s4-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(255,255,255,0.2);
+    align-self: center;
+  }
+
+  /* ─── SLIDE 5: How it works ─── */
+  .s5 {
+    background: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 80px;
+    gap: 52px;
+  }
+  .s5-header { text-align: center; }
+  .s5-eyebrow {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .s5-title {
+    font-size: 46px;
+    font-weight: 800;
+    color: #111827;
+    line-height: 1.15;
+  }
+  .s5-sub {
+    font-size: 19px;
+    color: #6b7280;
+    margin-top: 12px;
+  }
+  .s5-steps {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    width: 100%;
+    max-width: 1000px;
+  }
+  .s5-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+  }
+  .s5-step:not(:last-child)::after {
+    content: '→';
+    position: absolute;
+    right: -14px;
+    top: 30px;
+    font-size: 28px;
+    color: #cbd5e1;
+    font-weight: 300;
+  }
+  .s5-step-num {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 24px rgba(37,99,235,0.3);
+  }
+  .s5-step-icon { font-size: 36px; margin-bottom: 14px; }
+  .s5-step-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+  }
+  .s5-step-desc {
+    font-size: 15px;
+    color: #6b7280;
+    line-height: 1.55;
+  }
+  .s5-privacy-bar {
+    background: #fff;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 780px;
+  }
+  .s5-lock { font-size: 28px; }
+  .s5-privacy-text {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d4ed8;
+  }
+  .s5-privacy-sub {
+    font-size: 14px;
+    color: #6b7280;
+    margin-left: auto;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<div class="label">IMAGE 1 / 5 — Hero (screenshot this at 1270×952)</div>
+
+<!-- ═══ SLIDE 1: HERO ═══ -->
+<div class="slide s1">
+  <div class="s1-top">
+    <div class="s1-badge">🆓 Free &nbsp;·&nbsp; No sign-up &nbsp;·&nbsp; 100% Private</div>
+    <div class="s1-title">Compress Images Instantly<br>No Upload Required</div>
+    <div class="s1-sub">JPG · PNG · WebP · HEIC · GIF — all in your browser</div>
+  </div>
+
+  <div class="s1-card">
+    <div class="s1-img-box">🏔️</div>
+    <div class="s1-info">
+      <div class="s1-filename">mountain-photo-trip.jpg</div>
+      <div class="s1-sizes">
+        <span class="s1-size-before">3.2 MB</span>
+        <span class="s1-arrow">→</span>
+        <span class="s1-size-after">280 KB</span>
+      </div>
+      <div class="s1-bar-wrap">
+        <div class="s1-bar"></div>
+      </div>
+      <div class="s1-saved">✅ Saved 91% — no visible quality loss</div>
+    </div>
+    <div class="s1-download">⬇ Download (280 KB)</div>
+  </div>
+
+  <div class="s1-stats">
+    <div class="s1-stat">
+      <div class="s1-stat-num">90%</div>
+      <div class="s1-stat-label">smaller files</div>
+    </div>
+    <div class="s1-stat">
+      <div class="s1-stat-num">&lt;2s</div>
+      <div class="s1-stat-label">compression speed</div>
+    </div>
+    <div class="s1-stat">
+      <div class="s1-stat-num">59+</div>
+      <div class="s1-stat-label">tools available</div>
+    </div>
+    <div class="s1-stat">
+      <div class="s1-stat-num">0</div>
+      <div class="s1-stat-label">server uploads</div>
+    </div>
+  </div>
+</div>
+
+<div class="label">IMAGE 2 / 5 — Privacy</div>
+
+<!-- ═══ SLIDE 2: PRIVACY ═══ -->
+<div class="slide s2">
+  <div class="s2-left">
+    <div class="s2-inner">
+      <div class="s2-icon-good">🔒</div>
+      <div class="s2-heading"><span>CompressImg</span><br>Your browser</div>
+      <div class="s2-desc">
+        Compression runs 100% in your browser using a Web Worker.
+        Your photos <strong style="color:#60a5fa">never leave your device</strong>.
+      </div>
+      <div class="s2-chips">
+        <span class="s2-chip">✓ No server upload</span>
+        <span class="s2-chip">✓ No account</span>
+        <span class="s2-chip">✓ No watermark</span>
+        <span class="s2-chip">✓ GDPR friendly</span>
+      </div>
+    </div>
+  </div>
+  <div class="s2-vs">VS</div>
+  <div class="s2-right">
+    <div class="s2-inner">
+      <div class="s2-icon-bad">☁️</div>
+      <div class="s2-heading-bad">Other tools<br>Their servers</div>
+      <div class="s2-desc" style="color:#4b5563">
+        Your files are uploaded to a third-party server.
+        Who has access? For how long?
+      </div>
+      <div class="s2-chips">
+        <span class="s2-chip-bad">✗ Files uploaded</span>
+        <span class="s2-chip-bad">✗ Sign-up required</span>
+        <span class="s2-chip-bad">✗ Watermarks</span>
+        <span class="s2-chip-bad">✗ Usage limits</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="label">IMAGE 3 / 5 — Multi-tool</div>
+
+<!-- ═══ SLIDE 3: MULTI-TOOL ═══ -->
+<div class="slide s3">
+  <div class="s3-header">
+    <div class="s3-eyebrow">All-in-one image toolkit</div>
+    <div class="s3-title">Everything you need for images<br>in one free tool</div>
+    <div class="s3-sub">No app to install · Works on any device · Always free</div>
+  </div>
+
+  <div class="s3-grid">
+    <div class="s3-card">
+      <div class="s3-card-icon" style="background:#eff6ff">🗜️</div>
+      <div class="s3-card-body">
+        <div class="s3-card-title">Compress</div>
+        <div class="s3-card-desc">Reduce JPG, PNG, WebP, HEIC & GIF size up to 90% without visible quality loss.</div>
+        <span class="s3-card-tag">59+ format pages</span>
+      </div>
+    </div>
+    <div class="s3-card">
+      <div class="s3-card-icon" style="background:#f0fdf4">📐</div>
+      <div class="s3-card-body">
+        <div class="s3-card-title">Resize</div>
+        <div class="s3-card-desc">Scale images to exact pixel dimensions or percentage. Maintain aspect ratio or set custom sizes.</div>
+        <span class="s3-card-tag">Pixel-perfect output</span>
+      </div>
+    </div>
+    <div class="s3-card">
+      <div class="s3-card-icon" style="background:#fef9c3">✂️</div>
+      <div class="s3-card-body">
+        <div class="s3-card-title">Crop</div>
+        <div class="s3-card-desc">Drag-to-crop with aspect ratio presets (1:1, 16:9, 4:3). Rule-of-thirds grid for perfect framing.</div>
+        <span class="s3-card-tag">Freeform & ratio lock</span>
+      </div>
+    </div>
+    <div class="s3-card">
+      <div class="s3-card-icon" style="background:#fdf4ff">🔄</div>
+      <div class="s3-card-body">
+        <div class="s3-card-title">Convert</div>
+        <div class="s3-card-desc">Convert between JPG, PNG, WebP, AVIF, HEIC, TIFF, BMP, GIF, SVG — instantly.</div>
+        <span class="s3-card-tag">12+ format pairs</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="label">IMAGE 4 / 5 — Speed / Before-After</div>
+
+<!-- ═══ SLIDE 4: SPEED ═══ -->
+<div class="slide s4">
+  <div class="s4-title">
+    From <span>3.2 MB</span> to <span>280 KB</span><br>in under 2 seconds
+  </div>
+
+  <div class="s4-compare">
+    <div class="s4-box">
+      <div class="s4-box-label">Before</div>
+      <div class="s4-box-size">3.2<span style="font-size:28px;opacity:0.7"> MB</span></div>
+      <div class="s4-box-type">Original JPEG · 4032×3024px</div>
+    </div>
+
+    <div class="s4-arrow-box">
+      <div class="s4-arrow-icon">⚡</div>
+      <div class="s4-time">1.4 seconds</div>
+      <div style="font-size:28px;color:rgba(255,255,255,0.5)">→</div>
+    </div>
+
+    <div class="s4-box">
+      <div class="s4-box-label">After</div>
+      <div class="s4-box-size">280<span style="font-size:28px;opacity:0.7"> KB</span></div>
+      <div class="s4-box-type">Compressed JPEG · same resolution</div>
+    </div>
+  </div>
+
+  <div class="s4-saved-badge">✅ Saved 91% — no visible quality loss</div>
+
+  <div class="s4-stats">
+    <div class="s4-stat">
+      <div class="s4-stat-num">90<span class="s4-stat-unit">%</span></div>
+      <div class="s4-stat-label">max file size reduction</div>
+    </div>
+    <div class="s4-divider"></div>
+    <div class="s4-stat">
+      <div class="s4-stat-num">&lt;2<span class="s4-stat-unit">s</span></div>
+      <div class="s4-stat-label">average compression time</div>
+    </div>
+    <div class="s4-divider"></div>
+    <div class="s4-stat">
+      <div class="s4-stat-num">0<span class="s4-stat-unit">kb</span></div>
+      <div class="s4-stat-label">data sent to servers</div>
+    </div>
+    <div class="s4-divider"></div>
+    <div class="s4-stat">
+      <div class="s4-stat-num">20<span class="s4-stat-unit">MB</span></div>
+      <div class="s4-stat-label">max file size supported</div>
+    </div>
+  </div>
+</div>
+
+<div class="label">IMAGE 5 / 5 — How it works</div>
+
+<!-- ═══ SLIDE 5: HOW IT WORKS ═══ -->
+<div class="slide s5">
+  <div class="s5-header">
+    <div class="s5-eyebrow">Dead simple to use</div>
+    <div class="s5-title">3 steps. No sign-up.<br>Done in seconds.</div>
+    <div class="s5-sub">Works on desktop and mobile · No app download needed</div>
+  </div>
+
+  <div class="s5-steps">
+    <div class="s5-step">
+      <div class="s5-step-num">1</div>
+      <div class="s5-step-icon">📂</div>
+      <div class="s5-step-title">Drop your image</div>
+      <div class="s5-step-desc">Drag & drop, click to browse, or paste from clipboard with Ctrl+V</div>
+    </div>
+    <div class="s5-step">
+      <div class="s5-step-num">2</div>
+      <div class="s5-step-icon">🎚️</div>
+      <div class="s5-step-title">Choose quality</div>
+      <div class="s5-step-desc">Adjust the quality slider (default 80%). See the file size update live before you download</div>
+    </div>
+    <div class="s5-step">
+      <div class="s5-step-num">3</div>
+      <div class="s5-step-icon">⬇️</div>
+      <div class="s5-step-title">Download instantly</div>
+      <div class="s5-step-desc">One click saves your compressed image. No waiting, no email, no account</div>
+    </div>
+  </div>
+
+  <div class="s5-privacy-bar">
+    <span class="s5-lock">🔒</span>
+    <span class="s5-privacy-text">Your files never leave your device — 100% browser-based processing</span>
+    <span class="s5-privacy-sub">compressimg.pro</span>
+  </div>
+</div>
+
+</body>
+</html>

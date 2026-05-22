@@ -126,11 +126,11 @@ export default function ThumbnailCompressorPage() {
       <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12 space-y-6">
         <div className="text-center space-y-2">
           <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
-            Thumbnail Compressor Online Free
+            YouTube Thumbnail Compressor — Free, No Upload
           </h1>
           <p className="text-text-muted text-sm sm:text-base">
-            Compress YouTube, gaming, and social media thumbnails under 2MB — free, private, 100% in
-            your browser
+            Compress YouTube thumbnails under 2MB in seconds — gaming, social media, and streaming
+            thumbnails supported. 100% browser-based, private.
           </p>
         </div>
 

@@ -106,6 +106,16 @@ export default function CompressForSlackContentSection() {
         <p className="text-text-muted text-sm leading-relaxed">
           Even on paid Slack plans with generous storage, compressing images improves channel
           performance. The recommended size for Slack images is under 1MB for fast inline loading.
+          See{' '}
+          <a
+            href="https://slack.com/help/articles/201330736"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline font-medium"
+          >
+            Slack&apos;s official file upload documentation
+          </a>{' '}
+          for the latest plan-specific limits.
         </p>
       </div>
 

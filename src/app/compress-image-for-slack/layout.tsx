@@ -7,7 +7,7 @@ const OG_IMAGE = `${SITE_URL}/og-image.png`
 export const metadata: Metadata = {
   title: 'Does Slack Compress Images? Yes — Fix Free Online',
   description:
-    'Yes, Slack compresses every image you upload. See how it works and pre-optimize photos before sharing in channels — keeps them sharp and crisp in Slack. Free, browser-based.',
+    'Yes, Slack compresses every image you upload. Pre-optimize before sharing in channels to keep photos sharp and crisp. Free, browser-based.',
   keywords: [
     'compress image for slack',
     'compress photo for slack',

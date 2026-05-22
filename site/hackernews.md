@@ -9,7 +9,7 @@
 Show HN: A free image compressor that runs entirely in your browser
 
 ## URL
-https://compressimg.pro/compress-image
+https://compressimg.pro/compress-image/
 
 ## Text (optional — nhưng nên có, giải thích ngắn gọn)
 I built this because most image compressors upload your files to a server. This one runs 100% in the browser using a Web Worker — files never leave your device.
@@ -19,6 +19,7 @@ Stack: Next.js static export, browser-image-compression library, deployed on Ver
 The main technical challenge was keeping LCP under 2.5s on mobile while still loading AdSense and GA4. Ended up using `lazyOnload` for both third-party scripts, which brought LCP from 7.1s down to 2.0s.
 
 Supports JPG, PNG, WebP. No sign-up, no watermarks, no limits.
+Also includes 50+ related tools (resize, convert, format-specific compressors).
 
 ---
 

@@ -33,7 +33,17 @@ export default function ThumbnailCompressorContentSection() {
           YouTube requires thumbnails to be under <strong className="text-text-main">2MB</strong>{' '}
           and recommends <strong className="text-text-main">1280×720 pixels</strong> (16:9 aspect
           ratio). Thumbnails that exceed 2MB cannot be uploaded — YouTube will reject them with an
-          error. Here is how to compress any thumbnail to under 2MB while keeping it sharp:
+          error. See{' '}
+          <a
+            href="https://support.google.com/youtube/answer/72431"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline font-medium"
+          >
+            YouTube&apos;s official thumbnail spec
+          </a>{' '}
+          for the full requirements. Here is how to compress any thumbnail to under 2MB while
+          keeping it sharp:
         </p>
         <ol className="space-y-4">
           <li className="flex gap-3">

@@ -104,6 +104,10 @@ const siteJsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://analytics.google.com" />
+      </head>
       <body className="font-sans antialiased bg-white text-text-main flex flex-col min-h-screen">
         <script
           type="application/ld+json"
