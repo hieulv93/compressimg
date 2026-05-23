@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: 'Why Do Exported Images Look Blurry on Social Media? (2026 Fix)',
   description:
     'Your exported photos look blurry on Instagram, Facebook, or LinkedIn? Learn exactly why platforms compress images and 5 proven ways to keep them sharp.',
+  keywords: [
+    'blurry photos social media',
+    'why instagram blurs photos',
+    'fix blurry uploads',
+    'social media image quality',
+    'why are my photos blurry on facebook',
+    'instagram image compression',
+  ],
   alternates: {
     canonical: 'https://compressimg.pro/blog/why-photos-look-blurry-social-media/',
   },

@@ -5,6 +5,14 @@ export const metadata: Metadata = {
   title: 'How to Compress Images Without Losing Quality',
   description:
     'Compress JPG, PNG, and WebP images without visible quality loss. Learn which settings, methods, and formats minimize file size while keeping images sharp.',
+  keywords: [
+    'compress images without losing quality',
+    'lossless image compression',
+    'compress jpg without quality loss',
+    'compress png without losing quality',
+    'image compression quality',
+    'reduce image size without losing quality',
+  ],
   alternates: {
     canonical: 'https://compressimg.pro/blog/compress-images-without-losing-quality/',
   },

@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'What Is HEIC? How to Open and Convert HEIC Images',
   description:
     'HEIC is the default photo format on iPhones. Learn what HEIC is, why it exists, how to open HEIC files on Windows and Mac, and how to convert HEIC to JPG or PNG.',
+  keywords: [
+    'what is heic',
+    'heic format',
+    'heic vs jpg',
+    'heif format',
+    'iphone heic',
+    'open heic file',
+    'convert heic to jpg',
+  ],
   alternates: {
     canonical: 'https://compressimg.pro/blog/what-is-heic-format/',
   },

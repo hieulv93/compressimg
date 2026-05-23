@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'What Is WebP? The Complete Guide to WebP Images',
   description:
     'WebP is a modern image format that produces 25–35% smaller files than JPEG. Learn what WebP is, how it works, browser support, and how to convert images to and from WebP.',
+  keywords: [
+    'what is webp',
+    'webp format',
+    'webp vs jpg',
+    'webp vs png',
+    'google webp',
+    'webp image format',
+    'convert to webp',
+  ],
   alternates: {
     canonical: 'https://compressimg.pro/blog/what-is-webp-format/',
   },
