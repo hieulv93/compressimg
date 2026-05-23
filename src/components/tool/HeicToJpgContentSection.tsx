@@ -27,29 +27,53 @@ export default function HeicToJpgContentSection() {
 
       <div className="space-y-3">
         <h2 className="text-base font-bold text-text-main">
-          How to Convert HEIC to JPG — Step by Step
+          How to Convert HEIC to JPG — 3 Simple Steps
         </h2>
-        <ol className="list-decimal list-inside space-y-2 pl-1">
-          <li>
-            <strong className="text-text-main">Upload your HEIC file</strong> — click the upload
-            area or drag and drop your .heic or .heif photo. You can also paste a copied image with
-            Ctrl+V.
+        <ol className="space-y-4">
+          <li id="step-1" className="flex gap-3">
+            <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
+              1
+            </span>
+            <div>
+              <h3 className="text-sm font-semibold text-text-main">
+                Upload Your HEIC File from iPhone or Mac
+              </h3>
+              <p>
+                Click the upload area or drag and drop your .heic or .heif photo. You can also paste
+                a copied image with Ctrl+V. On iPhone, tap the upload area in Safari and select from
+                your camera roll.
+              </p>
+            </div>
           </li>
-          <li>
-            <strong className="text-text-main">Wait for conversion</strong> — the tool decodes the
-            HEIC file in your browser and converts it to JPG at quality 90. This takes 1–3 seconds
-            for most iPhone photos.
+          <li id="step-2" className="flex gap-3">
+            <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
+              2
+            </span>
+            <div>
+              <h3 className="text-sm font-semibold text-text-main">
+                Conversion to JPG Runs Automatically
+              </h3>
+              <p>
+                The tool decodes the HEIC file entirely in your browser and converts it to JPG at
+                quality 90. This takes 1–3 seconds for most iPhone photos. No server upload occurs —
+                your photo never leaves your device.
+              </p>
+            </div>
           </li>
-          <li>
-            <strong className="text-text-main">Download the JPG</strong> — click the download button
-            to save the converted JPG to your device. The file is named
-            &ldquo;compressed-[original-name].jpg&rdquo;.
+          <li id="step-3" className="flex gap-3">
+            <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
+              3
+            </span>
+            <div>
+              <h3 className="text-sm font-semibold text-text-main">Download the JPG File</h3>
+              <p>
+                Click Download to save the converted JPG to your device. The file is named with a
+                &ldquo;converted-&rdquo; prefix so you can distinguish it from the original HEIC. No
+                account required, no watermark.
+              </p>
+            </div>
           </li>
         </ol>
-        <p>
-          No account required. No file size limit beyond the 20MB browser constraint. All processing
-          happens locally in your browser — your photos are never sent to a server.
-        </p>
       </div>
 
       <div className="space-y-3">
@@ -362,7 +386,9 @@ export default function HeicToJpgContentSection() {
       </div>
 
       <div className="space-y-4">
-        <h2 className="text-base font-bold text-text-main">Frequently Asked Questions</h2>
+        <h2 className="text-base font-bold text-text-main">
+          Frequently Asked Questions About HEIC to JPG Conversion
+        </h2>
         <div className="space-y-3">
           <FAQItem
             question="Is my HEIC photo safe to convert here?"

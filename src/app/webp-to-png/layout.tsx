@@ -68,6 +68,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert WebP to PNG Online',
+      description:
+        'Convert WebP to lossless PNG with full transparency preserved — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'WebP image file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg WebP to PNG Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your WebP file',
+          text: 'Click the upload area, drag and drop your WebP image, or paste from clipboard with Ctrl+V. Supports WebP files up to 20 MB, including those with transparency.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Auto-conversion to lossless PNG',
+          text: 'Your WebP is converted to PNG instantly in your browser — no server upload. Alpha channel transparency is fully preserved in the PNG output.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the PNG file',
+          text: 'Click Download to save the lossless PNG. The output is compatible with Photoshop, Figma, Windows Photo Viewer, and any platform that does not support WebP.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

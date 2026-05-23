@@ -67,6 +67,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Reduce Image File Size Online',
+      description:
+        'Reduce image file size in KB or MB without changing dimensions — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'Image file (JPG, PNG or WebP — up to 20 MB)' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg — Free Image Size Reducer', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your image',
+          text: 'Click the upload area, drag and drop your file, or paste from clipboard. Supports JPG, PNG and WebP — up to 20 MB per file.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Adjust quality to reach your target file size',
+          text: 'Use the quality slider to reduce file size. The result card shows the output size before you download, so you can fine-tune until you reach the target KB or MB.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the reduced image',
+          text: 'Click Download to save the smaller file. Pixel dimensions remain unchanged — only the file size is reduced. No account, no watermark, no server upload.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

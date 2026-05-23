@@ -67,6 +67,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert JPG to PNG Online',
+      description:
+        'Convert JPG images to lossless PNG with full transparency support — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'JPG or JPEG image file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg JPG to PNG Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your JPG file',
+          text: 'Click the upload area, drag and drop your JPG, or paste from clipboard with Ctrl+V. Supports JPG and JPEG files up to 20 MB.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Conversion to PNG runs automatically',
+          text: 'Your JPG is converted to PNG instantly in your browser. No settings needed — the conversion preserves all image data in the lossless PNG format.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the PNG file',
+          text: 'Click Download to save the converted PNG. Note that converting from JPG to PNG does not restore any quality already lost in the original — but no new quality loss is introduced.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

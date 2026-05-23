@@ -67,6 +67,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress a JPEG Online',
+      description:
+        'Compress JPEG files up to 90% smaller without visible quality loss — all in your browser, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'JPEG or JPG image file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg JPEG Compressor', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your JPEG file',
+          text: 'Click the upload area, drag and drop your JPEG, or paste from clipboard with Ctrl+V. Supports JPG and JPEG files up to 20 MB.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Choose compression quality',
+          text: 'The default quality of 80 reduces file size 60–80% with no perceptible quality loss. Lower the slider for a smaller file; raise it for higher fidelity.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the compressed JPEG',
+          text: 'Compression runs instantly in your browser. Click Download to save the optimized JPEG. No account, no watermark, no server upload.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

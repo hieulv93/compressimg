@@ -67,6 +67,45 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress a Photo Online',
+      description:
+        'Compress photos from camera, iPhone, and DSLR — free, browser-based, HEIC supported, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [
+        { '@type': 'HowToSupply', name: 'Photo file (JPG, PNG, WebP or HEIC — up to 20 MB)' },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg — Free Photo Compressor', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your photo',
+          text: 'Click the upload area, drag and drop your photo, or paste from clipboard. Accepts JPG, PNG, WebP and HEIC (iPhone) photos — up to 20 MB per file.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Set the quality level',
+          text: 'The default quality of 80 reduces photo file size by 60–80% with no visible quality loss. Ideal for email, social media and web uploads. Lower for maximum compression, higher for print-quality output.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the compressed photo',
+          text: 'Click Download to save the compressed photo. The result card shows original vs compressed size before you download. No account, no watermark, no server upload.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

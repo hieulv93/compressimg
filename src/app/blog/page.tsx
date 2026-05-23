@@ -78,9 +78,12 @@ const posts = [
 export default function BlogPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-text-main mb-2">Blog</h1>
-      <p className="text-text-muted mb-10">
-        Image compression tips, format guides, and web performance best practices.
+      <h1 className="text-3xl font-bold text-text-main mb-2">
+        Image Optimization Blog — Compression, Format &amp; Performance Tips
+      </h1>
+      <p className="text-text-muted mb-10 max-w-2xl">
+        Practical guides on compressing JPG, PNG, WebP and HEIC images for web, email, and social
+        media — without losing quality. All tools and techniques are browser-based and free.
       </p>
 
       <div className="space-y-8">

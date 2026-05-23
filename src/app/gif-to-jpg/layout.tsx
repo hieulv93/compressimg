@@ -67,6 +67,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert GIF to JPG Online',
+      description:
+        'Extract the first frame of a GIF and save it as a high-quality JPG — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'GIF image or animation file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg GIF to JPG Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your GIF file',
+          text: 'Click the upload area or drag and drop your GIF. Both static GIFs and animated GIFs are supported — up to 20 MB.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Conversion to JPG runs automatically',
+          text: 'The first frame of your GIF is extracted and converted to JPG in your browser instantly. The output quality is set to 92 for sharp, detailed results.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the JPG file',
+          text: 'Click Download to save the JPG. The converted file is universally compatible and much smaller than the original GIF for use in emails, documents and social media.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

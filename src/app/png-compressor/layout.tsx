@@ -67,6 +67,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress a PNG Online',
+      description:
+        'Compress PNG files with full transparency preserved — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'PNG image file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg PNG Compressor', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your PNG file',
+          text: 'Click the upload area, drag and drop your PNG, or paste from clipboard. Supports PNG files up to 20 MB including those with transparency.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Adjust quality to balance size and detail',
+          text: 'The default quality of 80 reduces file size significantly while keeping the image visually identical. Lower for maximum compression; raise for fine detail in logos and icons.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the compressed PNG',
+          text: 'Compression completes instantly in your browser. Transparency is fully preserved in the output. No account, no watermark, no server upload.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

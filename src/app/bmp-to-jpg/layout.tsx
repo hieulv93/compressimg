@@ -67,6 +67,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert BMP to JPG Online',
+      description:
+        'Convert large BMP files to compact JPG — free, browser-based, dramatically reduce file size, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'BMP image file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg BMP to JPG Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your BMP file',
+          text: 'Click the upload area or drag and drop your BMP image. BMP files are uncompressed and can be very large — files up to 20 MB are supported.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Conversion to JPG runs automatically',
+          text: 'Your BMP is converted to JPG at quality 92 in your browser — no server upload. A typical BMP file shrinks by 90–95% when converted to JPG with no visible quality loss.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the JPG file',
+          text: 'Click Download to save the compact JPG. The converted file is far smaller and universally compatible for web, email and sharing. No account, no watermark.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

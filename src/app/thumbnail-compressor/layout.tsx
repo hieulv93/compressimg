@@ -70,6 +70,45 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress a Thumbnail Online',
+      description:
+        'Compress YouTube thumbnails and social media images under 2 MB — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [
+        { '@type': 'HowToSupply', name: 'Thumbnail image (JPG, PNG or WebP — up to 20 MB)' },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg — Free Thumbnail Compressor', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your thumbnail',
+          text: 'Click the upload area, drag and drop your thumbnail image, or paste from clipboard. Supports JPG, PNG and WebP — up to 20 MB.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Adjust quality for your platform',
+          text: 'Quality 80 is the sweet spot for YouTube thumbnails (sharp text, vivid colors, under 2 MB). Lower to 60–70 for social media thumbnails where smaller size matters more.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the compressed thumbnail',
+          text: 'Compression runs instantly in your browser. Click Download to save the optimized thumbnail file. No account, no watermark, no server upload.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

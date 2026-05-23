@@ -67,6 +67,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert PNG to JPG Online',
+      description:
+        'Convert PNG to JPG instantly — transparent areas filled with white background, free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'PNG image file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg PNG to JPG Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your PNG file',
+          text: 'Click the upload area, drag and drop your PNG, or paste from clipboard with Ctrl+V. Supports PNG files up to 20 MB, including files with transparency.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Conversion to JPG runs automatically',
+          text: 'Your PNG is converted to JPG instantly in your browser. Transparent areas are automatically filled with a white background, since JPG does not support transparency.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the JPG file',
+          text: 'Click Download to save the converted JPG. JPG uses lossy compression, so the output is significantly smaller than the original PNG — ideal for web, email and social media.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

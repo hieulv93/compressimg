@@ -78,12 +78,12 @@ export default function JpgContentSection() {
           How to Compress JPG Online — 3 Simple Steps
         </h2>
         <ol className="space-y-4">
-          <li className="flex gap-3">
+          <li id="step-1" className="flex gap-3">
             <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
               1
             </span>
             <div>
-              <p className="text-sm font-semibold text-text-main">Upload your JPG file</p>
+              <h3 className="text-sm font-semibold text-text-main">Upload Your JPG File</h3>
               <p className="text-sm text-text-muted leading-relaxed">
                 Click the upload area, drag and drop your JPG or JPEG file, or paste an image from
                 your clipboard (Ctrl+V). Files up to 20MB are accepted. Your image is never sent to
@@ -91,12 +91,12 @@ export default function JpgContentSection() {
               </p>
             </div>
           </li>
-          <li className="flex gap-3">
+          <li id="step-2" className="flex gap-3">
             <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
               2
             </span>
             <div>
-              <p className="text-sm font-semibold text-text-main">Adjust the quality slider</p>
+              <h3 className="text-sm font-semibold text-text-main">Choose Compression Quality</h3>
               <p className="text-sm text-text-muted leading-relaxed">
                 The quality slider controls how much image data is retained. For most JPG photos,
                 quality 75–85 produces an output that is visually indistinguishable from the
@@ -106,12 +106,12 @@ export default function JpgContentSection() {
               </p>
             </div>
           </li>
-          <li className="flex gap-3">
+          <li id="step-3" className="flex gap-3">
             <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
               3
             </span>
             <div>
-              <p className="text-sm font-semibold text-text-main">Download your compressed JPG</p>
+              <h3 className="text-sm font-semibold text-text-main">Download the Compressed JPG</h3>
               <p className="text-sm text-text-muted leading-relaxed">
                 The compressed JPG is ready instantly. You can see the original size, the new size,
                 and the percentage reduction before downloading. The output file is saved as a JPG
@@ -132,14 +132,16 @@ export default function JpgContentSection() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <div className="rounded-xl border border-border p-4 space-y-1">
-            <p className="font-semibold text-text-main text-sm">Quality 85–95%</p>
+            <h3 className="font-semibold text-text-main text-sm">Quality 85–95% — Near-Lossless</h3>
             <p className="text-xs text-text-muted leading-relaxed">
               Near-lossless output. Best for print-ready images, portfolio photography, and any
               image that will be enlarged or heavily examined. File size reduction: 30–50%.
             </p>
           </div>
           <div className="rounded-xl border border-border p-4 space-y-1">
-            <p className="font-semibold text-text-main text-sm">Quality 75–85% (Recommended)</p>
+            <h3 className="font-semibold text-text-main text-sm">
+              Quality 75–85% — Web Optimized (Recommended)
+            </h3>
             <p className="text-xs text-text-muted leading-relaxed">
               The sweet spot for most web use. Invisible quality loss on screen, excellent
               compression. Best for blog images, product photos, and general web use. Reduction:
@@ -147,14 +149,18 @@ export default function JpgContentSection() {
             </p>
           </div>
           <div className="rounded-xl border border-border p-4 space-y-1">
-            <p className="font-semibold text-text-main text-sm">Quality 60–74%</p>
+            <h3 className="font-semibold text-text-main text-sm">
+              Quality 60–74% — Thumbnails &amp; Social Media
+            </h3>
             <p className="text-xs text-text-muted leading-relaxed">
               Good for thumbnails, social media previews, and images displayed at small sizes.
               Slight quality reduction visible only at full zoom. Reduction: 70–80%.
             </p>
           </div>
           <div className="rounded-xl border border-border p-4 space-y-1">
-            <p className="font-semibold text-text-main text-sm">Quality 40–59%</p>
+            <h3 className="font-semibold text-text-main text-sm">
+              Quality 40–59% — Maximum Compression
+            </h3>
             <p className="text-xs text-text-muted leading-relaxed">
               Maximum compression mode. Visible artifacts on complex images. Use only when file size
               is critical (email attachments, slow networks). Reduction: 80–90%.
@@ -546,7 +552,9 @@ function JpgFAQSection() {
 
   return (
     <div className="space-y-3">
-      <h2 className="text-xl font-bold text-text-main">Frequently Asked Questions</h2>
+      <h2 className="text-xl font-bold text-text-main">
+        Frequently Asked Questions About JPG Compression
+      </h2>
       <dl className="space-y-3">
         {faqs.map((faq, i) => (
           <FAQItem key={i} question={faq.q} answer={faq.a} />

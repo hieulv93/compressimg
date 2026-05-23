@@ -66,6 +66,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert To or From WebP Online',
+      description:
+        'Convert JPG and PNG to WebP, or convert WebP back to JPG and PNG — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'Image file (JPG, PNG or WebP — up to 20 MB)' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg — Free WebP Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your image',
+          text: 'Click the upload area, drag and drop your file, or paste from clipboard. Supports JPG, PNG and WebP input — up to 20 MB per file.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Choose the output format',
+          text: 'Select the target format: WebP (for smaller web files), JPG (for universal compatibility), or PNG (for lossless quality with transparency). Conversion runs automatically in your browser.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the converted file',
+          text: 'Click Download to save the result. No account required, no watermark, no server upload — your files never leave your device.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

@@ -66,6 +66,45 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert an Image Online',
+      description:
+        'Convert between JPG, PNG, WebP and HEIC in your browser — free, private, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [
+        { '@type': 'HowToSupply', name: 'Image file (JPG, PNG, WebP or HEIC — up to 20 MB)' },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg — Free Online Image Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your image',
+          text: 'Click the upload area, drag and drop your file, or paste from clipboard with Ctrl+V. Accepts JPG, PNG, WebP and HEIC — up to 20 MB per file.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Select the output format',
+          text: 'Choose JPG, PNG or WebP as the target format. Conversion starts automatically in your browser. Switch formats at any time to compare results without re-uploading.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the converted file',
+          text: 'Click Download to save the result. The file is saved with a "converted-" prefix so you can easily distinguish it from the original. No account, no watermark.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

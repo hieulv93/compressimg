@@ -67,6 +67,48 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert HEIC to PNG Online',
+      description:
+        'Convert iPhone HEIC photos to lossless PNG — free, browser-based, transparency preserved, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [
+        {
+          '@type': 'HowToSupply',
+          name: 'HEIC or HEIF photo file from iPhone or iPad — up to 20 MB',
+        },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg HEIC to PNG Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your HEIC file',
+          text: 'Click the upload area or drag and drop your HEIC photo. On iPhone, tap the upload area and select from your camera roll. Files up to 20 MB are supported.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Auto-conversion to lossless PNG',
+          text: 'Your HEIC is converted to PNG losslessly in your browser — no server upload. PNG output preserves all pixel data with no additional quality loss beyond the original HEIC encoding.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the PNG file',
+          text: 'Click Download to save the converted PNG. The file is compatible with Windows, Android, all browsers, and every major design tool. No account, no watermark.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

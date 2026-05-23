@@ -29,24 +29,28 @@ export default function ResizeContentSection() {
           How to Resize Images Online — 3 Simple Steps
         </h2>
         <ol className="space-y-4">
-          <li className="flex gap-3">
+          <li id="step-1" className="flex gap-3">
             <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
               1
             </span>
             <div>
-              <p className="text-sm font-semibold text-text-main">Upload your image</p>
+              <h3 className="text-sm font-semibold text-text-main">
+                Upload Your Image (JPG, PNG, WebP, HEIC)
+              </h3>
               <p className="text-sm text-text-muted leading-relaxed">
                 Click the upload area, drag and drop your file, or paste from clipboard (Ctrl+V).
-                Supported formats: JPG, PNG, WebP — up to 20MB.
+                Supported formats: JPG, PNG, WebP, HEIC — up to 20MB.
               </p>
             </div>
           </li>
-          <li className="flex gap-3">
+          <li id="step-2" className="flex gap-3">
             <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
               2
             </span>
             <div>
-              <p className="text-sm font-semibold text-text-main">Set your dimensions</p>
+              <h3 className="text-sm font-semibold text-text-main">
+                Set New Dimensions or Choose a Preset
+              </h3>
               <p className="text-sm text-text-muted leading-relaxed">
                 Enter a custom width and height, or click a quick preset — Instagram Post, YouTube
                 Thumbnail, Full HD, and more. Toggle the lock icon to maintain aspect ratio
@@ -54,12 +58,12 @@ export default function ResizeContentSection() {
               </p>
             </div>
           </li>
-          <li className="flex gap-3">
+          <li id="step-3" className="flex gap-3">
             <span className="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
               3
             </span>
             <div>
-              <p className="text-sm font-semibold text-text-main">Download your resized image</p>
+              <h3 className="text-sm font-semibold text-text-main">Download the Resized Image</h3>
               <p className="text-sm text-text-muted leading-relaxed">
                 Resizing happens instantly in your browser. Click Download to save the result. The
                 output keeps the original file format — JPG stays JPG, PNG stays PNG.
@@ -545,7 +549,9 @@ function ResizeFAQSection() {
 
   return (
     <div className="space-y-3">
-      <h2 className="text-xl font-bold text-text-main">Frequently Asked Questions</h2>
+      <h2 className="text-xl font-bold text-text-main">
+        Frequently Asked Questions About Image Resizing
+      </h2>
       <dl className="space-y-3">
         {faqs.map((faq, i) => (
           <FAQItem key={i} question={faq.q} answer={faq.a} />

@@ -68,6 +68,46 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert AVIF to JPG Online',
+      description:
+        'Convert modern AVIF images to universally compatible JPG — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'AVIF image file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg AVIF to JPG Converter', url: PAGE_URL },
+        {
+          '@type': 'HowToTool',
+          name: 'Modern web browser with JavaScript enabled (Chrome 85+, Firefox 93+)',
+        },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your AVIF file',
+          text: 'Click the upload area or drag and drop your AVIF image. AVIF files up to 20 MB are supported. Use Chrome or Firefox for best compatibility.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Conversion to JPG runs automatically',
+          text: 'Your AVIF is decoded and converted to JPG at quality 92 in your browser — no server upload. The output is universally compatible with Windows, macOS, iOS, Android and all email clients.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the JPG file',
+          text: 'Click Download to save the JPG. The result opens in any image viewer, email client, CMS or social media platform without needing AVIF support.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

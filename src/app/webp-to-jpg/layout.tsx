@@ -67,6 +67,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert WebP to JPG Online',
+      description:
+        'Convert WebP images to universally compatible JPG — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'WebP image file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg WebP to JPG Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your WebP file',
+          text: 'Click the upload area, drag and drop your WebP image, or paste from clipboard with Ctrl+V. Supports WebP files up to 20 MB.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Conversion to JPG runs automatically',
+          text: 'Your WebP is converted to JPG instantly in your browser. Transparent areas are filled with a white background. The output quality is set to 92 for visually lossless results.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the JPG file',
+          text: 'Click Download to save the JPG. The converted file works in every email client, CMS, Windows photo viewer, and social media platform that requires JPG format.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

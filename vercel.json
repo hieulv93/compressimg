@@ -1,4 +1,12 @@
 {
+  "redirects": [
+    { "source": "/compress-jpeg", "destination": "/compress-jpg-online/", "permanent": true },
+    { "source": "/compress-jpeg/", "destination": "/compress-jpg-online/", "permanent": true },
+    { "source": "/png-compressor", "destination": "/compress-png-online/", "permanent": true },
+    { "source": "/png-compressor/", "destination": "/compress-png-online/", "permanent": true },
+    { "source": "/image-resizer", "destination": "/resize-image/", "permanent": true },
+    { "source": "/image-resizer/", "destination": "/resize-image/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

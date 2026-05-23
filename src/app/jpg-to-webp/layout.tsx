@@ -67,6 +67,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert JPG to WebP Online',
+      description:
+        'Convert JPG images to WebP for 25–35% smaller file sizes — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'JPG or JPEG image file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg JPG to WebP Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your JPG file',
+          text: 'Click the upload area, drag and drop your JPG, or paste from clipboard with Ctrl+V. Supports JPG and JPEG files up to 20 MB.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Choose WebP quality',
+          text: 'The default quality of 92 produces a WebP that is 25–35% smaller than the original JPG with virtually no visible quality difference. Lower the slider for even smaller files.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the WebP file',
+          text: 'Click Download to save the WebP. The converted file is supported by all modern browsers including Chrome, Firefox, Edge, and Safari 14+. Ideal for web performance and Core Web Vitals.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

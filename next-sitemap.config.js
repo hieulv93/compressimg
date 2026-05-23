@@ -4,7 +4,7 @@ module.exports = {
   generateRobotsTxt: false,
   changefreq: 'weekly',
   priority: 0.7,
-  exclude: ['/icon.svg'],
+  exclude: ['/icon.svg', '/compress-jpeg', '/png-compressor', '/image-resizer'],
   transform: async (config, path) => {
     const priorities = {
       '/': 0.9,

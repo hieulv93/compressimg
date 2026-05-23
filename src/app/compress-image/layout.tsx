@@ -83,6 +83,45 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Compress an Image Online',
+      description:
+        'Compress any JPG, PNG, or WebP image in your browser — free, no upload required, results in seconds.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [
+        { '@type': 'HowToSupply', name: 'Image file (JPG, PNG, WebP or HEIC — up to 20 MB)' },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg — Free Online Image Compressor', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your image',
+          text: 'Click the upload area, drag and drop your file, or paste from clipboard with Ctrl+V. Supports JPG, PNG, WebP and HEIC — up to 20 MB per file.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Adjust the quality slider',
+          text: 'The default quality of 80 reduces file size by 60–80% with no visible quality loss. Lower the slider for a smaller file, raise it to preserve more detail.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the compressed image',
+          text: 'Compression runs instantly in your browser. Click Download to save the compressed file — no account, no watermark, no server upload.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

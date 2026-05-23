@@ -69,6 +69,51 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert HEIC to JPG Online',
+      description:
+        'Convert iPhone HEIC photos to universally compatible JPG format — free, 100% browser-based, no app install required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [
+        {
+          '@type': 'HowToSupply',
+          name: 'HEIC or HEIF photo file from iPhone or iPad — up to 20 MB',
+        },
+      ],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg HEIC to JPG Converter', url: PAGE_URL },
+        {
+          '@type': 'HowToTool',
+          name: 'Modern web browser with JavaScript enabled (Chrome, Firefox, Edge, Safari 16+)',
+        },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your HEIC file from iPhone or Mac',
+          text: 'Click the upload area or drag and drop your HEIC photo. On iPhone, tap the upload area in Safari or Chrome and select the photo from your camera roll. Files up to 20 MB are supported.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Conversion to JPG runs automatically',
+          text: 'Your HEIC file is converted to JPG instantly in your browser using JavaScript — no server upload, no waiting. The conversion uses quality 90, which is visually indistinguishable from the original.',
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the JPG file',
+          text: 'Click Download to save the converted JPG. The file is named with a "converted-" prefix so you can easily distinguish it from the original HEIC. No account, no watermark.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {

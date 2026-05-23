@@ -68,6 +68,43 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'HowTo',
+      name: 'How to Convert GIF to PNG Online',
+      description:
+        'Convert GIF to lossless PNG with full 24-bit color — free, browser-based, no upload required.',
+      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
+      totalTime: 'PT10S',
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
+      supply: [{ '@type': 'HowToSupply', name: 'GIF image or animation file up to 20 MB' }],
+      tool: [
+        { '@type': 'HowToTool', name: 'CompressImg GIF to PNG Converter', url: PAGE_URL },
+        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
+      ],
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your GIF file',
+          text: 'Click the upload area or drag and drop your GIF. Both static GIFs and animated GIFs are supported — up to 20 MB.',
+          url: `${PAGE_URL}#step-1`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Conversion to lossless PNG runs automatically',
+          text: "The first frame of your GIF is converted to PNG losslessly in your browser. PNG supports full 24-bit color depth and full transparency — an upgrade from GIF's 256-color palette.",
+          url: `${PAGE_URL}#step-2`,
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the PNG file',
+          text: 'Click Download to save the PNG. The output is suitable for Figma, Photoshop, web use and any platform that does not support GIF. No account, no watermark.',
+          url: `${PAGE_URL}#step-3`,
+        },
+      ],
+    },
+    {
       '@type': 'FAQPage',
       mainEntity: [
         {
