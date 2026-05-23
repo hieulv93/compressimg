@@ -106,7 +106,9 @@ export default function ConvertImagePage() {
     <main className="flex-1">
       <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12 space-y-6">
         <div className="text-center space-y-2">
-          <h1 className="text-2xl sm:text-3xl font-bold text-text-main">Convert Image Online</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
+            Convert Image Online Free — JPG, PNG, WebP Converter
+          </h1>
           <p className="text-text-muted text-sm sm:text-base">
             Convert JPG, PNG, WebP to any format instantly — free, private, 100% in your browser
           </p>
