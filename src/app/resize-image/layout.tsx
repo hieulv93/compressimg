@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/resize-image/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image Online Free – Change Photo Dimensions Instantly',
+  title: 'Resize Image Online Free — JPG, PNG, WebP & HEIC | CompressImg',
   description:
-    'Free online image resizer. Change width and height of JPG, PNG, WebP in seconds. Instagram, YouTube, Twitter presets included. No upload — 100% browser-based.',
+    'Resize images to exact pixel dimensions free. Set custom width & height or use Instagram, YouTube, and passport presets. Supports HEIC. No upload — 100% browser-based.',
   keywords: [
     'resize image',
     'resize image online free',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Resize Image Online Free – Change Photo Dimensions Instantly',
+    title: 'Resize Image Online Free — JPG, PNG, WebP & HEIC | CompressImg',
     description:
       'Free online image resizer. Change dimensions for Instagram, YouTube, Twitter and more. 100% browser-based — your images never leave your device.',
     url: PAGE_URL,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Resize Image Online Free – Change Photo Dimensions Instantly',
+    title: 'Resize Image Online Free — JPG, PNG, WebP & HEIC | CompressImg',
     description:
       'Resize JPG, PNG, WebP to any size instantly. No uploads — works 100% in your browser.',
     images: [OG_IMAGE],
@@ -70,6 +70,32 @@ const jsonLd = {
         'No file upload — 100% browser-based',
         'Free with no limits',
         'Works on mobile and desktop',
+      ],
+    },
+    {
+      '@type': 'HowTo',
+      name: 'How to Resize an Image Online',
+      description:
+        'Resize any JPG, PNG, WebP, or HEIC image to exact pixel dimensions in your browser — free, no upload required.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Upload your image',
+          text: 'Click the upload area, drag and drop your file, or paste from clipboard (Ctrl+V). Supports JPG, PNG, WebP, HEIC — up to 20MB.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Set your dimensions',
+          text: 'Enter a custom width and height, or choose a quick preset: Instagram Post (1080×1080), YouTube Thumbnail (1280×720), Full HD (1920×1080), and more. Toggle the lock icon to maintain aspect ratio.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download the resized image',
+          text: 'Click "Resize Image". Processing happens instantly in your browser. Download the result — no account, no watermark, no server upload.',
+        },
       ],
     },
     {
@@ -137,6 +163,38 @@ const jsonLd = {
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'Yes. The tool is fully optimized for iOS and Android browsers. Tap to select an image from your gallery, set dimensions, and download — no app required.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I resize a HEIC photo from my iPhone?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Upload the .heic file directly — the tool automatically converts it to JPEG in your browser before resizing. No separate conversion step is needed.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the best image size for an Instagram post?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Square post: 1080×1080px (1:1). Portrait post: 1080×1350px (4:5). Story/Reel: 1080×1920px (9:16). All available as quick presets in the tool.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I resize an image to a specific KB size?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Use our dedicated KB resizer tools — available for 20KB, 50KB, 100KB, 200KB, and 500KB targets. These use automatic quality adjustment to guarantee the output stays under the specified limit.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I resize multiple images at once?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Use our batch image resizer at /resize-images/ — accepts up to 10 files and downloads all resized images as a ZIP file.',
           },
         },
       ],

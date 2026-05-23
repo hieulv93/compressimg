@@ -261,41 +261,212 @@ export default function ResizeContentSection() {
       </div>
 
       <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">How to Resize an Image for Instagram</h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Instagram supports multiple aspect ratios depending on the post type. Using the wrong size
+          results in automatic cropping that can cut out faces or key parts of the image. Here are
+          the exact dimensions to use:
+        </p>
+        <ul className="space-y-2 text-sm text-text-muted">
+          <li className="flex gap-2">
+            <span className="text-primary font-bold mt-0.5">→</span>
+            <span>
+              <strong className="text-text-main">Square post:</strong> 1080×1080px (1:1) — the
+              safest choice, displays well in the grid and feed.
+            </span>
+          </li>
+          <li className="flex gap-2">
+            <span className="text-primary font-bold mt-0.5">→</span>
+            <span>
+              <strong className="text-text-main">Portrait post:</strong> 1080×1350px (4:5) — maximum
+              screen real estate in the feed, ideal for fashion and product photos.
+            </span>
+          </li>
+          <li className="flex gap-2">
+            <span className="text-primary font-bold mt-0.5">→</span>
+            <span>
+              <strong className="text-text-main">Story / Reel:</strong> 1080×1920px (9:16) — full
+              vertical screen. Leave safe zones of ~250px top and bottom for UI overlays.
+            </span>
+          </li>
+          <li className="flex gap-2">
+            <span className="text-primary font-bold mt-0.5">→</span>
+            <span>
+              <strong className="text-text-main">Landscape post:</strong> 1080×566px (1.91:1) — used
+              for wide panoramic shots. Avoid for portraits as it forces horizontal framing.
+            </span>
+          </li>
+        </ul>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Upload your photo above, enter the target dimensions, and click Resize Image. For best
+          quality, always resize down from a larger original — never upscale a small photo to fit
+          Instagram&apos;s dimensions.
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
+          Resize Image to a Specific File Size (KB)
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Pixel dimensions and file size (in KB) are related but different things. Reducing
+          dimensions always reduces file size — but you cannot always hit an exact KB target by
+          adjusting pixels alone. Government portals, exam registrations, and visa applications
+          often specify both: &ldquo;Photo: 1080×1080px, under 200KB.&rdquo;
+        </p>
+        <p className="text-text-muted text-sm leading-relaxed">
+          If you need to hit a specific KB limit, use our dedicated tool after resizing:
+        </p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+          {[
+            { href: '/resize-image-to-20kb/', label: 'Resize to 20KB' },
+            { href: '/resize-image-to-50kb/', label: 'Resize to 50KB' },
+            { href: '/resize-image-to-100kb/', label: 'Resize to 100KB' },
+            { href: '/resize-image-to-200kb/', label: 'Resize to 200KB' },
+            { href: '/resize-image-to-500kb/', label: 'Resize to 500KB' },
+            { href: '/resize-image-in-kb/', label: 'Custom KB target' },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="text-xs px-3 py-2 rounded-xl border border-border text-text-muted hover:border-primary hover:text-primary transition-colors text-center"
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
+          Batch Resize — Resize 10 Images at Once
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Need to resize a set of product photos, blog images, or thumbnails to the same size? Our{' '}
+          <Link href="/resize-images/" className="text-primary underline">
+            batch image resizer
+          </Link>{' '}
+          lets you upload up to 10 images at once and resize them all in one step. Choose from three
+          modes:
+        </p>
+        <ul className="space-y-2 text-sm text-text-muted">
+          <li className="flex gap-2">
+            <span className="text-primary font-bold mt-0.5">→</span>
+            <span>
+              <strong className="text-text-main">Max width:</strong> Cap the longest dimension —
+              great for web images that need to load fast (800px, 1280px, 1920px presets).
+            </span>
+          </li>
+          <li className="flex gap-2">
+            <span className="text-primary font-bold mt-0.5">→</span>
+            <span>
+              <strong className="text-text-main">Percentage:</strong> Scale every image to 25%, 50%,
+              or 75% of its original size — useful for bulk downsizing.
+            </span>
+          </li>
+          <li className="flex gap-2">
+            <span className="text-primary font-bold mt-0.5">→</span>
+            <span>
+              <strong className="text-text-main">Exact size:</strong> Force all images to the same
+              pixel dimensions — Instagram square (1080×1080), Full HD (1920×1080), and more.
+            </span>
+          </li>
+        </ul>
+        <p className="text-text-muted text-sm leading-relaxed">
+          All resized images download as a single ZIP file.{' '}
+          <Link href="/resize-images/" className="text-primary underline">
+            Try batch resize →
+          </Link>
+        </p>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
+          HEIC Photos from iPhone — Automatic Conversion
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          iPhones shoot in HEIC format by default since iOS 11. HEIC files are not accepted by most
+          portals, design tools, or social media platforms — but they cannot be sent directly to a
+          canvas-based resizer either. Our tool handles this automatically:
+        </p>
+        <ol className="space-y-2 text-sm text-text-muted list-none">
+          <li className="flex gap-2">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
+              1
+            </span>
+            <span>You upload a .heic file from your iPhone camera roll.</span>
+          </li>
+          <li className="flex gap-2">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
+              2
+            </span>
+            <span>The tool converts it to JPEG in your browser — no file is sent to a server.</span>
+          </li>
+          <li className="flex gap-2">
+            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-primary text-white text-xs font-bold flex items-center justify-center">
+              3
+            </span>
+            <span>
+              The converted image is resized to your target dimensions and downloaded as JPEG.
+            </span>
+          </li>
+        </ol>
+        <p className="text-text-muted text-sm leading-relaxed">
+          No separate HEIC converter step needed. If you only want to convert HEIC to JPG without
+          resizing, see our dedicated{' '}
+          <Link href="/heic-to-jpg/" className="text-primary underline">
+            HEIC to JPG converter
+          </Link>
+          .
+        </p>
+      </div>
+
+      <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">More Free Image Tools</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <Link
-            href="/compress-image"
-            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
-          >
-            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress Image
-            </p>
-            <p className="text-xs text-text-muted mt-1">
-              Reduce image file size up to 90% without visible quality loss.
-            </p>
-          </Link>
-          <Link
-            href="/convert-image"
-            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
-          >
-            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Convert Image Format
-            </p>
-            <p className="text-xs text-text-muted mt-1">
-              Convert between JPG, PNG, and WebP instantly in your browser.
-            </p>
-          </Link>
-          <Link
-            href="/crop-image"
-            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
-          >
-            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Crop Image
-            </p>
-            <p className="text-xs text-text-muted mt-1">
-              Trim and cut any area with free or fixed aspect ratio presets.
-            </p>
-          </Link>
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {[
+            {
+              href: '/compress-image',
+              label: 'Compress Image',
+              desc: 'Reduce file size up to 90% without visible quality loss.',
+            },
+            {
+              href: '/resize-images/',
+              label: 'Batch Resize',
+              desc: 'Resize up to 10 images at once, download as ZIP.',
+            },
+            {
+              href: '/resize-image-in-kb/',
+              label: 'Resize in KB',
+              desc: 'Hit an exact file size target — 20KB, 50KB, 100KB and more.',
+            },
+            {
+              href: '/heic-to-jpg/',
+              label: 'HEIC to JPG',
+              desc: 'Convert iPhone HEIC photos to standard JPEG.',
+            },
+            {
+              href: '/compress-image-for-passport/',
+              label: 'Passport Compressor',
+              desc: 'US passport photo under 240KB in one click.',
+            },
+            {
+              href: '/compress-image',
+              label: 'Resize + Compress',
+              desc: 'Resize first, then compress — smallest file, best quality.',
+            },
+          ].map(({ href, label, desc }) => (
+            <Link
+              key={label}
+              href={href}
+              className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+            >
+              <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+                {label}
+              </p>
+              <p className="text-xs text-text-muted mt-1">{desc}</p>
+            </Link>
+          ))}
         </div>
       </div>
 
@@ -337,6 +508,38 @@ function ResizeFAQSection() {
     {
       q: 'Does this work on mobile phones?',
       a: 'Yes. The tool is fully optimized for iOS and Android browsers. Tap to select a photo from your gallery, set the dimensions, and download the result — no app required.',
+    },
+    {
+      q: 'Can I resize a HEIC photo from my iPhone?',
+      a: 'Yes. Upload the .heic file directly — the tool automatically converts it to JPEG in your browser before resizing. No separate HEIC converter step is needed. The download will be a standard JPEG file.',
+    },
+    {
+      q: 'What is the best image size for an Instagram post?',
+      a: 'For a square post: 1080×1080px (1:1). For a portrait post: 1080×1350px (4:5) — this takes up the most feed space. For a Story or Reel: 1080×1920px (9:16). All three are available as quick presets in the tool above.',
+    },
+    {
+      q: 'How do I resize an image to a specific KB size?',
+      a: 'Resizing by pixels reduces file size as a side effect, but cannot hit an exact KB target precisely. Use our dedicated KB resizer tools — available for 20KB, 50KB, 100KB, 200KB, and 500KB targets — which use automatic quality adjustment to hit the exact limit.',
+    },
+    {
+      q: 'Can I resize multiple images at once?',
+      a: 'Yes. Use our batch image resizer at /resize-images/ — it accepts up to 10 files at once and downloads all resized images as a ZIP file. Supports max width, percentage, and exact size modes.',
+    },
+    {
+      q: 'Can I resize a PNG without losing transparency?',
+      a: 'Yes. PNG files retain their alpha channel (transparency) after resizing. The output is saved as PNG, preserving any transparent backgrounds or semi-transparent areas in the original.',
+    },
+    {
+      q: 'What happens to EXIF data when I resize?',
+      a: 'EXIF metadata (camera model, GPS location, date taken) is typically stripped during canvas-based resizing. This is actually a privacy benefit — resized images will not contain location data embedded in the original photo.',
+    },
+    {
+      q: 'How do I resize a passport photo?',
+      a: 'For a US passport photo, the required size is 2×2 inches (600×600px at 300 DPI, or 413×531px for digital submission). Set width to 600 and height to 600, then ensure the face fills 70–80% of the frame. For file size under 240KB, use our Passport Compressor tool after resizing.',
+    },
+    {
+      q: 'What is the best image size for a YouTube thumbnail?',
+      a: 'YouTube recommends 1280×720px (16:9 aspect ratio) at under 2MB. This size displays correctly at all thumbnail sizes — from search results to the watch page. Use the YouTube Thumbnail preset in the tool above for one-click sizing.',
     },
   ]
 
