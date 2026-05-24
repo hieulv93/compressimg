@@ -96,6 +96,77 @@ export async function cropImage(file: File, cropRect: CropRect): Promise<CropRes
   })
 }
 
+export async function cropImageCircle(file: File, cropRect: CropRect): Promise<CropResult> {
+  return new Promise((resolve, reject) => {
+    const objectUrl = URL.createObjectURL(file)
+    const img = new Image()
+
+    img.onload = () => {
+      URL.revokeObjectURL(objectUrl)
+
+      const { x, y, w, h } = cropRect
+      // Force square from the crop rect center
+      const size = Math.round(Math.min(w, h))
+      const cx = x + w / 2
+      const cy = y + h / 2
+      const sx = Math.round(cx - size / 2)
+      const sy = Math.round(cy - size / 2)
+
+      if (size < MIN_CROP_PX) {
+        reject(new Error('Crop area too small'))
+        return
+      }
+
+      const canvas = document.createElement('canvas')
+      canvas.width = size
+      canvas.height = size
+
+      const ctx = canvas.getContext('2d')
+      if (!ctx) {
+        reject(new Error('Canvas context unavailable'))
+        return
+      }
+
+      ctx.imageSmoothingEnabled = true
+      ctx.imageSmoothingQuality = 'high'
+
+      // Clip to circle — must clip BEFORE drawing
+      ctx.beginPath()
+      ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2)
+      ctx.clip()
+
+      ctx.drawImage(img, sx, sy, size, size, 0, 0, size, size)
+
+      // Always PNG to preserve transparency
+      canvas.toBlob((blob) => {
+        if (!blob) {
+          reject(new Error('Failed to generate image blob'))
+          return
+        }
+        const previewUrl = URL.createObjectURL(blob)
+        resolve({
+          blob,
+          previewUrl,
+          originalWidth: img.naturalWidth,
+          originalHeight: img.naturalHeight,
+          croppedWidth: size,
+          croppedHeight: size,
+          originalSize: file.size,
+          outputSize: blob.size,
+          format: 'png',
+        })
+      }, 'image/png')
+    }
+
+    img.onerror = () => {
+      URL.revokeObjectURL(objectUrl)
+      reject(new Error('Failed to load image'))
+    }
+
+    img.src = objectUrl
+  })
+}
+
 export function revokeCropPreview(url: string) {
   URL.revokeObjectURL(url)
 }
