@@ -2,6 +2,78 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'dpi-vs-resolution-print-vs-web',
+    title: 'DPI vs Resolution: Image Settings for Print vs Web (2026 Guide)',
+    description:
+      "DPI and resolution explained — what they mean for print (300 DPI) vs web (72 PPI), why they're different, and how to set the right values for your use case.",
+    date: '2026-05-24',
+    readTime: '9 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'compress-images-for-etsy',
+    title: 'How to Compress Images for Etsy — Listing Photo Best Practices',
+    description:
+      'Compress Etsy listing photos to under 1MB for fast loading without losing detail. Covers the 10-image limit, recommended sizes, thumbnail tips, and Etsy image requirements.',
+    date: '2026-05-24',
+    readTime: '8 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'compress-images-for-shopify',
+    title: 'How to Compress Images for Shopify — Speed Up Your Store (2026)',
+    description:
+      'Compress Shopify product images to under 500KB for faster store loading, better PageSpeed scores, and higher Google rankings. Step-by-step guide with recommended settings.',
+    date: '2026-05-24',
+    readTime: '9 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'image-seo-guide',
+    title: 'Image SEO: Complete Guide to Optimizing Images for Google (2026)',
+    description:
+      'How to optimize images for Google search — file size, alt text, file names, structured data, Core Web Vitals, and next-gen formats. Complete image SEO guide for 2026.',
+    date: '2026-05-24',
+    readTime: '12 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'how-to-compress-images-on-android',
+    title: 'How to Compress Images on Android — Free Methods That Work',
+    description:
+      'Compress photos on Android without an app — use your browser. Also covers Google Photos storage saver, Samsung Gallery tricks, and file manager methods. Free.',
+    date: '2026-05-24',
+    readTime: '7 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'how-to-compress-images-on-iphone',
+    title: 'How to Compress Images on iPhone — Without Losing Quality (2026)',
+    description:
+      'Compress iPhone photos without losing quality — 5 free methods including browser-based tools, HEIC settings, AirDrop tricks, and the Files app. Works on iOS 16, 17, 18.',
+    date: '2026-05-24',
+    readTime: '7 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'avif-vs-webp',
+    title: 'AVIF vs WebP: Which Modern Image Format Wins in 2026?',
+    description:
+      'AVIF produces 40–60% smaller files than JPEG — but WebP has broader browser support. Full comparison of file size, encoding speed, and browser support to pick the right format.',
+    date: '2026-05-24',
+    readTime: '8 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'jpg-vs-jpeg',
+    title: "JPG vs JPEG: What's the Difference? (2026 Guide)",
+    description:
+      'JPG and JPEG are the same format. The two extensions exist for historical reasons from the Windows 3.x era. Full explanation of why both exist and which to use.',
+    date: '2026-05-24',
+    readTime: '6 min read',
+    category: 'Guide',
+  },
+  {
     slug: 'how-to-add-watermark-to-photos',
     title: 'How to Add a Watermark to Photos Online — Free Guide',
     description:
