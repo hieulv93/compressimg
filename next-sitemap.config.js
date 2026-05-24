@@ -97,6 +97,7 @@ module.exports = {
       '/compress-image-for-shopify': 0.8,
       '/compress-image-for-wix': 0.8,
       '/compress-image-for-squarespace': 0.8,
+      '/passport-photo-maker': 0.9,
       '/compress-image-for-slack': 0.75,
       '/compress-image-for-teams': 0.75,
       '/tiff-to-jpg': 0.85,

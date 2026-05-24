@@ -119,4 +119,7 @@ export const analytics = {
 
   imageToPdf: (originalKb: number, pageSize: string) =>
     track('image_to_pdf', { original_kb: Math.round(originalKb), page_size: pageSize }),
+
+  passportPhotoMade: (preset: string, widthPx: number, heightPx: number) =>
+    track('passport_photo_made', { preset, width_px: widthPx, height_px: heightPx }),
 }
