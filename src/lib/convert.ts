@@ -135,6 +135,42 @@ export async function convertTiffToJpg(file: File): Promise<ConvertResult> {
   })
 }
 
+export async function convertTiffToPng(file: File): Promise<ConvertResult> {
+  const buf = await file.arrayBuffer()
+  const UTIF = (await import('utif')).default
+  const ifds = UTIF.decode(buf)
+  if (!ifds || ifds.length === 0) throw new Error('Failed to decode TIFF')
+  UTIF.decodeImage(buf, ifds[0])
+  const rgba = UTIF.toRGBA8(ifds[0])
+  const width = ifds[0].width as number
+  const height = ifds[0].height as number
+
+  const canvas = document.createElement('canvas')
+  canvas.width = width
+  canvas.height = height
+  const ctx = canvas.getContext('2d')
+  if (!ctx) throw new Error('Canvas context unavailable')
+
+  ctx.putImageData(new ImageData(new Uint8ClampedArray(rgba), width, height), 0, 0)
+
+  return new Promise((resolve, reject) => {
+    canvas.toBlob((blob) => {
+      if (!blob) {
+        reject(new Error('Failed to generate PNG'))
+        return
+      }
+      resolve({
+        blob,
+        previewUrl: URL.createObjectURL(blob),
+        inputFormat: 'tiff',
+        outputExt: 'png',
+        originalSize: file.size,
+        outputSize: blob.size,
+      })
+    }, 'image/png')
+  })
+}
+
 export { triggerDownload } from './compress'
 
 async function getSvgSize(file: File): Promise<{ width: number; height: number }> {
