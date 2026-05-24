@@ -78,4 +78,17 @@ export const analytics = {
     }),
 
   cropError: (errorType: string) => track('crop_error', { error_type: errorType }),
+
+  imageRotated: (degrees: number, width: number, height: number) =>
+    track('image_rotated', { degrees, output_width: width, output_height: height }),
+
+  imageFlipped: (flipH: boolean, flipV: boolean, width: number, height: number) =>
+    track('image_flipped', {
+      flip_horizontal: flipH,
+      flip_vertical: flipV,
+      width,
+      height,
+    }),
+
+  transformError: (errorType: string) => track('transform_error', { error_type: errorType }),
 }
