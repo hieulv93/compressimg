@@ -91,4 +91,10 @@ export const analytics = {
     }),
 
   transformError: (errorType: string) => track('transform_error', { error_type: errorType }),
+
+  exifStripped: (originalKb: number, strippedKb: number) =>
+    track('exif_stripped', {
+      original_kb: Math.round(originalKb),
+      stripped_kb: Math.round(strippedKb),
+    }),
 }

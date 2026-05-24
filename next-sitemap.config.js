@@ -83,6 +83,7 @@ module.exports = {
       '/compress-image-to-800kb': 0.75,
       '/rotate-image': 0.85,
       '/flip-image': 0.8,
+      '/exif-remover': 0.85,
       '/compress-image-for-shopify': 0.8,
       '/compress-image-for-wix': 0.8,
       '/compress-image-for-squarespace': 0.8,

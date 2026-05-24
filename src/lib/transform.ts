@@ -99,6 +99,37 @@ export async function flipImageCanvas(
   }
 }
 
+export async function stripExifCanvas(file: File): Promise<TransformResult> {
+  const url = URL.createObjectURL(file)
+  try {
+    const img = await loadImg(url)
+    const w = img.naturalWidth
+    const h = img.naturalHeight
+
+    const canvas = document.createElement('canvas')
+    canvas.width = w
+    canvas.height = h
+    const ctx = canvas.getContext('2d')!
+    ctx.drawImage(img, 0, 0)
+
+    const blob = await new Promise<Blob>((res, rej) =>
+      canvas.toBlob((b) => (b ? res(b) : rej(new Error('toBlob failed'))), 'image/jpeg', 0.92)
+    )
+    return {
+      blob,
+      previewUrl: URL.createObjectURL(blob),
+      originalWidth: w,
+      originalHeight: h,
+      outputWidth: w,
+      outputHeight: h,
+      originalSize: file.size,
+      outputSize: blob.size,
+    }
+  } finally {
+    URL.revokeObjectURL(url)
+  }
+}
+
 export function revokeTransformPreview(url: string) {
   URL.revokeObjectURL(url)
 }
