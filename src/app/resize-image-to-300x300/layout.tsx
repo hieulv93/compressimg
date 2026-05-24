@@ -1,0 +1,157 @@
+import type { Metadata } from 'next'
+
+const SITE_URL = 'https://compressimg.pro'
+const PAGE_URL = `${SITE_URL}/resize-image-to-300x300/`
+const OG_IMAGE = `${SITE_URL}/og-image.png`
+
+export const metadata: Metadata = {
+  title: 'Resize Image to 300×300 Free | CompressImg',
+  description:
+    'Resize any image to 300×300 instantly. Perfect for thumbnails, product photos, and e-commerce listings. No upload — 100% browser-based.',
+  keywords: [
+    'resize image to 300x300',
+    '300x300 image resize',
+    'resize to 300 300',
+    '300x300 thumbnail',
+    'product image 300x300',
+    'resize image thumbnail',
+    '300x300 photo resize',
+    'small image resize 300',
+  ],
+  alternates: { canonical: PAGE_URL },
+  openGraph: {
+    title: 'Resize Image to 300×300 Free | CompressImg',
+    description:
+      'Resize any image to 300×300. Perfect for thumbnails, product photos, and e-commerce. 100% browser-based.',
+    url: PAGE_URL,
+    siteName: 'CompressImg',
+    images: [
+      {
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: 'Resize Image to 300×300 — CompressImg',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Resize Image to 300×300 Free',
+    description: 'Perfect 300×300 thumbnails in seconds. No upload, no account needed.',
+    images: [OG_IMAGE],
+  },
+}
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: 'Resize Image',
+          item: `${SITE_URL}/resize-image/`,
+        },
+        { '@type': 'ListItem', position: 3, name: 'Resize to 300×300', item: PAGE_URL },
+      ],
+    },
+    {
+      '@type': 'WebApplication',
+      name: 'Resize Image to 300×300 — CompressImg',
+      url: PAGE_URL,
+      applicationCategory: 'MultimediaApplication',
+      operatingSystem: 'Any',
+      browserRequirements: 'Requires a modern web browser with JavaScript enabled',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      description:
+        'Free browser-based tool to resize any image to 300×300 and other small thumbnail sizes. Supports JPG, PNG, WebP, HEIC. No file upload required.',
+    },
+    {
+      '@type': 'HowTo',
+      name: 'How to Resize an Image to 300×300',
+      description: 'Resize any image to 300×300 in your browser — free, no upload.',
+      step: [
+        {
+          '@type': 'HowToStep',
+          position: 1,
+          name: 'Select size',
+          text: 'Choose 300×300 or another thumbnail size from the preset buttons.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 2,
+          name: 'Upload your image',
+          text: 'Upload your JPG, PNG, WebP, or HEIC file. iPhone HEIC photos are automatically converted.',
+        },
+        {
+          '@type': 'HowToStep',
+          position: 3,
+          name: 'Download',
+          text: 'Download the resized thumbnail instantly. Ready for e-commerce, blogs, or any small image slot.',
+        },
+      ],
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is 300×300 used for?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '300×300px is used for product thumbnails on e-commerce sites (Amazon, eBay, Etsy), blog post thumbnail images, WordPress featured image previews, forum avatars, and small image placeholders in web and app layouts.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is 300×300 good enough for product images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '300×300px is sufficient for thumbnail listings but too small for product detail views. Most e-commerce platforms use 300×300 for grid thumbnails and then display a larger version (800×800 or 1000×1000) when the user clicks on the product.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is the Amazon product image minimum size?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Amazon requires product images to be at least 500×500px for listing, but recommends 1000×1000px or larger to enable the zoom feature. 300×300 is below Amazon's minimum — use the 600×600 preset for Amazon thumbnails instead.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Will my image be cropped to 300×300?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The tool fits your image within 300×300 while preserving the original aspect ratio. Non-square images get white bars on the sides or top/bottom. The image is not cropped.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Are my files uploaded to a server?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No. All resizing happens entirely in your browser. Your images are never sent to any server.',
+          },
+        },
+      ],
+    },
+  ],
+}
+
+export default function ResizeTo300x300Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {children}
+    </>
+  )
+}
