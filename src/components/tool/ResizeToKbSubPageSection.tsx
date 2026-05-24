@@ -9,6 +9,22 @@ interface UseCaseData {
 }
 
 function getUseCaseData(targetKb: number): UseCaseData {
+  if (targetKb === 30) {
+    return {
+      title: 'Who Needs Images Under 30KB?',
+      intro:
+        'A 30KB limit is the standard for government exam signature uploads across SSC, IBPS, UPSC, and railway recruitment portals in India. Signature images must be small, clean, and within strict byte limits for form submission to succeed.',
+      useCases: [
+        { portal: 'SSC CGL / CHSL / MTS', requirement: 'Signature: 10–30KB, 140×60px JPEG' },
+        { portal: 'UPSC Civil Services', requirement: 'Signature: 20–30KB, 140×60px' },
+        { portal: 'IBPS PO / Clerk / SO', requirement: 'Signature: 10–30KB, 140×60px' },
+        { portal: 'RRB (Railway Recruitment)', requirement: 'Signature: 10–30KB' },
+        { portal: 'NEET UG (NTA portal)', requirement: 'Signature: 10–30KB' },
+        { portal: 'State PSC portals', requirement: 'Signature: typically 10–30KB' },
+      ],
+      tip: 'For signature scans: use a white background, sign with a black or dark pen, crop tightly to the signature boundaries, and resize to 140×60px. A clean signature image at these dimensions typically lands at 5–15KB — well under 30KB.',
+    }
+  }
   if (targetKb === 20) {
     return {
       title: 'Who Needs Images Under 20KB?',
@@ -76,6 +92,41 @@ function getUseCaseData(targetKb: number): UseCaseData {
       tip: 'For document scans: scan at 150–200 DPI (not 600 DPI), crop to the document edges, and save as JPEG. Most scans at 1024px wide land at 100–180KB — within the 200KB limit without further reduction.',
     }
   }
+  if (targetKb === 150) {
+    return {
+      title: 'Who Needs Images Under 150KB?',
+      intro:
+        'A 150KB limit covers the majority of Indian college admission portals, entrance exam applications, and government recruitment photo requirements. It balances good image quality with the file size constraints of high-traffic government and educational portals.',
+      useCases: [
+        { portal: 'NEET UG (NTA portal)', requirement: 'Photo: 10–200KB, JPEG' },
+        { portal: 'JEE Main (NTA portal)', requirement: 'Photo: 10–200KB, JPEG' },
+        { portal: 'DU (Delhi University) admission', requirement: 'Photo: up to 200KB' },
+        { portal: 'CUET UG application', requirement: 'Photo: 10–200KB, JPEG' },
+        { portal: 'National Scholarship Portal (NSP)', requirement: 'Photo: under 200KB' },
+        { portal: 'State-level CET portals', requirement: 'Photo: 20–200KB typical' },
+      ],
+      tip: 'For exam photos: use a plain white or light blue background, face forward, no glasses. A 300×400px JPEG at quality 75 typically produces 30–80KB — well under 150KB while meeting most minimum dimension requirements.',
+    }
+  }
+  if (targetKb === 300) {
+    return {
+      title: 'Who Needs Images Under 300KB?',
+      intro:
+        'A 300KB limit allows for higher-quality images suitable for professional profiles, blog content, visa applications, and website uploads. It is larger than exam portal requirements but still small enough for fast loading on web pages.',
+      useCases: [
+        {
+          portal: 'LinkedIn profile photo',
+          requirement: '300×300px JPEG, under 8MB (300KB optimal)',
+        },
+        { portal: 'Schengen visa (EU embassies)', requirement: 'Digital photo: under 500KB' },
+        { portal: 'Australia ETA / eVisitor', requirement: 'Passport scan: under 500KB' },
+        { portal: 'WordPress blog images', requirement: '100–400KB recommended for speed' },
+        { portal: 'Email newsletter images', requirement: 'Under 500KB per image' },
+        { portal: 'Company career portals', requirement: 'Profile photo: under 500KB typical' },
+      ],
+      tip: 'For LinkedIn: upload a 400×400px or 800×800px JPEG at quality 85. This produces 150–280KB — sharp on high-DPI screens and well under 300KB. LinkedIn recompresses on upload, so higher quality input = better output.',
+    }
+  }
   // 500KB
   return {
     title: 'Who Needs Images Under 500KB?',
@@ -96,9 +147,12 @@ function getUseCaseData(targetKb: number): UseCaseData {
 
 const RELATED_SIZES: { kb: number; href: string }[] = [
   { kb: 20, href: '/resize-image-to-20kb/' },
+  { kb: 30, href: '/resize-image-to-30kb/' },
   { kb: 50, href: '/resize-image-to-50kb/' },
   { kb: 100, href: '/resize-image-to-100kb/' },
+  { kb: 150, href: '/resize-image-to-150kb/' },
   { kb: 200, href: '/resize-image-to-200kb/' },
+  { kb: 300, href: '/resize-image-to-300kb/' },
   { kb: 500, href: '/resize-image-to-500kb/' },
 ]
 

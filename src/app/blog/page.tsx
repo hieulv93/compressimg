@@ -2,6 +2,24 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'how-to-add-watermark-to-photos',
+    title: 'How to Add a Watermark to Photos Online — Free Guide',
+    description:
+      'Learn how to watermark photos in three steps — no Photoshop, no account. Covers position, opacity, color, and when to use each setting for branding or protection.',
+    date: '2026-05-24',
+    readTime: '8 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'what-is-base64-encoding',
+    title: 'What Is Base64 Encoding? A Plain-English Explanation',
+    description:
+      'Base64 encodes binary data — like images — as text. Learn how it works, the 33% size overhead, when to use it in HTML/CSS/JSON, and when to avoid it.',
+    date: '2026-05-24',
+    readTime: '7 min read',
+    category: 'Guide',
+  },
+  {
     slug: 'how-to-compress-images-for-wordpress',
     title: 'How to Compress Images for WordPress — Speed Up Your Site',
     description:

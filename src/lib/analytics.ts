@@ -116,4 +116,7 @@ export const analytics = {
     }),
 
   colorPicked: (hex: string) => track('color_picked', { hex }),
+
+  imageToPdf: (originalKb: number, pageSize: string) =>
+    track('image_to_pdf', { original_kb: Math.round(originalKb), page_size: pageSize }),
 }
