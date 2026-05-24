@@ -97,4 +97,23 @@ export const analytics = {
       original_kb: Math.round(originalKb),
       stripped_kb: Math.round(strippedKb),
     }),
+
+  imageToBase64: (originalKb: number, base64Chars: number) =>
+    track('image_to_base64', {
+      original_kb: Math.round(originalKb),
+      base64_chars: base64Chars,
+    }),
+
+  base64ToImage: (outputKb: number) =>
+    track('base64_to_image', { output_kb: Math.round(outputKb) }),
+
+  watermarkAdded: (position: string, opacity: number, originalKb: number, fontSize: number) =>
+    track('watermark_added', {
+      position,
+      opacity,
+      original_kb: Math.round(originalKb),
+      font_size: fontSize,
+    }),
+
+  colorPicked: (hex: string) => track('color_picked', { hex }),
 }
