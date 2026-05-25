@@ -116,6 +116,7 @@ module.exports = {
       '/compress-image-for-squarespace': 0.8,
       '/passport-photo-maker': 0.9,
       '/compress-image-for-website': 0.85,
+      '/compress-image-for-wordpress': 0.9,
       '/crop-image-to-square': 0.85,
       '/crop-image-circle': 0.85,
       '/crop-image-to-ratio': 0.85,
