@@ -19,10 +19,18 @@ export default function ResizeTool({
   h1,
   tagline,
   contentSection,
+  accept,
+  customValidate,
+  formatHint,
+  formatErrorMsg = 'Unsupported format. Use JPG, PNG, WebP, or HEIC.',
 }: {
   h1: string
   tagline: string
   contentSection: React.ReactNode
+  accept?: string
+  customValidate?: (file: File) => boolean
+  formatHint?: string
+  formatErrorMsg?: string
 }) {
   const [pageState, setPageState] = useState<PageState>('idle')
   const [width, setWidth] = useState(1920)
@@ -39,7 +47,7 @@ export default function ResizeTool({
     async (file: File) => {
       const fileWithFlag = file as File & { _invalid?: string }
       if (fileWithFlag._invalid === 'format') {
-        setErrorMessage('Unsupported format. Use JPG, PNG, WebP, or HEIC.')
+        setErrorMessage(formatErrorMsg)
         setPageState('error')
         return
       }
@@ -78,7 +86,7 @@ export default function ResizeTool({
       }
       img.src = objUrl
     },
-    [result]
+    [result, formatErrorMsg]
   )
 
   const handleResize = useCallback(async () => {
@@ -161,6 +169,9 @@ export default function ResizeTool({
                 onFileSelect={handleFileSelect}
                 errorMessage={errorMessage}
                 processingLabel="Loading image..."
+                accept={accept}
+                customValidate={customValidate}
+                formatHint={formatHint}
               />
               {pageState === 'idle' && (
                 <div className="flex items-center justify-center gap-3 text-xs text-text-muted flex-wrap">

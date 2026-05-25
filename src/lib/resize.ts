@@ -48,7 +48,12 @@ export async function resizeImage(file: File, options: ResizeOptions): Promise<R
       ctx.imageSmoothingQuality = 'high'
       ctx.drawImage(img, 0, 0, options.width, options.height)
 
-      const mimeType = file.type as 'image/jpeg' | 'image/png' | 'image/webp'
+      // canvas.toBlob doesn't support image/gif — fall back to image/png
+      const supported = ['image/jpeg', 'image/png', 'image/webp'] as const
+      type SupportedMime = (typeof supported)[number]
+      const mimeType: SupportedMime = (supported as readonly string[]).includes(file.type)
+        ? (file.type as SupportedMime)
+        : 'image/png'
       // PNG: no quality param. JPEG/WebP: 0.92 keeps good quality at smaller size
       const quality = mimeType === 'image/png' ? undefined : 0.92
 
@@ -65,7 +70,7 @@ export async function resizeImage(file: File, options: ResizeOptions): Promise<R
             originalHeight: img.naturalHeight,
             newWidth: options.width,
             newHeight: options.height,
-            format: file.type.split('/')[1] ?? 'jpeg',
+            format: mimeType.split('/')[1] ?? 'jpeg',
             previewUrl,
             originalSize: file.size,
             outputSize: blob.size,
