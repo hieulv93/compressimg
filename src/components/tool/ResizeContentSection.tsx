@@ -426,6 +426,105 @@ export default function ResizeContentSection() {
       </div>
 
       <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">Resize Image by Pixel, KB, Inch, or CM</h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Different tasks call for different resize methods. Choose the tool that matches your
+          requirement:
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            {
+              href: '/resize-image',
+              label: 'Resize by Pixels',
+              desc: 'Set exact width and height in pixels. Best for social media, web, and screen use.',
+            },
+            {
+              href: '/resize-image-in-kb',
+              label: 'Resize to KB',
+              desc: 'Hit an exact file size limit — 20KB, 50KB, 100KB, 200KB, 500KB, or custom target.',
+            },
+            {
+              href: '/resize-image-to-inches',
+              label: 'Resize to Inches',
+              desc: 'Enter dimensions in inches with DPI — perfect for US print sizes: Letter, 4×6, 8×10.',
+            },
+            {
+              href: '/resize-image-to-cm',
+              label: 'Resize to CM',
+              desc: 'Enter dimensions in centimeters — A4, A5, A3, business cards, passport photos.',
+            },
+            {
+              href: '/resize-image-to-a4',
+              label: 'Resize to A4',
+              desc: 'Resize to exact A4 pixel dimensions at 72, 96, 150, or 300 DPI — portrait or landscape.',
+            },
+            {
+              href: '/resize-images',
+              label: 'Batch Resize',
+              desc: 'Resize up to 10 images at once and download as a ZIP file.',
+            },
+          ].map(({ href, label, desc }) => (
+            <Link
+              key={href}
+              href={href}
+              className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+            >
+              <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+                {label}
+              </p>
+              <p className="text-xs text-text-muted mt-1">{desc}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
+          Resize Image for Online Forms & ID Photos
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Government portals, exam registrations, and visa applications have strict size rules —
+          usually both pixel dimensions and a KB file size limit. These tools handle the most common
+          cases:
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            {
+              href: '/resize-signature',
+              label: 'Resize Signature',
+              desc: 'Resize scanned signature to exact pixels for SSC, UPSC, IBPS, Railway, and NEET portals.',
+            },
+            {
+              href: '/resize-image-for-online-form',
+              label: 'Resize Image for Online Form',
+              desc: 'Set a KB target and download — meets government portal and exam application limits.',
+            },
+            {
+              href: '/resize-image-to-20kb',
+              label: 'Resize to 20KB',
+              desc: 'Many portals require signature under 20KB — guaranteed output under the limit.',
+            },
+            {
+              href: '/resize-image-to-50kb',
+              label: 'Resize to 50KB',
+              desc: 'Photo limit for SSC, IBPS, and SBI online applications — guaranteed under 50KB.',
+            },
+          ].map(({ href, label, desc }) => (
+            <Link
+              key={href}
+              href={href}
+              className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+            >
+              <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+                {label}
+              </p>
+              <p className="text-xs text-text-muted mt-1">{desc}</p>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">More Free Image Tools</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {[

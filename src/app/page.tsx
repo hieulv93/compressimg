@@ -314,7 +314,7 @@ export default function HomePage() {
       <div className="max-w-3xl mx-auto px-4 py-12 sm:py-20 space-y-10">
         <div className="text-center space-y-3">
           <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
-            Free Image Compressor — Compress, Resize &amp; Convert Images
+            Free Image Compressor — Compress, Resize & Convert Images
           </h1>
           <p className="text-text-muted text-sm sm:text-base max-w-lg mx-auto">
             Fast, private, browser-based. Your images never leave your device.
@@ -374,9 +374,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold text-text-muted uppercase tracking-wide">
               Also free
             </p>
-            <p className="font-bold text-text-main text-base">
-              Create thumbnails &amp; social images
-            </p>
+            <p className="font-bold text-text-main text-base">Create thumbnails & social images</p>
             <p className="text-sm text-text-muted leading-relaxed">
               YouTube thumbnails, Instagram posts, Twitter headers, LinkedIn banners, Facebook
               covers, OG images — all at exact platform sizes.
@@ -397,9 +395,7 @@ export default function HomePage() {
             <p className="text-xs font-semibold text-text-muted uppercase tracking-wide">
               From the blog
             </p>
-            <p className="font-bold text-text-main text-base">
-              Image compression tips &amp; guides
-            </p>
+            <p className="font-bold text-text-main text-base">Image compression tips & guides</p>
             <p className="text-sm text-text-muted">
               How to reduce file size, best formats for web, compression tools compared.
             </p>
