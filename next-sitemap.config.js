@@ -33,6 +33,8 @@ module.exports = {
       '/resize-png': 0.85,
       '/resize-webp': 0.85,
       '/resize-gif': 0.8,
+      '/resize-signature': 0.85,
+      '/resize-image-for-online-form': 0.85,
       '/resize-image-for-facebook': 0.85,
       '/resize-image-for-linkedin': 0.85,
       '/resize-image-for-whatsapp': 0.85,
