@@ -48,7 +48,7 @@ export default function WhyPhotosLookBlurry() {
           <div className="flex items-center gap-2 text-xs text-text-muted mb-4">
             <span className="bg-surface px-2 py-0.5 rounded font-medium">Guide</span>
             <span>·</span>
-            <time dateTime="2026-05-04">May 4, 2026</time>
+            <time dateTime="2026-05-26">May 26, 2026</time>
             <span>·</span>
             <span>10 min read</span>
           </div>
@@ -383,6 +383,7 @@ export default function WhyPhotosLookBlurry() {
               Each platform has different dimension requirements, compression targets, and upload
               best practices. These dedicated guides cover everything you need:
             </p>
+            <p className="text-sm font-semibold text-text-main">Social media</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {[
                 {
@@ -414,6 +415,52 @@ export default function WhyPhotosLookBlurry() {
                   href: '/compress-image-for-tiktok',
                   label: 'TikTok',
                   desc: 'Quality 80, JPG only (no WebP)',
+                },
+              ].map(({ href, label, desc }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+                >
+                  <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+                    Compress for {label}
+                  </p>
+                  <p className="text-xs text-text-muted mt-1">{desc}</p>
+                </Link>
+              ))}
+            </div>
+            <p className="text-sm font-semibold text-text-main mt-2">Workplace & messaging apps</p>
+            <p className="text-text-muted text-sm leading-relaxed">
+              Slack, Teams, Discord, and WhatsApp each handle image compression differently from
+              social platforms — and differently from each other. See the full comparison guide:
+            </p>
+            <Link
+              href="/blog/how-messaging-apps-compress-images"
+              className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+            >
+              <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+                How Messaging Apps Compress Images — Slack, Teams, Discord & WhatsApp
+              </p>
+              <p className="text-xs text-text-muted mt-1">
+                Comparison table + per-platform fix guide for all 6 major apps
+              </p>
+            </Link>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {[
+                {
+                  href: '/compress-image-for-slack',
+                  label: 'Slack',
+                  desc: 'Desktop: no compression. Mobile: pre-compress to 1 MB',
+                },
+                {
+                  href: '/compress-image-for-teams',
+                  label: 'Microsoft Teams',
+                  desc: 'Pre-compress to under 1 MB for sharp inline previews',
+                },
+                {
+                  href: '/compress-image-for-discord',
+                  label: 'Discord',
+                  desc: 'Keep under 8 MB; upload via button, not paste',
                 },
               ].map(({ href, label, desc }) => (
                 <Link
