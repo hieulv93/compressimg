@@ -149,6 +149,10 @@ module.exports = {
       '/image-resizer': 0.9,
       '/webp-converter': 0.85,
       '/image-converter': 0.85,
+      '/resize-image-for-passport': 0.85,
+      '/resize-image-to-2x2-inch': 0.85,
+      '/resize-image-to-35x45mm': 0.85,
+      '/resize-image-for-resume': 0.85,
     }
     return {
       loc: path,
