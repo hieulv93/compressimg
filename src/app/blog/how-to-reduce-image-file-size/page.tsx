@@ -24,9 +24,9 @@ export default function HowToReduceImageFileSize() {
           <div className="flex items-center gap-2 text-xs text-text-muted mb-4">
             <span className="bg-surface px-2 py-0.5 rounded font-medium">Guide</span>
             <span>·</span>
-            <time dateTime="2026-04-29">April 29, 2026</time>
+            <time dateTime="2026-05-26">May 26, 2026</time>
             <span>·</span>
-            <span>9 min read</span>
+            <span>12 min read</span>
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold text-text-main leading-tight mb-4">
             How to Reduce Image File Size: 5 Methods That Actually Work
@@ -328,6 +328,135 @@ export default function HowToReduceImageFileSize() {
             </p>
           </section>
 
+          {/* Device guide */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold">How to Reduce Image File Size on Any Device</h2>
+            <p className="text-text-muted">
+              The fastest method for every device is a browser-based tool — no software to install,
+              works on Windows, Mac, iPhone, and Android. Here is the quickest approach on each:
+            </p>
+            <div className="space-y-3">
+              {[
+                {
+                  platform: 'Windows',
+                  steps:
+                    'Open your browser and go to compressimg.pro. Drag the image onto the upload area, adjust quality to 80, and click Download. No Paint or Photos app required — the result is ready in seconds. For bulk compression (a folder of images), use the Batch Compress tool.',
+                },
+                {
+                  platform: 'Mac',
+                  steps:
+                    'Preview (built-in) can export at lower quality: File → Export → change Format to JPEG → adjust Quality slider. For more control — especially hitting a specific KB target — use compressimg.pro in Safari or Chrome. Preview cannot target an exact file size; the browser tool can.',
+                },
+                {
+                  platform: 'iPhone (iOS)',
+                  steps:
+                    'Open Safari, go to compressimg.pro, tap the upload area and choose a photo from your camera roll. After compressing, tap Download and the file saves to Files. No app install needed. iOS HEIC photos are automatically converted to JPEG during processing.',
+                },
+                {
+                  platform: 'Android',
+                  steps:
+                    'Open Chrome, go to compressimg.pro, tap the upload area and select a photo from your gallery. After downloading, the compressed image is saved to your Downloads folder. Works on all Android versions without installing any app.',
+                },
+              ].map(({ platform, steps }) => (
+                <div key={platform} className="border border-border rounded-xl p-4 space-y-1">
+                  <p className="text-sm font-semibold text-text-main">{platform}</p>
+                  <p className="text-sm text-text-muted leading-relaxed">{steps}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Platform-specific limits */}
+          <section className="space-y-4">
+            <h2 className="text-2xl font-bold">
+              How to Reduce Image File Size for Specific Platforms
+            </h2>
+            <p className="text-text-muted">
+              Different platforms have different limits, compression behavior, and display sizes.
+              Pre-compressing to the right size prevents double-compression artifacts and storage
+              overuse.
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-surface">
+                    <th className="text-left p-3 border border-border font-semibold text-text-main">
+                      Platform
+                    </th>
+                    <th className="text-left p-3 border border-border font-semibold text-text-main">
+                      What it does to images
+                    </th>
+                    <th className="text-left p-3 border border-border font-semibold text-text-main">
+                      Recommended pre-compress size
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    [
+                      'Email (Gmail/Outlook)',
+                      '25MB attachment limit; large inline images may not render',
+                      'Under 1MB per image; under 5MB total',
+                    ],
+                    [
+                      'WhatsApp',
+                      'Compresses photos ~80% when sent via Photos tab; Files tab preserves original',
+                      'Under 5MB via Photos; use Files tab for originals',
+                    ],
+                    [
+                      'Slack (desktop)',
+                      'Does NOT compress uploaded originals — stores full file',
+                      '300KB–1MB to save workspace storage and load fast',
+                    ],
+                    [
+                      'Slack (mobile)',
+                      'Compresses images before uploading from the mobile app',
+                      'Pre-compress at Q80 before sending to control quality',
+                    ],
+                    [
+                      'Microsoft Teams',
+                      'Stores original in SharePoint; generates lower-res preview for chat',
+                      'Under 1MB for chat; under 2MB for channel files',
+                    ],
+                    [
+                      'Discord',
+                      'Compresses images over 8MB; limits display to 10MB',
+                      'Under 8MB; ideally 500KB–2MB for fast loading',
+                    ],
+                    [
+                      'Instagram',
+                      'Re-compresses all uploads to JPEG; 8MB limit',
+                      '1080×1080px JPG under 2MB; Q80 avoids double-compression',
+                    ],
+                    [
+                      'WordPress',
+                      'Generates multiple sizes (thumbnail, medium, large); stores originals',
+                      'Under 500KB per image; resize to 1200px wide before uploading',
+                    ],
+                  ].map(([platform, behavior, target]) => (
+                    <tr key={platform} className="border-t border-border">
+                      <td className="p-3 border border-border font-medium text-text-main">
+                        {platform}
+                      </td>
+                      <td className="p-3 border border-border text-text-muted">{behavior}</td>
+                      <td className="p-3 border border-border text-text-muted">{target}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-text-muted text-sm">
+              For more detail on how messaging apps handle image compression, see the{' '}
+              <Link
+                href="/blog/how-messaging-apps-compress-images"
+                className="text-primary hover:underline font-medium"
+              >
+                messaging apps image compression guide
+              </Link>
+              .
+            </p>
+          </section>
+
           {/* Platform guide */}
           <section className="space-y-4">
             <h2 className="text-2xl font-bold">Recommended Settings by Use Case</h2>
@@ -402,6 +531,18 @@ export default function HowToReduceImageFileSize() {
                 {
                   q: 'What image format produces the smallest file size?',
                   a: 'WebP produces the smallest file size for most web images — 25–35% smaller than JPEG at equivalent quality, with both lossy and lossless modes. AVIF is even more efficient but has less platform support. For photographs, JPEG remains the universal choice. For graphics and screenshots, PNG is best when you need lossless output.',
+                },
+                {
+                  q: 'How do I reduce image file size for email attachments?',
+                  a: 'Compress each image to under 1MB using quality 80, then check the total attachment size (Gmail limits to 25MB, Outlook to 20MB). For photos you want the recipient to view inline, JPEG at quality 80 is the best balance. If you are sending many images, batch compress them first and send as a ZIP — or use a file-sharing link instead of attaching directly.',
+                },
+                {
+                  q: 'Why does WhatsApp reduce my image quality when I send photos?',
+                  a: 'WhatsApp applies its own compression when you send images via the Photos tab, reducing quality by up to 80% to save bandwidth. To send an image without compression, use the Files or Document option instead — WhatsApp does not compress file attachments. Pre-compressing at quality 80 before sending via Photos tab gives you control over the final quality rather than letting WhatsApp decide.',
+                },
+                {
+                  q: 'How do I reduce image file size below 200KB?',
+                  a: 'Use the target-size compressor at compressimg.pro/compress-image-to-200kb — it automatically adjusts JPEG quality until the output is under 200KB. For a typical smartphone photo (12MP, 5–8MB original), quality 80 usually achieves 300–600KB. To reach under 200KB, you may need to resize dimensions first (to around 1200–1600px wide) and then compress.',
                 },
               ].map(({ q, a }) => (
                 <div key={q} className="border-b border-border pb-6 last:border-0 last:pb-0">

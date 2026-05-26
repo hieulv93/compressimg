@@ -7,7 +7,7 @@ const OG_IMAGE = `${SITE_URL}/og-image.png`
 export const metadata: Metadata = {
   title: 'How to Reduce Image File Size: 5 Methods That Actually Work',
   description:
-    'Reduce image file size for web, email, and upload forms. 5 proven methods: compress, resize, convert format, batch process, and target-size compression.',
+    'Reduce image file size for web, email, WhatsApp, Slack, and upload forms. 5 methods: compress to 80% quality, resize dimensions, convert to WebP, hit exact KB targets, or batch process.',
   keywords: [
     'how to reduce image file size',
     'reduce image file size',
@@ -16,6 +16,12 @@ export const metadata: Metadata = {
     'image file size reduction',
     'make image file smaller',
     'compress image size',
+    'reduce image file size without losing quality',
+    'how to reduce image file size for email',
+    'how to reduce image size on iphone',
+    'how to reduce image size on android',
+    'reduce image file size below 100kb',
+    'reduce image file size below 200kb',
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -60,7 +66,7 @@ const jsonLd = {
         'Compress, resize, convert format, batch process — 5 proven techniques to reduce image file size for any use case.',
       url: PAGE_URL,
       datePublished: '2026-04-29',
-      dateModified: '2026-04-29',
+      dateModified: '2026-05-26',
       author: { '@type': 'Organization', name: 'CompressImg', url: SITE_URL },
       publisher: {
         '@type': 'Organization',
@@ -111,6 +117,30 @@ const jsonLd = {
           acceptedAnswer: {
             '@type': 'Answer',
             text: 'WebP produces the smallest file size for most web images — 25–35% smaller than JPEG at equivalent quality. AVIF is even smaller (20–30% smaller than WebP) but has less browser support. For photographs specifically, JPEG is still widely used due to universal compatibility. PNG is the smallest for images with flat colors and sharp edges.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I reduce image file size for email?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "Compress each image to under 1MB using JPEG quality 80, then verify the total attachment size is under your provider's limit (25MB for Gmail, 20MB for Outlook). For multiple photos, batch compress them first. If recipients need full quality, share via a cloud link instead of attaching directly.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Why does WhatsApp reduce image quality when sending photos?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'WhatsApp compresses images sent via the Photos tab to save bandwidth. To avoid this, send the file via the Document or Files option — WhatsApp does not compress file attachments. Pre-compressing at quality 80 before sending via Photos gives you control over the output quality.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I reduce image file size below 200KB?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Use a target-size compressor and set the limit to 200KB. The tool automatically adjusts JPEG quality until the output meets the limit. For very large source images (12MP+), resize to around 1200–1600px wide first, then compress. This avoids aggressive quality reduction on high-resolution originals.',
           },
         },
       ],
