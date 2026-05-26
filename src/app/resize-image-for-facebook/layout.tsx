@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for Facebook — Free, Exact Dimensions | CompressImg',
   description:
     'Resize any image to exact Facebook dimensions free. Cover photo (820×312), post image (1200×630), story (1080×1920). HEIC from iPhone supported. No upload — browser-based.',
-  keywords: [
-    'resize image for facebook',
-    'facebook image size',
-    'facebook cover photo size',
-    'facebook post size',
-    'resize facebook photo',
-    'facebook profile picture size',
-    'facebook story size',
-    'facebook image dimensions',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for Facebook — Free, Exact Dimensions | CompressImg',

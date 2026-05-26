@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'GIF to JPG Converter — Convert GIF to JPEG Free Online',
   description:
     'Convert GIF to JPG free online. Extract the first frame as a high-quality JPEG instantly. No upload — 100% browser-based and private.',
-  keywords: [
-    'gif to jpg',
-    'gif to jpeg',
-    'convert gif to jpg',
-    'gif to jpg online',
-    'gif to jpg free',
-    'gif to jpeg converter',
-    'gif frame to jpg',
-    'save gif as jpg',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'GIF to JPG Converter — Free Online',

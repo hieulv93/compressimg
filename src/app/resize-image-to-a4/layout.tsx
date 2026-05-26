@@ -8,19 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to A4 Size Online Free — 2480×3508 or 1240×1754 px | CompressImg',
   description:
     'Resize any image to A4 size (21×29.7 cm) at 72, 96, 150, or 300 DPI. Portrait and landscape. Download instantly — free, 100% browser-based.',
-  keywords: [
-    'resize image to a4',
-    'a4 size image',
-    'a4 image dimensions pixels',
-    'resize photo to a4 size',
-    'a4 image pixels',
-    'a4 300 dpi pixels',
-    'a4 150 dpi pixels',
-    'resize image a4 online',
-    'a4 size in pixels',
-    'image a4 format',
-    'resize to a4 free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to A4 Size Online Free',

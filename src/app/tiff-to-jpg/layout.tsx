@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'TIFF to JPG Converter — Convert TIFF to JPEG Free Online',
   description:
     'Convert TIFF to JPG free online. Reduce huge TIFF files to compact JPEG instantly. No upload — 100% browser-based and private.',
-  keywords: [
-    'tiff to jpg',
-    'tiff to jpeg',
-    'convert tiff to jpg',
-    'tiff to jpg online',
-    'tiff to jpg free',
-    'tif to jpg',
-    'tiff to jpeg converter',
-    'tiff file to jpg',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'TIFF to JPG Converter — Free Online',

@@ -8,20 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Signature Online Free — SSC, UPSC, IBPS, Railway | CompressImg',
   description:
     'Resize your signature image to exact pixel dimensions for SSC, UPSC, IBPS, Railway, and other government exam forms. Free, browser-based, no upload.',
-  keywords: [
-    'resize signature online',
-    'resize signature for SSC',
-    'resize signature for UPSC',
-    'signature resize for government form',
-    'SSC signature size',
-    'UPSC signature dimensions',
-    'IBPS signature size pixels',
-    'resize signature to 140x60',
-    'resize signature to 280x90',
-    'signature image resizer',
-    'resize photo signature online',
-    'government exam signature resize',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Signature Online Free — SSC, UPSC, IBPS, Railway',

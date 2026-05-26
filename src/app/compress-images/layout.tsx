@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Batch Compress Images Online Free — Multiple Files at Once',
   description:
     'Compress multiple images at once for free. Upload up to 5 JPG, PNG, or WebP files and download all compressed images as a ZIP. 100% browser-based, no uploads.',
-  keywords: [
-    'batch compress images',
-    'compress multiple images',
-    'bulk image compressor',
-    'compress images at once',
-    'multiple image compressor online',
-    'batch image optimizer',
-    'compress images in bulk free',
-    'bulk compress jpg png',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Batch Compress Images Online Free — Multiple Files at Once',

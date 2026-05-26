@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Discord Compresses Inline Images & Clipboard Pastes — Free Pre-Compressor',
   description:
     'Yes, Discord compresses images for inline display and aggressively compresses clipboard pastes. Pre-compress photos before uploading to keep full quality — free, 100% browser-based.',
-  keywords: [
-    'compress image for discord',
-    'compress image discord',
-    'discord image size limit',
-    'reduce image size discord',
-    'discord file size limit',
-    'compress gif discord',
-    'discord upload size',
-    'compress photo discord',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Discord Compresses Inline Images & Clipboard Pastes — Free Pre-Compressor',

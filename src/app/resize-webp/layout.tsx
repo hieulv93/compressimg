@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize WebP Online Free — Change WebP Image Dimensions | CompressImg',
   description:
     'Resize WebP images online for free. Change WebP dimensions for web, CMS, and social media. Preserves WebP format. No upload, 100% browser-based.',
-  keywords: [
-    'resize webp',
-    'resize webp online',
-    'change webp size',
-    'webp resizer',
-    'webp image resize',
-    'resize webp file',
-    'webp dimensions',
-    'make webp smaller',
-    'webp image resizer',
-    'resize webp free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize WebP Online Free — Change WebP Image Dimensions | CompressImg',

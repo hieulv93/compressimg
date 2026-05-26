@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'EXIF Remover — Strip Photo Metadata Free Online',
   description:
     'Remove EXIF data from JPG, PNG, WebP photos instantly. Strips GPS location, camera info, and date. 100% browser-based — no upload, no sign-up. Free.',
-  keywords: [
-    'exif remover',
-    'remove exif data',
-    'strip metadata image',
-    'remove gps from photo',
-    'exif cleaner',
-    'image metadata remover',
-    'photo privacy tool',
-    'remove location from photo',
-    'strip exif jpg',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'EXIF Remover — Strip Photo Metadata Free Online',

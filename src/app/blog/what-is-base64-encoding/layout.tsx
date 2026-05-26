@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: 'What Is Base64 Encoding? A Plain-English Explanation',
   description:
     'Base64 encoding converts binary data — like images — into text strings. Learn how it works, when to use it, the 33% size overhead, and practical HTML/CSS examples.',
-  keywords: [
-    'what is base64 encoding',
-    'base64 explained',
-    'base64 encoding images',
-    'how does base64 work',
-    'base64 vs binary',
-    'data url base64',
-    'base64 web development',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'What Is Base64 Encoding? A Plain-English Explanation',

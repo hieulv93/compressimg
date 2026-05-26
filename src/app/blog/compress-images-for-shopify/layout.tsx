@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'How to Compress Images for Shopify — Speed Up Your Store (2026)',
   description:
     'Compress Shopify product images to under 500KB for faster store loading, better PageSpeed scores, and higher Google rankings. Step-by-step guide with recommended settings.',
-  keywords: [
-    'compress images for shopify',
-    'shopify image optimization',
-    'shopify image size',
-    'shopify product image compression',
-    'shopify page speed images',
-    'optimize images shopify',
-    'shopify image too large',
-    'shopify image format',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'How to Compress Images for Shopify — Speed Up Your Store',

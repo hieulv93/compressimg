@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 800×600 Free | CompressImg',
   description:
     'Resize any image to 800×600 instantly. Perfect for web images, email attachments, and blog photos. No upload — 100% browser-based.',
-  keywords: [
-    'resize image to 800x600',
-    '800x600 image resize',
-    'resize to 800 600',
-    '800x600 resolution',
-    'web image 800x600',
-    'resize image for email',
-    '800x600 photo resize',
-    'svga resolution resize',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 800×600 Free | CompressImg',

@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 20KB Online Free — SSC Signature, UPSC | CompressImg',
   description:
     'Resize any image to under 20KB free. Perfect for SSC signature, UPSC signature, and government form uploads. JPEG output, 100% browser-based and private.',
-  keywords: [
-    'resize image to 20kb',
-    'reduce image to 20kb',
-    'compress photo to 20kb',
-    'image to 20kb',
-    'resize jpg to 20kb',
-    'ssc signature image size',
-    'upsc signature size',
-    '20kb image converter',
-    'compress image under 20kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 20KB Online Free',

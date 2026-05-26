@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: 'AVIF to WebP Converter — Convert AVIF to WebP Free Online',
   description:
     'Convert AVIF to WebP free online. Smaller files than PNG, wider browser support than AVIF. No upload — 100% browser-based.',
-  keywords: [
-    'avif to webp',
-    'convert avif to webp',
-    'avif to webp online',
-    'avif to webp free',
-    'avif webp converter',
-    'avif to webp converter',
-    'avif file to webp',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'AVIF to WebP Converter — Free Online',

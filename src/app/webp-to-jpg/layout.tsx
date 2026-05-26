@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'WebP to JPG Converter Online Free — Convert WebP to JPEG',
   description:
     'Free online WebP to JPG converter. Convert WebP images to universally compatible JPG/JPEG instantly. No upload — 100% browser-based and private.',
-  keywords: [
-    'webp to jpg',
-    'webp to jpeg',
-    'webp to jpg converter',
-    'convert webp to jpg',
-    'convert webp to jpeg online',
-    'webp to jpg online free',
-    'change webp to jpg',
-    'webp converter to jpg',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'WebP to JPG Converter Online Free',

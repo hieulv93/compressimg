@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Image SEO: Complete Guide to Optimizing Images for Google (2026)',
   description:
     'How to optimize images for Google search — file size, alt text, file names, structured data, Core Web Vitals, and next-gen formats. Complete image SEO guide for 2026.',
-  keywords: [
-    'image seo',
-    'image seo optimization',
-    'optimize images for seo',
-    'image alt text seo',
-    'image file name seo',
-    'core web vitals images',
-    'image search ranking',
-    'image compression seo',
-    'google image search optimization',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Image SEO: Complete Guide to Optimizing Images for Google (2026)',

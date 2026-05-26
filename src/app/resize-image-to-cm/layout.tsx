@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to Centimeters Online Free — Set Width & Height in CM | CompressImg',
   description:
     'Resize any image to exact centimeter dimensions at any DPI. Enter width and height in cm, choose 72/96/150/300 DPI, download instantly. Free, browser-based.',
-  keywords: [
-    'resize image to cm',
-    'resize image in centimeters',
-    'resize photo to cm',
-    'image resizer cm',
-    'resize image to specific size cm',
-    'image cm to pixels',
-    'resize image cm dpi',
-    'resize photo centimeters',
-    'image size cm online',
-    'convert image to cm',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to Centimeters Online Free',

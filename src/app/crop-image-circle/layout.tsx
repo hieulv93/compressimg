@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Crop Image to Circle Online Free — Round Photo Cropper',
   description:
     'Crop any image to a circle with transparent background online free. Perfect for profile pictures, logos, and avatars. No upload — 100% browser-based and private.',
-  keywords: [
-    'crop image to circle',
-    'circle crop image',
-    'round image cropper',
-    'crop photo to circle',
-    'circular crop online',
-    'profile picture circle crop',
-    'round photo cropper',
-    'crop image circle online free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Crop Image to Circle Online Free',

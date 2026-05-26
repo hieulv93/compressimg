@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Microsoft Teams Compresses Images — Pre-Compress to 1MB to Keep Quality | Free Tool',
   description:
     'Microsoft Teams reduces image quality for inline channel display. Pre-compress to under 1 MB before sharing to keep previews sharp on all devices — free, browser-based, no install.',
-  keywords: [
-    'compress image for teams',
-    'compress image for microsoft teams',
-    'compress photo for teams',
-    'teams image size limit',
-    'microsoft teams file size limit',
-    'compress image teams',
-    'resize image for teams',
-    'teams photo compressor',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Microsoft Teams Compresses Images — Pre-Compress to 1MB to Keep Quality | Free Tool',

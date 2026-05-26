@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Make Image Smaller Online Free — Reduce Photo Size | CompressImg',
   description:
     'Make images smaller online free. Reduce photo file size for email, social media, and web uploads by resizing or compressing. JPG, PNG, WebP, HEIC supported. No upload.',
-  keywords: [
-    'make image smaller',
-    'make photo smaller',
-    'reduce image size',
-    'shrink image',
-    'make picture smaller',
-    'decrease image size',
-    'make image smaller online free',
-    'reduce photo size',
-    'smaller image file size',
-    'compress and resize image',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Make Image Smaller Online Free — Reduce Photo Size',

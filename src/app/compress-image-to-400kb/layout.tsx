@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image to 400KB Online Free — Any Format',
   description:
     'Free online tool to compress images to 400KB or less. Reduce JPG, PNG, WebP for email, web, and platform uploads. Browser-based, no upload required.',
-  keywords: [
-    'compress image to 400kb',
-    'reduce image size to 400kb',
-    'compress photo to 400kb',
-    'image compressor 400kb',
-    'jpg to 400kb',
-    'compress image under 400kb',
-    'compress image to 400kb online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image to 400KB Online Free — Any Format',

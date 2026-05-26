@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image for Pinterest — Reduce Size',
   description:
     'Free online tool to compress images for Pinterest. Reduce JPG, PNG size before uploading pins — avoid blurry results, faster uploads. 100% browser-based, no upload.',
-  keywords: [
-    'compress image for pinterest',
-    'compress photo for pinterest',
-    'reduce image size pinterest',
-    'pinterest image compressor',
-    'pinterest image size',
-    'compress jpg for pinterest',
-    'pinterest photo optimizer',
-    'resize image for pinterest',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image for Pinterest — Reduce Photo Size Before Pinning',

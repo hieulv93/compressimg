@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for YouTube Thumbnail — 1280×720 Free | CompressImg',
   description:
     'Resize images to the perfect YouTube thumbnail size (1280×720) and channel art (2560×1440) free. HEIC from iPhone supported. No upload — 100% browser-based.',
-  keywords: [
-    'resize image for youtube thumbnail',
-    'youtube thumbnail size',
-    'youtube thumbnail dimensions',
-    'resize youtube thumbnail',
-    'youtube channel art size',
-    'youtube image size',
-    '1280x720 thumbnail',
-    'youtube thumbnail free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for YouTube Thumbnail — 1280×720 Free | CompressImg',

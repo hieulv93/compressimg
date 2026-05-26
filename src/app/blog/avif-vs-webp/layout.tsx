@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: 'AVIF vs WebP: Which Modern Image Format Wins in 2026?',
   description:
     'AVIF vs WebP compared on file size, quality, browser support, and encoding speed. Which format should you use for your website in 2026? Full data-driven comparison.',
-  keywords: [
-    'avif vs webp',
-    'avif vs webp quality',
-    'avif or webp',
-    'best modern image format',
-    'avif webp comparison',
-    'avif vs webp file size',
-    'webp vs avif 2026',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'AVIF vs WebP: Which Modern Image Format Wins in 2026?',

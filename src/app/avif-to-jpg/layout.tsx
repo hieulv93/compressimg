@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'AVIF to JPG Converter — Convert AVIF to JPEG Free Online',
   description:
     'Convert AVIF to JPG free online. Transform modern AVIF images to universally compatible JPEG instantly. No upload — 100% browser-based.',
-  keywords: [
-    'avif to jpg',
-    'avif to jpeg',
-    'convert avif to jpg',
-    'avif to jpg online',
-    'avif to jpg free',
-    'avif converter',
-    'avif to jpeg converter',
-    'avif file to jpg',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'AVIF to JPG Converter — Free Online',

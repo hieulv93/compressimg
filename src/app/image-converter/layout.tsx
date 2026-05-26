@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Image Converter Online Free — Convert JPG, PNG, WebP',
   description:
     'Free online image converter. Convert images between JPG, PNG, and WebP formats instantly. No upload to server — 100% browser-based and private.',
-  keywords: [
-    'image converter',
-    'image converter online',
-    'convert image',
-    'convert image online',
-    'image format converter',
-    'free image converter',
-    'online image converter',
-    'convert jpg png webp',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Image Converter Online Free — Convert JPG, PNG, WebP',

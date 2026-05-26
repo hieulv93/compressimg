@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'PNG to ICO Converter Online Free — Create Favicon from PNG',
   description:
     'Free online PNG to ICO converter. Create a favicon.ico from any PNG, JPG, or WebP image instantly — 6 sizes included (16×16 to 256×256), no upload, 100% browser-based.',
-  keywords: [
-    'png to ico',
-    'png to ico converter',
-    'convert png to ico',
-    'favicon generator',
-    'create favicon from png',
-    'png to favicon',
-    'image to ico',
-    'favicon maker online free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'PNG to ICO Converter Online Free — Create Favicon',

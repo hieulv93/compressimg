@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'BMP to PNG Converter — Convert BMP to PNG Free Online',
   description:
     'Convert BMP to PNG free online. Smaller file size, transparency support, universal compatibility. No upload — 100% browser-based.',
-  keywords: [
-    'bmp to png',
-    'convert bmp to png',
-    'bmp to png online',
-    'bmp to png free',
-    'bmp png converter',
-    'bitmap to png',
-    'bmp file to png',
-    'bmp converter',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'BMP to PNG Converter — Free Online',

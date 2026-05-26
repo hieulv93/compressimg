@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 200KB Online Free — Aadhaar, Visa | CompressImg',
   description:
     'Resize any image to under 200KB free. Perfect for Aadhaar/PAN document uploads, visa applications, and online form submissions. JPEG output, 100% private.',
-  keywords: [
-    'resize image to 200kb',
-    'reduce image to 200kb',
-    'compress photo to 200kb',
-    'image to 200kb',
-    'resize jpg to 200kb',
-    'aadhaar image size',
-    'pan card image size',
-    'visa photo size',
-    '200kb image resizer',
-    'compress image under 200kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 200KB Online Free — Aadhaar, Visa',

@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Flip Image Online Free — Mirror Horizontal & Vertical',
   description:
     'Flip or mirror JPG, PNG, WebP, HEIC images horizontally or vertically in one click. 100% browser-based — no upload, no sign-up. Free.',
-  keywords: [
-    'flip image',
-    'mirror image',
-    'flip photo',
-    'flip image online',
-    'mirror photo',
-    'flip image horizontal',
-    'flip image vertical',
-    'mirror image online free',
-    'flip jpg online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Flip Image Online Free — Mirror Horizontal & Vertical',

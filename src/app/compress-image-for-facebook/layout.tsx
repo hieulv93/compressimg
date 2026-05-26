@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image for Facebook — Reduce Size',
   description:
     'Free online tool to compress images for Facebook. Reduce JPG, PNG file size before posting — keep quality, avoid double-compression. 100% browser-based, no upload.',
-  keywords: [
-    'compress image for facebook',
-    'compress photo for facebook',
-    'reduce image size facebook',
-    'facebook image compressor',
-    'compress image before posting facebook',
-    'shrink photo facebook',
-    'facebook photo size reducer',
-    'compress jpg for facebook',
-    'reduce photo size for facebook',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image for Facebook — Reduce Photo Size Before Posting',

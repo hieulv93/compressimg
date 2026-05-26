@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image Online Free – Reduce JPG, PNG, WebP Size',
   description:
     'Free online image compressor. Reduce image file size up to 90% without losing quality. No upload to server — 100% browser-based and private. Supports JPG, PNG, WebP.',
-  keywords: [
-    'compress image',
-    'image compressor',
-    'compress image online free',
-    'reduce image file size',
-    'compress jpg',
-    'compress png',
-    'compress webp',
-    'compress image without losing quality',
-    'how to reduce image size in kb',
-  ],
   alternates: {
     canonical: PAGE_URL,
   },

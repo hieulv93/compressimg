@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'GIF Compressor Online Free — Compress Animated GIF File Size',
   description:
     'Free GIF compressor and animated GIF size reducer. Reduce GIF file size by up to 70% without losing animation. No upload to server — 100% browser-based and private.',
-  keywords: [
-    'compress gif online',
-    'gif compressor',
-    'reduce gif size',
-    'gif file size reducer',
-    'compress animated gif',
-    'gif optimizer online',
-    'shrink gif',
-    'gif compression free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'GIF Compressor Online Free — Compress Animated GIF File Size',

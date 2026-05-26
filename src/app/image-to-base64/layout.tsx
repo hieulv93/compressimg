@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Image to Base64 Converter — Encode Photos Free Online',
   description:
     'Convert JPG, PNG, WebP, or HEIC to a Base64 data URL string instantly. Copy to clipboard or download as .txt. 100% browser-based — image never leaves your device. Free.',
-  keywords: [
-    'image to base64',
-    'convert image to base64',
-    'base64 encoder online',
-    'jpg to base64',
-    'png to base64',
-    'base64 image string',
-    'encode image base64',
-    'image data url converter',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Image to Base64 Converter — Encode Photos Free Online',

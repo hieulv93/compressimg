@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Enlarge Image Online Free — Upscale Without Blur | CompressImg',
   description:
     'Enlarge images online free. Upscale JPG, PNG, WebP to larger dimensions for print, presentations, and display. No upload, 100% browser-based. Free with no limits.',
-  keywords: [
-    'enlarge image',
-    'enlarge image online',
-    'upscale image',
-    'increase image size',
-    'make image bigger',
-    'enlarge photo online free',
-    'image upscaler',
-    'enlarge jpg',
-    'enlarge png',
-    'scale up image',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Enlarge Image Online Free — Upscale JPG, PNG, WebP',

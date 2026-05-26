@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'TIFF to PNG Converter Online Free — Convert TIF to PNG',
   description:
     'Free online TIFF to PNG converter. Convert TIF and TIFF files to lossless PNG instantly — no upload, 100% browser-based and private. Supports TIFF files up to 20MB.',
-  keywords: [
-    'tiff to png',
-    'tif to png',
-    'tiff to png converter',
-    'convert tiff to png',
-    'convert tif to png online',
-    'tiff to png online free',
-    'tiff to png free',
-    'change tiff to png',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'TIFF to PNG Converter Online Free',

@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 2×2 Inch — US Passport Photo Free | CompressImg',
   description:
     'Resize any photo to 2×2 inch (600×600px) for US passport, visa, and immigration forms. Free, browser-based, no upload required. HEIC from iPhone supported.',
-  keywords: [
-    'resize image to 2x2 inch',
-    '2x2 passport photo',
-    '2x2 inch photo',
-    'us passport photo size',
-    '600x600 passport photo',
-    'resize photo to 2x2',
-    '2x2 photo resize free',
-    'us passport photo pixels',
-    'resize image 2 inch by 2 inch',
-    'passport photo 2x2',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 2×2 Inch — US Passport Photo Free | CompressImg',

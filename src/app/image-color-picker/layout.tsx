@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Image Color Picker — Pick Colors from Any Photo Online Free',
   description:
     'Click anywhere on an uploaded photo to pick the exact color. Get HEX, RGB, and HSL values instantly. Copy in one click. 100% browser-based — free, no sign-up.',
-  keywords: [
-    'image color picker',
-    'pick color from image',
-    'color picker online',
-    'get color from photo',
-    'hex color from image',
-    'rgb color picker',
-    'eyedropper tool online',
-    'color extractor from image',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Image Color Picker — Pick Colors from Any Photo Online Free',

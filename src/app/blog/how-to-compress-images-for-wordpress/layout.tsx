@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'How to Compress Images for WordPress — Speed Up Your Site',
   description:
     'Compress images before uploading to WordPress to reduce page load time and improve Core Web Vitals. Recommended sizes, WebP support, and the right quality settings for WordPress.',
-  keywords: [
-    'compress images for wordpress',
-    'wordpress image optimization',
-    'image size for wordpress',
-    'optimize images wordpress',
-    'wordpress image file size',
-    'reduce image size wordpress',
-    'wordpress image compression',
-    'best image size for wordpress',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'How to Compress Images for WordPress — Speed Up Your Site',

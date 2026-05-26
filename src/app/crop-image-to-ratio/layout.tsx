@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Crop Image to Aspect Ratio Online Free — 16:9, 4:3, 3:2',
   description:
     'Crop any image to an exact aspect ratio online free — 16:9, 4:3, 3:2, 9:16, or custom. Perfect for YouTube thumbnails, presentations, and social media. No upload.',
-  keywords: [
-    'crop image to aspect ratio',
-    'crop image 16:9',
-    'crop image 4:3',
-    'crop photo to ratio',
-    'aspect ratio cropper',
-    'crop image for youtube',
-    'crop image for presentation',
-    '16 9 image cropper online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Crop Image to Aspect Ratio Online Free',

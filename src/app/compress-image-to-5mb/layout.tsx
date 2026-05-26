@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image to 5MB Online Free — Reduce to Under 5MB',
   description:
     'Free online tool to compress images to under 5MB. Reduce JPG, PNG, WebP file size instantly. No upload to server — 100% browser-based and private.',
-  keywords: [
-    'compress image to 5mb',
-    'compress photo to 5mb',
-    'reduce image size to 5mb',
-    'compress image to 5mb online',
-    'compress jpg to 5mb',
-    'compress png to 5mb',
-    'reduce image under 5mb',
-    'image compressor 5mb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image to 5MB Online Free',

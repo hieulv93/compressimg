@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for Resume / CV — Free, Exact Dimensions | CompressImg',
   description:
     'Resize your photo for resume, CV, or LinkedIn — LinkedIn 400×400px, Naukri 200×200px, European CV 300×400px. Free, browser-based, no upload required.',
-  keywords: [
-    'resize image for resume',
-    'resume photo size',
-    'cv photo size',
-    'resize photo for cv',
-    'linkedin profile photo size',
-    'naukri photo size',
-    'resume photo pixels',
-    'cv photo dimensions',
-    'resize photo for job application',
-    'passport size photo for resume',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for Resume / CV — Free, Exact Dimensions | CompressImg',

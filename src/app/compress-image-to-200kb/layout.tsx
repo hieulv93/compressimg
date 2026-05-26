@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image to 200KB Online Free — Reduce Photo Size',
   description:
     'Free online tool to compress images to under 200KB. Reduce JPG, PNG file size for LinkedIn, visa forms, and portals. No upload, 100% browser-based and private.',
-  keywords: [
-    'compress image to 200kb',
-    'reduce image size to 200kb',
-    'compress photo to 200kb',
-    'image compressor 200kb',
-    'resize image to 200kb',
-    'compress image under 200kb',
-    'reduce photo size 200kb online',
-    'compress jpg to 200kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image to 200KB Online Free',

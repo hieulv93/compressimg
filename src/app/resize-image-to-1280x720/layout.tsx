@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 1280×720 (HD) Free | CompressImg',
   description:
     'Resize any image to 1280×720 HD instantly. Perfect for YouTube thumbnails, video frames, and web banners. No upload — 100% browser-based.',
-  keywords: [
-    'resize image to 1280x720',
-    '1280x720 image resize',
-    'hd image resize',
-    'resize to 1280 720',
-    '720p image size',
-    'youtube thumbnail 1280x720',
-    'resize image hd 720p',
-    '1280x720 resolution',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 1280×720 (HD) Free | CompressImg',

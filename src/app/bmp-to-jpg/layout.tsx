@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'BMP to JPG Converter — Convert BMP to JPEG Free Online',
   description:
     'Convert BMP to JPG free online. Reduce huge BMP files to compact JPEG instantly. No upload — 100% browser-based and private.',
-  keywords: [
-    'bmp to jpg',
-    'bmp to jpeg',
-    'convert bmp to jpg',
-    'bmp to jpg online',
-    'bmp to jpg free',
-    'bmp to jpeg converter',
-    'bitmap to jpg',
-    'bmp file to jpg',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'BMP to JPG Converter — Free Online',

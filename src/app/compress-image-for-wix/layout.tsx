@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Images for Wix — Faster Website Photos Free',
   description:
     'Compress Wix images to under 500KB for faster website loading. Optimize product photos, gallery images, and blog banners. 100% browser-based, free.',
-  keywords: [
-    'compress image for wix',
-    'wix image optimization',
-    'wix image size',
-    'compress wix photos',
-    'wix image compressor',
-    'reduce wix image size',
-    'optimize images for wix',
-    'wix product image size',
-    'wix site speed images',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Images for Wix — Faster Website Photos Free',

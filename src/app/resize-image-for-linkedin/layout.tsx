@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for LinkedIn — Free, Exact Dimensions | CompressImg',
   description:
     'Resize any image to exact LinkedIn dimensions free. Banner (1584×396), post image (1200×627), profile picture (400×400). HEIC from iPhone supported. No upload — browser-based.',
-  keywords: [
-    'resize image for linkedin',
-    'linkedin image size',
-    'linkedin banner size',
-    'linkedin post image size',
-    'linkedin profile picture size',
-    'linkedin cover photo dimensions',
-    'resize linkedin photo',
-    'linkedin image dimensions',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for LinkedIn — Free, Exact Dimensions | CompressImg',

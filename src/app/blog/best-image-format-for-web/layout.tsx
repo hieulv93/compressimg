@@ -8,14 +8,6 @@ export const metadata: Metadata = {
   title: 'Best Image Format for Web: JPEG vs PNG vs WebP in 2026',
   description:
     'JPEG, PNG, WebP, AVIF — which image format is best for your website? Full comparison of file size, quality, browser support, and when to use each format.',
-  keywords: [
-    'best image format for web',
-    'image format for web',
-    'jpeg vs png vs webp',
-    'webp vs jpeg',
-    'image format comparison',
-    'best format for website images',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Best Image Format for Web: JPEG vs PNG vs WebP in 2026',

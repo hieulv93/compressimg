@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Does Twitter Compress Images? Yes — Fix Free Online',
   description:
     'Yes, Twitter/X compresses every image you tweet — converting to WebP and reducing to 300–500KB. Pre-compress at quality 80 to keep photos sharp on the timeline. Free, browser-based.',
-  keywords: [
-    'compress image for twitter',
-    'compress photo for twitter',
-    'reduce image size twitter',
-    'twitter image compressor',
-    'compress image for x',
-    'compress image before tweeting',
-    'shrink photo twitter',
-    'twitter photo size reducer',
-    'compress jpg for twitter',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Does Twitter Compress Images? Yes — Fix Free Online',

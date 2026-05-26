@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Images for WordPress — Faster Page Speed Free',
   description:
     'Compress WordPress images to under 500KB before uploading. Improve PageSpeed and LCP score without a plugin — 100% browser-based, free, no sign-up.',
-  keywords: [
-    'compress image for wordpress',
-    'wordpress image optimization',
-    'wordpress image compressor',
-    'optimize images for wordpress',
-    'reduce image size wordpress',
-    'wordpress image file size',
-    'compress wordpress photos',
-    'wordpress pagespeed images',
-    'image compression wordpress no plugin',
-    'wordpress upload image size',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Images for WordPress — Faster Page Speed Free',

@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 1080×1080 (Square) Free | CompressImg',
   description:
     'Resize any image to 1080×1080 square instantly. Perfect for Instagram posts, product photos, and profile pictures. No upload — 100% browser-based.',
-  keywords: [
-    'resize image to 1080x1080',
-    '1080x1080 image resize',
-    'square image resize',
-    'resize to square',
-    'instagram square image',
-    '1080x1080 photo resize',
-    'make image square',
-    '1:1 aspect ratio resize',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 1080×1080 (Square) Free | CompressImg',

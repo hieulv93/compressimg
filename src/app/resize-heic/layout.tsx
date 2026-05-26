@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize HEIC Image Online Free — Convert & Resize iPhone Photos',
   description:
     'Resize HEIC photos from iPhone to any size and convert to JPEG in your browser. Free, no upload, no software needed. Supports all iPhone HEIC files instantly.',
-  keywords: [
-    'resize heic',
-    'resize heic image',
-    'heic resize',
-    'convert and resize heic',
-    'resize iphone photo',
-    'heic to jpg resize',
-    'resize heic online free',
-    'iphone heic resize',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize HEIC Image Online Free — Convert & Resize iPhone Photos',

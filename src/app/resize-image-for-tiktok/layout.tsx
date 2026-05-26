@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for TikTok — Free, Exact Dimensions | CompressImg',
   description:
     'Resize any image to exact TikTok dimensions free. Video cover (1080×1920), profile picture (200×200), square post (1080×1080). HEIC from iPhone supported. No upload — browser-based.',
-  keywords: [
-    'resize image for tiktok',
-    'tiktok image size',
-    'tiktok video cover size',
-    'tiktok profile picture size',
-    'tiktok post size',
-    'tiktok photo dimensions',
-    'resize tiktok photo',
-    'tiktok thumbnail size',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for TikTok — Free, Exact Dimensions | CompressImg',

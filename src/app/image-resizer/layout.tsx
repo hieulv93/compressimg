@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Image Resizer Online Free — Resize Images in Seconds',
   description:
     'Free online image resizer. Resize JPG, PNG, WebP, and HEIC images to any pixel dimensions instantly. No upload to server — 100% browser-based and private.',
-  keywords: [
-    'image resizer',
-    'resize image',
-    'image resizer online',
-    'resize image online',
-    'resize image online free',
-    'photo resizer',
-    'resize photo',
-    'image size changer',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Image Resizer Online Free — Resize Images in Seconds',

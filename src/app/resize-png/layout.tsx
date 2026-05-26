@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize PNG Online Free — Change PNG Image Dimensions | CompressImg',
   description:
     'Resize PNG images online for free. Change dimensions while keeping PNG format and transparency. No upload, no quality loss — 100% browser-based.',
-  keywords: [
-    'resize png',
-    'resize png online',
-    'change png size',
-    'png resizer',
-    'png image resize',
-    'resize transparent png',
-    'make png smaller',
-    'resize png file',
-    'png dimensions',
-    'resize png free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize PNG Online Free — Change PNG Image Dimensions | CompressImg',

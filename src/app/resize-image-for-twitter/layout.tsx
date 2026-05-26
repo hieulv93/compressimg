@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for Twitter / X — Free, Exact Dimensions | CompressImg',
   description:
     'Resize any image to exact Twitter / X dimensions free. Post image (1200×675), header (1500×500), profile picture (400×400). HEIC from iPhone supported. No upload — browser-based.',
-  keywords: [
-    'resize image for twitter',
-    'twitter image size',
-    'twitter post image size',
-    'twitter header size',
-    'twitter profile picture size',
-    'x image dimensions',
-    'resize twitter photo',
-    'twitter card image size',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for Twitter / X — Free, Exact Dimensions | CompressImg',

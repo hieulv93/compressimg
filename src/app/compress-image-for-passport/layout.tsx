@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Passport Photo Online — Under 240KB Free',
   description:
     'Compress passport photos to under 240KB for US passport applications. JPEG output, 100% browser-based — your photo never leaves your device. Free, no sign-up.',
-  keywords: [
-    'compress passport photo',
-    'passport photo file size',
-    'compress passport photo to 240kb',
-    'passport photo compressor',
-    'us passport photo requirements',
-    'passport photo jpeg',
-    'compress photo for passport application',
-    'passport photo size kb',
-    'resize passport photo online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Passport Photo Online — Under 240KB Free',

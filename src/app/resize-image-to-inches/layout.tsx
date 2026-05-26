@@ -8,19 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to Inches Online Free — Set Width & Height in Inches | CompressImg',
   description:
     'Resize any image to exact inch dimensions at any DPI. Enter width and height in inches, choose 72/96/150/300 DPI, download instantly. Free, browser-based.',
-  keywords: [
-    'resize image to inches',
-    'resize photo to inches',
-    'image resizer inches',
-    'resize image in inches online',
-    'image inches to pixels',
-    'resize image inches dpi',
-    'resize photo to inch size',
-    'image size inches online',
-    'convert image to inches',
-    'resize image to 4x6 inches',
-    'resize image to 8x10 inches',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to Inches Online Free',

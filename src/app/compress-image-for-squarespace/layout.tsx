@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Images for Squarespace — Faster Site Free',
   description:
     'Compress Squarespace images to under 500KB for faster page loading. Optimize blog photos, product images, and banners. 100% browser-based, free.',
-  keywords: [
-    'compress image for squarespace',
-    'squarespace image optimization',
-    'squarespace image size',
-    'compress squarespace photos',
-    'squarespace image compressor',
-    'reduce squarespace image size',
-    'optimize images for squarespace',
-    'squarespace image file size',
-    'squarespace site speed',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Images for Squarespace — Faster Site Free',

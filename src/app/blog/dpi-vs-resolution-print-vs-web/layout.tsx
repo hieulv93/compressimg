@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'DPI vs Resolution: Image Settings for Print vs Web (2026 Guide)',
   description:
     "DPI and resolution explained — what they mean for print (300 DPI) vs web (72 PPI), why they're different, and how to set the right values for your use case.",
-  keywords: [
-    'dpi vs resolution',
-    'dpi for print',
-    'dpi for web',
-    '72 dpi vs 300 dpi',
-    'image resolution explained',
-    'pixels per inch web',
-    'print resolution requirements',
-    'dpi ppi difference',
-    'what dpi for web images',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'DPI vs Resolution: Image Settings for Print vs Web',

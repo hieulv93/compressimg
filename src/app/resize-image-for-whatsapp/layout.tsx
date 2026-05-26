@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for WhatsApp — Free, Exact Dimensions | CompressImg',
   description:
     'Resize any image to exact WhatsApp dimensions free. Status (1080×1920), profile picture (500×500), link preview (1200×630). HEIC from iPhone supported. No upload — browser-based.',
-  keywords: [
-    'resize image for whatsapp',
-    'whatsapp image size',
-    'whatsapp status size',
-    'whatsapp profile picture size',
-    'resize whatsapp photo',
-    'whatsapp dp size',
-    'whatsapp image dimensions',
-    'whatsapp status dimensions',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for WhatsApp — Free, Exact Dimensions | CompressImg',

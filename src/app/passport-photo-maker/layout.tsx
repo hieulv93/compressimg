@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Passport Photo Maker Online Free — 2×2 inch & 35×45mm',
   description:
     'Make passport size photos online free. US 2×2 inch, UK/EU/India 35×45mm, white background. Print-ready JPG at 300 DPI — no upload, 100% browser-based and private.',
-  keywords: [
-    'passport photo maker',
-    'passport size photo',
-    'passport photo online free',
-    '2x2 passport photo',
-    '35x45mm passport photo',
-    'visa photo maker',
-    'passport photo generator',
-    'id photo maker',
-    'passport photo creator',
-    'make passport photo online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Passport Photo Maker Online Free — 2×2 inch & 35×45mm',

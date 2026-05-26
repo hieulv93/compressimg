@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image to 20KB Online Free — Reduce Photo Size',
   description:
     'Free online tool to compress images to 20KB or less. Reduce JPG, PNG for government exams, ID uploads, and online forms. No upload — 100% browser-based.',
-  keywords: [
-    'compress image to 20kb',
-    'reduce image size to 20kb',
-    'compress photo to 20kb',
-    'image compressor 20kb',
-    'jpg to 20kb',
-    'compress image under 20kb',
-    'photo less than 20kb',
-    'compress image to 20kb online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image to 20KB Online Free — Reduce Photo Size',

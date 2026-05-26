@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for Instagram — Free, Exact Dimensions | CompressImg',
   description:
     'Resize any image to exact Instagram dimensions free. Square (1080×1080), Portrait (1080×1350), Story (1080×1920). HEIC from iPhone supported. No upload — browser-based.',
-  keywords: [
-    'resize image for instagram',
-    'instagram image size',
-    'instagram photo size',
-    'resize photo for instagram',
-    'instagram post size',
-    'instagram story size',
-    'instagram image dimensions',
-    'resize instagram photo free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for Instagram — Free, Exact Dimensions | CompressImg',

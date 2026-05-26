@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'HEIC to JPG Converter — Convert iPhone Photos Free Online',
   description:
     'Convert HEIC to JPG free online. Open iPhone photos on Windows, Android, and the web instantly. No upload, 100% browser-based, no app install required.',
-  keywords: [
-    'heic to jpg',
-    'heic to jpeg',
-    'convert heic to jpg',
-    'heic converter',
-    'iphone photo converter',
-    'heif to jpg',
-    'open heic on windows',
-    'heic to jpg free',
-    'convert iphone photos to jpg',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'HEIC to JPG Converter — Convert iPhone Photos Free Online',

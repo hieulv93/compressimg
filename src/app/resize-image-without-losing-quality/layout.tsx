@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image Without Losing Quality — Free Online | CompressImg',
   description:
     'Resize JPG, PNG, WebP and HEIC images without losing quality. Lock aspect ratio, choose the right output format, and downscale with maximum sharpness. Free, browser-based.',
-  keywords: [
-    'resize image without losing quality',
-    'resize photo without quality loss',
-    'high quality image resizer',
-    'resize image keep quality',
-    'resize jpg without losing quality',
-    'resize png without quality loss',
-    'resize image lossless',
-    'downscale image quality',
-    'shrink image without quality loss',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image Without Losing Quality — Free Online',

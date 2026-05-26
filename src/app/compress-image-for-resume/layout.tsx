@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image for Resume / CV — Photo Under 100KB Free',
   description:
     'Compress your resume or CV photo to under 100KB in one click. Fits Naukri, LinkedIn, Indeed, and all job portal limits. No upload — 100% browser-based and private.',
-  keywords: [
-    'compress image for resume',
-    'compress photo for cv',
-    'resume photo compressor',
-    'cv photo size reducer',
-    'compress resume photo',
-    'photo for naukri',
-    'compress photo for job application',
-    'resume photo under 100kb',
-    'compress cv photo online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image for Resume / CV — Photo Under 100KB Free',

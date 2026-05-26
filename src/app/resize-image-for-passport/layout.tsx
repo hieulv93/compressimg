@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for Passport — All Countries Free | CompressImg',
   description:
     'Resize photos to passport size for any country — US 2×2 inch (600×600px), UK/Schengen/India 35×45mm (413×531px), Canada 50×70mm. Free, browser-based, no upload.',
-  keywords: [
-    'resize image for passport',
-    'passport photo size',
-    'passport photo pixel size',
-    'resize photo for passport',
-    'passport photo dimensions',
-    'passport size photo pixels',
-    'resize passport photo free',
-    'passport photo size in pixels',
-    'us passport photo size',
-    'uk passport photo size',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for Passport — All Countries Free | CompressImg',

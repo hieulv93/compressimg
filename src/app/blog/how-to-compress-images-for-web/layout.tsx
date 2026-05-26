@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'How to Compress Images for Web: The Complete Guide',
   description:
     'Learn how to compress images for web without losing quality. Covers JPEG vs PNG vs WebP, the right quality settings, and free tools to reduce file size by up to 90%.',
-  keywords: [
-    'how to compress images for web',
-    'image compression guide',
-    'compress images without losing quality',
-    'image file size reduction',
-    'jpeg png webp compression',
-    'web image optimization',
-    'reduce image size web',
-    'image compression tutorial',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'How to Compress Images for Web: The Complete Guide',

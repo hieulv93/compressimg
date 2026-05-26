@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize GIF Online Free — Change GIF Width & Height | CompressImg',
   description:
     'Resize GIF images online for free. Change GIF width and height by pixel. Static GIFs output as PNG; for animation, use our GIF compressor. No upload, 100% browser-based.',
-  keywords: [
-    'resize gif',
-    'resize gif online',
-    'change gif size',
-    'gif resizer',
-    'gif image resize',
-    'make gif smaller',
-    'gif dimensions',
-    'resize animated gif',
-    'gif pixel size',
-    'resize gif free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize GIF Online Free — Change GIF Width & Height | CompressImg',

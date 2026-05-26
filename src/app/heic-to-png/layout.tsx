@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'HEIC to PNG Converter — Convert iPhone Photos to PNG Free',
   description:
     'Convert HEIC to PNG free online. Lossless PNG output — no quality loss. Works on Windows, Android, and web. No upload, 100% browser-based.',
-  keywords: [
-    'heic to png',
-    'convert heic to png',
-    'heic to png online',
-    'heic to png free',
-    'heif to png',
-    'iphone photo to png',
-    'heic converter png',
-    'convert iphone photos to png',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'HEIC to PNG Converter — Convert iPhone Photos to PNG Free',

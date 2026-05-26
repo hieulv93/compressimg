@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image to 50KB Online Free — Reduce Photo Size',
   description:
     'Free online tool to compress images to 50KB or less. Reduce JPG, PNG file size for government portals, exam registration, and official forms. 100% browser-based, no upload.',
-  keywords: [
-    'compress image to 50kb',
-    'reduce image size to 50kb',
-    'compress photo to 50kb',
-    'image compressor 50kb',
-    'resize image to 50kb',
-    'compress image under 50kb',
-    'compress jpg to 50kb',
-    'compress png to 50kb',
-    'reduce photo size to 50kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image to 50KB Online Free — Reduce Photo Size',

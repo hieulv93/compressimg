@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'How to Compress Images on Android — Free Methods That Work',
   description:
     'Compress photos on Android without an app — use your browser. Also covers Google Photos storage saver, Samsung Gallery tricks, and file manager methods. Free.',
-  keywords: [
-    'compress images on android',
-    'reduce photo size android',
-    'compress photos android',
-    'android image compressor',
-    'reduce image size android',
-    'make photos smaller android',
-    'android photo file size',
-    'compress jpeg android',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'How to Compress Images on Android — Free Methods That Work',

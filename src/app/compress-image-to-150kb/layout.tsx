@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image to 150KB Online Free — Reduce Photo Size',
   description:
     'Free online tool to compress images to 150KB or less. Reduce JPG, PNG, WebP for SSC, college applications, and job portals. Browser-based, no upload required.',
-  keywords: [
-    'compress image to 150kb',
-    'reduce image size to 150kb',
-    'compress photo to 150kb',
-    'image compressor 150kb',
-    'jpg to 150kb',
-    'compress image under 150kb',
-    'compress image to 150kb online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image to 150KB Online Free — Reduce Photo Size',

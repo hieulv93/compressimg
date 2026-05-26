@@ -8,21 +8,6 @@ export const metadata: Metadata = {
   title: 'How to Reduce Image File Size: 5 Methods That Actually Work',
   description:
     'Reduce image file size for web, email, WhatsApp, Slack, and upload forms. 5 methods: compress to 80% quality, resize dimensions, convert to WebP, hit exact KB targets, or batch process.',
-  keywords: [
-    'how to reduce image file size',
-    'reduce image file size',
-    'reduce image size',
-    'how to reduce image size',
-    'image file size reduction',
-    'make image file smaller',
-    'compress image size',
-    'reduce image file size without losing quality',
-    'how to reduce image file size for email',
-    'how to reduce image size on iphone',
-    'how to reduce image size on android',
-    'reduce image file size below 100kb',
-    'reduce image file size below 200kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'How to Reduce Image File Size: 5 Methods That Actually Work',

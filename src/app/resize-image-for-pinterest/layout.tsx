@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for Pinterest — Free, Exact Dimensions | CompressImg',
   description:
     'Resize any image to exact Pinterest dimensions free. Standard pin (1000×1500), square pin (1000×1000), long pin (1000×2100). HEIC from iPhone supported. No upload — browser-based.',
-  keywords: [
-    'resize image for pinterest',
-    'pinterest image size',
-    'pinterest pin size',
-    'pinterest photo dimensions',
-    'resize pinterest image',
-    'pinterest standard pin size',
-    'pinterest infographic size',
-    'best pinterest image size',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for Pinterest — Free, Exact Dimensions | CompressImg',

@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 300KB Online Free — LinkedIn, Blog, Visa',
   description:
     'Resize any image to under 300KB free. Ideal for LinkedIn profile photo, blog featured images, Schengen visa, and web uploads. JPEG output, 100% browser-based.',
-  keywords: [
-    'resize image to 300kb',
-    'compress image to 300kb',
-    'reduce image to 300kb',
-    'linkedin photo 300kb',
-    'image under 300kb',
-    '300kb photo resizer',
-    'reduce photo to 300kb',
-    'visa photo 300kb',
-    'blog image size 300kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 300KB Online Free — LinkedIn, Blog, Visa',

@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 300×300 Free | CompressImg',
   description:
     'Resize any image to 300×300 instantly. Perfect for thumbnails, product photos, and e-commerce listings. No upload — 100% browser-based.',
-  keywords: [
-    'resize image to 300x300',
-    '300x300 image resize',
-    'resize to 300 300',
-    '300x300 thumbnail',
-    'product image 300x300',
-    'resize image thumbnail',
-    '300x300 photo resize',
-    'small image resize 300',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 300×300 Free | CompressImg',

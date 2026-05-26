@@ -27,14 +27,6 @@ export const metadata: Metadata = {
   },
   description:
     'Free online image compressor. Reduce image file size up to 90% without losing quality. No upload to server — 100% browser-based and private.',
-  keywords: [
-    'image compressor',
-    'compress image online',
-    'reduce image size',
-    'compress jpg',
-    'compress png',
-    'compressimg',
-  ],
   authors: [{ name: 'CompressImg' }],
   robots: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
   openGraph: {

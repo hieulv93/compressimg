@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image for Email — Reduce File Size',
   description:
     'Free online tool to compress images for email attachments. Reduce JPG, PNG file size to under 500KB instantly. No upload — 100% browser-based and private.',
-  keywords: [
-    'compress image for email',
-    'compress photo for email',
-    'reduce image size for email',
-    'compress image email attachment',
-    'shrink image for email',
-    'compress jpg for email',
-    'reduce photo size email',
-    'email image compressor',
-    'compress image before sending email',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image for Email — Reduce Photo Size for Attachments',

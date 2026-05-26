@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: 'How to Add a Watermark to Photos Online — Free Guide',
   description:
     'Learn how to watermark photos for free in your browser — no Photoshop needed. Covers position, opacity, font size, color, and when to use each setting.',
-  keywords: [
-    'how to add watermark to photo',
-    'watermark photos free',
-    'add watermark online',
-    'photo watermark guide',
-    'watermark position opacity guide',
-    'protect photos watermark',
-    'free watermark tool',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'How to Add a Watermark to Photos Online — Free Guide',

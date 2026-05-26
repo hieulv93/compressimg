@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 50KB Online Free — Passport, NEET, JEE | CompressImg',
   description:
     'Resize any image to under 50KB free. Ideal for US passport portal (DS-160), NEET, JEE, and government exam photo uploads. JPEG output, 100% browser-based.',
-  keywords: [
-    'resize image to 50kb',
-    'reduce image to 50kb',
-    'compress photo to 50kb',
-    'image to 50kb',
-    'resize jpg to 50kb',
-    'ds-160 photo size',
-    'neet photo size',
-    'jee photo size',
-    '50kb image resizer',
-    'compress image under 50kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 50KB Online Free — Passport, NEET, JEE',

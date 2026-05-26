@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Photo Compressor Online Free — Compress Photos Instantly',
   description:
     'Free online photo compressor. Compress JPG, PNG, WebP, and HEIC photos by up to 90% without losing quality. No upload to server — 100% browser-based and private.',
-  keywords: [
-    'photo compressor',
-    'compress photo',
-    'photo compressor online',
-    'compress photo online',
-    'photo size reducer',
-    'compress photo free',
-    'compress photo without losing quality',
-    'online photo compressor',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Photo Compressor Online Free — Compress Photos Instantly',

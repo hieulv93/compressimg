@@ -8,20 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image for Online Form — Government & Exam Upload | CompressImg',
   description:
     'Resize your photo or signature to exact KB and pixel requirements for government portals, exam applications, and online forms. Free, browser-based, no upload.',
-  keywords: [
-    'resize image for online form',
-    'resize photo for online application',
-    'resize image for government form',
-    'resize photo for exam application',
-    'compress image for online form',
-    'reduce photo size for online form',
-    'resize image to kb for form',
-    'online form photo size',
-    'government portal image requirement',
-    'resize image for SSC form',
-    'resize image for UPSC application',
-    'photo size for online application',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image for Online Form — Government & Exam Upload',

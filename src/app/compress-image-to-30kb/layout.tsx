@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image to 30KB Online Free — Any Format',
   description:
     'Free online tool to compress images to 30KB or less. Reduce JPG, PNG, WebP for online exam forms and government portals. Browser-based, no upload required.',
-  keywords: [
-    'compress image to 30kb',
-    'reduce image size to 30kb',
-    'compress photo to 30kb',
-    'image compressor 30kb',
-    'jpg to 30kb',
-    'compress image under 30kb',
-    'compress image to 30kb online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image to 30KB Online Free — Any Format',

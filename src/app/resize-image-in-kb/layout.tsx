@@ -8,19 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image in KB Online Free — Resize to Exact File Size | CompressImg',
   description:
     'Resize image to an exact KB size — 20KB, 50KB, 100KB, 200KB or 500KB. Perfect for online forms, exams, and ID uploads. No upload, 100% private.',
-  keywords: [
-    'resize image in kb',
-    'resize image to kb',
-    'resize photo in kb',
-    'image resizer kb',
-    'resize jpg in kb',
-    'resize image to specific size',
-    'resize image to 20kb',
-    'resize image to 50kb',
-    'resize image to 100kb',
-    'resize image to 200kb',
-    'resize image to 500kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image in KB Online Free — Resize to Exact File Size',

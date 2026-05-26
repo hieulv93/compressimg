@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Add Watermark to Image Online Free — Text Overlay',
   description:
     'Add a custom text watermark to any photo instantly. Choose position, opacity, font size, and color. 100% browser-based — your image never leaves your device. Free.',
-  keywords: [
-    'add watermark to image',
-    'watermark image online',
-    'text watermark photo',
-    'watermark photo free',
-    'add text to image online',
-    'watermark generator',
-    'photo watermark tool',
-    'image watermark online free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Add Watermark to Image Online Free — Text Overlay',

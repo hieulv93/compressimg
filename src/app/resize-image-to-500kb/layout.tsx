@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 500KB Online Free — Web, Blog, Email | CompressImg',
   description:
     'Resize any image to under 500KB free. Ideal for blog images, email attachments, and web uploads where quality matters. JPEG output, 100% browser-based.',
-  keywords: [
-    'resize image to 500kb',
-    'reduce image to 500kb',
-    'compress photo to 500kb',
-    'image to 500kb',
-    'resize jpg to 500kb',
-    '500kb image resizer',
-    'resize image for blog',
-    'resize image for email',
-    'compress image under 500kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 500KB Online Free — Web, Blog, Email',

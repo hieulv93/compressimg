@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'How to Compress Images for Etsy — Listing Photo Best Practices',
   description:
     'Compress Etsy listing photos to under 1MB for fast loading without losing detail. Covers the 10-image limit, recommended sizes, thumbnail tips, and Etsy image requirements.',
-  keywords: [
-    'compress images for etsy',
-    'etsy image size',
-    'etsy listing photo size',
-    'etsy image optimization',
-    'etsy photo file size',
-    'etsy product image compression',
-    'etsy photo requirements',
-    'best image size for etsy',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'How to Compress Images for Etsy — Listing Photo Best Practices',

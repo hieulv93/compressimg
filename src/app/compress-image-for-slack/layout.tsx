@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Slack Image Compression Explained — Pre-Compress for Mobile & Previews (Free)',
   description:
     'Slack does not compress images on desktop but does compress on mobile. Inline previews are lower-res on all devices. Pre-compress at quality 80 before uploading to keep photos sharp for everyone — free, browser-based.',
-  keywords: [
-    'compress image for slack',
-    'compress photo for slack',
-    'reduce image size for slack',
-    'slack image size limit',
-    'slack file upload limit',
-    'compress image slack',
-    'resize image for slack',
-    'slack photo compressor',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Slack Image Compression Explained — Pre-Compress for Mobile & Previews (Free)',

@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Does LinkedIn Compress Images? Yes — Free Fix Online',
   description:
     'Yes, LinkedIn re-compresses uploads and reduces quality. Pre-compress images before uploading to keep them sharp. Free, browser-based, no sign-up needed.',
-  keywords: [
-    'compress image for linkedin',
-    'compress photo for linkedin',
-    'reduce image size linkedin',
-    'linkedin image compressor',
-    'compress linkedin profile photo',
-    'linkedin photo size reducer',
-    'compress image before linkedin',
-    'shrink photo linkedin',
-    'linkedin image size reducer',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Does LinkedIn Compress Images? Yes — Free Fix Online',

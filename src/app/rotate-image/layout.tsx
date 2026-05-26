@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Rotate Image Online Free — 90°, 180°, 270°',
   description:
     'Rotate JPG, PNG, WebP, or HEIC images 90°, 180°, or 270° instantly. 100% browser-based — no upload, no sign-up. Free.',
-  keywords: [
-    'rotate image',
-    'rotate image online',
-    'rotate photo',
-    'image rotator',
-    'rotate jpg',
-    'rotate png',
-    'rotate image 90 degrees',
-    'rotate photo online free',
-    'flip image 180',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Rotate Image Online Free — 90°, 180°, 270°',

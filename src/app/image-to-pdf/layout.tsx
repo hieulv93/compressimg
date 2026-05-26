@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Image to PDF Converter — Convert JPG, PNG to PDF Free Online',
   description:
     'Convert JPG, PNG, WebP, or HEIC to PDF instantly. Choose A4, Letter, or fit-to-image page size. 100% browser-based — your image never leaves your device. Free.',
-  keywords: [
-    'image to pdf',
-    'jpg to pdf',
-    'png to pdf',
-    'convert image to pdf online',
-    'photo to pdf',
-    'image to pdf converter free',
-    'jpg to pdf online free',
-    'convert photo to pdf',
-    'heic to pdf',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Image to PDF Converter — Convert JPG, PNG to PDF Free Online',

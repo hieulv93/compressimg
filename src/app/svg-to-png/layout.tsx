@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'SVG to PNG Converter Online Free — Convert SVG to PNG',
   description:
     'Free online SVG to PNG converter. Convert SVG files to PNG instantly — lossless output, no upload, 100% browser-based and private. Supports any SVG file up to 20MB.',
-  keywords: [
-    'svg to png',
-    'svg to png converter',
-    'convert svg to png',
-    'svg to png online free',
-    'svg to png online',
-    'svg converter',
-    'svg to png free',
-    'convert svg to image',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'SVG to PNG Converter Online Free',

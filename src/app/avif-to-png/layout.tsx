@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'AVIF to PNG Converter — Convert AVIF to PNG Free Online',
   description:
     'Convert AVIF to PNG free online. Preserve transparency and full quality — no upload, 100% browser-based. Works on Chrome, Firefox, and Safari.',
-  keywords: [
-    'avif to png',
-    'convert avif to png',
-    'avif to png online',
-    'avif to png free',
-    'avif png converter',
-    'avif to transparent png',
-    'avif file to png',
-    'avif converter',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'AVIF to PNG Converter — Free Online',

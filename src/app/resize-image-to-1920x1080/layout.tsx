@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 1920×1080 (Full HD) Free | CompressImg',
   description:
     'Resize any image to 1920×1080 Full HD instantly. Perfect for wallpapers, presentations, and video frames. No upload — 100% browser-based.',
-  keywords: [
-    'resize image to 1920x1080',
-    '1920x1080 image resize',
-    'full hd image resize',
-    'resize to 1920 1080',
-    '1080p image size',
-    'wallpaper resize 1920x1080',
-    'resize image full hd',
-    '1920x1080 wallpaper maker',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 1920×1080 (Full HD) Free | CompressImg',

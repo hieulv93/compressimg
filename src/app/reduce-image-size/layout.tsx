@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Reduce Image Size Online Free — Image Size Reducer',
   description:
     'Free online image size reducer. Reduce image file size by up to 90% without losing quality. No upload to server — 100% browser-based and private.',
-  keywords: [
-    'reduce image size',
-    'reduce image file size',
-    'image size reducer',
-    'reduce photo size',
-    'make image smaller',
-    'image file size reducer',
-    'compress image online',
-    'reduce image size online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Reduce Image Size Online Free — Image Size Reducer',

@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Does YouTube Compress Images? Yes — Fix Free Online',
   description:
     'Yes, YouTube compresses thumbnails and images on upload. Pre-compress before uploading to stay sharp and under the 2MB limit. Free, browser-based, no sign-up.',
-  keywords: [
-    'compress image for youtube',
-    'compress youtube thumbnail',
-    'reduce youtube thumbnail file size',
-    'youtube thumbnail size reducer',
-    'compress youtube banner',
-    'youtube image compressor',
-    'reduce image size youtube',
-    'compress image before youtube upload',
-    'youtube thumbnail file size',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Does YouTube Compress Images? Yes — Fix Free Online',

@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Images for Website — Faster Page Speed Free',
   description:
     'Compress images for website use — under 200KB for faster loading, better Core Web Vitals, and higher Google rankings. JPG, PNG, WebP — 100% browser-based, free.',
-  keywords: [
-    'compress images for website',
-    'optimize images for website',
-    'web image compressor',
-    'compress image for page speed',
-    'website image optimization',
-    'reduce image size for web',
-    'image seo optimization',
-    'compress images for seo',
-    'web performance images',
-    'core web vitals images',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Images for Website — Faster Page Speed Free',

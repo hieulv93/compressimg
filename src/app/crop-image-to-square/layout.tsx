@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Crop Image to Square Online Free — 1:1 Photo Cropper',
   description:
     'Crop any image to a perfect square (1:1) online free. Ideal for Instagram, profile photos, and thumbnails. No upload — 100% browser-based and private.',
-  keywords: [
-    'crop image to square',
-    'square image cropper',
-    'crop photo to square',
-    '1:1 crop online',
-    'instagram square crop',
-    'crop image 1:1',
-    'square crop tool',
-    'make image square online',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Crop Image to Square Online Free',

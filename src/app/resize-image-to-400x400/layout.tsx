@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 400×400 Free | CompressImg',
   description:
     'Resize any image to 400×400 instantly. Perfect for profile pictures, avatars, and small product photos. No upload — 100% browser-based.',
-  keywords: [
-    'resize image to 400x400',
-    '400x400 image resize',
-    'resize to 400 400',
-    '400x400 profile picture',
-    'profile photo resize 400',
-    'resize image profile',
-    '400x400 photo resize',
-    'avatar resize 400x400',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 400×400 Free | CompressImg',

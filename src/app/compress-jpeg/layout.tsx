@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress JPEG Online Free — JPEG Compressor',
   description:
     'Free online JPEG compressor. Compress JPG and JPEG files by up to 90% without losing quality. No upload to server — 100% browser-based and private.',
-  keywords: [
-    'compress jpeg',
-    'compress jpeg online',
-    'jpeg compressor',
-    'compress jpg jpeg',
-    'reduce jpeg size',
-    'jpeg file size reducer',
-    'compress jpeg free',
-    'online jpeg compressor',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress JPEG Online Free — JPEG Compressor',

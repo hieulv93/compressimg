@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Does Instagram Compress Images? Yes — Fix Free Online',
   description:
     'Yes, Instagram compresses every photo you upload. Pre-compress at quality 80 before posting to reduce double-compression and keep photos sharp — free, 100% browser-based.',
-  keywords: [
-    'compress image for instagram',
-    'compress photo for instagram',
-    'reduce image size instagram',
-    'instagram image compressor',
-    'compress image before uploading instagram',
-    'instagram photo size reducer',
-    'compress jpg for instagram',
-    'best image size for instagram',
-    'instagram photo quality',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Does Instagram Compress Images? Yes — Fix Free Online',

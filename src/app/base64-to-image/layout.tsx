@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'Base64 to Image Converter — Decode & Download Free Online',
   description:
     'Paste a Base64 string and instantly decode it back to an image. Preview and download as JPG. 100% browser-based — no upload, no sign-up. Free.',
-  keywords: [
-    'base64 to image',
-    'decode base64 image',
-    'base64 image decoder',
-    'base64 to jpg',
-    'base64 to png',
-    'convert base64 to image online',
-    'base64 decoder image',
-    'data url to image',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Base64 to Image Converter — Decode & Download Free Online',

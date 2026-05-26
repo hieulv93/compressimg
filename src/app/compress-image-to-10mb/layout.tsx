@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image to 10MB — Reduce Photo Size Online Free',
   description:
     'Free online tool to compress images to under 10MB. Reduce large JPG, PNG, or WebP files to fit 10MB upload limits — 100% browser-based, no upload to server.',
-  keywords: [
-    'compress image to 10mb',
-    'reduce image size to 10mb',
-    'compress photo to 10mb',
-    'image compressor 10mb',
-    'reduce jpg to 10mb',
-    'compress image under 10mb',
-    'resize image to 10mb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image to 10MB — Free Online Tool',

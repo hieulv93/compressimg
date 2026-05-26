@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'How to Compress Images on iPhone — Without Losing Quality (2026)',
   description:
     'Compress iPhone photos without losing quality — 5 free methods including browser-based tools, HEIC settings, AirDrop tricks, and the Files app. Works on iOS 16, 17, 18.',
-  keywords: [
-    'compress images on iphone',
-    'reduce photo size iphone',
-    'compress photos iphone',
-    'iphone image compressor',
-    'reduce image size ios',
-    'compress jpeg iphone',
-    'make photos smaller iphone',
-    'iphone photo file size',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'How to Compress Images on iPhone — Without Losing Quality',

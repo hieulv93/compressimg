@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'JPG to PNG Converter Online Free — Convert JPEG to PNG',
   description:
     'Free online JPG to PNG converter. Convert JPEG to PNG instantly — lossless, no upload, 100% browser-based and private. Supports JPG and JPEG files up to 20MB.',
-  keywords: [
-    'jpg to png',
-    'jpeg to png',
-    'jpg to png converter',
-    'convert jpg to png',
-    'convert jpeg to png online',
-    'jpg to png online free',
-    'change jpg to png',
-    'jpg to png free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'JPG to PNG Converter Online Free',

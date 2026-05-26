@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Images for Shopify — Faster Product Photos',
   description:
     'Optimize Shopify product images for faster store loading — compress to under 500KB without losing quality. 100% browser-based, free, no sign-up.',
-  keywords: [
-    'compress image for shopify',
-    'shopify image optimization',
-    'shopify product image size',
-    'compress shopify photos',
-    'shopify image compressor',
-    'reduce shopify image size',
-    'shopify image file size',
-    'optimize images for shopify',
-    'shopify store speed images',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Images for Shopify — Faster Product Photos',

@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: 'PNG to GIF Converter — Convert PNG to GIF Free Online',
   description:
     'Convert PNG to GIF free online. Turn any PNG image into a GIF file instantly. No upload — 100% browser-based.',
-  keywords: [
-    'png to gif',
-    'convert png to gif',
-    'png to gif online',
-    'png to gif free',
-    'png gif converter',
-    'image to gif',
-    'png to animated gif',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'PNG to GIF Converter — Free Online',

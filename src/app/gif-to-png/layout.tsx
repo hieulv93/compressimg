@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'GIF to PNG Converter — Convert GIF to PNG Free Online',
   description:
     'Convert GIF to PNG free online. Get a lossless PNG with full color depth and transparency support. No upload — 100% browser-based and private.',
-  keywords: [
-    'gif to png',
-    'convert gif to png',
-    'gif to png online',
-    'gif to png free',
-    'gif to png converter',
-    'gif frame to png',
-    'save gif as png',
-    'gif to transparent png',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'GIF to PNG Converter — Free Online',

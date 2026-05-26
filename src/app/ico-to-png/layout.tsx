@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'ICO to PNG Converter — Convert Favicon ICO to PNG Free Online',
   description:
     'Convert ICO to PNG free online. Extract favicon or icon from ICO file and save as PNG. No upload — 100% browser-based.',
-  keywords: [
-    'ico to png',
-    'convert ico to png',
-    'favicon to png',
-    'icon to png',
-    'ico file to png',
-    'ico png converter',
-    'extract ico to png',
-    'favicon converter',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'ICO to PNG Converter — Free Online',

@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize JPG Online Free — Change JPEG Width & Height | CompressImg',
   description:
     'Resize JPG and JPEG images online for free. Change width and height by pixel. Preserves JPG format and quality. No upload — 100% browser-based.',
-  keywords: [
-    'resize jpg',
-    'resize jpeg',
-    'resize jpg online',
-    'jpeg resizer',
-    'change jpg dimensions',
-    'jpg image resizer',
-    'reduce jpg size',
-    'make jpg smaller',
-    'resize jpeg file',
-    'jpg resizer free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize JPG Online Free — Change JPEG Width & Height | CompressImg',

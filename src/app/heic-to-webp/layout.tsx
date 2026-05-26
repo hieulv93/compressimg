@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'HEIC to WebP Converter Online Free — Convert iPhone Photos to WebP',
   description:
     'Free online HEIC to WebP converter. Convert iPhone HEIC photos to WebP instantly — smaller files for web, no upload, 100% browser-based and private.',
-  keywords: [
-    'heic to webp',
-    'heic to webp converter',
-    'convert heic to webp',
-    'iphone heic to webp',
-    'heic to webp online free',
-    'heif to webp',
-    'convert heif to webp',
-    'heic to webp free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'HEIC to WebP Converter Online Free',

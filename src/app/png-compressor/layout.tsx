@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'PNG Compressor Online Free — Reduce PNG File Size',
   description:
     'Free PNG compressor. Reduce PNG file size instantly while preserving transparency and sharp edges. No upload to server — 100% browser-based, no sign-up.',
-  keywords: [
-    'png compressor',
-    'png file size reducer',
-    'compress png free',
-    'png image compressor',
-    'reduce png size online',
-    'png compressor online',
-    'compress png without losing quality',
-    'png size reducer',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'PNG Compressor Online Free — Reduce PNG File Size',

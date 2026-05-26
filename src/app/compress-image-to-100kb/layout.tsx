@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Compress Image to 100KB Online Free — Any Format',
   description:
     'Free online tool to compress images to 100KB or less. Reduce JPG, PNG, WebP file size instantly. No upload to server — 100% browser-based and private.',
-  keywords: [
-    'compress image to 100kb',
-    'compress photo to 100kb',
-    'reduce image size to 100kb',
-    'compress image to 100kb online',
-    'compress jpg to 100kb',
-    'compress png to 100kb',
-    'reduce photo size to 100kb',
-    'compress image under 100kb',
-    'image compressor 100kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Compress Image to 100KB Online Free — Any Format',

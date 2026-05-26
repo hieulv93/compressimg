@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'WhatsApp Cuts Photo Quality 80% — Pre-Compress at Q80 to Keep Detail (Free)',
   description:
     'Yes, WhatsApp compresses every photo you send — often reducing a 12MP photo to 1–2MP quality. Pre-compress at quality 80 before sending to reduce blur — free, 100% browser-based.',
-  keywords: [
-    'compress image for whatsapp',
-    'compress photo for whatsapp',
-    'reduce image size whatsapp',
-    'whatsapp image compressor',
-    'compress image before sending whatsapp',
-    'shrink photo whatsapp',
-    'whatsapp photo size reducer',
-    'compress jpg for whatsapp',
-    'reduce photo size for whatsapp sharing',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'WhatsApp Cuts Photo Quality 80% — Pre-Compress at Q80 to Keep Detail (Free)',

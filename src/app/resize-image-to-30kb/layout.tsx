@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 30KB Online Free — SSC, IBPS, UPSC Signature',
   description:
     'Resize any image to under 30KB free. Ideal for SSC, IBPS, UPSC, and government exam signature uploads. JPEG output, 100% browser-based — no upload, no sign-up.',
-  keywords: [
-    'resize image to 30kb',
-    'compress image to 30kb',
-    'reduce image to 30kb',
-    'ssc signature size 30kb',
-    'ibps signature size',
-    'upsc signature 30kb',
-    'government exam photo size',
-    'image under 30kb',
-    '30kb image resizer',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 30KB Online Free — SSC, IBPS, UPSC',

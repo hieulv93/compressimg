@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: "JPG vs JPEG: What's the Difference? (2026 Guide)",
   description:
     'JPG and JPEG are identical formats — same compression, same quality, same files. Learn why two extensions exist, which to use, and what actually matters when saving images.',
-  keywords: [
-    'jpg vs jpeg',
-    'jpg vs jpeg difference',
-    'jpeg vs jpg which is better',
-    'jpg and jpeg same',
-    'jpg file extension',
-    'jpeg file format',
-    'difference between jpg and jpeg',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "JPG vs JPEG: What's the Difference?",

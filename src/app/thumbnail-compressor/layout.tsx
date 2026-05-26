@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'YouTube Thumbnail Compressor — Compress Under 2MB Free',
   description:
     'Free thumbnail compressor for YouTube, gaming, and social media. Compress thumbnails under 2MB instantly. No upload to server — 100% browser-based and private.',
-  keywords: [
-    'thumbnail compressor',
-    'compress thumbnail',
-    'youtube thumbnail compressor',
-    'reduce thumbnail size',
-    'compress youtube thumbnail',
-    'thumbnail file size reducer',
-    'compress thumbnail online free',
-    'gaming thumbnail compressor',
-    'thumbnail image compressor',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Thumbnail Compressor Online Free — Reduce Thumbnail File Size',

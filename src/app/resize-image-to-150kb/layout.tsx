@@ -8,17 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 150KB Online Free — College Admissions, NEET',
   description:
     'Resize any image to under 150KB free. Ideal for college admission portals, NEET, JEE Main, and government recruitment photo uploads. JPEG output, 100% browser-based.',
-  keywords: [
-    'resize image to 150kb',
-    'compress image to 150kb',
-    'reduce image to 150kb',
-    'neet photo 150kb',
-    'jee photo size 150kb',
-    'college admission photo size',
-    'image under 150kb',
-    '150kb image resizer',
-    'reduce photo to 150kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 150KB Online Free — College Admissions, NEET',

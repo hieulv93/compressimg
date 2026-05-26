@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Crop Image Online Free – Trim & Cut JPG, PNG, WebP',
   description:
     'Free online image cropper. Select any area, choose ratio (1:1, 16:9, 4:3), and download instantly. No upload — 100% browser-based and private.',
-  keywords: [
-    'crop image online',
-    'crop image free',
-    'online image cropper',
-    'crop jpg online',
-    'crop png online',
-    'crop photo online',
-    'image crop tool',
-    'crop image to square',
-    'crop image 16:9',
-    'free image cropper',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Crop Image Online Free – Trim & Cut JPG, PNG, WebP',

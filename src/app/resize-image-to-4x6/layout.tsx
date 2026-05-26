@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 4×6 Inch — 1200×1800px Free | CompressImg',
   description:
     'Resize any photo to 4×6 inch (1200×1800px at 300 DPI) for printing at home, pharmacy, or photo lab. Portrait and landscape. Free, browser-based, no upload.',
-  keywords: [
-    'resize image to 4x6',
-    '4x6 photo size',
-    '4x6 inch photo pixels',
-    '4x6 print size',
-    'resize photo to 4x6',
-    '1200x1800 photo',
-    '4x6 photo dimensions',
-    'resize image for printing',
-    '4 by 6 photo size pixels',
-    '4x6 picture size',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 4×6 Inch — 1200×1800px Free | CompressImg',

@@ -8,15 +8,6 @@ export const metadata: Metadata = {
   title: 'WebP to GIF Converter — Convert WebP to GIF Free Online',
   description:
     'Convert WebP to GIF free online. Turn any WebP image into a GIF file instantly. No upload — 100% browser-based.',
-  keywords: [
-    'webp to gif',
-    'convert webp to gif',
-    'webp to gif online',
-    'webp to gif free',
-    'webp gif converter',
-    'animated webp to gif',
-    'webp to animated gif',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'WebP to GIF Converter — Free Online',

@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 35×45mm — Passport Photo Free | CompressImg',
   description:
     'Resize any photo to 35×45mm (413×531px) for UK, Schengen, India, Australia, and Japan passport. Free, browser-based, no upload. HEIC from iPhone supported.',
-  keywords: [
-    'resize image to 35x45mm',
-    '35x45mm passport photo',
-    '35x45 photo size',
-    'uk passport photo size',
-    'schengen passport photo size',
-    'india passport photo size',
-    '413x531 passport photo',
-    'resize photo to 35x45',
-    'passport photo 35mm x 45mm pixels',
-    '35x45 mm photo in pixels',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 35×45mm — Passport Photo Free | CompressImg',

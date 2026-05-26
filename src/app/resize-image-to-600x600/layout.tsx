@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 600×600 Pixels — Free Online | CompressImg',
   description:
     'Resize any image to 600×600px — US passport photo (2×2 inch at 300 DPI), WooCommerce thumbnail, eBay listing, podcast art. Free, browser-based, no upload.',
-  keywords: [
-    'resize image to 600x600',
-    '600x600 pixels',
-    '600x600 image',
-    'resize photo to 600x600',
-    '600 x 600 pixel image',
-    'resize image 600 600',
-    '600x600 passport photo',
-    '600x600 woocommerce',
-    'resize to 600x600 free',
-    '600 pixel square image',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 600×600 Pixels — Free Online | CompressImg',

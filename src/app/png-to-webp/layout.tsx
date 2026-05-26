@@ -8,16 +8,6 @@ export const metadata: Metadata = {
   title: 'PNG to WebP Converter Online Free — Convert PNG to WebP',
   description:
     'Free online PNG to WebP converter. Convert PNG to WebP instantly — 26–80% smaller, preserves transparency, no upload, 100% browser-based and private.',
-  keywords: [
-    'png to webp',
-    'png to webp converter',
-    'convert png to webp',
-    'png to webp online free',
-    'change png to webp',
-    'png converter to webp',
-    'convert png image to webp',
-    'png to webp free',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'PNG to WebP Converter Online Free',

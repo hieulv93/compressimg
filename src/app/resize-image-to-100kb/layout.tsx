@@ -8,18 +8,6 @@ export const metadata: Metadata = {
   title: 'Resize Image to 100KB Online Free — Resume, Job Portal | CompressImg',
   description:
     'Resize any image to under 100KB free. Great for resume photos, Naukri, LinkedIn, and IBPS bank job portals. JPEG output, no upload, 100% private.',
-  keywords: [
-    'resize image to 100kb',
-    'reduce image to 100kb',
-    'compress photo to 100kb',
-    'image to 100kb',
-    'resize jpg to 100kb',
-    'naukri photo size',
-    'ibps photo size',
-    'resume photo size',
-    '100kb image resizer',
-    'compress image under 100kb',
-  ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Resize Image to 100KB Online Free — Resume, Job Portal',
