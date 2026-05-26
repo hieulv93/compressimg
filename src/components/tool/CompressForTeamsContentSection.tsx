@@ -178,6 +178,11 @@ export default function CompressForTeamsContentSection() {
               label: 'Compress to 2MB',
               desc: 'Target under 2MB for larger images',
             },
+            {
+              href: '/blog/how-messaging-apps-compress-images',
+              label: 'Do Messaging Apps Compress Images?',
+              desc: 'Slack vs Teams vs Discord vs WhatsApp guide',
+            },
           ].map(({ href, label, desc }) => (
             <Link
               key={href}

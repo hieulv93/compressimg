@@ -64,6 +64,7 @@ module.exports = {
       '/blog/how-to-compress-images-for-web': 0.8,
       '/blog/why-photos-look-blurry-social-media': 0.8,
       '/blog/how-to-compress-images-for-wordpress': 0.8,
+      '/blog/how-messaging-apps-compress-images': 0.85,
       '/png-compressor': 0.85,
       '/compress-gif-online': 0.8,
       '/compress-images': 0.8,

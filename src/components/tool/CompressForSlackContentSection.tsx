@@ -10,39 +10,45 @@ export default function CompressForSlackContentSection() {
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">Does Slack Compress Images?</h2>
         <p className="text-text-muted text-sm leading-relaxed">
-          <strong className="text-text-main">Yes — but only the preview, not the original.</strong>{' '}
-          Slack automatically generates smaller thumbnail previews for images shared in channels and
-          direct messages. These previews display inline in the message thread at a reduced size.
-          However, the original full-size image is stored on Slack&apos;s servers and is available
-          for teammates to download at the original file size, counting toward your workspace
-          storage quota.
-        </p>
-        <p className="text-text-muted text-sm leading-relaxed">
-          Slack also reduces image quality for animated GIFs to limit bandwidth usage in channels.
-          For static images (JPG, PNG, WebP), Slack shows a compressed preview but preserves the
-          original for download.
+          <strong className="text-text-main">It depends on the device.</strong> On the Slack desktop
+          app (Windows, Mac, Linux), Slack does <strong className="text-text-main">not</strong>{' '}
+          compress images you upload — the original file is stored and delivered at full quality. On
+          the Slack mobile app (Android and iOS), Slack{' '}
+          <strong className="text-text-main">does</strong> compress images before uploading, which
+          can noticeably reduce quality for detailed photos. Regardless of device, Slack generates a
+          lower-resolution inline thumbnail for display inside the channel.
         </p>
         <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
           <p className="font-semibold text-text-main">Quick answer: Does Slack compress images?</p>
           <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
             <li>
-              ✅ <strong className="text-text-main">Preview thumbnails:</strong> Yes — Slack
-              generates smaller previews for inline display in channels
+              ❌ <strong className="text-text-main">Desktop upload:</strong> No — Slack stores and
+              delivers the full original file
             </li>
             <li>
-              ❌ <strong className="text-text-main">Original file:</strong> No — full-size original
-              is stored and available for download
+              ✅ <strong className="text-text-main">Mobile upload:</strong> Yes — the Slack mobile
+              app compresses images before sending
             </li>
             <li>
-              ⚠️ <strong className="text-text-main">Storage quota:</strong> The original counts
-              against your plan&apos;s storage limit (5GB on Free)
+              ✅ <strong className="text-text-main">Inline previews:</strong> Lower-res thumbnail
+              shown in channel on all devices
+            </li>
+            <li>
+              ⚠️ <strong className="text-text-main">Storage quota:</strong> The uploaded file counts
+              against your plan&apos;s storage limit (5 GB on Free)
             </li>
           </ul>
         </div>
         <p className="text-text-muted text-sm leading-relaxed">
-          Because Slack stores the original file, compressing images <em>before</em> uploading is
-          the only reliable way to save workspace storage, speed up channel loading for everyone,
-          and reduce bandwidth usage for teammates on mobile data or slow connections.
+          The practical problem is that most team photos are taken and shared from phones. Mobile
+          Slack compression can reduce a 5 MB phone photo significantly before it even reaches
+          Slack&apos;s servers. Pre-compressing at quality 80 before uploading — regardless of
+          device — ensures everyone sees the same sharp image, saves workspace storage, and speeds
+          up channel loading for teammates on slow connections or mobile data.
+        </p>
+        <p className="text-text-muted text-sm leading-relaxed">
+          Slack also reduces quality for animated GIFs on all platforms to limit bandwidth. For
+          static images uploaded from desktop, the original is always preserved and downloadable.
         </p>
       </div>
 
@@ -181,6 +187,11 @@ export default function CompressForSlackContentSection() {
               href: '/compress-image-to-500kb',
               label: 'Compress to 500KB',
               desc: 'Target under 500KB for fastest loading',
+            },
+            {
+              href: '/blog/how-messaging-apps-compress-images',
+              label: 'Do Messaging Apps Compress Images?',
+              desc: 'Slack vs Teams vs Discord vs WhatsApp guide',
             },
           ].map(({ href, label, desc }) => (
             <Link

@@ -5,7 +5,7 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-whatsapp/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Does WhatsApp Compress Images? Yes — Fix Free Online',
+  title: 'WhatsApp Cuts Photo Quality 80% — Pre-Compress at Q80 to Keep Detail (Free)',
   description:
     'Yes, WhatsApp compresses every photo you send — often reducing a 12MP photo to 1–2MP quality. Pre-compress at quality 80 before sending to reduce blur — free, 100% browser-based.',
   keywords: [
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Does WhatsApp Compress Images? Yes — Fix Free Online',
+    title: 'WhatsApp Cuts Photo Quality 80% — Pre-Compress at Q80 to Keep Detail (Free)',
     description:
       'Yes, WhatsApp compresses every photo sent — often to 1–2MP quality. Pre-compress at quality 80 to reduce blur — free, no uploads, 100% browser-based.',
     url: PAGE_URL,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Does WhatsApp Compress Images? Yes — Fix Free Online',
+    title: 'WhatsApp Cuts Photo Quality 80% — Pre-Compress at Q80 to Keep Detail (Free)',
     description:
       'Yes, WhatsApp compresses photos to ~1–2MP. Pre-compress to keep quality — 100% browser-based, no uploads.',
     images: [OG_IMAGE],

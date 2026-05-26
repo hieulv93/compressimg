@@ -5,9 +5,9 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-slack/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Does Slack Compress Images? Yes — Fix Free Online',
+  title: 'Slack Image Compression Explained — Pre-Compress for Mobile & Previews (Free)',
   description:
-    'Yes, Slack compresses every image you upload. Pre-optimize before sharing in channels to keep photos sharp and crisp. Free, browser-based.',
+    'Slack does not compress images on desktop but does compress on mobile. Inline previews are lower-res on all devices. Pre-compress at quality 80 before uploading to keep photos sharp for everyone — free, browser-based.',
   keywords: [
     'compress image for slack',
     'compress photo for slack',
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Does Slack Compress Images? Yes — Fix Free Online',
+    title: 'Slack Image Compression Explained — Pre-Compress for Mobile & Previews (Free)',
     description:
-      'Yes, Slack compresses every image you upload. Pre-compress before sharing in channels to keep photos sharp and crisp in Slack — free, browser-based.',
+      'Slack compresses images on mobile but not desktop. Inline previews are lower-res on all devices. Pre-compress before uploading to keep photos sharp for all teammates — free, browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for Slack Online' }],
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Does Slack Compress Images? Yes — Fix Free Online',
+    title: 'Slack Image Compression Explained — Pre-Compress for Mobile & Previews (Free)',
     description:
-      'Yes, Slack compresses every image you upload. Pre-compress before sharing — keeps photos crisp in Slack. 100% browser-based, no sign-up.',
+      'Slack compresses on mobile, not desktop. Previews are lower-res everywhere. Pre-compress to keep quality sharp across all devices — 100% browser-based, no sign-up.',
     images: [OG_IMAGE],
   },
 }
