@@ -153,6 +153,8 @@ module.exports = {
       '/resize-image-to-2x2-inch': 0.85,
       '/resize-image-to-35x45mm': 0.85,
       '/resize-image-for-resume': 0.85,
+      '/resize-image-to-4x6': 0.8,
+      '/resize-image-to-600x600': 0.8,
     }
     return {
       loc: path,
