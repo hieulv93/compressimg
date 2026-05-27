@@ -5,12 +5,12 @@ const PAGE_URL = `${SITE_URL}/thumbnail-compressor/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'YouTube Thumbnail Compressor — Compress Under 2MB Free',
+  title: 'Thumbnail Compressor Online — Compress Under 2MB Free',
   description:
-    'Free thumbnail compressor for YouTube, gaming, and social media. Compress thumbnails under 2MB instantly. No upload to server — 100% browser-based and private.',
+    'Free online thumbnail compressor for YouTube, gaming, and social media. Reduce thumbnail file size under 2MB instantly. No upload — 100% browser-based and private.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Thumbnail Compressor Online Free — Reduce Thumbnail File Size',
+    title: 'Thumbnail Compressor Online Free — YouTube, Gaming & Social Media',
     description:
       'Compress YouTube, gaming, and social media thumbnails under 2MB for free. No uploads — works 100% in your browser.',
     url: PAGE_URL,

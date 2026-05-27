@@ -5,14 +5,14 @@ const PAGE_URL = `${SITE_URL}/heic-to-jpg/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'HEIC to JPG Converter — Convert iPhone Photos Free Online',
+  title: 'Convert iPhone Photos to JPG Free — HEIC to JPG Converter',
   description:
-    'Convert HEIC to JPG free online. Open iPhone photos on Windows, Android, and the web instantly. No upload, 100% browser-based, no app install required.',
+    'iPhone saves photos as HEIC — convert them to JPG free online. Opens on Windows, Android, and any website instantly. No upload, 100% browser-based, no app install.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'HEIC to JPG Converter — Convert iPhone Photos Free Online',
+    title: 'Convert iPhone Photos to JPG Free — HEIC to JPG Converter',
     description:
-      'Convert iPhone HEIC photos to JPG instantly. Works on Windows, Android, and web. 100% browser-based — no upload, no app required.',
+      'iPhone photos are saved as HEIC — convert them to JPG instantly. Works on Windows, Android, and web. 100% browser-based — no upload, no app required.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'HEIC to JPG Converter' }],
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'HEIC to JPG — Free iPhone Photo Converter',
+    title: 'Convert iPhone Photos to JPG Free — HEIC Converter',
     description:
-      'Convert iPhone HEIC photos to JPG free. Open on Windows, Android, and any website. No upload needed.',
+      'iPhone photos are HEIC — convert to JPG free online. Opens on Windows, Android, and any site. No upload needed.',
     images: [OG_IMAGE],
   },
 }
