@@ -1,15 +1,23 @@
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void
+    dataLayer?: unknown[]
   }
 }
 
 type EventParams = Record<string, string | number | boolean>
 
 function track(event: string, params?: EventParams) {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', event, params)
+  if (typeof window === 'undefined') return
+  if (!window.dataLayer) window.dataLayer = []
+  if (!window.gtag) {
+    // Mirror ga4-init: create wrapper so events queue before gtag.js loads
+    window.gtag = function () {
+      // eslint-disable-next-line prefer-rest-params
+      ;(window.dataLayer as unknown[]).push(arguments)
+    } as Window['gtag']
   }
+  window.gtag!('event', event, params)
 }
 
 export const analytics = {
