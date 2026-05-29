@@ -393,6 +393,11 @@ export default function ConvertContentSection() {
               label: 'PNG to WebP',
               desc: 'Shrink PNG files by 60–80% by converting to WebP.',
             },
+            {
+              href: '/image-to-pdf',
+              label: 'Image to PDF',
+              desc: 'Convert JPG, PNG, or WebP to a PDF document — free, no upload.',
+            },
           ].map(({ href, label, desc }) => (
             <Link
               key={href}

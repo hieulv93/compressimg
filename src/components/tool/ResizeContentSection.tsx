@@ -544,6 +544,11 @@ export default function ResizeContentSection() {
               desc: 'Hit an exact file size target — 20KB, 50KB, 100KB and more.',
             },
             {
+              href: '/resize-image-for-facebook/',
+              label: 'Resize for Facebook',
+              desc: 'Cover photo (851×315), post, story, and profile — all in one tool.',
+            },
+            {
               href: '/heic-to-jpg/',
               label: 'HEIC to JPG',
               desc: 'Convert iPhone HEIC photos to standard JPEG.',
@@ -552,11 +557,6 @@ export default function ResizeContentSection() {
               href: '/compress-image-for-passport/',
               label: 'Passport Compressor',
               desc: 'US passport photo under 240KB in one click.',
-            },
-            {
-              href: '/compress-image',
-              label: 'Resize + Compress',
-              desc: 'Resize first, then compress — smallest file, best quality.',
             },
           ].map(({ href, label, desc }) => (
             <Link

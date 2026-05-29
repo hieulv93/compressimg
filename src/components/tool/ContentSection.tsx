@@ -285,6 +285,17 @@ export default function ContentSection() {
               Compress multiple images at once and download as a ZIP.
             </p>
           </Link>
+          <Link
+            href="/compress-image-for-wix"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Compress for Wix
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Optimize images for Wix sites — faster pages, better SEO scores.
+            </p>
+          </Link>
         </div>
       </div>
 
