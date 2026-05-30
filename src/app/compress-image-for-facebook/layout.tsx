@@ -5,14 +5,14 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-facebook/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Facebook — Reduce Size',
+  title: 'Does Facebook Compress Images? Yes — Pre-Compress to Keep Quality | Free Tool',
   description:
-    'Free online tool to compress images for Facebook. Reduce JPG, PNG file size before posting — keep quality, avoid double-compression. 100% browser-based, no upload.',
+    'Facebook compresses images when you post them, reducing quality. Pre-compress at quality 80 before uploading to keep photos sharp — free, browser-based, no upload required.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for Facebook — Reduce Photo Size Before Posting',
+    title: 'Does Facebook Compress Images? Yes — Pre-Compress to Keep Quality | Free Tool',
     description:
-      'Reduce JPG and PNG file size before posting on Facebook. Avoid double-compression and keep photos sharp — free, no uploads, 100% browser-based.',
+      'Facebook reduces image quality when you post. Pre-compress at quality 80 before uploading to keep photos sharp for all viewers — free, no uploads, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for Facebook' }],
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Compress Image for Facebook — Free Photo Size Reducer',
+    title: 'Does Facebook Compress Images? Yes — Pre-Compress to Keep Quality | Free Tool',
     description:
       'Compress photos before posting on Facebook to avoid quality loss. 100% browser-based, no uploads.',
     images: [OG_IMAGE],

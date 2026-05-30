@@ -276,41 +276,41 @@ export default function CompressForTwitterContentSection() {
       </div>
 
       <div className="space-y-3">
-        <h2 className="text-xl font-bold text-text-main">More Free Image Tools</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <Link
-            href="/compress-image-for-facebook"
-            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
-          >
-            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress for Facebook
-            </p>
-            <p className="text-xs text-text-muted mt-1">
-              Optimize photos for Facebook feed, cover, and Stories before posting.
-            </p>
-          </Link>
-          <Link
-            href="/compress-image-for-instagram"
-            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
-          >
-            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Compress for Instagram
-            </p>
-            <p className="text-xs text-text-muted mt-1">
-              Reduce photo size before posting on Instagram to avoid double-compression.
-            </p>
-          </Link>
-          <Link
-            href="/resize-image"
-            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
-          >
-            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
-              Resize Image
-            </p>
-            <p className="text-xs text-text-muted mt-1">
-              Resize photos to Twitter&apos;s recommended dimensions before compressing.
-            </p>
-          </Link>
+        <h2 className="text-xl font-bold text-text-main">Other Platform Compressors</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {[
+            {
+              href: '/compress-image-for-facebook',
+              label: 'Compress for Facebook',
+              desc: 'Optimize photos for Facebook feed, cover, and Stories before posting',
+            },
+            {
+              href: '/compress-image-for-instagram',
+              label: 'Compress for Instagram',
+              desc: 'Reduce photo size before posting on Instagram to avoid double-compression',
+            },
+            {
+              href: '/compress-image-for-whatsapp',
+              label: 'Compress for WhatsApp',
+              desc: 'Reduce double-compression blur before sending photos',
+            },
+            {
+              href: '/blog/how-messaging-apps-compress-images',
+              label: 'Do Messaging Apps Compress Images?',
+              desc: 'Twitter vs Instagram vs Facebook vs WhatsApp compared',
+            },
+          ].map(({ href, label, desc }) => (
+            <Link
+              key={href}
+              href={href}
+              className="block rounded-xl border border-border p-3 hover:border-primary transition-colors group"
+            >
+              <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+                {label}
+              </p>
+              <p className="text-xs text-text-muted mt-0.5">{desc}</p>
+            </Link>
+          ))}
         </div>
       </div>
 
