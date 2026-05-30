@@ -53,6 +53,59 @@ const jsonLd = {
         { '@type': 'ListItem', position: 3, name: 'Compress Images for Etsy', item: PAGE_URL },
       ],
     },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is the best image size for Etsy listings?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: "2000 × 2000 pixels at a 1:1 square ratio is the recommended size for Etsy listing photos. This is large enough for Etsy's zoom feature and ensures high-quality thumbnails in search results. Compress to under 800 KB before uploading.",
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What file format should I use for Etsy photos?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'JPEG (JPG) is the recommended format for product photos on Etsy. It provides good quality with smaller file sizes compared to PNG. Use PNG only for images with transparent backgrounds. Note: Etsy does not currently accept WebP.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I make photos smaller for Etsy?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Upload your photo to compressimg.pro, set quality to 82–85, and download the compressed version. For a typical 8 MP product photo, this reduces file size from 5–8 MB to 400–700 KB with no visible quality change.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does Etsy compress photos after upload?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Etsy generates multiple size variants from your uploaded source image. However, compression quality improves when you upload a well-prepared source. Avoid uploading already heavily compressed images — Etsy will re-compress them, adding another generation of quality loss.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Why do my Etsy photos look blurry?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Blurry listing photos are usually caused by uploading images that are too small (under 1000 px), too heavily compressed before upload, or images with low original quality. Upload at 2000 × 2000 px from a sharp original at quality 82–85.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How many photos can I upload to an Etsy listing?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Etsy allows up to 10 photos per listing. Use all 10 slots — listings with more photos typically have higher click-through rates. Include product shots from multiple angles, a lifestyle photo, detail shots, size references, and packaging.',
+          },
+        },
+      ],
+    },
   ],
 }
 

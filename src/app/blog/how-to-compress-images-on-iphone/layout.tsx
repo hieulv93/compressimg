@@ -53,6 +53,59 @@ const jsonLd = {
       ],
     },
     {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'How do I compress photos on my iPhone without an app?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Open Safari and go to compressimg.pro. Tap the upload area, select your photo, adjust quality if needed, and tap Download. The entire process happens in your browser — no app install required.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does compressing photos on iPhone reduce quality?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'At quality 80 (the default), compressed photos are visually indistinguishable from the original on a phone screen or monitor. The compression removes data the human eye cannot easily perceive. For professional print use, keep quality at 85–90.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Why are iPhone photos so large?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'iPhone cameras capture at 12–48 megapixels to preserve maximum detail for editing. This results in raw files of 8–25 MB. For sharing and web use, you only need 1–3 MP, so compression reduces file size by 80–95% without any visible difference.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I compress a HEIC photo on iPhone?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Upload the HEIC file to compressimg.pro in Safari. The tool automatically converts it to JPEG (the universal format) and compresses it at your chosen quality level.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I send a smaller photo from my iPhone via email?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'In the Photos app, share the photo via Mail. The share sheet offers size options (Small, Medium, Large, Actual). Select Medium or Small. Alternatively, compress first at compressimg.pro then attach the compressed file.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does iPhone compress photos automatically when sharing?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'iMessage and WhatsApp do compress photos when sent as messages (not as files). Instagram also re-compresses uploads. If you share via AirDrop, email as a file, or save to Files app, the original uncompressed file is used.',
+          },
+        },
+      ],
+    },
+    {
       '@type': 'HowTo',
       name: 'How to Compress Images on iPhone',
       totalTime: 'PT2M',

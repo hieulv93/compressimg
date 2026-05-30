@@ -53,6 +53,59 @@ const jsonLd = {
         { '@type': 'ListItem', position: 3, name: 'DPI vs Resolution', item: PAGE_URL },
       ],
     },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is the difference between DPI and resolution?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'DPI (dots per inch) is a print concept — it describes how many ink dots a printer places per inch of physical output. Resolution refers to the total pixel count of an image (e.g., 3000 × 2400 px). For printing, both are relevant. For web, only pixel dimensions matter — DPI is ignored by browsers.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does DPI matter for web images?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No. Browsers ignore the DPI value embedded in image files. For web images, only the pixel dimensions affect display. A 800 × 600 px image at 72 DPI displays identically to the same image at 300 DPI — both appear at 800 × 600 pixels in the browser.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What DPI should I use for print?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '300 DPI is the standard for professional print work — photos, magazines, brochures, business cards. For large-format materials viewed from a distance (banners, posters), 100–150 DPI is sufficient. For billboards, as low as 15–72 DPI is common.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What is 72 DPI in pixels?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '72 DPI is a screen resolution standard — originally set by Apple in the 1980s. At 72 DPI, 1 CSS pixel = 1 physical pixel on an original standard monitor. On modern Retina displays at 144+ PPI, the OS scales the display so 1 CSS pixel is still rendered at the same apparent size.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do I calculate pixels needed for a print at 300 DPI?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Multiply the desired print size in inches by 300. For a 4 × 6 inch print: 4 × 300 = 1200 px wide, 6 × 300 = 1800 px tall. For millimeters: px = mm × (300 / 25.4). For example, 35mm = 35 × 11.81 = 413 px.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I change the DPI of an image without losing quality?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'You can change the DPI metadata embedded in a file without resampling the actual pixels. This does not change the image quality or pixel count — only the embedded print size hint. However, increasing DPI by adding new pixels (upsampling) does reduce quality because the software has to invent pixel data.',
+          },
+        },
+      ],
+    },
   ],
 }
 

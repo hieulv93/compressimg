@@ -268,6 +268,80 @@ export default function WhatIsBase64Encoding() {
               </Link>
             </div>
           </section>
+
+          <section className="space-y-4">
+            <h2 className="text-xl font-bold text-text-main">Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  Why does Base64 make image files 33% larger?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  Base64 encodes every 3 bytes of binary data into 4 printable characters. Because 3
+                  bytes become 4 characters, the output is always 33% larger than the input. This
+                  size overhead is the fundamental trade-off — you gain the ability to embed binary
+                  data in text formats, but at a cost to file size.
+                </p>
+              </details>
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  When should I use Base64 for images?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  Base64 makes sense for: small icons under 5–10 KB where eliminating one HTTP
+                  request matters, images embedded in HTML emails (external images are often blocked
+                  by email clients), JSON API responses that must include image data inline, and
+                  offline-first web apps that need images available without network access.
+                </p>
+              </details>
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  Can I use a Base64 image in an img tag?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  Yes. A browser treats a Base64 data URL exactly like a regular image URL. Use it
+                  as the src attribute: &lt;img src=&quot;data:image/jpeg;base64,/9j/4AAQ...&quot;
+                  alt=&quot;Description&quot; /&gt;. No separate HTTP request is needed, as the
+                  image data is embedded directly in the HTML.
+                </p>
+              </details>
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  Does Base64 compress images?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  No. Base64 is an encoding scheme, not a compression algorithm. It converts binary
+                  bytes into text characters, which actually increases data size by 33%. If you want
+                  to reduce image file size, compress the image first (using JPEG quality reduction
+                  or PNG optimization), then encode the compressed result to Base64 if needed.
+                </p>
+              </details>
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  Are Base64 images cached by the browser?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  No. Base64 images embedded in HTML or CSS cannot be cached independently by the
+                  browser — they are part of the document and cached only as long as that document
+                  is cached. External image URLs with their own cache headers can be cached
+                  indefinitely. This is a major reason to avoid Base64 for images larger than a few
+                  KB on public websites.
+                </p>
+              </details>
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  What is the difference between Base64 and a regular image URL?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  A regular image URL (e.g., /images/photo.jpg) requires the browser to make an HTTP
+                  request to fetch the image file — a separate network round-trip. A Base64 data URL
+                  embeds the full image data inside the HTML or CSS, so no network request is
+                  needed. The trade-off: Base64 images are 33% larger, cannot be cached separately,
+                  and increase the size of the embedding document.
+                </p>
+              </details>
+            </div>
+          </section>
         </div>
       </article>
     </main>

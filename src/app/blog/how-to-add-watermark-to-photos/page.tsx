@@ -293,6 +293,79 @@ export default function HowToAddWatermarkToPhotos() {
               Add Watermark to Photo — Free
             </Link>
           </section>
+
+          <section className="space-y-4">
+            <h2 className="text-xl font-bold text-text-main">Frequently Asked Questions</h2>
+            <div className="space-y-3">
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  Does adding a watermark reduce photo quality?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  No, if you use the correct tool. Our watermark tool saves the output at JPEG
+                  quality 92 — visually lossless. The watermark text is rendered on top of your
+                  image using the Canvas API in your browser, so no server processing reduces the
+                  quality. The downloaded file is essentially as sharp as the original.
+                </p>
+              </details>
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  Can someone remove my watermark?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  A determined editor can remove any watermark using Photoshop content-aware fill or
+                  AI tools. However, a visible watermark stops casual theft — most unauthorized
+                  reuse is opportunistic. For maximum protection, use a center watermark at 80%
+                  opacity, which makes the image difficult to use without obvious removal effort.
+                </p>
+              </details>
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  What opacity should I use for a watermark?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  50–70% opacity is the sweet spot for most photographers and content creators —
+                  clearly readable without significantly distracting from the image. Use 20–40% for
+                  subtle branding on portfolio work, and 80–100% for client proofs where you want
+                  maximum deterrence.
+                </p>
+              </details>
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  Where should I place my watermark?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  Bottom right is the most common position for photography watermarks — visible,
+                  minimal, and professional. Center placement offers the most protection (hard to
+                  crop out) and is best for client proof images. Avoid corners that are easily
+                  cropped off if theft prevention is your main goal.
+                </p>
+              </details>
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  What should my watermark text say?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  Your name, studio name, website URL, or copyright notice are the most effective
+                  options. Examples: &quot;© Jane Smith Photography&quot;,
+                  &quot;yourwebsite.com&quot;, or &quot;@yourhandle&quot;. Keep it short — a
+                  watermark that is too long must be reduced to an unreadably small size. A website
+                  URL is especially useful as it drives traffic when the image is shared.
+                </p>
+              </details>
+              <details className="border border-border rounded-lg p-4">
+                <summary className="font-medium text-text-main cursor-pointer">
+                  Does watermarking work on iPhone photos (HEIC)?
+                </summary>
+                <p className="mt-2 text-text-muted text-sm leading-relaxed">
+                  Yes. Our watermark tool accepts HEIC files uploaded in Safari on iPhone and iPad.
+                  The HEIC is decoded in your browser and the watermark is applied before saving the
+                  output as JPEG. No conversion step is needed — just upload your HEIC photo
+                  directly.
+                </p>
+              </details>
+            </div>
+          </section>
         </div>
       </article>
     </main>

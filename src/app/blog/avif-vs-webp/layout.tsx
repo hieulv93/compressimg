@@ -53,6 +53,59 @@ const jsonLd = {
         { '@type': 'ListItem', position: 3, name: 'AVIF vs WebP', item: PAGE_URL },
       ],
     },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Is AVIF better than WebP?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'AVIF produces 20–30% smaller files than WebP at equivalent visual quality, which makes it technically superior in compression. However, WebP has broader browser support (97% vs ~90%) and faster encoding. For most websites in 2026, WebP is the practical choice — use AVIF with a WebP fallback if file size is critical.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does Safari support AVIF?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Safari 16+ (iOS 16 / macOS Ventura and later) added basic AVIF support. Older Safari versions do not support AVIF. This is why the <picture> element fallback to WebP is important — it ensures Safari users always see the image.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is AVIF supported in Chrome?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Chrome has supported AVIF since version 85 (released August 2020). This covers the majority of desktop and Android browser usage.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How much smaller is AVIF compared to JPEG?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'At equivalent visual quality, AVIF is typically 40–60% smaller than JPEG. The actual reduction varies by image type — photographs with smooth gradients show the largest improvement, while flat-color images show less difference.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can I convert images to AVIF or WebP for free?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Use the free tools at compressimg.pro — JPG to WebP and PNG to WebP convert in your browser without any upload. For AVIF conversion, specialized tools or image CDNs handle this at the server level.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does WebP or AVIF support transparency?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Both formats support alpha channel transparency. WebP can replace PNG for transparent images with much smaller file sizes. AVIF also supports transparency with even better compression.',
+          },
+        },
+      ],
+    },
   ],
 }
 

@@ -59,6 +59,59 @@ const jsonLd = {
         },
       ],
     },
+    {
+      '@type': 'FAQPage',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Does adding a watermark reduce photo quality?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No, if you use the correct tool. Our watermark tool saves the output at JPEG quality 92 — visually lossless. The watermark text is rendered on top of your image using the Canvas API in your browser, so no server processing reduces the quality. The downloaded file is essentially as sharp as the original.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can someone remove my watermark?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'A determined editor can remove any watermark using Photoshop content-aware fill or AI tools. However, a visible watermark stops casual theft — most unauthorized reuse is opportunistic. For maximum protection, use a center watermark at 80% opacity, which makes the image difficult to use without obvious removal effort.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What opacity should I use for a watermark?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '50–70% opacity is the sweet spot for most photographers and content creators — clearly readable without significantly distracting from the image. Use 20–40% for subtle branding on portfolio work, and 80–100% for client proofs where you want maximum deterrence.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Where should I place my watermark?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Bottom right is the most common position for photography watermarks — visible, minimal, and professional. Center placement offers the most protection (hard to crop out) and is best for client proof images. Avoid corners that are easily cropped off if theft prevention is your main goal.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'What should my watermark text say?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Your name, studio name, website URL, or copyright notice are the most effective options. Examples: "© Jane Smith Photography", "yourwebsite.com", or "@yourhandle". Keep it short — a watermark that is too long must be reduced to an unreadably small size. A website URL is especially useful as it drives traffic when the image is shared.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Does watermarking work on iPhone photos (HEIC)?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. Our watermark tool accepts HEIC files uploaded in Safari on iPhone and iPad. The HEIC is decoded in your browser and the watermark is applied before saving the output as JPEG. No conversion step is needed — just upload your HEIC photo directly.',
+          },
+        },
+      ],
+    },
   ],
 }
 

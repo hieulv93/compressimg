@@ -335,36 +335,122 @@ export default function BatchCompressPage() {
           Uploading and compressing images one at a time is slow when you have a batch of photos
           from a shoot, a set of product images for an e-commerce listing, or a collection of
           screenshots for documentation. This batch image compressor lets you compress up to{' '}
-          {MAX_FILES} images simultaneously and download all results as a single ZIP file.
+          {MAX_FILES} images simultaneously and download all results as a single ZIP file — no
+          server uploads, no account required, and no watermarks on any output.
         </p>
         <p>
           Each image is compressed independently using the same quality setting. The quality slider
           (default: 80) applies to all files in the batch. JPG, PNG, WebP, and HEIC formats are all
           supported — HEIC files from iPhones are automatically converted to JPEG before
-          compression.
+          compression. You can download each result individually or grab all compressed files in a
+          single ZIP.
         </p>
+
+        <h2 className="text-xl font-bold text-text-main">How Batch Image Compression Works</h2>
+        <p>
+          When you upload multiple files, the tool processes them one by one in your browser using
+          the Web Canvas API and the browser-image-compression library. No data is sent to any
+          server at any point — compression runs entirely on your device, which means your images
+          stay private and processing speed depends on your device rather than internet speed.
+        </p>
+        <p>
+          The quality value you set controls how aggressively each image is compressed. At quality
+          80, a typical 3MB JPEG photograph compresses to 300–600 KB while remaining visually
+          indistinguishable from the original at normal viewing sizes. Lower quality values (60–70)
+          produce smaller files that are acceptable for web thumbnails and social media previews.
+          Higher values (85–95) are appropriate when the images will be enlarged or printed.
+        </p>
+        <p>
+          Once processing is complete, each file shows its original size, compressed size, and
+          percentage reduction. You can download individual files with one click, or use
+          &quot;Download All as ZIP&quot; to get a single archive containing every compressed image
+          — useful when you need to hand off a batch to a client or upload a folder to a CMS.
+        </p>
+
+        <h2 className="text-xl font-bold text-text-main">
+          Batch Compression vs Single Image Compression
+        </h2>
+        <p>
+          This page compresses multiple images using a shared quality setting and outputs a ZIP. The{' '}
+          <Link href="/compress-image" className="text-primary hover:underline">
+            single image compressor
+          </Link>{' '}
+          on /compress-image works differently: it shows a side-by-side before/after preview, lets
+          you fine-tune quality per image, and displays exact file size reduction before you
+          download.
+        </p>
+        <ul className="list-disc pl-5 space-y-2">
+          <li>
+            <strong className="text-text-main">Use batch (/compress-images)</strong> when you have
+            multiple images that all need the same compression level — product photos for a listing,
+            images for a blog post, or a set of screenshots for documentation.
+          </li>
+          <li>
+            <strong className="text-text-main">Use single (/compress-image)</strong> when you need
+            to preview the result before downloading, want to set different quality levels per
+            image, or are compressing a single important photo where exact quality matters.
+          </li>
+        </ul>
+
+        <h2 className="text-xl font-bold text-text-main">Tips for Getting the Best Results</h2>
+        <ul className="list-disc pl-5 space-y-2">
+          <li>
+            <strong className="text-text-main">Set quality before uploading.</strong> The quality
+            slider locks once images are being processed. If you want a different quality level,
+            click &quot;Compress more&quot; and re-upload.
+          </li>
+          <li>
+            <strong className="text-text-main">Quality 80 works for most use cases.</strong> Product
+            photos for Shopify or WooCommerce, blog post images, and social media posts all compress
+            well at 80 without visible quality loss.
+          </li>
+          <li>
+            <strong className="text-text-main">Use 70–75 for thumbnail-only images.</strong> If the
+            images will only be displayed at small sizes (avatars, preview cards, email banners),
+            lower quality produces much smaller files with no visible difference.
+          </li>
+          <li>
+            <strong className="text-text-main">Group similar content types.</strong> Compress all
+            product photos together, then re-upload screenshots separately if they need different
+            quality settings. Mixed batches with varied content types may benefit from separate
+            passes.
+          </li>
+          <li>
+            <strong className="text-text-main">HEIC files convert automatically.</strong> iPhone
+            photos in HEIC format are converted to JPEG before compression — you do not need to
+            convert them first.
+          </li>
+        </ul>
 
         <h2 className="text-xl font-bold text-text-main">Who Uses Batch Image Compression?</h2>
         <ul className="list-disc pl-5 space-y-2">
           <li>
             <strong className="text-text-main">E-commerce sellers</strong> — compress 5 product
-            photos at once before uploading to Shopify, WooCommerce, or Amazon
+            photos at once before uploading to Shopify, WooCommerce, or Amazon. Smaller images mean
+            faster page load and better Core Web Vitals scores, which directly affect conversion
+            rate.
           </li>
           <li>
-            <strong className="text-text-main">Real estate agents</strong> — compress property
-            photos before adding to listings
+            <strong className="text-text-main">Real estate agents</strong> — compress an entire
+            property shoot in one batch before uploading to listing platforms that cap image file
+            sizes.
           </li>
           <li>
             <strong className="text-text-main">Bloggers and writers</strong> — compress all article
-            images in one pass before publishing
+            images in one pass before publishing to WordPress or a headless CMS.
           </li>
           <li>
             <strong className="text-text-main">Social media managers</strong> — compress a set of
-            Instagram or LinkedIn images to meet platform limits
+            Instagram carousel images or LinkedIn document cover slides to stay within platform
+            upload limits.
           </li>
           <li>
             <strong className="text-text-main">Developers</strong> — compress UI screenshots and
-            design assets before committing to a repository
+            design assets before committing to a repository or adding to documentation.
+          </li>
+          <li>
+            <strong className="text-text-main">Photographers</strong> — prepare a client gallery for
+            web delivery without spending time on each individual photo.
           </li>
         </ul>
 
@@ -402,19 +488,31 @@ export default function BatchCompressPage() {
           {[
             {
               q: 'How many images can I compress at once?',
-              a: `Up to ${MAX_FILES} images per batch. After downloading, click "Compress more" to process the next batch.`,
+              a: `Up to ${MAX_FILES} images per batch. After downloading, click "Compress more" to process the next batch of up to ${MAX_FILES} more images.`,
             },
             {
               q: 'Can I download all images as a ZIP?',
-              a: 'Yes. Once all images are compressed, "Download All as ZIP" bundles every result into a single download.',
+              a: 'Yes. Once all images are compressed, "Download All as ZIP" bundles every result into a single download. You can also download each image individually using its own download button.',
             },
             {
               q: 'Are my images uploaded to a server?',
-              a: 'No. All compression happens in your browser — your files never leave your device.',
+              a: 'No. All compression happens in your browser using the Web Canvas API — your files never leave your device and are not stored anywhere.',
             },
             {
-              q: 'Does the quality setting apply to all images?',
-              a: 'Yes. Set quality before uploading. Quality 80 is the recommended starting point for most images.',
+              q: 'Does the quality setting apply to all images in the batch?',
+              a: 'Yes. The quality slider applies uniformly to every file in the batch. Set it before uploading. If you need different quality levels for different images, compress them in separate batches.',
+            },
+            {
+              q: 'What quality setting should I use for e-commerce product photos?',
+              a: 'Quality 75–80 is the standard for e-commerce product images. At quality 80, a typical product photo compresses from 3–5 MB to 300–500 KB while remaining sharp enough for zoom views. If your platform shows images small (under 500px wide), quality 70 is often sufficient.',
+            },
+            {
+              q: 'Can I compress different image formats in the same batch?',
+              a: 'Yes. You can mix JPG, PNG, WebP, and HEIC files in a single batch. Each file is compressed according to its format — HEIC files are automatically converted to JPEG, and PNG files with transparency are preserved as PNG.',
+            },
+            {
+              q: 'What is the maximum file size per image?',
+              a: `Each image must be under ${MAX_FILE_SIZE_MB}MB. Files larger than this are skipped to prevent the browser from running out of memory. If you have very large RAW photos, resize them first using the resize tool, then compress.`,
             },
           ].map(({ q, a }) => (
             <div key={q}>
