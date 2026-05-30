@@ -199,8 +199,14 @@ export default function HowMessagingAppsCompressImages() {
               </p>
               <p>
                 Storage. Free Slack workspaces have a 5 GB cap. A team sharing 10 uncompressed phone
-                photos per day (5 MB each) fills that cap in 100 days. Pre-compressing to under 500
-                KB extends storage 10× at no cost and makes channels load faster for everyone.
+                photos per day (5 MB each) fills that cap in 100 days.{' '}
+                <Link
+                  href="/compress-image-for-slack"
+                  className="text-primary underline font-medium"
+                >
+                  Pre-compressing to under 500 KB
+                </Link>{' '}
+                extends storage 10× at no cost and makes channels load faster for everyone.
               </p>
             </div>
             <Link
@@ -226,9 +232,12 @@ export default function HowMessagingAppsCompressImages() {
             </p>
             <p className="text-text-muted leading-relaxed">
               The gap between what colleagues see inline versus the full file is the most-reported
-              Teams image quality issue. The fix is the same as Slack: pre-compress to under 1 MB
-              before uploading. This gives the Teams compression algorithm a smaller file to work
-              with, reducing how much it degrades the inline preview.
+              Teams image quality issue. The fix is the same as Slack:{' '}
+              <Link href="/compress-image-for-teams" className="text-primary underline font-medium">
+                pre-compress to under 1 MB before uploading
+              </Link>
+              . This gives the Teams compression algorithm a smaller file to work with, reducing how
+              much it degrades the inline preview.
             </p>
             <p className="text-text-muted leading-relaxed">
               During <strong className="text-text-main">live meetings and screen sharing</strong>,
@@ -261,7 +270,14 @@ export default function HowMessagingAppsCompressImages() {
               pasted directly into the Discord message box (Ctrl+V / Cmd+V) are compressed
               aggressively before sending. This catches many users off guard — a screenshot pasted
               from clipboard looks noticeably worse than the same file uploaded via the attachment
-              button. If image quality matters, always upload via the attachment button, not paste.
+              button. If image quality matters, always{' '}
+              <Link
+                href="/compress-image-for-discord"
+                className="text-primary underline font-medium"
+              >
+                upload via the attachment button
+              </Link>
+              , not paste.
             </p>
             <p className="text-text-muted leading-relaxed">
               Very large images (high-resolution camera files) may be resized by Discord for inline
@@ -312,6 +328,17 @@ export default function HowMessagingAppsCompressImages() {
                 </div>
               ))}
             </div>
+            <p className="text-text-muted leading-relaxed">
+              When sending as a standard photo,{' '}
+              <Link
+                href="/compress-image-for-whatsapp"
+                className="text-primary underline font-medium"
+              >
+                pre-compressing to 300–500 KB at quality 80
+              </Link>{' '}
+              before sending noticeably reduces the double-compression effect — WhatsApp has less
+              data to degrade, and the recipient sees a sharper result.
+            </p>
             <Link
               href="/compress-image-for-whatsapp"
               className="inline-block text-sm font-semibold text-primary underline"
