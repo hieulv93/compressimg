@@ -5,14 +5,14 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-teams/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Microsoft Teams Compresses Images — Pre-Compress to 1MB to Keep Quality | Free Tool',
+  title: 'Does Microsoft Teams Compress Images? Yes — Pre-Compress to 1MB to Keep Quality | Free',
   description:
-    'Microsoft Teams reduces image quality for inline channel display. Pre-compress to under 1 MB before sharing to keep previews sharp on all devices — free, browser-based, no install.',
+    'Microsoft Teams compresses images for inline channel display. Pre-compress to under 1 MB before sharing to keep previews sharp on all devices — free, browser-based, no install.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Microsoft Teams Compresses Images — Pre-Compress to 1MB to Keep Quality | Free Tool',
+    title: 'Does Microsoft Teams Compress Images? Yes — Pre-Compress to 1MB to Keep Quality | Free',
     description:
-      'Microsoft Teams reduces image quality for inline channel display. Pre-compress to under 1 MB before sharing to keep previews sharp for all teammates — free, browser-based.',
+      'Microsoft Teams compresses images for inline channel display. Pre-compress to under 1 MB before sharing to keep previews sharp for all teammates — free, browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Microsoft Teams Compresses Images — Pre-Compress to 1MB to Keep Quality | Free Tool',
+    title: 'Does Microsoft Teams Compress Images? Yes — Pre-Compress to 1MB to Keep Quality | Free',
     description:
       'Teams reduces image quality for inline display. Pre-compress to under 1 MB to keep channel photos sharp on all devices — 100% browser-based, no install.',
     images: [OG_IMAGE],

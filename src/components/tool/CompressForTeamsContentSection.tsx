@@ -145,6 +145,53 @@ export default function CompressForTeamsContentSection() {
       </div>
 
       <div className="space-y-3">
+        <h2 className="text-xl font-bold text-text-main">
+          Why Do Pasted Images Look Blurry in Teams?
+        </h2>
+        <p className="text-text-muted text-sm leading-relaxed">
+          If you paste a screenshot directly into a Teams chat using{' '}
+          <strong className="text-text-main">Ctrl+V or Cmd+V</strong>, Teams applies its own
+          aggressive compression to the clipboard image before sending. The result is often
+          noticeably blurry — text becomes hard to read, fine details disappear, and JPEG artifacts
+          appear in flat-color areas.
+        </p>
+        <p className="text-text-muted text-sm leading-relaxed">
+          This happens because clipboard images are passed to Teams as raw bitmap data, and Teams
+          re-encodes them at a low quality setting for bandwidth efficiency. The compression is
+          applied before you even see the preview in the chat box.
+        </p>
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">How to avoid blurry pasted images in Teams</p>
+          <ul className="space-y-1 text-text-muted text-xs leading-relaxed">
+            <li>
+              ✅ <strong className="text-text-main">Save as a file first:</strong> Take your
+              screenshot, save it as a .jpg or .png, then upload via the attachment button (
+              <em>not paste</em>) — Teams delivers uploaded files at much higher quality
+            </li>
+            <li>
+              ✅ <strong className="text-text-main">Pre-compress before pasting:</strong> Compress
+              the image at quality 85 using this tool, then paste — gives Teams less room to degrade
+              the quality further
+            </li>
+            <li>
+              ✅ <strong className="text-text-main">Use the attachment button:</strong> Click the
+              paperclip / attachment icon → upload your image file — always produces sharper results
+              than clipboard paste
+            </li>
+            <li>
+              ❌ <strong className="text-text-main">Avoid:</strong> Pasting directly from Print
+              Screen or Snipping Tool without saving as a file first
+            </li>
+          </ul>
+        </div>
+        <p className="text-text-muted text-sm leading-relaxed">
+          The root cause is the same whether you are pasting a screenshot from Windows Snipping
+          Tool, Mac Screenshot, or any design tool like Figma or Photoshop. Saving the image to disk
+          and uploading it as a file bypasses Teams&apos; clipboard compression entirely.
+        </p>
+      </div>
+
+      <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">Other Platform Compressors</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[

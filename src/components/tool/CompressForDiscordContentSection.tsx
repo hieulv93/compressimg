@@ -229,28 +229,33 @@ export default function CompressForDiscordContentSection() {
       </div>
 
       <div className="space-y-3">
-        <h2 className="text-xl font-bold text-text-main">Related Tools</h2>
+        <h2 className="text-xl font-bold text-text-main">Other Platform Compressors</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
             {
-              href: '/compress-image',
-              label: 'Compress Image',
-              desc: 'General image compressor for any use case',
+              href: '/compress-image-for-slack',
+              label: 'Compress for Slack',
+              desc: 'Optimize images for Slack channels — mobile and desktop',
             },
             {
-              href: '/resize-image',
-              label: 'Resize Image',
-              desc: 'Reduce dimensions for very large files',
+              href: '/compress-image-for-teams',
+              label: 'Compress for Teams',
+              desc: 'Keep inline channel previews sharp at under 1MB',
             },
             {
-              href: '/png-to-jpg',
-              label: 'PNG to JPG',
-              desc: 'Convert screenshots to smaller JPG',
+              href: '/compress-image-for-whatsapp',
+              label: 'Compress for WhatsApp',
+              desc: 'Reduce double-compression blur before sending',
             },
             {
-              href: '/heic-to-jpg',
-              label: 'HEIC to JPG',
-              desc: 'Convert iPhone photos to Discord-compatible JPG',
+              href: '/compress-image-for-email',
+              label: 'Compress for Email',
+              desc: 'Reduce image size for email attachments',
+            },
+            {
+              href: '/compress-image-to-1mb',
+              label: 'Compress to 1MB',
+              desc: 'Target exactly under 1MB for any platform',
             },
             {
               href: '/compress-gif-online',
@@ -258,9 +263,9 @@ export default function CompressForDiscordContentSection() {
               desc: 'Reduce GIF size for Discord uploads',
             },
             {
-              href: '/compress-images',
-              label: 'Batch Compress',
-              desc: 'Compress multiple images at once',
+              href: '/blog/how-messaging-apps-compress-images',
+              label: 'Do Messaging Apps Compress Images?',
+              desc: 'Slack vs Teams vs Discord vs WhatsApp compared',
             },
           ].map(({ href, label, desc }) => (
             <Link

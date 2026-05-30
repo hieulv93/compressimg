@@ -5,12 +5,12 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-slack/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Slack Image Compression Explained — Pre-Compress for Mobile & Previews (Free)',
+  title: 'Does Slack Compress Images? Yes on Mobile — Keep Photos Sharp | Free Tool',
   description:
-    'Slack does not compress images on desktop but does compress on mobile. Inline previews are lower-res on all devices. Pre-compress at quality 80 before uploading to keep photos sharp for everyone — free, browser-based.',
+    'Slack compresses images on mobile but not on desktop. Inline previews are lower-res on all devices. Pre-compress at quality 80 before uploading to keep photos sharp for everyone — free, browser-based.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Slack Image Compression Explained — Pre-Compress for Mobile & Previews (Free)',
+    title: 'Does Slack Compress Images? Yes on Mobile — Keep Photos Sharp | Free Tool',
     description:
       'Slack compresses images on mobile but not desktop. Inline previews are lower-res on all devices. Pre-compress before uploading to keep photos sharp for all teammates — free, browser-based.',
     url: PAGE_URL,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Slack Image Compression Explained — Pre-Compress for Mobile & Previews (Free)',
+    title: 'Does Slack Compress Images? Yes on Mobile — Keep Photos Sharp | Free Tool',
     description:
       'Slack compresses on mobile, not desktop. Previews are lower-res everywhere. Pre-compress to keep quality sharp across all devices — 100% browser-based, no sign-up.',
     images: [OG_IMAGE],
