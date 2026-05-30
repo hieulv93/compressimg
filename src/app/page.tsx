@@ -302,6 +302,11 @@ const popularUseCases = [
     title: 'Batch Compress Images',
     description: 'Compress multiple images at once — ZIP download when done.',
   },
+  {
+    href: '/image-converter',
+    title: 'Image Converter',
+    description: 'Convert between JPG, PNG, WebP, HEIC, BMP, TIFF, and ICO — free, no upload.',
+  },
 ]
 
 export default function HomePage() {

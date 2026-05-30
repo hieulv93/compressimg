@@ -290,7 +290,10 @@ export default function CompressImagesForEtsy() {
                 — convert WebP to JPEG for Etsy upload
               </li>
               <li>
-                <Link href="/compress-images-for-shopify" className="text-primary hover:underline">
+                <Link
+                  href="/blog/compress-images-for-shopify"
+                  className="text-primary hover:underline"
+                >
                   Compress images for Shopify
                 </Link>{' '}
                 — similar guide for Shopify stores

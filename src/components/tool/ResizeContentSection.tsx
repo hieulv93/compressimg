@@ -558,6 +558,76 @@ export default function ResizeContentSection() {
               label: 'Passport Compressor',
               desc: 'US passport photo under 240KB in one click.',
             },
+            {
+              href: '/resize-jpg/',
+              label: 'Resize JPG',
+              desc: 'Resize JPEG files to any dimension — web, email, social.',
+            },
+            {
+              href: '/resize-png/',
+              label: 'Resize PNG',
+              desc: 'Resize PNG images without losing transparency.',
+            },
+            {
+              href: '/resize-webp/',
+              label: 'Resize WebP',
+              desc: 'Resize WebP for Next.js, Shopify, and modern web projects.',
+            },
+            {
+              href: '/resize-gif/',
+              label: 'Resize GIF',
+              desc: 'Resize animated GIFs — outputs PNG for max compatibility.',
+            },
+            {
+              href: '/resize-image-for-whatsapp/',
+              label: 'Resize for WhatsApp',
+              desc: 'Status (1080×1920), profile, link preview, and sticker sizes.',
+            },
+            {
+              href: '/resize-image-for-tiktok/',
+              label: 'Resize for TikTok',
+              desc: 'Video cover (1080×1920), profile, and square formats.',
+            },
+            {
+              href: '/resize-image-for-pinterest/',
+              label: 'Resize for Pinterest',
+              desc: 'Standard (1000×1500), square, long pin, and infographic sizes.',
+            },
+            {
+              href: '/resize-image-for-resume/',
+              label: 'Resize for Resume',
+              desc: 'LinkedIn, CV, Naukri, and government portal photo sizes.',
+            },
+            {
+              href: '/resize-image-to-4x6/',
+              label: 'Resize to 4×6',
+              desc: 'Standard photo print size — portrait and landscape presets.',
+            },
+            {
+              href: '/resize-image-to-600x600/',
+              label: 'Resize to 600×600',
+              desc: 'Square format for WooCommerce, eBay, and passport photos.',
+            },
+            {
+              href: '/resize-image-to-800x600/',
+              label: 'Resize to 800×600',
+              desc: 'Legacy 4:3 format for government portals and email images.',
+            },
+            {
+              href: '/enlarge-image/',
+              label: 'Enlarge Image',
+              desc: 'Scale images up to 400% — useful for low-res photos.',
+            },
+            {
+              href: '/make-image-smaller/',
+              label: 'Make Image Smaller',
+              desc: 'Reduce dimensions and file size in one step.',
+            },
+            {
+              href: '/image-converter/',
+              label: 'Image Converter',
+              desc: 'Convert between JPG, PNG, WebP, HEIC, BMP, TIFF, and ICO.',
+            },
           ].map(({ href, label, desc }) => (
             <Link
               key={label}

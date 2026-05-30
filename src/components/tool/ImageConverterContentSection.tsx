@@ -232,6 +232,10 @@ export default function ImageConverterContentSection() {
             { href: '/webp-to-png', label: 'WebP to PNG', desc: 'WebP → lossless PNG' },
             { href: '/heic-to-jpg', label: 'HEIC to JPG', desc: 'iPhone photos → JPEG' },
             { href: '/heic-to-png', label: 'HEIC to PNG', desc: 'iPhone photos → PNG' },
+            { href: '/heic-to-webp', label: 'HEIC to WebP', desc: 'iPhone photos → WebP' },
+            { href: '/bmp-to-png', label: 'BMP to PNG', desc: 'BMP → web-ready PNG' },
+            { href: '/tiff-to-png', label: 'TIFF to PNG', desc: 'TIFF → compressed PNG' },
+            { href: '/ico-to-png', label: 'ICO to PNG', desc: 'Icon → standard PNG' },
           ].map(({ href, label, desc }) => (
             <Link
               key={href}

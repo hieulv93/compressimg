@@ -296,6 +296,94 @@ export default function ContentSection() {
               Optimize images for Wix sites — faster pages, better SEO scores.
             </p>
           </Link>
+          <Link
+            href="/image-converter"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Image Converter
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Convert between JPG, PNG, WebP, HEIC, BMP, TIFF, and ICO formats.
+            </p>
+          </Link>
+          <Link
+            href="/photo-compressor"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Photo Compressor
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Compress photos from your camera or phone — JPG, PNG, WebP, HEIC.
+            </p>
+          </Link>
+          <Link
+            href="/reduce-image-size"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Reduce Image Size
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Make images smaller without visible quality loss — free, no upload.
+            </p>
+          </Link>
+          <Link
+            href="/compress-image-for-resume"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Compress for Resume
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Reduce profile photo size for job portals — Naukri, LinkedIn, IBPS.
+            </p>
+          </Link>
+          <Link
+            href="/compress-image-to-30kb"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Compress to 30KB
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Reduce any photo to under 30KB for UPSC, SSC, and government forms.
+            </p>
+          </Link>
+          <Link
+            href="/compress-image-to-150kb"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Compress to 150KB
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Reduce to under 150KB for college admissions and scholarship portals.
+            </p>
+          </Link>
+          <Link
+            href="/compress-image-to-800kb"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Compress to 800KB
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Reduce to under 800KB for Squarespace, Wix, and email newsletters.
+            </p>
+          </Link>
+          <Link
+            href="/compress-image-to-4mb"
+            className="block rounded-xl border border-border p-4 hover:border-primary transition-colors group"
+          >
+            <p className="font-semibold text-text-main text-sm group-hover:text-primary transition-colors">
+              Compress to 4MB
+            </p>
+            <p className="text-xs text-text-muted mt-1">
+              Reduce to under 4MB — WhatsApp document limit and email attachments.
+            </p>
+          </Link>
         </div>
       </div>
 
