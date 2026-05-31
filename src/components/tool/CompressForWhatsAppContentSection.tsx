@@ -39,6 +39,12 @@ export default function CompressForWhatsAppContentSection() {
           send, starting with an optimized 500KB file results in significantly less quality loss
           than sending a raw 10MB photo. The recipient sees a noticeably sharper image.
         </p>
+        <p className="text-sm text-text-muted pt-1">
+          To send sharper photos on WhatsApp —{' '}
+          <a href="#compress-tool" className="text-primary hover:underline font-medium">
+            use the compressor above ↑
+          </a>
+        </p>
       </div>
 
       <div className="space-y-3">

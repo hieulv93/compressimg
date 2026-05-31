@@ -45,6 +45,12 @@ export default function CompressForDiscordContentSection() {
           Pre-compressing before uploading ensures everyone in the channel sees your image at the
           exact quality you intended — without Discord&apos;s re-encoding affecting the result.
         </p>
+        <p className="text-sm text-text-muted pt-1">
+          To share images at full quality on Discord —{' '}
+          <a href="#compress-tool" className="text-primary hover:underline font-medium">
+            use the compressor above ↑
+          </a>
+        </p>
       </div>
 
       <div className="space-y-3">

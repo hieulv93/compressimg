@@ -45,6 +45,12 @@ export default function CompressForTeamsContentSection() {
           only way to reduce SharePoint storage consumption, speed up loading for everyone in the
           channel, and ensure colleagues receive an optimally sized file.
         </p>
+        <p className="text-sm text-text-muted pt-1">
+          To reduce Teams storage and share optimally sized files —{' '}
+          <a href="#compress-tool" className="text-primary hover:underline font-medium">
+            use the compressor above ↑
+          </a>
+        </p>
       </div>
 
       <div className="space-y-3">

@@ -50,6 +50,12 @@ export default function CompressForSlackContentSection() {
           Slack also reduces quality for animated GIFs on all platforms to limit bandwidth. For
           static images uploaded from desktop, the original is always preserved and downloadable.
         </p>
+        <p className="text-sm text-text-muted pt-1">
+          To keep photos sharp across Slack desktop and mobile —{' '}
+          <a href="#compress-tool" className="text-primary hover:underline font-medium">
+            use the compressor above ↑
+          </a>
+        </p>
       </div>
 
       <div className="space-y-3">

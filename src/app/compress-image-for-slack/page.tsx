@@ -134,7 +134,7 @@ export default function CompressForSlackPage() {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div id="compress-tool" className="space-y-4">
           <UploadBox
             state={uploadBoxState}
             onFileSelect={handleFileSelect}
