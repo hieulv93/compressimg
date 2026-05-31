@@ -11,6 +11,7 @@ import type { CompressResult } from '@/lib/compress'
 import { MAX_FILE_SIZE_MB } from '@/lib/utils'
 import { analytics } from '@/lib/analytics'
 import CompressForDiscordContentSection from '@/components/tool/CompressForDiscordContentSection'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 
 type PageState = 'idle' | 'processing' | 'done' | 'error'
 
@@ -124,6 +125,13 @@ export default function CompressForDiscordPage() {
   return (
     <main className="flex-1">
       <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12 space-y-6">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Compress', href: '/compress-image' },
+            { label: 'For Discord' },
+          ]}
+        />
         <div className="text-center space-y-2">
           <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
             Compress Image for Discord

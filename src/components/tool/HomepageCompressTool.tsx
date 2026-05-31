@@ -1,21 +1,18 @@
-﻿'use client'
+'use client'
 
 import { useState, useCallback, useRef, useEffect } from 'react'
 import UploadBox from '@/components/tool/UploadBox'
 import QualitySlider from '@/components/tool/QualitySlider'
 import ProgressBar from '@/components/tool/ProgressBar'
 import ResultCard from '@/components/tool/ResultCard'
-import AdSlot from '@/components/ads/AdSlot'
 import { compressImage, revokePreview } from '@/lib/compress'
 import type { CompressResult } from '@/lib/compress'
 import { MAX_FILE_SIZE_MB } from '@/lib/utils'
 import { analytics } from '@/lib/analytics'
-import CompressForWhatsAppContentSection from '@/components/tool/CompressForWhatsAppContentSection'
-import Breadcrumb from '@/components/layout/Breadcrumb'
 
 type PageState = 'idle' | 'processing' | 'done' | 'error'
 
-export default function CompressForWhatsAppPage() {
+export default function HomepageCompressTool() {
   const [pageState, setPageState] = useState<PageState>('idle')
   const [quality, setQuality] = useState(80)
   const [result, setResult] = useState<CompressResult | null>(null)
@@ -25,7 +22,6 @@ export default function CompressForWhatsAppPage() {
   const origUrlRef = useRef<string | null>(null)
   const qualityTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  // Auto-recompress 800ms after slider stops (only when a result already exists)
   useEffect(() => {
     if (pageState !== 'done' || !originalFile) return
     if (qualityTimerRef.current) clearTimeout(qualityTimerRef.current)
@@ -123,70 +119,41 @@ export default function CompressForWhatsAppPage() {
           : 'idle'
 
   return (
-    <main className="flex-1">
-      <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12 space-y-6">
-        <Breadcrumb
-          items={[
-            { label: 'Home', href: '/' },
-            { label: 'Compress', href: '/compress-image' },
-            { label: 'For WhatsApp' },
-          ]}
+    <div className="space-y-4">
+      <UploadBox
+        state={uploadBoxState}
+        onFileSelect={handleFileSelect}
+        errorMessage={errorMessage}
+      />
+
+      {uploadBoxState === 'idle' && (
+        <div className="flex items-center justify-center gap-3 text-xs text-text-muted flex-wrap">
+          <span>⚡ Compressed in seconds</span>
+          <span>·</span>
+          <span>🔒 Images never leave your device</span>
+          <span>·</span>
+          <span>✓ Free, no sign-up</span>
+        </div>
+      )}
+
+      <QualitySlider value={quality} onChange={setQuality} disabled={pageState === 'processing'} />
+
+      <ProgressBar visible={pageState === 'processing'} quality={quality} />
+
+      {pageState === 'done' && result && originalFile && (
+        <ResultCard
+          blob={result.blob}
+          previewUrl={result.previewUrl}
+          originalPreviewUrl={originalPreviewUrl ?? undefined}
+          originalSize={result.originalSize}
+          compressedSize={result.compressedSize}
+          format={result.format}
+          originalName={originalFile.name}
+          onReset={handleReset}
+          onRecompress={handleRecompress}
+          onDownload={() => analytics.imageDownloaded(Math.round(result.compressedSize / 1024))}
         />
-        <div className="text-center space-y-2">
-          <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
-            Compress Image for WhatsApp
-          </h1>
-          <p className="text-text-muted text-sm sm:text-base">
-            Reduce photo size before sharing on WhatsApp — avoid quality loss from
-            double-compression
-          </p>
-        </div>
-
-        <div id="compress-tool" className="space-y-4">
-          <UploadBox
-            state={uploadBoxState}
-            onFileSelect={handleFileSelect}
-            errorMessage={errorMessage}
-          />
-
-          {uploadBoxState === 'idle' && (
-            <div className="flex items-center justify-center gap-3 text-xs text-text-muted flex-wrap">
-              <span>⚡ Compressed in seconds</span>
-              <span>·</span>
-              <span>🔒 Images never leave your device</span>
-              <span>·</span>
-              <span>✓ Free, no sign-up</span>
-            </div>
-          )}
-
-          <QualitySlider
-            value={quality}
-            onChange={setQuality}
-            disabled={pageState === 'processing'}
-          />
-
-          <ProgressBar visible={pageState === 'processing'} quality={quality} />
-        </div>
-
-        {pageState === 'done' && result && originalFile && (
-          <ResultCard
-            blob={result.blob}
-            previewUrl={result.previewUrl}
-            originalPreviewUrl={originalPreviewUrl ?? undefined}
-            originalSize={result.originalSize}
-            compressedSize={result.compressedSize}
-            format={result.format}
-            originalName={originalFile.name}
-            onReset={handleReset}
-            onRecompress={handleRecompress}
-            onDownload={() => analytics.imageDownloaded(Math.round(result.compressedSize / 1024))}
-          />
-        )}
-
-        <AdSlot compressionDone={pageState === 'done'} slot="placeholder-slot-id" />
-
-        <CompressForWhatsAppContentSection />
-      </div>
-    </main>
+      )}
+    </div>
   )
 }
