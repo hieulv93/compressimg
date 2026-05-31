@@ -10,7 +10,8 @@ import GAPageview from '@/components/analytics/GAPageview'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
-  display: 'optional',
+  display: 'swap',
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
