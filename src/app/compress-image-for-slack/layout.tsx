@@ -32,18 +32,6 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: 'Compress Image for Slack',
-          item: PAGE_URL,
-        },
-      ],
-    },
-    {
       '@type': 'WebApplication',
       name: 'CompressImg — Compress Image for Slack',
       url: PAGE_URL,

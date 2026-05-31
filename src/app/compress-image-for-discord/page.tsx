@@ -129,7 +129,7 @@ export default function CompressForDiscordPage() {
           items={[
             { label: 'Home', href: '/' },
             { label: 'Compress', href: '/compress-image' },
-            { label: 'For Discord' },
+            { label: 'For Discord', url: 'https://compressimg.pro/compress-image-for-discord/' },
           ]}
         />
         <div className="text-center space-y-2">

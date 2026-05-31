@@ -129,7 +129,7 @@ export default function CompressForWhatsAppPage() {
           items={[
             { label: 'Home', href: '/' },
             { label: 'Compress', href: '/compress-image' },
-            { label: 'For WhatsApp' },
+            { label: 'For WhatsApp', url: 'https://compressimg.pro/compress-image-for-whatsapp/' },
           ]}
         />
         <div className="text-center space-y-2">

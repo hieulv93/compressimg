@@ -129,7 +129,7 @@ export default function CompressForTeamsPage() {
           items={[
             { label: 'Home', href: '/' },
             { label: 'Compress', href: '/compress-image' },
-            { label: 'For Teams' },
+            { label: 'For Teams', url: 'https://compressimg.pro/compress-image-for-teams/' },
           ]}
         />
         <div className="text-center space-y-2">

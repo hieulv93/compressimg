@@ -129,7 +129,7 @@ export default function CompressForSlackPage() {
           items={[
             { label: 'Home', href: '/' },
             { label: 'Compress', href: '/compress-image' },
-            { label: 'For Slack' },
+            { label: 'For Slack', url: 'https://compressimg.pro/compress-image-for-slack/' },
           ]}
         />
         <div className="text-center space-y-2">
