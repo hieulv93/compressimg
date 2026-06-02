@@ -142,6 +142,21 @@ export default function CompressForSlackPage() {
           </p>
         </div>
 
+        {/* Direct answer box — visible above the fold for informational searchers */}
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">Does Slack compress images?</p>
+          <p className="text-text-muted leading-relaxed text-xs">
+            <strong className="text-text-main">Yes, on mobile.</strong> The Slack mobile app
+            recompresses photos before sending, which is why screenshots and detailed images often
+            look blurry in Slack channels. On desktop, Slack stores the original — but inline
+            previews are always lower-res.
+          </p>
+          <p className="text-text-muted leading-relaxed text-xs">
+            <strong className="text-text-main">The fix:</strong> pre-compress your image below so it
+            arrives crisp on every device, regardless of how teammates view it.
+          </p>
+        </div>
+
         <div id="compress-tool" className="space-y-4">
           <UploadBox
             state={uploadBoxState}

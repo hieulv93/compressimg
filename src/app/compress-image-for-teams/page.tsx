@@ -142,6 +142,22 @@ export default function CompressForTeamsPage() {
           </p>
         </div>
 
+        {/* Direct answer box — visible above the fold for informational searchers */}
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">Does Microsoft Teams compress images?</p>
+          <p className="text-text-muted leading-relaxed text-xs">
+            <strong className="text-text-main">Yes — when you paste from clipboard.</strong> Teams
+            automatically compresses clipboard-pasted images, which is why screenshots and diagrams
+            look blurry in chat. Files uploaded directly keep the original, but Teams still
+            generates compressed inline previews for everyone in the channel.
+          </p>
+          <p className="text-text-muted leading-relaxed text-xs">
+            <strong className="text-text-main">The fix:</strong> pre-compress your image below
+            before sharing so Teams&apos; compression has nothing left to degrade — keeping
+            screenshots and diagrams fully readable.
+          </p>
+        </div>
+
         <div id="compress-tool" className="space-y-4">
           <UploadBox
             state={uploadBoxState}
