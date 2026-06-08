@@ -2,6 +2,24 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'how-to-compress-images-for-email',
+    title: 'How to Compress Images for Email Attachments (2026)',
+    description:
+      'Gmail limit is 25MB, Outlook is 20MB. Reduce image file size for email without losing quality — ideal dimensions, best format, and free browser tool.',
+    date: '2026-06-08',
+    readTime: '6 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'png-vs-jpg',
+    title: 'PNG vs JPG: Which Image Format Should You Use? (2026 Guide)',
+    description:
+      'PNG vs JPG comparison — when to use each, file size differences, transparency support, quality loss, and the right format for web, social media, and print.',
+    date: '2026-06-08',
+    readTime: '7 min read',
+    category: 'Guide',
+  },
+  {
     slug: 'dpi-vs-resolution-print-vs-web',
     title: 'DPI vs Resolution: Image Settings for Print vs Web (2026 Guide)',
     description:
