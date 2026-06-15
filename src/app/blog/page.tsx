@@ -2,6 +2,24 @@ import Link from 'next/link'
 
 const posts = [
   {
+    slug: 'how-to-compress-images-for-instagram',
+    title: 'How to Compress Images for Instagram Without Losing Quality (2026)',
+    description:
+      'Compress images for Instagram the right way — correct dimensions for feed, Stories, and Reels, JPG quality settings, HEIC conversion, and file size targets to prevent blurry uploads.',
+    date: '2026-06-15',
+    readTime: '8 min read',
+    category: 'Guide',
+  },
+  {
+    slug: 'what-is-image-resolution',
+    title: 'What Is Image Resolution? Pixels, DPI, and File Size Explained',
+    description:
+      'Image resolution explained simply — what pixels and megapixels mean, DPI vs PPI for print and web, how resolution affects file size, and what you actually need for printing at different sizes.',
+    date: '2026-06-15',
+    readTime: '9 min read',
+    category: 'Guide',
+  },
+  {
     slug: 'how-to-compress-images-for-email',
     title: 'How to Compress Images for Email Attachments (2026)',
     description:
