@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-for-online-form/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image for Online Form — Government & Exam Upload | CompressImg',
+  title: 'Resize Image for Online Form — Government & Exam Upload',
   description:
     'Resize your photo or signature to exact KB and pixel requirements for government portals, exam applications, and online forms. Free, browser-based, no upload.',
   alternates: { canonical: PAGE_URL },

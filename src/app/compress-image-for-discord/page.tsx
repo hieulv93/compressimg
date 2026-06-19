@@ -141,6 +141,24 @@ export default function CompressForDiscordPage() {
           </p>
         </div>
 
+        {/* Direct answer box — above the fold for informational searchers */}
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">Does Discord compress images?</p>
+          <p className="text-text-muted leading-relaxed text-xs">
+            <strong className="text-text-main">
+              Yes — inline previews are compressed, and clipboard pastes are compressed more
+              aggressively.
+            </strong>{' '}
+            When you paste a screenshot directly into Discord, quality drops noticeably compared to
+            uploading the file. The original file stays downloadable at full quality, but what
+            teammates see in chat is Discord&apos;s re-encoded version.
+          </p>
+          <p className="text-text-muted leading-relaxed text-xs">
+            <strong className="text-text-main">The fix:</strong> pre-compress your image below so
+            Discord displays exactly the quality you intended.
+          </p>
+        </div>
+
         <div id="compress-tool" className="space-y-4">
           <UploadBox
             state={uploadBoxState}

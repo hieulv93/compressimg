@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-png/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize PNG Online Free — Change PNG Image Dimensions | CompressImg',
+  title: 'Resize PNG Online Free — Change PNG Image Dimensions',
   description:
     'Resize PNG images online for free. Change dimensions while keeping PNG format and transparency. No upload, no quality loss — 100% browser-based.',
   alternates: { canonical: PAGE_URL },

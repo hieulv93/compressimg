@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-for-resume/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image for Resume / CV — Free, Exact Dimensions | CompressImg',
+  title: 'Resize Image for Resume / CV — Free, Exact Dimensions',
   description:
     'Resize your photo for resume, CV, or LinkedIn — LinkedIn 400×400px, Naukri 200×200px, European CV 300×400px. Free, browser-based, no upload required.',
   alternates: { canonical: PAGE_URL },

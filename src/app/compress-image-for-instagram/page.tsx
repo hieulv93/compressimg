@@ -11,6 +11,7 @@ import type { CompressResult } from '@/lib/compress'
 import { MAX_FILE_SIZE_MB } from '@/lib/utils'
 import { analytics } from '@/lib/analytics'
 import CompressForInstagramContentSection from '@/components/tool/CompressForInstagramContentSection'
+import Breadcrumb from '@/components/layout/Breadcrumb'
 
 type PageState = 'idle' | 'processing' | 'done' | 'error'
 
@@ -124,6 +125,16 @@ export default function CompressForInstagramPage() {
   return (
     <main className="flex-1">
       <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12 space-y-6">
+        <Breadcrumb
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Compress', href: '/compress-image' },
+            {
+              label: 'For Instagram',
+              url: 'https://compressimg.pro/compress-image-for-instagram/',
+            },
+          ]}
+        />
         <div className="text-center space-y-2">
           <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
             Compress Image for Instagram
@@ -131,6 +142,21 @@ export default function CompressForInstagramPage() {
           <p className="text-text-muted text-sm sm:text-base">
             Reduce photo size before posting on Instagram — avoid double-compression, keep photos
             sharp
+          </p>
+        </div>
+
+        {/* Direct answer box — above the fold for informational searchers */}
+        <div className="rounded-xl border border-border bg-surface p-4 space-y-2 text-sm">
+          <p className="font-semibold text-text-main">Does Instagram compress images?</p>
+          <p className="text-text-muted leading-relaxed text-xs">
+            <strong className="text-text-main">Yes — every photo you upload.</strong> Instagram
+            strips EXIF data and applies its own lossy compression, often reducing a 10MB photo to
+            under 300KB. This double-compression (your camera already compressed the JPG) causes
+            visible softness on high-resolution screens.
+          </p>
+          <p className="text-text-muted leading-relaxed text-xs">
+            <strong className="text-text-main">The fix:</strong> pre-compress at quality 80 below —
+            Instagram compresses less aggressively when it receives an already-optimized file.
           </p>
         </div>
 

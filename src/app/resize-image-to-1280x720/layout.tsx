@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-to-1280x720/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image to 1280×720 (HD) Free | CompressImg',
+  title: 'Resize Image to 1280×720 (HD) Free',
   description:
     'Resize any image to 1280×720 HD instantly. Perfect for YouTube thumbnails, video frames, and web banners. No upload — 100% browser-based.',
   alternates: { canonical: PAGE_URL },

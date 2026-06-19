@@ -1,15 +1,14 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import HomeContentSection from '@/components/layout/HomeContentSection'
-import HomepageCompressTool from '@/components/tool/HomepageCompressTool'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Free Image Compressor Online — Compress JPG, PNG, WebP | CompressImg' },
+  title: { absolute: 'Free Online Image Tools — Compress, Resize, Convert & Crop | CompressImg' },
   description:
-    'Free online image compressor. Reduce JPG, PNG, WebP file size up to 90% without losing quality. No upload — 100% browser-based and private.',
+    'Free online image tools: compress, resize, convert and crop JPG, PNG, WebP images. No upload to any server — 100% browser-based and private.',
   alternates: { canonical: 'https://compressimg.pro/' },
   openGraph: {
-    title: 'Free Image Compressor Online — Compress JPG, PNG, WebP | CompressImg',
+    title: 'Free Online Image Tools — Compress, Resize, Convert & Crop | CompressImg',
     description:
       'Compress, resize, convert, and crop JPG, PNG, WebP instantly. No upload, no login — 100% private.',
     url: 'https://compressimg.pro/',
@@ -19,7 +18,7 @@ export const metadata: Metadata = {
         url: 'https://compressimg.pro/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'CompressImg — Free Online Image Compressor',
+        alt: 'CompressImg — Free Online Image Tools',
       },
     ],
     locale: 'en_US',
@@ -33,10 +32,26 @@ const jsonLd = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What is an online image compressor?',
+      name: 'What image tools does CompressImg offer?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'An online image compressor reduces the file size of JPG, PNG, or WebP images using lossy or lossless compression algorithms — all inside your browser, with no upload to any server. CompressImg uses JPEG recompression and PNG optimization to reduce file size by 50–90% with no visible quality loss at quality 80.',
+        text: 'CompressImg offers four free browser-based tools: Compress Image (reduce file size up to 90%), Resize Image (change dimensions for any platform), Convert Image (convert between JPG, PNG, WebP, HEIC, BMP, GIF), and Crop Image (trim to preset ratios for Instagram, YouTube, and more). All tools run in your browser — no server upload.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Are all CompressImg tools free?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. All tools on CompressImg are completely free — no account, no watermarks, no file limits, and no subscription required. Compress, resize, convert, and crop as many images as you need at no cost.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to upload my images to a server?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. All processing runs entirely in your browser using JavaScript. Your images never leave your device — nothing is uploaded to any server. This makes CompressImg safe for personal, confidential, and unreleased images.',
       },
     },
     {
@@ -44,39 +59,23 @@ const jsonLd = {
       name: 'What image formats does CompressImg support?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'CompressImg supports JPG (JPEG), PNG, and WebP for compression. For conversion, it also supports HEIC, BMP, GIF, and SVG as input formats. All output files are downloaded directly to your device — no server storage involved.',
+        text: 'CompressImg supports JPG, PNG, WebP, HEIC (iPhone photos), BMP, GIF, and SVG across its tools. Output files are downloaded directly to your device — no server storage involved.',
       },
     },
     {
       '@type': 'Question',
-      name: 'How much does image compression reduce file size?',
+      name: 'Does CompressImg work on mobile phones?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'At quality 80, compression typically reduces JPG file size by 60–80% and PNG by 30–60%. A 5MB photo from a smartphone compresses to 300–800KB with no visible quality loss on screen. Results vary based on image content — photos with complex detail compress more than simple graphics.',
+        text: 'Yes. All tools work on iPhone and Android in Chrome, Safari, and Firefox. Tap the upload area on any tool page to select from your camera roll — no app installation needed.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Is CompressImg free to use?',
+      name: 'Is there a file size limit for CompressImg tools?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. CompressImg is completely free with no file limits, no watermarks, and no sign-up required. All compression, conversion, resizing, and cropping tools run in your browser at no cost.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are my images safe when using CompressImg?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. All processing runs entirely in your browser using JavaScript — no image is ever uploaded to any server. Your files never leave your device. This makes CompressImg safe for personal, confidential, and unreleased content.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Can I compress images on my phone?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. CompressImg works on iPhone and Android in Chrome, Safari, and Firefox. Tap the upload area to select an image from your camera roll, adjust quality, and download the compressed file — no app installation needed.',
+        text: 'Yes. All tools accept image files up to 20MB. Most smartphone photos (3–8MB) and web images are well within this limit. Files larger than 20MB can be scaled down before processing.',
       },
     },
   ],
@@ -320,18 +319,17 @@ export default function HomePage() {
       <div className="max-w-3xl mx-auto px-4 py-12 sm:py-20 space-y-10">
         <div className="text-center space-y-2">
           <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
-            Free Image Compressor — Compress, Resize & Convert Images
+            Free Online Image Tools — Compress, Resize, Convert & Crop
           </h1>
           <p className="text-text-muted text-sm sm:text-base max-w-lg mx-auto">
-            Fast, private, browser-based. Your images never leave your device.
+            All your image tools in one place — free, instant, and 100% private. No upload to any
+            server.
           </p>
         </div>
 
-        <HomepageCompressTool />
-
         <div className="space-y-3">
           <p className="text-xs font-semibold text-text-muted uppercase tracking-wide">
-            Other free tools
+            Free image tools
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {tools.map((tool) => (

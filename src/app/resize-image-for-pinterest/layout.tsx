@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-for-pinterest/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image for Pinterest — Free, Exact Dimensions | CompressImg',
+  title: 'Resize Image for Pinterest — Free, Exact Dimensions',
   description:
     'Resize any image to exact Pinterest dimensions free. Standard pin (1000×1500), square pin (1000×1000), long pin (1000×2100). HEIC from iPhone supported. No upload — browser-based.',
   alternates: { canonical: PAGE_URL },

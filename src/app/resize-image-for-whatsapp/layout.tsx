@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-for-whatsapp/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image for WhatsApp — Free, Exact Dimensions | CompressImg',
+  title: 'Resize Image for WhatsApp — Free, Exact Dimensions',
   description:
     'Resize any image to exact WhatsApp dimensions free. Status (1080×1920), profile picture (500×500), link preview (1200×630). HEIC from iPhone supported. No upload — browser-based.',
   alternates: { canonical: PAGE_URL },

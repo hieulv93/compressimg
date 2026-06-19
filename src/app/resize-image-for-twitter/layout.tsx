@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-for-twitter/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image for Twitter / X — Free, Exact Dimensions | CompressImg',
+  title: 'Resize Image for Twitter / X — Free, Exact Dimensions',
   description:
     'Resize any image to exact Twitter / X dimensions free. Post image (1200×675), header (1500×500), profile picture (400×400). HEIC from iPhone supported. No upload — browser-based.',
   alternates: { canonical: PAGE_URL },

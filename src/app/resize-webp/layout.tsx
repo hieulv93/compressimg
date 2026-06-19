@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-webp/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize WebP Online Free — Change WebP Image Dimensions | CompressImg',
+  title: 'Resize WebP Online Free — Change WebP Image Dimensions',
   description:
     'Resize WebP images online for free. Change WebP dimensions for web, CMS, and social media. Preserves WebP format. No upload, 100% browser-based.',
   alternates: { canonical: PAGE_URL },

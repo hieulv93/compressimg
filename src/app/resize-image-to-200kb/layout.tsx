@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-to-200kb/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image to 200KB Online Free — Aadhaar, Visa | CompressImg',
+  title: 'Resize Image to 200KB Online Free — Aadhaar, Visa',
   description:
     'Resize any image to under 200KB free. Perfect for Aadhaar/PAN document uploads, visa applications, and online form submissions. JPEG output, 100% private.',
   alternates: { canonical: PAGE_URL },

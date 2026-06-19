@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-in-kb/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image in KB Online Free — Resize to Exact File Size | CompressImg',
+  title: 'Resize Image in KB Online Free — Resize to Exact File Size',
   description:
     'Resize image to an exact KB size — 20KB, 50KB, 100KB, 200KB or 500KB. Perfect for online forms, exams, and ID uploads. No upload, 100% private.',
   alternates: { canonical: PAGE_URL },

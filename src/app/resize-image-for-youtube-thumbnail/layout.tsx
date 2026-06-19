@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-for-youtube-thumbnail/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image for YouTube Thumbnail — 1280×720 Free | CompressImg',
+  title: 'Resize Image for YouTube Thumbnail — 1280×720 Free',
   description:
     'Resize images to the perfect YouTube thumbnail size (1280×720) and channel art (2560×1440) free. HEIC from iPhone supported. No upload — 100% browser-based.',
   alternates: { canonical: PAGE_URL },

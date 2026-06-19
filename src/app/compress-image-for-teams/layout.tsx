@@ -5,14 +5,14 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-teams/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Does Microsoft Teams Compress Images? Yes — Pre-Compress to 1MB to Keep Quality | Free',
+  title: 'Send Full Quality Images on Microsoft Teams — Free Compressor (No Install)',
   description:
-    'Microsoft Teams compresses images for inline channel display. Pre-compress to under 1 MB before sharing to keep previews sharp on all devices — free, browser-based, no install.',
+    'Teams re-compresses image previews in channels and chats. Pre-compress to quality 80 before sharing to keep photos sharp for all teammates — free, browser-based, no sign-up.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Does Microsoft Teams Compress Images? Yes — Pre-Compress to 1MB to Keep Quality | Free',
+    title: 'Send Full Quality Images on Microsoft Teams — Free Compressor (No Install)',
     description:
-      'Microsoft Teams compresses images for inline channel display. Pre-compress to under 1 MB before sharing to keep previews sharp for all teammates — free, browser-based.',
+      'Teams re-compresses image previews in channels and chats. Pre-compress to quality 80 before sharing to keep photos sharp for all teammates — free, browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Does Microsoft Teams Compress Images? Yes — Pre-Compress to 1MB to Keep Quality | Free',
+    title: 'Send Full Quality Images on Microsoft Teams — Free Compressor (No Install)',
     description:
-      'Teams reduces image quality for inline display. Pre-compress to under 1 MB to keep channel photos sharp on all devices — 100% browser-based, no install.',
+      'Teams re-compresses image previews in channels and chats. Pre-compress to quality 80 before sharing to keep photos sharp for all teammates — 100% browser-based, no install.',
     images: [OG_IMAGE],
   },
 }

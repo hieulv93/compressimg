@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/enlarge-image/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Enlarge Image Online Free — Upscale Without Blur | CompressImg',
+  title: 'Enlarge Image Online Free — Upscale Without Blur',
   description:
     'Enlarge images online free. Upscale JPG, PNG, WebP to larger dimensions for print, presentations, and display. No upload, 100% browser-based. Free with no limits.',
   alternates: { canonical: PAGE_URL },

@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-to-50kb/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image to 50KB Online Free — Passport, NEET, JEE | CompressImg',
+  title: 'Resize Image to 50KB Online Free — Passport, NEET, JEE',
   description:
     'Resize any image to under 50KB free. Ideal for US passport portal (DS-160), NEET, JEE, and government exam photo uploads. JPEG output, 100% browser-based.',
   alternates: { canonical: PAGE_URL },

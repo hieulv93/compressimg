@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-without-losing-quality/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image Without Losing Quality — Free Online | CompressImg',
+  title: 'Resize Image Without Losing Quality — Free Online',
   description:
     'Resize JPG, PNG, WebP and HEIC images without losing quality. Lock aspect ratio, choose the right output format, and downscale with maximum sharpness. Free, browser-based.',
   alternates: { canonical: PAGE_URL },

@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-to-inches/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image to Inches Online Free — Set Width & Height in Inches | CompressImg',
+  title: 'Resize Image to Inches Online Free — Set Width & Height in Inches',
   description:
     'Resize any image to exact inch dimensions at any DPI. Enter width and height in inches, choose 72/96/150/300 DPI, download instantly. Free, browser-based.',
   alternates: { canonical: PAGE_URL },

@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-to-100kb/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image to 100KB Online Free — Resume, Job Portal | CompressImg',
+  title: 'Resize Image to 100KB Online Free — Resume, Job Portal',
   description:
     'Resize any image to under 100KB free. Great for resume photos, Naukri, LinkedIn, and IBPS bank job portals. JPEG output, no upload, 100% private.',
   alternates: { canonical: PAGE_URL },

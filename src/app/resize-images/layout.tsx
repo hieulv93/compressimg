@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-images/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Batch Resize Images Online Free — Multiple Files at Once | CompressImg',
+  title: 'Batch Resize Images Online Free — Multiple Files at Once',
   description:
     'Resize multiple images at once for free. Upload up to 10 JPG, PNG, WebP, HEIC files and download all resized as ZIP. 100% browser-based, no upload.',
   alternates: { canonical: PAGE_URL },

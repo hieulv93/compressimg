@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-signature/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Signature Online Free — SSC, UPSC, IBPS, Railway | CompressImg',
+  title: 'Resize Signature Online Free — SSC, UPSC, IBPS, Railway',
   description:
     'Resize your signature image to exact pixel dimensions for SSC, UPSC, IBPS, Railway, and other government exam forms. Free, browser-based, no upload.',
   alternates: { canonical: PAGE_URL },

@@ -5,41 +5,69 @@ export default function HomeContentSection() {
   return (
     <section className="space-y-8 pt-8 border-t border-border text-sm text-text-muted leading-relaxed">
       <div className="space-y-3">
-        <h2 className="text-xl font-bold text-text-main">What Is an Online Image Compressor?</h2>
+        <h2 className="text-xl font-bold text-text-main">What Can You Do with CompressImg?</h2>
         <p>
-          An online image compressor reduces the file size of a JPG, PNG, or WebP image using
-          compression algorithms that run entirely in your browser — no upload, no server, no
-          waiting in a queue. CompressImg uses JPEG recompression and PNG optimization to shrink
-          images by 50–90% with no visible quality loss at quality 80.
+          CompressImg is a suite of free browser-based image tools that run entirely on your device
+          — no file is ever uploaded to a server. Everything happens locally using JavaScript, so
+          your images stay private and processing is instant.
         </p>
-        <p>
-          Unlike desktop software like Photoshop or GIMP, a browser-based image compressor requires
-          no installation and works on any device: Mac, Windows, iPhone, and Android. You upload
-          your image, set a quality level, and download the compressed file — all in under 10
-          seconds.
-        </p>
+        <div className="grid sm:grid-cols-2 gap-4 mt-2">
+          {[
+            {
+              title: 'Compress Images',
+              href: '/compress-image',
+              desc: 'Reduce JPG, PNG, and WebP file size by 50–90% without visible quality loss. Adjust quality from 1–100 and see the before/after size comparison instantly.',
+            },
+            {
+              title: 'Resize Images',
+              href: '/resize-image',
+              desc: 'Change image dimensions to exact pixel sizes or use presets for Instagram, YouTube thumbnails, Twitter headers, and more — without recompressing unnecessarily.',
+            },
+            {
+              title: 'Convert Images',
+              href: '/convert-image',
+              desc: 'Convert between JPG, PNG, and WebP formats. Also converts HEIC (iPhone photos), BMP, and GIF to standard web formats. Transparency is preserved for PNG and WebP output.',
+            },
+            {
+              title: 'Crop Images',
+              href: '/crop-image',
+              desc: 'Trim and crop photos to any aspect ratio with preset options for Instagram (1:1, 4:5), YouTube (16:9), Portraits (9:16), and custom dimensions.',
+            },
+          ].map(({ title, href, desc }) => (
+            <Link
+              key={href}
+              href={href}
+              className="block rounded-xl border border-border p-4 space-y-1 hover:border-primary transition-colors group"
+            >
+              <p className="text-sm font-semibold text-text-main group-hover:text-primary transition-colors">
+                {title} →
+              </p>
+              <p className="text-sm text-text-muted leading-relaxed">{desc}</p>
+            </Link>
+          ))}
+        </div>
       </div>
 
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">
-          How to Compress Images Online — 3 Steps
+          How to Use Any CompressImg Tool — 3 Steps
         </h2>
         <ol className="space-y-4">
           {[
             {
               n: '1',
-              title: 'Open the image compressor',
-              body: 'Go to the Compress Image tool. Drag and drop your JPG, PNG, or WebP file onto the upload area, click to browse, or paste with Ctrl+V. Files up to 20MB are accepted.',
+              title: 'Open the tool you need',
+              body: 'Go to Compress Image, Resize Image, Convert Image, or Crop Image. All tools open instantly — no sign-up, no install. Drag and drop your image onto the upload area, click to browse, or paste with Ctrl+V. Files up to 20MB are accepted.',
             },
             {
               n: '2',
-              title: 'Set the quality level',
-              body: 'The default quality is 80 — the recommended setting for most use cases. At quality 80, a 5MB photo compresses to 300–600KB with no visible difference on screen. Drag the slider lower for a smaller file or higher for maximum sharpness.',
+              title: 'Adjust the settings',
+              body: 'Each tool has a simple control: a quality slider for compression (default 80), pixel dimensions for resizing, target format for conversion, or crop ratio for cropping. Defaults are pre-set to the most common use case — you can start without changing anything.',
             },
             {
               n: '3',
-              title: 'Download the compressed image',
-              body: 'Click Download to save the compressed file to your device. The result card shows the original and compressed file sizes and the percentage saved. No account, no watermark, no email required.',
+              title: 'Download your file',
+              body: 'Click Download to save the output to your device. The filename includes the tool name (compressed-, resized-, converted-) so you can easily identify processed files. No watermark, no account, no email required.',
             },
           ].map(({ n, title, body }) => (
             <li key={n} className="flex gap-3">
@@ -56,24 +84,24 @@ export default function HomeContentSection() {
       </div>
 
       <div className="space-y-3">
-        <h2 className="text-xl font-bold text-text-main">Why Compress Images?</h2>
+        <h2 className="text-xl font-bold text-text-main">Why Use Browser-Based Image Tools?</h2>
         <div className="grid sm:grid-cols-2 gap-4">
           {[
             {
-              title: 'Faster page load times',
-              desc: 'Images are the largest assets on most web pages. A page with uncompressed 3MB photos takes 4–8× longer to load than the same page with 300KB compressed images. Faster pages rank higher on Google and reduce bounce rate.',
+              title: 'Your images never leave your device',
+              desc: 'All processing runs in your browser using JavaScript — no file is sent to any server. This is critical for personal photos, unreleased product images, ID documents, and confidential business content. There is no cloud storage, no data retention, and no account with access to your files.',
             },
             {
-              title: 'Meet platform file size limits',
-              desc: 'YouTube requires thumbnails under 2MB. Many job portals and government forms require photos under 100–200KB. WhatsApp, Slack, and Teams re-compress images you send — pre-compressing at quality 80 prevents double-compression artifacts.',
+              title: 'Instant results — no server queue',
+              desc: "Browser-based tools process images using your device's own CPU. There's no server queue, no wait time, and no rate limit. A 5MB photo is typically compressed, resized, or converted in under 3 seconds on a modern device.",
             },
             {
-              title: 'Reduce storage and bandwidth costs',
-              desc: 'Uncompressed images consume 3–10× more storage space than optimized ones. For creators publishing hundreds of images per month, compression saves gigabytes of storage and significantly reduces CDN bandwidth costs.',
+              title: 'Works on any device, no install needed',
+              desc: 'All CompressImg tools work on Mac, Windows, iPhone, and Android in any modern browser (Chrome, Safari, Firefox). Open the tool, upload your image, download the result — no software to install, no extension to add.',
             },
             {
-              title: 'Better Core Web Vitals scores',
-              desc: "Google's Core Web Vitals ranking signals measure page speed and user experience. Largest Contentful Paint (LCP) — a key ranking factor — is directly improved by compressing images. Most LCP elements are hero images or thumbnails.",
+              title: 'Completely free, no limits',
+              desc: 'All tools are free with no file count limits, no daily quota, no paid tier, and no watermarks on output. Process as many images as you need at any time — tools run on your device, not on our servers.',
             },
           ].map(({ title, desc }) => (
             <div key={title} className="bg-surface border border-border rounded-xl p-4 space-y-1">
@@ -87,8 +115,9 @@ export default function HomeContentSection() {
       <div className="space-y-3">
         <h2 className="text-xl font-bold text-text-main">Supported Image Formats</h2>
         <p>
-          CompressImg supports the most common image formats for compression and conversion. All
-          processing happens in your browser — no format is stored on any server.
+          CompressImg tools support the most common image formats for compression, resizing,
+          conversion, and cropping. All processing happens in your browser — no format is stored on
+          any server.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full border-collapse text-xs">
@@ -141,7 +170,7 @@ export default function HomeContentSection() {
                 {
                   fmt: 'GIF',
                   type: 'Lossless (animated)',
-                  use: 'Animated images — reduce frame count',
+                  use: 'Animated images — convert or compress',
                   tool: '/compress-gif-online',
                   toolLabel: 'Compress GIF',
                 },
@@ -226,28 +255,28 @@ export default function HomeContentSection() {
       <div className="space-y-4">
         <h2 className="text-xl font-bold text-text-main">Frequently Asked Questions</h2>
         <FAQItem
-          question="What is an online image compressor?"
-          answer="An online image compressor reduces the file size of JPG, PNG, or WebP images using compression algorithms that run in your browser. No image is uploaded to any server — all processing happens locally on your device. CompressImg reduces file size by 50–90% at quality 80 with no visible quality loss."
+          question="What image tools does CompressImg offer?"
+          answer="CompressImg offers four free tools: Compress Image (reduce file size up to 90%), Resize Image (change dimensions for any platform), Convert Image (convert between JPG, PNG, WebP, HEIC, BMP), and Crop Image (trim to any ratio or preset). All tools run in your browser — no file is uploaded to any server."
+        />
+        <FAQItem
+          question="Are all CompressImg tools free to use?"
+          answer="Yes. All tools are completely free — no account, no watermarks, no file count limit, and no subscription. You can compress, resize, convert, and crop as many images as you need."
+        />
+        <FAQItem
+          question="Do my images get uploaded to a server?"
+          answer="No. All processing runs entirely in your browser. Your images never leave your device. No file is sent to any server — making CompressImg safe for personal, confidential, and unreleased content."
         />
         <FAQItem
           question="What image formats does CompressImg support?"
-          answer="CompressImg supports JPG, PNG, and WebP for compression. For conversion, it also accepts HEIC, BMP, GIF, and SVG as input formats. All downloads go directly to your device — no server storage."
+          answer="JPG, PNG, WebP, HEIC (iPhone photos), BMP, GIF, and SVG are supported across CompressImg tools. Output formats depend on the tool: the compressor outputs in the same format as the input; the converter lets you choose JPG, PNG, or WebP as output."
         />
         <FAQItem
-          question="How much does image compression reduce file size?"
-          answer="At quality 80, a typical 5MB smartphone photo compresses to 300–600KB — a 85–94% reduction. Results vary by content: photos compress more than graphics with flat colors or text. Use the quality slider to find the right balance for your image."
+          question="Does CompressImg work on iPhone and Android?"
+          answer="Yes. All tools work on iPhone and Android in Chrome, Safari, and Firefox. Tap the upload area on any tool page to select from your camera roll. No app installation needed."
         />
         <FAQItem
-          question="Is CompressImg free to use?"
-          answer="Yes. CompressImg is completely free — no account, no watermarks, no file limits. All tools (compress, resize, convert, crop) are available at no cost."
-        />
-        <FAQItem
-          question="Are my images safe when using CompressImg?"
-          answer="Yes. All processing runs in your browser — no image is ever sent to a server. Your files never leave your device, making it safe for personal, confidential, and unreleased content."
-        />
-        <FAQItem
-          question="Can I compress images on my phone?"
-          answer="Yes. CompressImg works on iPhone and Android in Chrome, Safari, and Firefox. Tap the upload area to select an image from your camera roll, adjust quality, and download — no app needed."
+          question="Is there a file size limit?"
+          answer="Yes. All tools accept files up to 20MB. Most smartphone photos (3–8MB) and web images are well within this limit. Files larger than 20MB can be scaled down before processing."
         />
       </div>
     </section>

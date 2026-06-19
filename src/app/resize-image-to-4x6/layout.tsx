@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-to-4x6/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image to 4×6 Inch — 1200×1800px Free | CompressImg',
+  title: 'Resize Image to 4×6 Inch — 1200×1800px Free',
   description:
     'Resize any photo to 4×6 inch (1200×1800px at 300 DPI) for printing at home, pharmacy, or photo lab. Portrait and landscape. Free, browser-based, no upload.',
   alternates: { canonical: PAGE_URL },

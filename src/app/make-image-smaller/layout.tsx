@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/make-image-smaller/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Make Image Smaller Online Free — Reduce Photo Size | CompressImg',
+  title: 'Make Image Smaller Online Free — Reduce Photo Size',
   description:
     'Make images smaller online free. Reduce photo file size for email, social media, and web uploads by resizing or compressing. JPG, PNG, WebP, HEIC supported. No upload.',
   alternates: { canonical: PAGE_URL },

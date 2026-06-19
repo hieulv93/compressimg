@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-to-35x45mm/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image to 35×45mm — Passport Photo Free | CompressImg',
+  title: 'Resize Image to 35×45mm — Passport Photo Free',
   description:
     'Resize any photo to 35×45mm (413×531px) for UK, Schengen, India, Australia, and Japan passport. Free, browser-based, no upload. HEIC from iPhone supported.',
   alternates: { canonical: PAGE_URL },

@@ -5,12 +5,12 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-discord/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Discord Compresses Inline Images & Clipboard Pastes — Free Pre-Compressor',
+  title: 'Does Discord Compress Images? Yes — Fix Blurry Pastes Free',
   description:
-    'Yes, Discord compresses images for inline display and aggressively compresses clipboard pastes. Pre-compress photos before uploading to keep full quality — free, 100% browser-based.',
+    'Yes, Discord compresses inline previews and aggressively compresses clipboard pastes. Pre-compress before uploading to keep full quality — free, 100% browser-based.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Discord Compresses Inline Images & Clipboard Pastes — Free Pre-Compressor',
+    title: 'Does Discord Compress Images? Yes — Fix Blurry Pastes Free',
     description:
       'Yes, Discord compresses images for display and aggressively compresses clipboard pastes. Pre-compress before uploading to preserve full quality — free, browser-based.',
     url: PAGE_URL,
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Discord Compresses Inline Images & Clipboard Pastes — Free Pre-Compressor',
+    title: 'Does Discord Compress Images? Yes — Fix Blurry Pastes Free',
     description:
       'Yes, Discord compresses images for display and clipboard pastes. Pre-compress to keep full quality — 100% browser-based, no uploads to server.',
     images: [OG_IMAGE],
@@ -31,6 +31,13 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Compress Image for Discord', item: PAGE_URL },
+      ],
+    },
     {
       '@type': 'WebApplication',
       name: 'CompressImg — Compress Image for Discord',

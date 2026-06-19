@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-to-20kb/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image to 20KB Online Free — SSC Signature, UPSC | CompressImg',
+  title: 'Resize Image to 20KB Online Free — SSC Signature, UPSC',
   description:
     'Resize any image to under 20KB free. Perfect for SSC signature, UPSC signature, and government form uploads. JPEG output, 100% browser-based and private.',
   alternates: { canonical: PAGE_URL },

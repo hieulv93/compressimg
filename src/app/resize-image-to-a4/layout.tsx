@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 const SITE_URL = 'https://compressimg.pro'
 const PAGE_URL = `${SITE_URL}/resize-image-to-a4/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Resize Image to A4 Size Online Free — 2480×3508 or 1240×1754 px | CompressImg',
+  title: 'Resize Image to A4 Size Online Free — 2480×3508 or 1240×1754 px',
   description:
     'Resize any image to A4 size (21×29.7 cm) at 72, 96, 150, or 300 DPI. Portrait and landscape. Download instantly — free, 100% browser-based.',
   alternates: { canonical: PAGE_URL },
