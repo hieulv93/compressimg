@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Contact CompressImg — Get in Touch',
+  title: 'Contact Us — Get in Touch',
   description:
     'Contact the CompressImg team for bug reports, feature requests, or general feedback about our free image compression tools.',
   alternates: { canonical: 'https://compressimg.pro/contact/' },
