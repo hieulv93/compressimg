@@ -5,14 +5,14 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-pinterest/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Compress Image for Pinterest — Reduce Size',
+  title: 'Does Pinterest Compress Images? Yes — Fix It Free',
   description:
-    'Free online tool to compress images for Pinterest. Reduce JPG, PNG size before uploading pins — avoid blurry results, faster uploads. 100% browser-based, no upload.',
+    'Pinterest re-compresses every pin image on upload. Pre-compress your JPGs and PNGs at quality 80 to keep pins sharp and vibrant — free, browser-based, no sign-up.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Compress Image for Pinterest — Reduce Photo Size Before Pinning',
+    title: 'Does Pinterest Compress Images? Yes — Fix It Free',
     description:
-      'Reduce JPG and PNG size before pinning on Pinterest. Prevent quality loss from double-compression — free, no uploads, 100% browser-based.',
+      'Pinterest re-compresses every pin on upload. Pre-compress at quality 80 to keep pins sharp and vibrant — free, no uploads, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for Pinterest' }],

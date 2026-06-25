@@ -5,14 +5,14 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-twitter/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Does Twitter Compress Images? Yes — Fix Free Online',
+  title: 'Does Twitter/X Compress Images? Yes — Fix It Free',
   description:
-    'Yes, Twitter/X compresses every image you tweet — converting to WebP and reducing to 300–500KB. Pre-compress at quality 80 to keep photos sharp on the timeline. Free, browser-based.',
+    'Twitter/X compresses every image to 300–500KB on upload. Pre-compress at quality 80 before posting to keep photos sharp on the timeline — free, browser-based, no sign-up.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Does Twitter Compress Images? Yes — Fix Free Online',
+    title: 'Does Twitter/X Compress Images? Yes — Fix It Free',
     description:
-      'Yes, Twitter compresses every image to 300–500KB. Pre-compress at quality 80 to keep photos sharp on the timeline — free, no uploads, 100% browser-based.',
+      'Twitter/X compresses every image to 300–500KB on upload. Pre-compress at quality 80 to keep photos sharp on the timeline — free, no uploads, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for Twitter' }],

@@ -5,14 +5,14 @@ const PAGE_URL = `${SITE_URL}/compress-image-for-tiktok/`
 const OG_IMAGE = `${SITE_URL}/og-image.png`
 
 export const metadata: Metadata = {
-  title: 'Does TikTok Compress Images? Yes — Fix Free Online',
+  title: 'Does TikTok Compress Images? Yes — Fix It Free',
   description:
-    'Yes, TikTok compresses every photo you upload — profile pictures and cover images get aggressively re-encoded. Pre-compress at quality 80 to keep them sharp. Free, browser-based.',
+    'TikTok compresses profile pictures and cover images on upload. Pre-compress at quality 80 to keep photos sharp — free, browser-based, no sign-up required.',
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Does TikTok Compress Images? Yes — Fix Free Online',
+    title: 'Does TikTok Compress Images? Yes — Fix It Free',
     description:
-      'Yes, TikTok compresses every photo on upload. Pre-compress at quality 80 to keep profile photos and covers sharp — free, no uploads, 100% browser-based.',
+      'TikTok compresses profile pictures and cover images on upload. Pre-compress at quality 80 to keep photos sharp — free, no uploads, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress Image for TikTok' }],
