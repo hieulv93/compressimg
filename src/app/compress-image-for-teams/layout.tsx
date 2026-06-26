@@ -61,58 +61,34 @@ const jsonLd = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Does Teams compress images?',
+          name: 'Does Microsoft Teams compress images?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Yes, Microsoft Teams compresses images when displaying them inline in chat and channels. Teams re-encodes images to generate optimized preview versions, which can reduce sharpness compared to the original. The original file is stored in SharePoint and remains downloadable at full quality. Pre-compressing images to under 1MB before sharing ensures the version everyone sees in chat matches your intended quality.',
+            text: 'Yes. Teams automatically compresses images in two situations: (1) when you paste directly from clipboard — Teams re-encodes the bitmap at a low quality setting, which causes visible blur; (2) when displaying inline previews in channels — Teams generates a compressed thumbnail regardless of the original file size. The original file is stored in SharePoint and remains downloadable at full quality, but the version everyone sees in chat is compressed.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What is the Microsoft Teams file upload size limit?',
+          name: 'Does Teams reduce image quality?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Microsoft Teams allows file uploads up to 250GB per file when connected to SharePoint. However, images pasted directly into chat have a practical display limit — very large images load slowly in the Teams interface. For smooth inline display, compress images to under 2MB before sharing in channels.',
+            text: 'Yes, noticeably for clipboard pastes. When you copy a screenshot and paste it into Teams with Ctrl+V, Teams applies aggressive lossy compression before sending — fine text becomes hard to read and flat-color areas show JPEG artifacts. For uploaded files, Teams generates a compressed inline preview but keeps the original in SharePoint. The practical impact is that pasted screenshots often look significantly worse than the source.',
           },
         },
         {
           '@type': 'Question',
-          name: 'What quality setting should I use for Teams images?',
+          name: 'How can users avoid Teams image compression?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Quality 80 is ideal for Microsoft Teams. It produces files of 200KB–1MB for most photos, which load instantly in Teams channels on any corporate network or VPN. For screenshots and diagrams where text legibility matters, use quality 85.',
+            text: 'The most effective method is to pre-compress the image before sharing: compress at quality 80 using this tool, then upload via the attachment button (not paste). This gives Teams an already-optimized file that requires minimal further compression. For clipboard pastes specifically, save the screenshot as a file first and upload it — this bypasses the aggressive clipboard re-encoding Teams applies.',
           },
         },
         {
           '@type': 'Question',
-          name: 'Why compress images before sharing in Teams?',
+          name: 'How can users send full-quality images in Teams?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Large images slow down Teams channels and meetings. When sharing screenshots, product photos, or design assets in Teams, oversized images delay message loading for the whole team. Compressing to under 1MB ensures instant inline display and keeps channels fast even with many image posts.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does Teams compress images automatically?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Teams may resize images for inline display but stores originals in SharePoint. The full-size original is what gets downloaded when team members click to view the full image. Pre-compressing gives everyone the optimal file size from the start.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What image dimensions work best for Teams?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'For screenshots shared in Teams, 1920×1080px or smaller at quality 80 is ideal — this produces files of 150KB–400KB that display crisply at any Teams window size. For photos and detailed images, 2000–3000px wide at quality 80 is a good balance of quality and speed.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Are my images safe when using this tool?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. All compression runs entirely in your browser — no image is ever sent to a server. Your files never leave your device during processing. This is important when sharing internal screenshots, confidential documents, or client materials.',
+            text: 'To send images at the highest possible quality in Teams: (1) compress to quality 80 using this tool before uploading — this keeps files small enough to load fast while preserving visible sharpness; (2) use the attachment button to upload the file rather than pasting from clipboard; (3) for images that must be pixel-perfect, share a link to the file in SharePoint instead — recipients can download the uncompressed original directly.',
           },
         },
       ],

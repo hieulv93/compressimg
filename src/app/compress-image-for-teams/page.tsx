@@ -134,11 +134,11 @@ export default function CompressForTeamsPage() {
         />
         <div className="text-center space-y-2">
           <h1 className="text-2xl sm:text-3xl font-bold text-text-main">
-            Compress Image for Microsoft Teams
+            Microsoft Teams Compresses Images — Pre-Compress to Fix It
           </h1>
           <p className="text-text-muted text-sm sm:text-base">
-            Reduce photo size before sharing in Teams channels — fast loading, free, 100% in your
-            browser
+            Teams blurs clipboard-pasted images and generates compressed previews in channels. Fix
+            it by pre-compressing before you share — free, 100% in your browser.
           </p>
         </div>
 
