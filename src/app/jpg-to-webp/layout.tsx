@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
+import { schemaScript, PageType, pageUrl } from '@/lib/schema'
 
-const SITE_URL = 'https://compressimg.pro'
-const PAGE_URL = `${SITE_URL}/jpg-to-webp/`
-const OG_IMAGE = `${SITE_URL}/og-image.png`
+const PAGE_URL = pageUrl('/jpg-to-webp')
 
 export const metadata: Metadata = {
   title: 'JPG to WebP Converter Online Free — Convert JPEG to WebP',
@@ -15,7 +14,14 @@ export const metadata: Metadata = {
       'Convert JPG and JPEG files to WebP — reduce file size by 25–35% with no visible quality loss. No uploads, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'JPG to WebP Converter Online Free' }],
+    images: [
+      {
+        url: 'https://compressimg.pro/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'JPG to WebP Converter Online Free',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -23,155 +29,70 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'JPG to WebP Converter Online Free',
     description: 'Convert JPG to WebP and save 25–35% file size. No uploads — 100% browser-based.',
-    images: [OG_IMAGE],
+    images: ['https://compressimg.pro/og-image.png'],
   },
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'JPG to WebP', item: PAGE_URL },
-      ],
-    },
-    {
-      '@type': 'WebApplication',
-      name: 'CompressImg — JPG to WebP Converter',
-      url: PAGE_URL,
-      applicationCategory: 'MultimediaApplication',
-      operatingSystem: 'Any',
-      browserRequirements: 'Requires a modern web browser with JavaScript enabled',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      description:
-        'Free browser-based JPG to WebP converter. Converts JPEG files to WebP with 25–35% smaller file size. No file upload required.',
-      featureList: [
-        'Convert JPG to WebP online',
-        'Convert JPEG to WebP online',
-        '25–35% smaller file size than JPG',
-        'No file upload — 100% browser-based',
-        'Free with no limits or watermarks',
-        'Works on mobile and desktop',
-      ],
-    },
-    {
-      '@type': 'HowTo',
-      name: 'How to Convert JPG to WebP Online',
-      description:
-        'Convert JPG images to WebP for 25–35% smaller file sizes — free, browser-based, no upload required.',
-      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
-      totalTime: 'PT10S',
-      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
-      supply: [{ '@type': 'HowToSupply', name: 'JPG or JPEG image file up to 20 MB' }],
-      tool: [
-        { '@type': 'HowToTool', name: 'CompressImg JPG to WebP Converter', url: PAGE_URL },
-        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
-      ],
-      step: [
-        {
-          '@type': 'HowToStep',
-          position: 1,
-          name: 'Upload your JPG file',
-          text: 'Click the upload area, drag and drop your JPG, or paste from clipboard with Ctrl+V. Supports JPG and JPEG files up to 20 MB.',
-          url: `${PAGE_URL}#step-1`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 2,
-          name: 'Choose WebP quality',
-          text: 'The default quality of 92 produces a WebP that is 25–35% smaller than the original JPG with virtually no visible quality difference. Lower the slider for even smaller files.',
-          url: `${PAGE_URL}#step-2`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 3,
-          name: 'Download the WebP file',
-          text: 'Click Download to save the WebP. The converted file is supported by all modern browsers including Chrome, Firefox, Edge, and Safari 14+. Ideal for web performance and Core Web Vitals.',
-          url: `${PAGE_URL}#step-3`,
-        },
-      ],
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How much smaller is WebP compared to JPG?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'WebP is typically 25–35% smaller than JPG at equivalent visual quality. For a typical 500KB JPG photo, the WebP equivalent is around 325–375KB. The exact savings depend on image content — photos with fine detail or gradients benefit most from WebP compression.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does converting JPG to WebP lose quality?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'At default quality settings, the quality difference between a JPG and its WebP conversion is virtually invisible to the human eye, while file size drops significantly. Both formats use lossy compression, so some minimal re-encoding loss occurs. For best results, convert from the original source rather than re-converting multiple times.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is WebP supported in all browsers?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'WebP is supported in all modern browsers: Chrome, Firefox, Safari 14+, Edge, and Opera. Global browser support exceeds 95% as of 2025. The main exceptions are very old browsers (IE11, Safari before 2020) and some email clients (Outlook 2019 and earlier).',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I use WebP images for email?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Not recommended. Many email clients — including older Outlook versions and some corporate email systems — do not display WebP images correctly. For email attachments and newsletter images, use JPG for universal compatibility.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does WebP support transparency like PNG?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. WebP supports an alpha channel (transparency), making it a potential replacement for PNG on the web. When you convert a JPG to WebP, the output does not have transparency since JPG has no alpha channel. To get a WebP with transparency, start from a PNG with transparent areas.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I convert JPG to WebP on mobile?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. This tool works fully on iOS and Android mobile browsers. Tap to select a photo from your camera roll, and the WebP file downloads directly to your device. No app installation required.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What software opens WebP files?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'All modern browsers open WebP natively. On Windows, Photos app (Windows 10 v1809+) and Paint 3D support WebP. On macOS, Preview supports WebP from macOS Ventura (2022). Photoshop added native WebP support in version 23.2 (2022). For older software, convert WebP back to JPG using our WebP to JPG tool.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Are my JPG files uploaded when converting to WebP?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. All conversion happens entirely in your browser using the Canvas API. Your JPG files never leave your device and are never sent to any server. The conversion and download happen locally on your computer or phone.',
-          },
-        },
-      ],
-    },
+const schema = schemaScript({
+  type: PageType.ToolGeneric,
+  trail: [
+    { name: 'Home', url: pageUrl('/') },
+    { name: 'JPG to WebP', url: PAGE_URL },
   ],
-}
+  props: {
+    url: PAGE_URL,
+    name: 'JPG to WebP Converter Online Free — Convert JPEG to WebP',
+    description:
+      'Free online JPG to WebP converter. Convert JPEG to WebP and reduce file size by 25–35% with no quality loss. No upload — 100% browser-based and private.',
+    faq: [
+      {
+        question: 'How much smaller is WebP compared to JPG?',
+        answer:
+          'WebP is typically 25–35% smaller than JPG at equivalent visual quality. For a typical 500KB JPG photo, the WebP equivalent is around 325–375KB. The exact savings depend on image content — photos with fine detail or gradients benefit most from WebP compression.',
+      },
+      {
+        question: 'Does converting JPG to WebP lose quality?',
+        answer:
+          'At default quality settings, the quality difference between a JPG and its WebP conversion is virtually invisible to the human eye, while file size drops significantly. Both formats use lossy compression, so some minimal re-encoding loss occurs. For best results, convert from the original source rather than re-converting multiple times.',
+      },
+      {
+        question: 'Is WebP supported in all browsers?',
+        answer:
+          'WebP is supported in all modern browsers: Chrome, Firefox, Safari 14+, Edge, and Opera. Global browser support exceeds 95% as of 2025. The main exceptions are very old browsers (IE11, Safari before 2020) and some email clients (Outlook 2019 and earlier).',
+      },
+      {
+        question: 'Can I use WebP images for email?',
+        answer:
+          'Not recommended. Many email clients — including older Outlook versions and some corporate email systems — do not display WebP images correctly. For email attachments and newsletter images, use JPG for universal compatibility.',
+      },
+      {
+        question: 'Does WebP support transparency like PNG?',
+        answer:
+          'Yes. WebP supports an alpha channel (transparency), making it a potential replacement for PNG on the web. When you convert a JPG to WebP, the output does not have transparency since JPG has no alpha channel. To get a WebP with transparency, start from a PNG with transparent areas.',
+      },
+      {
+        question: 'Can I convert JPG to WebP on mobile?',
+        answer:
+          'Yes. This tool works fully on iOS and Android mobile browsers. Tap to select a photo from your camera roll, and the WebP file downloads directly to your device. No app installation required.',
+      },
+      {
+        question: 'What software opens WebP files?',
+        answer:
+          'All modern browsers open WebP natively. On Windows, Photos app (Windows 10 v1809+) and Paint 3D support WebP. On macOS, Preview supports WebP from macOS Ventura (2022). Photoshop added native WebP support in version 23.2 (2022). For older software, convert WebP back to JPG using our WebP to JPG tool.',
+      },
+      {
+        question: 'Are my JPG files uploaded when converting to WebP?',
+        answer:
+          'No. All conversion happens entirely in your browser using the Canvas API. Your JPG files never leave your device and are never sent to any server. The conversion and download happen locally on your computer or phone.',
+      },
+    ],
+  },
+})
 
-export default function JpgToWebpLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {schema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schema }} />}
       {children}
     </>
   )

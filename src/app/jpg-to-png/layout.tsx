@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
+import { schemaScript, PageType, pageUrl } from '@/lib/schema'
 
-const SITE_URL = 'https://compressimg.pro'
-const PAGE_URL = `${SITE_URL}/jpg-to-png/`
-const OG_IMAGE = `${SITE_URL}/og-image.png`
+const PAGE_URL = pageUrl('/jpg-to-png')
 
 export const metadata: Metadata = {
   title: 'JPG to PNG Converter Online Free — Convert JPEG to PNG',
@@ -15,7 +14,14 @@ export const metadata: Metadata = {
       'Convert JPG and JPEG files to PNG instantly. Lossless output, no uploads — 100% browser-based and private.',
     url: PAGE_URL,
     siteName: 'CompressImg',
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'JPG to PNG Converter Online Free' }],
+    images: [
+      {
+        url: 'https://compressimg.pro/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'JPG to PNG Converter Online Free',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -23,155 +29,70 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'JPG to PNG Converter Online Free',
     description: 'Convert JPG to PNG instantly. No uploads — 100% browser-based.',
-    images: [OG_IMAGE],
+    images: ['https://compressimg.pro/og-image.png'],
   },
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'JPG to PNG', item: PAGE_URL },
-      ],
-    },
-    {
-      '@type': 'WebApplication',
-      name: 'CompressImg — JPG to PNG Converter',
-      url: PAGE_URL,
-      applicationCategory: 'MultimediaApplication',
-      operatingSystem: 'Any',
-      browserRequirements: 'Requires a modern web browser with JavaScript enabled',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      description:
-        'Free browser-based JPG to PNG converter. Converts JPEG files to lossless PNG instantly. No file upload required.',
-      featureList: [
-        'Convert JPG to PNG online',
-        'Convert JPEG to PNG online',
-        'Lossless PNG output',
-        'No file upload — 100% browser-based',
-        'Free with no limits or watermarks',
-        'Works on mobile and desktop',
-      ],
-    },
-    {
-      '@type': 'HowTo',
-      name: 'How to Convert JPG to PNG Online',
-      description:
-        'Convert JPG images to lossless PNG with full transparency support — free, browser-based, no upload required.',
-      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
-      totalTime: 'PT10S',
-      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
-      supply: [{ '@type': 'HowToSupply', name: 'JPG or JPEG image file up to 20 MB' }],
-      tool: [
-        { '@type': 'HowToTool', name: 'CompressImg JPG to PNG Converter', url: PAGE_URL },
-        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
-      ],
-      step: [
-        {
-          '@type': 'HowToStep',
-          position: 1,
-          name: 'Upload your JPG file',
-          text: 'Click the upload area, drag and drop your JPG, or paste from clipboard with Ctrl+V. Supports JPG and JPEG files up to 20 MB.',
-          url: `${PAGE_URL}#step-1`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 2,
-          name: 'Conversion to PNG runs automatically',
-          text: 'Your JPG is converted to PNG instantly in your browser. No settings needed — the conversion preserves all image data in the lossless PNG format.',
-          url: `${PAGE_URL}#step-2`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 3,
-          name: 'Download the PNG file',
-          text: 'Click Download to save the converted PNG. Note that converting from JPG to PNG does not restore any quality already lost in the original — but no new quality loss is introduced.',
-          url: `${PAGE_URL}#step-3`,
-        },
-      ],
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Does converting JPG to PNG improve image quality?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No — converting JPG to PNG does not improve quality. Any compression artifacts already present in the JPG are preserved exactly in the PNG output. The benefit is that PNG is lossless, so no additional quality is lost in future edits.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Will the PNG have a transparent background after conversion?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. JPG files do not contain transparency data. The resulting PNG will have a solid (opaque) background matching the original JPG. To remove the background and make it transparent, you need a background removal tool after conversion.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Why is the converted PNG file larger than the original JPG?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PNG stores every pixel losslessly, while JPG discards data to achieve small file sizes. A photograph that is 500KB as JPG may become 3–8MB as PNG. This is normal — PNG is not designed for photographic compression.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I convert JPEG to PNG? Is JPEG the same as JPG?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes — JPEG and JPG are the same format. This tool accepts both .jpg and .jpeg files and converts them to PNG identically.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is the JPG to PNG conversion lossless?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The conversion process itself is lossless — PNG stores the pixel data from the JPG exactly as-is with no additional quality loss. However, the original JPG already contains compression artifacts from its own encoding.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the best use case for converting JPG to PNG?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'The most common reasons: you need to edit the image multiple times without accumulating quality loss, you need transparency support, you are working with logos or graphics that need sharp edges, or you are compositing the image in a design tool.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I convert JPG to PNG on my phone?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. This tool works fully on iOS and Android mobile browsers. Tap to select a photo from your camera roll, and download the converted PNG — no app installation required.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Are my JPG files uploaded to a server during conversion?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. All conversion happens entirely in your browser using the Canvas API. Your files never leave your device and are never sent to any server.',
-          },
-        },
-      ],
-    },
+const schema = schemaScript({
+  type: PageType.ToolGeneric,
+  trail: [
+    { name: 'Home', url: pageUrl('/') },
+    { name: 'JPG to PNG', url: PAGE_URL },
   ],
-}
+  props: {
+    url: PAGE_URL,
+    name: 'JPG to PNG Converter Online Free — Convert JPEG to PNG',
+    description:
+      'Free online JPG to PNG converter. Convert JPEG to PNG instantly — lossless, no upload, 100% browser-based and private. Supports JPG and JPEG files up to 20MB.',
+    faq: [
+      {
+        question: 'Does converting JPG to PNG improve image quality?',
+        answer:
+          'No — converting JPG to PNG does not improve quality. Any compression artifacts already present in the JPG are preserved exactly in the PNG output. The benefit is that PNG is lossless, so no additional quality is lost in future edits.',
+      },
+      {
+        question: 'Will the PNG have a transparent background after conversion?',
+        answer:
+          'No. JPG files do not contain transparency data. The resulting PNG will have a solid (opaque) background matching the original JPG. To remove the background and make it transparent, you need a background removal tool after conversion.',
+      },
+      {
+        question: 'Why is the converted PNG file larger than the original JPG?',
+        answer:
+          'PNG stores every pixel losslessly, while JPG discards data to achieve small file sizes. A photograph that is 500KB as JPG may become 3–8MB as PNG. This is normal — PNG is not designed for photographic compression.',
+      },
+      {
+        question: 'Can I convert JPEG to PNG? Is JPEG the same as JPG?',
+        answer:
+          'Yes — JPEG and JPG are the same format. This tool accepts both .jpg and .jpeg files and converts them to PNG identically.',
+      },
+      {
+        question: 'Is the JPG to PNG conversion lossless?',
+        answer:
+          'The conversion process itself is lossless — PNG stores the pixel data from the JPG exactly as-is with no additional quality loss. However, the original JPG already contains compression artifacts from its own encoding.',
+      },
+      {
+        question: 'What is the best use case for converting JPG to PNG?',
+        answer:
+          'The most common reasons: you need to edit the image multiple times without accumulating quality loss, you need transparency support, you are working with logos or graphics that need sharp edges, or you are compositing the image in a design tool.',
+      },
+      {
+        question: 'Can I convert JPG to PNG on my phone?',
+        answer:
+          'Yes. This tool works fully on iOS and Android mobile browsers. Tap to select a photo from your camera roll, and download the converted PNG — no app installation required.',
+      },
+      {
+        question: 'Are my JPG files uploaded to a server during conversion?',
+        answer:
+          'No. All conversion happens entirely in your browser using the Canvas API. Your files never leave your device and are never sent to any server.',
+      },
+    ],
+  },
+})
 
-export default function JpgToPngLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {schema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schema }} />}
       {children}
     </>
   )

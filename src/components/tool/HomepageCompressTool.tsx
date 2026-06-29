@@ -21,6 +21,7 @@ export default function HomepageCompressTool() {
   const [originalPreviewUrl, setOriginalPreviewUrl] = useState<string | null>(null)
   const origUrlRef = useRef<string | null>(null)
   const qualityTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const uploadAreaRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (pageState !== 'done' || !originalFile) return
@@ -85,6 +86,7 @@ export default function HomepageCompressTool() {
     setOriginalPreviewUrl(null)
     setErrorMessage('')
     setPageState('idle')
+    setTimeout(() => uploadAreaRef.current?.focus(), 0)
   }, [result])
 
   const handleRecompress = useCallback(async () => {
@@ -120,11 +122,13 @@ export default function HomepageCompressTool() {
 
   return (
     <div className="space-y-4">
-      <UploadBox
-        state={uploadBoxState}
-        onFileSelect={handleFileSelect}
-        errorMessage={errorMessage}
-      />
+      <div ref={uploadAreaRef} tabIndex={-1} className="outline-none">
+        <UploadBox
+          state={uploadBoxState}
+          onFileSelect={handleFileSelect}
+          errorMessage={errorMessage}
+        />
+      </div>
 
       {uploadBoxState === 'idle' && (
         <div className="flex items-center justify-center gap-3 text-xs text-text-muted flex-wrap">

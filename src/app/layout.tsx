@@ -44,58 +44,6 @@ export const metadata: Metadata = {
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
-const siteJsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'WebSite',
-      url: 'https://compressimg.pro',
-      name: 'CompressImg',
-      description:
-        'Free browser-based image tools. Compress, resize, convert, and crop JPG, PNG, WebP instantly. No upload, no login — 100% private.',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: 'https://compressimg.pro/{search_term_string}',
-        },
-        'query-input': 'required name=search_term_string',
-      },
-    },
-    {
-      '@type': 'Organization',
-      url: 'https://compressimg.pro',
-      name: 'CompressImg',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://compressimg.pro/og-image.png',
-        width: 1200,
-        height: 630,
-      },
-    },
-    {
-      '@type': 'WebApplication',
-      name: 'CompressImg',
-      url: 'https://compressimg.pro',
-      applicationCategory: 'MultimediaApplication',
-      operatingSystem: 'Any',
-      browserRequirements: 'Requires a modern web browser with JavaScript enabled',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      description:
-        'Free browser-based image compressor, resizer, converter, and cropper. Supports JPG, PNG, WebP, HEIC, GIF, BMP, SVG. No upload required.',
-      featureList: [
-        'Compress JPG, PNG, WebP images online',
-        'Resize images to any dimension',
-        'Convert between image formats',
-        'Crop images to any ratio',
-        'Batch compress multiple images',
-        'No file upload — 100% browser-based',
-        'Free with no limits or watermarks',
-      ],
-    },
-  ],
-}
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
@@ -104,10 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://analytics.google.com" />
       </head>
       <body className="font-sans antialiased bg-white text-text-main flex flex-col min-h-screen">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
-        />
         <Header />
         <div className="flex-1 flex flex-col">{children}</div>
         <Footer />

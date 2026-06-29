@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>F3 R-03 — Real Library Invariant Verification</title>
+  <style>
+    body { font-family: monospace; padding: 20px; background: #111; color: #eee; }
+    .pass { color: #4ade80; }
+    .fail { color: #f87171; }
+    .info { color: #94a3b8; }
+    pre { background: #1e293b; padding: 12px; border-radius: 6px; overflow: auto; }
+    h2 { color: #60a5fa; }
+    button { padding: 8px 16px; background: #2563eb; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    #log { margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>F3 R-03 — Real <code>browser-image-compression</code> Invariant Verification</h1>
+  <p class="info">
+    Tests that <code>compressToTarget</code> output size is always ≤ target when using the <em>real</em> library.
+    Opens results in this page. Copy log to share evidence.
+  </p>
+  <button id="run">Run Verification</button>
+  <pre id="log"></pre>
+
+  <script type="module">
+    // ── Inline compressToTarget algorithm (mirrors compress-target.ts exactly) ──
+    // This is the production algorithm copy-pasted verbatim for standalone testing.
+    // Any deviation between this copy and the live source would invalidate the test.
+
+    const MIN_Q = 0.3
+    const MAX_Q = 0.95
+    const MAX_ITER = 7
+    const TOLERANCE = 0.9
+    const DOWNSCALE_DIM = 1280
+
+    function inBand(size, target) {
+      return size <= target && size >= TOLERANCE * target
+    }
+
+    async function compressToTarget(file, targetBytes, onProgress) {
+      // Dynamic import — uses the real library installed at /node_modules
+      // (served via the Next.js dev server or a bundler; open via `npm run dev` at localhost)
+      const { default: imageCompression } = await import(
+        '/_next/static/chunks/node_modules_browser-image-compression_dist_browser-image-compression_js.js'
+      ).catch(() => import('https://cdn.jsdelivr.net/npm/browser-image-compression@2.0.2/dist/browser-image-compression.js'))
+
+      const format = file.type.split('/')[1] ?? 'jpeg'
+      const fileType = file.type
+
+      const compress = (opts) =>
+        imageCompression(file, {
+          ...(opts.maxSizeMB !== undefined ? { maxSizeMB: opts.maxSizeMB } : {}),
+          initialQuality: opts.initialQuality,
+          alwaysKeepResolution: true,
+          maxWidthOrHeight: 1920,
+          useWebWorker: false,   // must be false — no Worker in this inline script context
+          fileType,
+        })
+
+      if (file.size <= targetBytes) {
+        return { compressedSize: file.size, iterations: 0, status: 'edge_case' }
+      }
+
+      const first = await compress({ maxSizeMB: targetBytes / 1_048_576, initialQuality: 0.8 })
+      onProgress(1, first.size)
+
+      if (inBand(first.size, targetBytes)) {
+        return { compressedSize: first.size, iterations: 1, status: 'first_pass_inband' }
+      }
+
+      let qLow, qHigh
+      if (first.size > targetBytes) {
+        qLow = MIN_Q; qHigh = 0.8
+      } else {
+        qLow = 0.8; qHigh = MAX_Q
+      }
+
+      let best = first.size <= targetBytes ? { size: first.size } : null
+      let closestFallback = { size: first.size }
+      let iterations = 1
+
+      for (let i = 0; i < MAX_ITER; i++) {
+        const qMid = Math.min(MAX_Q, Math.max(MIN_Q, (qLow + qHigh) / 2))
+        const blob = await compress({ initialQuality: qMid })
+        iterations++
+        onProgress(iterations, blob.size)
+
+        if (blob.size <= targetBytes) {
+          if (!best || blob.size > best.size) best = { size: blob.size }
+          if (inBand(blob.size, targetBytes)) break
+          qLow = qMid
+        } else {
+          if (blob.size < closestFallback.size) closestFallback = { size: blob.size }
+          qHigh = qMid
+        }
+        if (qHigh - qLow < 0.005) break
+      }
+
+      if (best) {
+        return { compressedSize: best.size, iterations, status: 'binary_search' }
+      }
+      return { compressedSize: closestFallback.size, iterations, status: 'exhausted', violated: closestFallback.size > targetBytes }
+    }
+
+    // ── Create synthetic test images via Canvas ──
+    function makeCanvasBlob(width, height, type) {
+      const canvas = document.createElement('canvas')
+      canvas.width = width; canvas.height = height
+      const ctx = canvas.getContext('2d')
+      // Photo-like: random noise
+      const id = ctx.createImageData(width, height)
+      for (let i = 0; i < id.data.length; i++) id.data[i] = (Math.random() * 255) | 0
+      ctx.putImageData(id, 0, 0)
+      return new Promise(res => canvas.toBlob(res, type, 0.95))
+    }
+
+    function makeTransparentPng(width, height) {
+      const canvas = document.createElement('canvas')
+      canvas.width = width; canvas.height = height
+      const ctx = canvas.getContext('2d')
+      // Checkerboard with alpha
+      for (let y = 0; y < height; y += 8) {
+        for (let x = 0; x < width; x += 8) {
+          ctx.fillStyle = ((x + y) / 8 % 2 === 0) ? 'rgba(255,0,0,0.5)' : 'rgba(0,0,255,0)'
+          ctx.fillRect(x, y, 8, 8)
+        }
+      }
+      return new Promise(res => canvas.toBlob(res, 'image/png'))
+    }
+
+    // ── Test runner ──
+    const log = document.getElementById('log')
+    const btn = document.getElementById('run')
+
+    function write(msg, cls = '') {
+      const span = document.createElement('span')
+      if (cls) span.className = cls
+      span.textContent = msg + '\n'
+      log.appendChild(span)
+    }
+
+    btn.addEventListener('click', async () => {
+      btn.disabled = true
+      log.innerHTML = ''
+      write('=== F3 R-03: Real Library Invariant Verification ===', 'info')
+      write(`Date: ${new Date().toISOString()}`, 'info')
+      write(`UA: ${navigator.userAgent}`, 'info')
+      write('')
+
+      // Fixture matrix: type × {inputDim, targetKb}
+      const fixtures = [
+        { label: 'Photo JPEG 800×600 → 100 KB',      type: 'image/jpeg', w: 800,  h: 600,  targetKb: 100 },
+        { label: 'Photo JPEG 1920×1080 → 200 KB',    type: 'image/jpeg', w: 1920, h: 1080, targetKb: 200 },
+        { label: 'Photo JPEG 1920×1080 → 50 KB',     type: 'image/jpeg', w: 1920, h: 1080, targetKb: 50  },
+        { label: 'Graphic PNG 800×800 → 150 KB',     type: 'image/png',  w: 800,  h: 800,  targetKb: 150 },
+        { label: 'Graphic PNG 1200×900 → 300 KB',    type: 'image/png',  w: 1200, h: 900,  targetKb: 300 },
+        { label: 'Transparent PNG 600×600 → 100 KB', type: 'image/png',  w: 600,  h: 600,  targetKb: 100, transparent: true },
+      ]
+
+      let passed = 0, failed = 0, exhausted = 0
+
+      for (const fx of fixtures) {
+        write(`\n[${fx.label}]`, 'info')
+        try {
+          const blob = fx.transparent
+            ? await makeTransparentPng(fx.w, fx.h)
+            : await makeCanvasBlob(fx.w, fx.h, fx.type)
+          const file = new File([blob], 'test.' + fx.type.split('/')[1], { type: fx.type })
+          const targetBytes = fx.targetKb * 1024
+          write(`  input: ${(file.size / 1024).toFixed(1)} KB  target: ${fx.targetKb} KB`)
+
+          const iters = []
+          const result = await compressToTarget(file, targetBytes, (iter, sz) => {
+            iters.push(`iter ${iter}: ${(sz / 1024).toFixed(1)} KB`)
+          })
+
+          iters.forEach(s => write('  ' + s, 'info'))
+          write(`  status: ${result.status}  iterations: ${result.iterations}`)
+
+          if (result.status === 'exhausted') {
+            exhausted++
+            write(`  EXHAUSTED — best achievable: ${(result.compressedSize / 1024).toFixed(1)} KB`, 'info')
+            write(`  (QualityExhaustedError path — no result returned to caller)`, 'info')
+          } else if (result.compressedSize <= targetBytes) {
+            passed++
+            write(`  PASS — output ${(result.compressedSize / 1024).toFixed(1)} KB ≤ ${fx.targetKb} KB`, 'pass')
+          } else {
+            failed++
+            write(`  FAIL — output ${(result.compressedSize / 1024).toFixed(1)} KB > ${fx.targetKb} KB`, 'fail')
+          }
+        } catch (e) {
+          write(`  ERROR: ${e.message}`, 'fail')
+          failed++
+        }
+      }
+
+      write('')
+      write(`=== Summary: ${passed} passed, ${exhausted} exhausted, ${failed} failed ===`,
+        failed > 0 ? 'fail' : 'pass')
+      btn.disabled = false
+    })
+  </script>
+</body>
+</html>

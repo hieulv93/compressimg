@@ -1,0 +1,53 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://compressimg.pro/#organization",
+      "name": "CompressImg",
+      "url": "https://compressimg.pro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://compressimg.pro/og-image.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://compressimg.pro/#website",
+      "url": "https://compressimg.pro",
+      "name": "CompressImg",
+      "publisher": {
+        "@id": "https://compressimg.pro/#organization"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://compressimg.pro/#webapp",
+      "name": "CompressImg — Free Online Image Compressor",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "provider": {
+        "@id": "https://compressimg.pro/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://compressimg.pro/#webpage",
+      "url": "https://compressimg.pro/",
+      "name": "Free Online Image Tools — CompressImg",
+      "isPartOf": {
+        "@id": "https://compressimg.pro/#website"
+      },
+      "mainEntity": {
+        "@id": "https://compressimg.pro/#webapp"
+      }
+    }
+  ]
+}

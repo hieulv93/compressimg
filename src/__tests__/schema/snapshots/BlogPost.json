@@ -1,0 +1,81 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://compressimg.pro/#organization",
+      "name": "CompressImg",
+      "url": "https://compressimg.pro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://compressimg.pro/og-image.png",
+        "width": 1200,
+        "height": 630
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://compressimg.pro/#website",
+      "url": "https://compressimg.pro",
+      "name": "CompressImg",
+      "publisher": {
+        "@id": "https://compressimg.pro/#organization"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://compressimg.pro/#webapp",
+      "name": "CompressImg — Free Online Image Compressor",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "provider": {
+        "@id": "https://compressimg.pro/#organization"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://compressimg.pro/blog/best-image-format-for-web/#article",
+      "headline": "Best Image Format for Web: JPEG vs PNG vs WebP in 2026",
+      "description": "Choosing the wrong image format costs performance. This guide explains when to use JPEG, PNG, and WebP.",
+      "url": "https://compressimg.pro/blog/best-image-format-for-web/",
+      "datePublished": "2026-04-28",
+      "author": {
+        "@id": "https://compressimg.pro/#organization"
+      },
+      "publisher": {
+        "@id": "https://compressimg.pro/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://compressimg.pro/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://compressimg.pro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://compressimg.pro/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Best Image Format for Web",
+          "item": "https://compressimg.pro/blog/best-image-format-for-web/"
+        }
+      ]
+    }
+  ]
+}

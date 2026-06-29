@@ -21,8 +21,12 @@ function track(event: string, params?: EventParams) {
 }
 
 export const analytics = {
-  imageUploaded: (fileType: string, fileSizeKb: number) =>
-    track('image_uploaded', { file_type: fileType, file_size_kb: Math.round(fileSizeKb) }),
+  imageUploaded: (fileType: string, fileSizeKb: number, compressionMode?: 'quality' | 'target') =>
+    track('image_uploaded', {
+      file_type: fileType,
+      file_size_kb: Math.round(fileSizeKb),
+      ...(compressionMode ? { compression_mode: compressionMode } : {}),
+    }),
 
   imageCompressed: (originalKb: number, compressedKb: number, format: string, quality: number) =>
     track('image_compressed', {
@@ -130,4 +134,36 @@ export const analytics = {
 
   passportPhotoMade: (preset: string, widthPx: number, heightPx: number) =>
     track('passport_photo_made', { preset, width_px: widthPx, height_px: heightPx }),
+
+  targetModeUsed: (page: string, targetKb: number) =>
+    track('target_mode_used', { page, target_kb: targetKb }),
+
+  targetCompressionCompleted: (
+    originalKb: number,
+    compressedKb: number,
+    targetKb: number,
+    iterations: number,
+    downscaled: boolean,
+    status: 'success' | 'unreachable',
+    durationMs: number
+  ) =>
+    track('target_compression_completed', {
+      original_kb: Math.round(originalKb),
+      compressed_kb: Math.round(compressedKb),
+      target_kb: targetKb,
+      iterations,
+      downscaled,
+      status,
+      duration_ms: Math.round(durationMs),
+    }),
+
+  targetUnreachable: (targetKb: number, achievedKb: number, downscaled: boolean) =>
+    track('target_unreachable', {
+      target_kb: targetKb,
+      achieved_kb: Math.round(achievedKb),
+      downscaled,
+    }),
+
+  targetCompressionFailed: (reason: string, fileSizeKb: number) =>
+    track('target_compression_failed', { reason, file_size_kb: Math.round(fileSizeKb) }),
 }

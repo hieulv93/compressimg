@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
+import { schemaScript, PageType, pageUrl } from '@/lib/schema'
 
-const SITE_URL = 'https://compressimg.pro'
-const PAGE_URL = `${SITE_URL}/image-converter/`
-const OG_IMAGE = `${SITE_URL}/og-image.png`
+const PAGE_URL = pageUrl('/image-converter')
 
 export const metadata: Metadata = {
   title: 'Image Converter Online Free — Convert JPG, PNG, WebP',
@@ -15,7 +14,14 @@ export const metadata: Metadata = {
       'Free image converter. Convert between JPG, PNG, WebP formats — no uploads, 100% browser-based.',
     url: PAGE_URL,
     siteName: 'CompressImg',
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Image Converter Online Free' }],
+    images: [
+      {
+        url: 'https://compressimg.pro/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Image Converter Online Free',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -23,140 +29,60 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Image Converter Online Free',
     description: 'Free image converter. Convert JPG, PNG, WebP — no uploads.',
-    images: [OG_IMAGE],
+    images: ['https://compressimg.pro/og-image.png'],
   },
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Image Converter', item: PAGE_URL },
-      ],
-    },
-    {
-      '@type': 'WebApplication',
-      name: 'CompressImg — Free Image Converter',
-      url: PAGE_URL,
-      applicationCategory: 'MultimediaApplication',
-      operatingSystem: 'Any',
-      browserRequirements: 'Requires a modern web browser with JavaScript enabled',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      description:
-        'Free browser-based image converter. Convert between JPG, PNG, and WebP formats. Supports HEIC input. No upload required.',
-      featureList: [
-        'Convert images between JPG, PNG, and WebP',
-        'Supports HEIC input (iPhone photos)',
-        'Instant format switching',
-        'No file upload — 100% browser-based',
-        'Free with no limits or watermarks',
-      ],
-    },
-    {
-      '@type': 'HowTo',
-      name: 'How to Convert an Image Online',
-      description:
-        'Convert between JPG, PNG, WebP and HEIC in your browser — free, private, no upload required.',
-      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
-      totalTime: 'PT10S',
-      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
-      supply: [
-        { '@type': 'HowToSupply', name: 'Image file (JPG, PNG, WebP or HEIC — up to 20 MB)' },
-      ],
-      tool: [
-        { '@type': 'HowToTool', name: 'CompressImg — Free Online Image Converter', url: PAGE_URL },
-        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
-      ],
-      step: [
-        {
-          '@type': 'HowToStep',
-          position: 1,
-          name: 'Upload your image',
-          text: 'Click the upload area, drag and drop your file, or paste from clipboard with Ctrl+V. Accepts JPG, PNG, WebP and HEIC — up to 20 MB per file.',
-          url: `${PAGE_URL}#step-1`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 2,
-          name: 'Select the output format',
-          text: 'Choose JPG, PNG or WebP as the target format. Conversion starts automatically in your browser. Switch formats at any time to compare results without re-uploading.',
-          url: `${PAGE_URL}#step-2`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 3,
-          name: 'Download the converted file',
-          text: 'Click Download to save the result. The file is saved with a "converted-" prefix so you can easily distinguish it from the original. No account, no watermark.',
-          url: `${PAGE_URL}#step-3`,
-        },
-      ],
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'How do I convert an image online for free?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Upload your image, select the output format (JPG, PNG, or WebP), and download the converted file. The conversion runs entirely in your browser — no upload to server, no sign-up, free with no daily limit.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'What is the best image format for websites?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'WebP is the best format for websites — 25–35% smaller than JPEG at the same visual quality. All modern browsers support WebP. Converting photos to WebP improves page load speed and Google PageSpeed scores.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do I convert JPG to PNG?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Upload your JPG file and select PNG as the output format. The PNG downloads instantly. PNG is lossless and supports transparency — use it for logos and graphics, not photographs.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do I convert PNG to JPG?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Upload your PNG and select JPG as the output format. Transparent backgrounds are replaced with white. JPG is smaller and universally compatible — ideal for email, print, and form uploads.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do I convert HEIC (iPhone photos) to JPG?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Upload your HEIC file and select JPG as the output format. The tool converts HEIC to JPG automatically in your browser. Use this to make iPhone photos compatible with Windows and platforms that do not support HEIC.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does converting an image change its dimensions?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. Format conversion changes the file format only — width and height stay exactly the same. To change dimensions, use the Resize Image tool.',
-          },
-        },
-      ],
-    },
+const schema = schemaScript({
+  type: PageType.ToolGeneric,
+  trail: [
+    { name: 'Home', url: pageUrl('/') },
+    { name: 'Image Converter', url: PAGE_URL },
   ],
-}
+  props: {
+    url: PAGE_URL,
+    name: 'Image Converter Online Free — Convert JPG, PNG, WebP',
+    description:
+      'Free online image converter. Convert images between JPG, PNG, and WebP formats instantly. No upload to server — 100% browser-based and private.',
+    faq: [
+      {
+        question: 'How do I convert an image online for free?',
+        answer:
+          'Upload your image, select the output format (JPG, PNG, or WebP), and download the converted file. The conversion runs entirely in your browser — no upload to server, no sign-up, free with no daily limit.',
+      },
+      {
+        question: 'What is the best image format for websites?',
+        answer:
+          'WebP is the best format for websites — 25–35% smaller than JPEG at the same visual quality. All modern browsers support WebP. Converting photos to WebP improves page load speed and Google PageSpeed scores.',
+      },
+      {
+        question: 'How do I convert JPG to PNG?',
+        answer:
+          'Upload your JPG file and select PNG as the output format. The PNG downloads instantly. PNG is lossless and supports transparency — use it for logos and graphics, not photographs.',
+      },
+      {
+        question: 'How do I convert PNG to JPG?',
+        answer:
+          'Upload your PNG and select JPG as the output format. Transparent backgrounds are replaced with white. JPG is smaller and universally compatible — ideal for email, print, and form uploads.',
+      },
+      {
+        question: 'How do I convert HEIC (iPhone photos) to JPG?',
+        answer:
+          'Upload your HEIC file and select JPG as the output format. The tool converts HEIC to JPG automatically in your browser. Use this to make iPhone photos compatible with Windows and platforms that do not support HEIC.',
+      },
+      {
+        question: 'Does converting an image change its dimensions?',
+        answer:
+          'No. Format conversion changes the file format only — width and height stay exactly the same. To change dimensions, use the Resize Image tool.',
+      },
+    ],
+  },
+})
 
-export default function ImageConverterLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {schema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schema }} />}
       {children}
     </>
   )

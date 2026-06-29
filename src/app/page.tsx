@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import HomeContentSection from '@/components/layout/HomeContentSection'
+import { schemaScript, PageType, pageUrl } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: { absolute: 'Free Online Image Tools — Compress, Resize, Convert & Crop | CompressImg' },
@@ -26,60 +27,13 @@ export const metadata: Metadata = {
   },
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What image tools does CompressImg offer?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'CompressImg offers four free browser-based tools: Compress Image (reduce file size up to 90%), Resize Image (change dimensions for any platform), Convert Image (convert between JPG, PNG, WebP, HEIC, BMP, GIF), and Crop Image (trim to preset ratios for Instagram, YouTube, and more). All tools run in your browser — no server upload.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Are all CompressImg tools free?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. All tools on CompressImg are completely free — no account, no watermarks, no file limits, and no subscription required. Compress, resize, convert, and crop as many images as you need at no cost.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do I need to upload my images to a server?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'No. All processing runs entirely in your browser using JavaScript. Your images never leave your device — nothing is uploaded to any server. This makes CompressImg safe for personal, confidential, and unreleased images.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What image formats does CompressImg support?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'CompressImg supports JPG, PNG, WebP, HEIC (iPhone photos), BMP, GIF, and SVG across its tools. Output files are downloaded directly to your device — no server storage involved.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does CompressImg work on mobile phones?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. All tools work on iPhone and Android in Chrome, Safari, and Firefox. Tap the upload area on any tool page to select from your camera roll — no app installation needed.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Is there a file size limit for CompressImg tools?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. All tools accept image files up to 20MB. Most smartphone photos (3–8MB) and web images are well within this limit. Files larger than 20MB can be scaled down before processing.',
-      },
-    },
-  ],
-}
+const schema = schemaScript({
+  type: PageType.Homepage,
+  props: {
+    url: pageUrl('/'),
+    name: 'Free Online Image Tools — Compress, Resize, Convert & Crop | CompressImg',
+  },
+})
 
 const tools = [
   {
@@ -312,10 +266,7 @@ const popularUseCases = [
 export default function HomePage() {
   return (
     <main className="flex-1">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {schema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schema }} />}
       <div className="max-w-3xl mx-auto px-4 py-12 sm:py-20 space-y-10">
         <div className="text-center space-y-2">
           <h1 className="text-2xl sm:text-3xl font-bold text-text-main">

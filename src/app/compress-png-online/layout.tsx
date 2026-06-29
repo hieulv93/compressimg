@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
+import { schemaScript, PageType, pageUrl } from '@/lib/schema'
 
-const SITE_URL = 'https://compressimg.pro'
-const PAGE_URL = `${SITE_URL}/compress-png-online/`
-const OG_IMAGE = `${SITE_URL}/og-image.png`
+const PAGE_URL = pageUrl('/compress-png-online')
 
 export const metadata: Metadata = {
   title: 'Compress PNG Online Free – Reduce PNG File Size',
@@ -15,7 +14,14 @@ export const metadata: Metadata = {
       'Reduce PNG file size while preserving transparency for free. No uploads — works 100% in your browser. Alpha channel fully preserved.',
     url: PAGE_URL,
     siteName: 'CompressImg',
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Compress PNG Online Free' }],
+    images: [
+      {
+        url: 'https://compressimg.pro/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Compress PNG Online Free',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },
@@ -24,155 +30,70 @@ export const metadata: Metadata = {
     title: 'Compress PNG Online Free – Reduce PNG File Size',
     description:
       'Reduce PNG file size while keeping transparency. 100% browser-based — no uploads.',
-    images: [OG_IMAGE],
+    images: ['https://compressimg.pro/og-image.png'],
   },
 }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Compress PNG Online', item: PAGE_URL },
-      ],
-    },
-    {
-      '@type': 'WebApplication',
-      name: 'CompressImg — Free Online PNG Compressor',
-      url: PAGE_URL,
-      applicationCategory: 'MultimediaApplication',
-      operatingSystem: 'Any',
-      browserRequirements: 'Requires a modern web browser with JavaScript enabled',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-      description:
-        'Free browser-based PNG compressor. Reduces file size while preserving transparency. No upload required.',
-      featureList: [
-        'Compress PNG images online',
-        'Preserve PNG transparency and alpha channel',
-        'Adjustable quality slider (1–100)',
-        'No file upload — 100% browser-based',
-        'Compress PNG for websites and email',
-        'Free with no limits or watermarks',
-      ],
-    },
-    {
-      '@type': 'HowTo',
-      name: 'How to Compress a PNG Online',
-      description:
-        'Compress PNG files with full transparency preserved — free, browser-based, no upload required.',
-      image: { '@type': 'ImageObject', url: OG_IMAGE, width: 1200, height: 630 },
-      totalTime: 'PT10S',
-      estimatedCost: { '@type': 'MonetaryAmount', currency: 'USD', value: '0' },
-      supply: [{ '@type': 'HowToSupply', name: 'PNG image file up to 20 MB' }],
-      tool: [
-        { '@type': 'HowToTool', name: 'CompressImg PNG Compressor', url: PAGE_URL },
-        { '@type': 'HowToTool', name: 'Modern web browser with JavaScript enabled' },
-      ],
-      step: [
-        {
-          '@type': 'HowToStep',
-          position: 1,
-          name: 'Upload your PNG file',
-          text: 'Click the upload area, drag and drop your PNG, or paste from clipboard with Ctrl+V. Supports PNG files up to 20 MB, including files with transparency.',
-          url: `${PAGE_URL}#step-1`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 2,
-          name: 'Adjust quality to balance size and detail',
-          text: 'The default quality of 80 significantly reduces file size while keeping the image visually identical. Lower for maximum compression; raise to preserve fine details in icons and logos.',
-          url: `${PAGE_URL}#step-2`,
-        },
-        {
-          '@type': 'HowToStep',
-          position: 3,
-          name: 'Download the compressed PNG',
-          text: 'Compression completes instantly in your browser. Transparency is fully preserved in the output. Click Download to save — no account, no watermark, no upload.',
-          url: `${PAGE_URL}#step-3`,
-        },
-      ],
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What is a PNG file and when should I use it?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PNG (Portable Network Graphics) is a lossless image format that supports transparency. Use PNG for logos, icons, screenshots, and images requiring transparent backgrounds or sharp edges.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Does compressing a PNG affect its transparency?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'No. PNG transparency (alpha channel) is fully preserved. Transparent pixels stay transparent, semi-transparent pixels keep their exact opacity. The compressed PNG looks identical to the original over any background.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How much can I reduce a PNG file size?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Logos and flat-color graphics reduce by 40–70%. Screenshots reduce by 40–65%. PNG photos reduce by 30–60%. For photos without transparency, converting to JPG achieves 60–90% reduction.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is PNG compression lossless?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Traditional PNG is lossless. Our tool applies near-lossless techniques at lower quality settings for greater size reduction while keeping quality imperceptible on screen. Output is always saved as PNG with full alpha channel support.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'When should I use PNG instead of JPG?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Use PNG when you need transparent backgrounds, sharp edges, logos with flat colors, or lossless quality for further editing. Use JPG for photographs without transparency — JPG compresses photos far more efficiently.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How do I compress a PNG image for a website?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Upload your PNG, set quality to 75–85 for logos or 60–70 for screenshots, then download. For even smaller files, convert the compressed PNG to WebP — WebP lossless mode is typically 26% smaller than PNG.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can I compress PNG without losing sharp edges and text?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. At quality 80 and above, logos, text, and sharp edges are preserved with no visible degradation. The algorithm is conservative on high-contrast edges and text.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Are my PNG files safe when using this tool?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Yes. All PNG compression happens in your browser using JavaScript. Files are never uploaded to any server, never stored, and never transmitted anywhere. No accounts, no watermarks, no limits.',
-          },
-        },
-      ],
-    },
+const schema = schemaScript({
+  type: PageType.ToolGeneric,
+  trail: [
+    { name: 'Home', url: pageUrl('/') },
+    { name: 'Compress PNG Online', url: PAGE_URL },
   ],
-}
+  props: {
+    url: PAGE_URL,
+    name: 'Compress PNG Online Free – Reduce PNG File Size',
+    description:
+      'Free online PNG compressor. Reduce PNG file size while preserving transparency and quality. No upload to server — 100% browser-based and private.',
+    faq: [
+      {
+        question: 'What is a PNG file and when should I use it?',
+        answer:
+          'PNG (Portable Network Graphics) is a lossless image format that supports transparency. Use PNG for logos, icons, screenshots, and images requiring transparent backgrounds or sharp edges.',
+      },
+      {
+        question: 'Does compressing a PNG affect its transparency?',
+        answer:
+          'No. PNG transparency (alpha channel) is fully preserved. Transparent pixels stay transparent, semi-transparent pixels keep their exact opacity. The compressed PNG looks identical to the original over any background.',
+      },
+      {
+        question: 'How much can I reduce a PNG file size?',
+        answer:
+          'Logos and flat-color graphics reduce by 40–70%. Screenshots reduce by 40–65%. PNG photos reduce by 30–60%. For photos without transparency, converting to JPG achieves 60–90% reduction.',
+      },
+      {
+        question: 'Is PNG compression lossless?',
+        answer:
+          'Traditional PNG is lossless. Our tool applies near-lossless techniques at lower quality settings for greater size reduction while keeping quality imperceptible on screen. Output is always saved as PNG with full alpha channel support.',
+      },
+      {
+        question: 'When should I use PNG instead of JPG?',
+        answer:
+          'Use PNG when you need transparent backgrounds, sharp edges, logos with flat colors, or lossless quality for further editing. Use JPG for photographs without transparency — JPG compresses photos far more efficiently.',
+      },
+      {
+        question: 'How do I compress a PNG image for a website?',
+        answer:
+          'Upload your PNG, set quality to 75–85 for logos or 60–70 for screenshots, then download. For even smaller files, convert the compressed PNG to WebP — WebP lossless mode is typically 26% smaller than PNG.',
+      },
+      {
+        question: 'Can I compress PNG without losing sharp edges and text?',
+        answer:
+          'Yes. At quality 80 and above, logos, text, and sharp edges are preserved with no visible degradation. The algorithm is conservative on high-contrast edges and text.',
+      },
+      {
+        question: 'Are my PNG files safe when using this tool?',
+        answer:
+          'Yes. All PNG compression happens in your browser using JavaScript. Files are never uploaded to any server, never stored, and never transmitted anywhere. No accounts, no watermarks, no limits.',
+      },
+    ],
+  },
+})
 
-export default function CompressPngLayout({ children }: { children: React.ReactNode }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {schema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schema }} />}
       {children}
     </>
   )
