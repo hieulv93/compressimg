@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { schemaScript, PageType, pageUrl } from '@/lib/schema'
+import { pageUrl } from '@/lib/schema'
 
 const PAGE_URL = pageUrl('/blog')
 
@@ -33,25 +33,6 @@ export const metadata: Metadata = {
   },
 }
 
-const schema = schemaScript({
-  type: PageType.Category,
-  trail: [
-    { name: 'Home', url: pageUrl('/') },
-    { name: 'Blog', url: PAGE_URL },
-  ],
-  props: {
-    url: PAGE_URL,
-    name: 'Image Optimization Blog — Compression, Format & Performance Tips',
-    description:
-      'Free guides on image compression, format conversion, and web performance. Learn how to compress JPG, PNG, WebP for web, email, Instagram, WhatsApp and more.',
-  },
-})
-
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      {schema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schema }} />}
-      {children}
-    </>
-  )
+  return <>{children}</>
 }

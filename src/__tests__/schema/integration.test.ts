@@ -89,3 +89,57 @@ describe('JSON-LD integration', () => {
     })
   }
 })
+
+// CI-F3 regression: blog/layout.tsx must not inject schema into blog post pages
+describe('Blog JSON-LD isolation (CI-F3 regression)', () => {
+  describe('/blog/ index', () => {
+    let html: string
+    beforeAll(() => {
+      html = readPage('blog/index.html')
+    })
+
+    it('has exactly one JSON-LD block', () => {
+      expect(extractJsonLdScripts(html)).toHaveLength(1)
+    })
+
+    it('contains CollectionPage', () => {
+      const [content] = extractJsonLdScripts(html)
+      expect(content).toContain('CollectionPage')
+    })
+
+    it('does not contain BlogPosting', () => {
+      const [content] = extractJsonLdScripts(html)
+      expect(content).not.toContain('BlogPosting')
+    })
+  })
+
+  describe('/blog/jpg-vs-jpeg/', () => {
+    let html: string
+    beforeAll(() => {
+      html = readPage('blog/jpg-vs-jpeg/index.html')
+    })
+
+    it('has exactly one JSON-LD block', () => {
+      expect(extractJsonLdScripts(html)).toHaveLength(1)
+    })
+
+    it('contains BlogPosting', () => {
+      const [content] = extractJsonLdScripts(html)
+      expect(content).toContain('BlogPosting')
+    })
+
+    it('does not contain CollectionPage', () => {
+      const [content] = extractJsonLdScripts(html)
+      expect(content).not.toContain('CollectionPage')
+    })
+  })
+
+  it('no blog post page has more than one JSON-LD block', () => {
+    const slugs = ['jpg-vs-jpeg', 'png-vs-jpg', 'avif-vs-webp', 'what-is-webp-format']
+    for (const slug of slugs) {
+      const html = readPage(`blog/${slug}/index.html`)
+      const scripts = extractJsonLdScripts(html)
+      expect(scripts).toHaveLength(1)
+    }
+  })
+})

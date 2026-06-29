@@ -1,4 +1,19 @@
 import Link from 'next/link'
+import { schemaScript, PageType, pageUrl } from '@/lib/schema'
+
+const schema = schemaScript({
+  type: PageType.Category,
+  trail: [
+    { name: 'Home', url: pageUrl('/') },
+    { name: 'Blog', url: pageUrl('/blog') },
+  ],
+  props: {
+    url: pageUrl('/blog'),
+    name: 'Image Optimization Blog — Compression, Format & Performance Tips',
+    description:
+      'Free guides on image compression, format conversion, and web performance. Learn how to compress JPG, PNG, WebP for web, email, Instagram, WhatsApp and more.',
+  },
+})
 
 const posts = [
   {
@@ -203,52 +218,55 @@ const posts = [
 
 export default function BlogPage() {
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-text-main mb-2">
-        Image Optimization Blog — Compression, Format &amp; Performance Tips
-      </h1>
-      <p className="text-text-muted mb-10 max-w-2xl">
-        Practical guides on compressing JPG, PNG, WebP and HEIC images for web, email, and social
-        media — without losing quality. All tools and techniques are browser-based and free.
-      </p>
+    <>
+      {schema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schema }} />}
+      <main className="max-w-3xl mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold text-text-main mb-2">
+          Image Optimization Blog — Compression, Format &amp; Performance Tips
+        </h1>
+        <p className="text-text-muted mb-10 max-w-2xl">
+          Practical guides on compressing JPG, PNG, WebP and HEIC images for web, email, and social
+          media — without losing quality. All tools and techniques are browser-based and free.
+        </p>
 
-      <div className="space-y-8">
-        {posts.map((post) => (
-          <article
-            key={post.slug}
-            className="border border-border rounded-xl p-6 hover:border-primary transition-colors duration-150"
-          >
-            <div className="flex items-center gap-2 text-xs text-text-muted mb-3">
-              <span className="bg-surface px-2 py-0.5 rounded font-medium">{post.category}</span>
-              <span>·</span>
-              <time dateTime={post.date}>
-                {new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </time>
-              <span>·</span>
-              <span>{post.readTime}</span>
-            </div>
-            <h2 className="text-xl font-bold text-text-main mb-2">
+        <div className="space-y-8">
+          {posts.map((post) => (
+            <article
+              key={post.slug}
+              className="border border-border rounded-xl p-6 hover:border-primary transition-colors duration-150"
+            >
+              <div className="flex items-center gap-2 text-xs text-text-muted mb-3">
+                <span className="bg-surface px-2 py-0.5 rounded font-medium">{post.category}</span>
+                <span>·</span>
+                <time dateTime={post.date}>
+                  {new Date(post.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  })}
+                </time>
+                <span>·</span>
+                <span>{post.readTime}</span>
+              </div>
+              <h2 className="text-xl font-bold text-text-main mb-2">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="hover:text-primary transition-colors duration-150"
+                >
+                  {post.title}
+                </Link>
+              </h2>
+              <p className="text-text-muted text-sm leading-relaxed mb-4">{post.description}</p>
               <Link
                 href={`/blog/${post.slug}`}
-                className="hover:text-primary transition-colors duration-150"
+                className="text-primary font-medium text-sm hover:underline"
               >
-                {post.title}
+                Read article →
               </Link>
-            </h2>
-            <p className="text-text-muted text-sm leading-relaxed mb-4">{post.description}</p>
-            <Link
-              href={`/blog/${post.slug}`}
-              className="text-primary font-medium text-sm hover:underline"
-            >
-              Read article →
-            </Link>
-          </article>
-        ))}
-      </div>
-    </main>
+            </article>
+          ))}
+        </div>
+      </main>
+    </>
   )
 }
