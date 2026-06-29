@@ -55,7 +55,9 @@ function extractMetaDescription(content: string): string {
 
 function extractBreadcrumbNames(content: string): { pos2: string; pos3?: string } {
   const result: { pos2: string; pos3?: string } = { pos2: '' }
-  for (const m of content.matchAll(/position:\s*(\d+),\s*name:\s*'([^']*)'/g)) {
+  const regex = /position:\s*(\d+),\s*name:\s*'([^']*)'/g
+  let m: RegExpExecArray | null
+  while ((m = regex.exec(content)) !== null) {
     const pos = parseInt(m[1])
     if (pos === 2 && !result.pos2) result.pos2 = m[2]
     if (pos === 3) result.pos3 = m[2]
